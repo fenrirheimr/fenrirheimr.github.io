@@ -1,0 +1,158 @@
+
+body {background: #fff;}
+header div {display: block; height: 100px;}
+header .logo {display: block; height: 100px;}
+header .logo img {position: relative; top: 50%; margin-top: -24px;}
+header .btn-login {
+    border: 1px solid #fe990e;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: #feb712 !important;
+    text-transform: none;
+    padding: 4px 30px;
+    position: relative;
+    top: 50%;
+    margin-top: -15px;
+}
+header .btn-login:focus,
+header .btn-login:active,
+header .btn-login:hover {
+    background-color: #feb712 !important;
+    border-color: #feb712 !important;
+    color: #fff !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+/*.row > div {background: #ccc; border: 1px solid #393939;}*/
+
+/* --------------------------------------------------------------------- */
+nav {
+    background: #2d2f33;
+    display: block;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    right: -20em;
+    font-size: 15px;
+    top: 0;
+    width: 20em;
+    z-index: 2000;
+
+    transition: right 0.3s ease-in-out 0s;
+    -webkit-transition: right 0.3s ease-in-out 0s;
+    -moz-transition: right 0.3s ease-in-out 0s;
+    -o-transition: right 0.3s ease-in-out 0s;
+
+}
+
+.nav-expander {
+    position: relative; top: 50%; margin-top: -11px;
+    border-top: 2px solid #424242; border-bottom: 2px solid #424242;
+    width: 20px; height: 22px; display: block;
+}
+
+.nav-expander:before {
+    display: block; width: 100%; height: 0; border-top: 2px solid #424242; position: absolute; top: 50%; margin-top: -1px; content: ' ';
+}
+
+.nav-expanded nav {right: 0;}
+
+body.nav-expanded {
+    margin-left: 0em;
+    transition: right 0.4s ease-in-out 0s;
+    -webkit-transition: right 0.4s ease-in-out 0s;
+    -moz-transition: right 0.4s ease-in-out 0s;
+    -o-transition: right 0.4s ease-in-out 0s;
+}
+
+#nav-close {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    padding-right: 10px;
+}
+
+nav {
+    background: #2d2f33;
+    display: block;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    right: -20em;
+    font-size: 15px;
+    top: 0;
+    width: 20em;
+    z-index: 2000;
+
+    transition: right 0.3s ease-in-out 0s;
+    -webkit-transition: right 0.3s ease-in-out 0s;
+    -moz-transition: right 0.3s ease-in-out 0s;
+    -o-transition: right 0.3s ease-in-out 0s;
+
+}
+.nav-expanded nav {
+    right: 0;
+}
+
+body.nav-expanded {
+    margin-left: 0em;
+    transition: right 0.4s ease-in-out 0s;
+    -webkit-transition: right 0.4s ease-in-out 0s;
+    -moz-transition: right 0.4s ease-in-out 0s;
+    -o-transition: right 0.4s ease-in-out 0s;
+}
+
+#nav-close {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    padding-right: 10px;
+}
+
+nav {
+    background: #484bbf;
+    display: block;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    right: -20em;
+    font-size: 15px;
+    top: 0;
+    width: 20em;
+    z-index: 2000;
+
+    transition: right 0.3s ease-in-out 0s;
+    -webkit-transition: right 0.3s ease-in-out 0s;
+    -moz-transition: right 0.3s ease-in-out 0s;
+    -o-transition: right 0.3s ease-in-out 0s;
+
+}
+.nav-expanded nav {
+    right: 0;
+}
+
+body.nav-expanded {
+    margin-left: 0em;
+    transition: right 0.4s ease-in-out 0s;
+    -webkit-transition: right 0.4s ease-in-out 0s;
+    -moz-transition: right 0.4s ease-in-out 0s;
+    -o-transition: right 0.4s ease-in-out 0s;
+}
+
+#nav-close {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    padding-right: 10px;
+}
+
+footer {height: 144px; background: #474747;}
+
+/* --------------------------------------------------------------------- */
+
+
+@media (max-width: 768px) {
+    header .btn-login {display: none;}
+}
