@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>SpeakAsap</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,600,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -36,24 +38,38 @@
 
                 <nav>
                     <a href="#" id="nav-close">X</a>
-                    <ul class="list-unstyled main-menu">
 
-                        <!--Include your navigation here-->
-                        <li><a href="#">Menu One <span class="icon"></span></a></li>
-                        <li><a href="#">Menu Two <span class="icon"></span></a></li>
-                        <li><a href="#">Menu Three <span class="icon"></span></a></li>
-                        <li><a href="#">Dropdown</a>
-                            <ul class="list-unstyled">
-                                <li class="sub-nav"><a href="#">Sub Menu One <span class="icon"></span></a></li>
-                                <li class="sub-nav"><a href="#">Sub Menu Two <span class="icon"></span></a></li>
-                                <li class="sub-nav"><a href="#">Sub Menu Three <span class="icon"></span></a></li>
-                                <li class="sub-nav"><a href="#">Sub Menu Four <span class="icon"></span></a></li>
-                                <li class="sub-nav"><a href="#">Sub Menu Five <span class="icon"></span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Menu Four <span class="icon"></span></a></li>
-                        <li><a href="#">Menu Five <span class="icon"></span></a></li>
+                    <a href="" class="btn btn-login">Вход <span>для судентов</span></a>
+
+                    <ul class="list-unstyled main-menu">
+                        <li class="current"><a href="#">Главная</a></li>
+                        <li><a href="#">Все курсы</a></li>
+                        <li><a href="#">Языковые марафоны</a></li>
+                        <li><a href="#">Бесплатные Материалы</a></li>
                     </ul>
+
+                    <ul class="list-unstyled main-menu second-menu">
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Языковая поддержка</a></li>
+                    </ul>
+
+                    <div class="social-btns">
+                        <a href="javascript:void(0)" class="btn btn-default btn-fab btn-raised fb"></a>
+                        <a href="javascript:void(0)" class="btn btn-default btn-fab btn-raised vk"></a>
+                        <a href="javascript:void(0)" class="btn btn-default btn-fab btn-raised ok"></a>
+                        <a href="javascript:void(0)" class="btn btn-default btn-fab btn-raised yt"></a>
+                        <a href="javascript:void(0)" class="btn btn-default btn-fab btn-raised tw"></a>
+                        <a href="javascript:void(0)" class="btn btn-default btn-fab btn-raised gp"></a>
+                    </div>
+
+                    <div class="search-wrapper">
+                        <form class="form-inline" action="#" method="#">
+                            <button type="submit" class="btn btn-default btn-fab btn-raised pull-left">Искать</button>
+                            <div class="form-group">
+                                <input class="form-control floating-label" id="focusedInput" type="text" placeholder="Поиск на сайте">
+                            </div>
+                        </form>
+                    </div>
                 </nav>
 
             </div>
