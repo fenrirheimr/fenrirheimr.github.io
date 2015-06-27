@@ -1,11 +1,11 @@
 
 body {background: #fff; padding-top: 100px; font-family: 'Open Sans', sans-serif;}
-header div {display: block;}
-header .row > div { height: 100px;}
-header > div { background: #fff;}
-header .logo {display: block; height: 100px;}
-header .logo img {position: relative; top: 50%; margin-top: -24px;}
-header .btn-login {
+body > header div {display: block;}
+body > header .row > div { height: 100px;}
+body > header > div { background: #fff;}
+body > header .logo {display: block; height: 100px;}
+body > header .logo img {position: relative; top: 50%; margin-top: -24px;}
+body > header .btn-login {
     border: 1px solid #fe990e;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -17,9 +17,9 @@ header .btn-login {
     top: 50%;
     margin-top: -15px;
 }
-header .btn-login:focus,
-header .btn-login:active,
-header .btn-login:hover {
+body > header .btn-login:focus,
+body > header .btn-login:active,
+body > header .btn-login:hover {
     background-color: #feb712 !important;
     border-color: #feb712 !important;
     color: #fff !important;
@@ -28,6 +28,9 @@ header .btn-login:hover {
     box-shadow: none !important;
 }
 a {color: #2c96ff;}
+h1 {font-family: 'PT Mono', sans-serif; font-size: 32px;}
+h2 {font-family: 'PT Mono', sans-serif; font-size: 23px;}
+p {font-family: 'Open Sans', sans-serif; line-height: 24px;}
 
 /* Right nav
 --------------------------------------------------------------------- */
@@ -117,6 +120,7 @@ nav .btn-login:hover {
 
 /* Social btns
 ------------------------------------------------------------------------ */
+
 nav .social-btns {position: absolute; bottom: 120px; left: 40px; right: 40px;}
 nav .social-btns .btn {
     width: 40px; height: 40px;
@@ -174,6 +178,20 @@ nav .social-btns .btn.gp:before {background: url('data:image/png;base64,iVBORw0K
 .lang-nav {height: 144px; background: #044b92}
 .products {height: 144px; background: #cdebf7}
 .reviews {}
+
+/* Text block on main page
+------------------------------------------------------------------------ */
+
+.text-block {
+    background: #205991; text-align:center;
+    height: 456px; padding: 100px 0;
+}
+.text-block header {margin-bottom: 30px;}
+.text-block h1 {color: #fff;}
+.text-block h2 {color: #feb600;}
+.text-block p {color: #93bfe5;}
+.text-block section {max-width: 1110px; margin: 0 auto;}
+.text-block section article {padding: 0 40px;}
 
 /* Facts
 ------------------------------------------------------------------------ */
