@@ -1,6 +1,6 @@
 
-body {background: #fff;}
-header div {display: block; height: 100px;}
+body {background: #fff; padding-top: 100px;}
+header div {display: block; height: 100px; background: #fff;}
 header .logo {display: block; height: 100px;}
 header .logo img {position: relative; top: 50%; margin-top: -24px;}
 header .btn-login {
@@ -147,6 +147,26 @@ body.nav-expanded {
     font-size: 24px;
     padding-right: 10px;
 }
+
+.promo {}
+.lang-nav {height: 144px; background: #044b92}
+.products {height: 144px; background: #cdebf7}
+.reviews {}
+.facts {background: #f3da82;}
+
+/* Support
+------------------------------------------------------------------------ */
+
+.support {background: #f7f7f7;}
+.support .bg {
+    width: 604px; height: 564px;
+    background: url("../img/support-bg1.jpg") no-repeat;
+}
+
+/* Sitemap
+------------------------------------------------------------------------ */
+.sitemap {background-color: #3d3d3d;}
+
 
 footer {height: 144px; background: #474747;}
 
