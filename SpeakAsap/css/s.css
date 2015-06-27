@@ -149,6 +149,7 @@ nav .btn-login:hover {
 
 .search-wrapper {background: #363991; height: 60px; position: absolute; bottom: 0; left: 0; right: 0; padding: 15px 30px;}
 .search-wrapper .form-control-wrapper .floating-label {color:#6d74e2;}
+.search-wrapper .form-group {margin: 0; display: inline-block;}
 .search-wrapper .form-group input.form-control:focus~.floating-label,
 .search-wrapper .form-group-default input.form-control:focus~.floating-label {color: #bdbdbd;}
 .search-wrapper .form-control {background-image: none; color: #6d74e2;}
@@ -173,12 +174,26 @@ nav .btn-login:hover {
 .lang-nav {height: 144px; background: #044b92}
 .products {height: 144px; background: #cdebf7}
 .reviews {}
-.facts {background: #f3da82;}
+
+/* Facts
+------------------------------------------------------------------------ */
+
+.facts {background: #f3da82; padding: 25px 0;}
+.facts > div {max-width: 1300px; margin: 0 auto;}
+
+.facts .fact {margin: 25px 0;}
+.facts .fact .counter {
+    max-width: 68px; height: 68px; text-align: center; font-size: 24px; font-weight: 600; color: #fff;
+    line-height: 68px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABECAYAAAA4E5OyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjJCMDM5QzkxQ0FFMTFFNUE4MzFFRUYzQkYwQUNDNUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjJCMDM5Q0ExQ0FFMTFFNUE4MzFFRUYzQkYwQUNDNUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMkIwMzlDNzFDQUUxMUU1QTgzMUVFRjNCRjBBQ0M1RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMkIwMzlDODFDQUUxMUU1QTgzMUVFRjNCRjBBQ0M1RiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ph8hwLQAAAN5SURBVHja7Jw9aFNRFMdvItJdHOLgpoiKhBJsohAQpEuhOAacIzHtYsAtQgjoHKeEoK6BjKGQpQQCXZJKkSIqYjaHZhD3ErT+j573eKbvK18veffeA39uaZuP8+Pcj3PPvS8ilmSHL5/dRZOBUlCMfz2EelBz48Xr98v4XpElgLiJpgo98PjXLrQDMF+kBAIQUTQF6BW05vNlp1ARqgDMb2mAAMY6mhqUnPIt+lAeUD6EGghAXEdTgh7P4bPOoAZUBphvoQECCBfQbEI56NECPoPAtKA6tA84v1YOCCBcQpOGtqBt6EpAQ9MJtAe1oQPA+bkUIABwi52nMSEOXVvGjGUTOQPomMecNgB9XigQgLhDIz70UITDOjSzAczHuQMBjCyvHy6KcNmI1zNv5waEYbwR4bYnfqBEfHaToxBGhl2kJLy6T9THG1UkgCHYh8pMEcKzySchl912m328ImRLyGdbs3SZpIRAkrMAiUsIJD7VGMLL8R8rsAJdxIr2stMy3y1C0hLCMIIgPU2XkXFA9fQt4pLCfw8waw3aKEu+ard14BQhmxLDEOzb5iRdJifkt5yvLsPbfl8lHVDHZ5sb49uRdhFSUgCGEQwl1wjh3fEjRYAYUZKw7uZHLTDo55pCMIyAqLHv57pMQdLcxU9uU/ivy3B5kcJmTahpVCFcp7KpESFVhWEI9r36N0K4Cn8otJFtUIRkNAfTMgQkpTmYliIgMc3BtFhUMzif3A01BtOGBKSnOZjWIyBNzcG0ZpRP+3U1C9ElFsagusvLV1WNfN8xkzsu7RUVBlI0jn9ap10qBPcVhNEXliK43iBy2iDirkN/aCgUHY3xs692K9Uyk1MhOsp2K1UxFiW0C91SAEjL7gCwUy5TVwBI3SmXsbN98a/cJ6udsI/+gHDNc09iIHtOR8Ld0v+2xEDabum/kx1IOtucsW+TAeETNgMJgQzcLgl47ZgdSwjE1ScvIDLmNv1ZgMg4sLanBsLbAh2JYHS87tD42XWnQvBIAhgjYSlqTw2Ebw/kJQCS93ORyFddBm/0Dk02pJFC3znLPoi5ALFASYRsTKHvmvALg0xfQpwHEBtAal9T9YCjLzK7wNFX3R3AzPowBDrh9DSIhyEEchyCHbkPPReTVQhP+TX3goARWISMRcskD1TZnWamCBUQC5iVfOTOHwEGAB6JHRe7shpIAAAAAElFTkSuQmCC') 0 0 no-repeat;
+    /*background-size: contain;*/
+}
+.facts .fact .text {color: #1a1a1a; font-size: 13px; font-weight: 400; text-transform: uppercase; padding-top: 13px; padding-bottom: 13px;}
 
 /* Support
 ------------------------------------------------------------------------ */
 
-.support {background: #f7f7f7;}
+.support {background: #f7f7f7; display: none;}
 .support .bg {
     width: 604px; height: 564px;
     background: url("../img/support-bg1.jpg") no-repeat;
@@ -194,6 +209,23 @@ footer {height: 144px; background: #474747;}
 /* --------------------------------------------------------------------- */
 
 
+
+
+/* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) {
     header .btn-login {display: none;}
+    .search-wrapper .form-group input {width: auto;}
+    .facts {padding: 25px 2%;}
+    .facts .fact {margin: 10px 0}
+    .facts .fact .text {padding-bottom: 0}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .facts {padding: 45px 0;}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .facts {padding: 55px 0;}
 }
