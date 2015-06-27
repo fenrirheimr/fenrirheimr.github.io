@@ -28,4 +28,12 @@ $(function() {
         }
     });
 
+    $(".go-top").click(function (){
+        //$(this).animate(function(){
+        $('html, body').animate({
+            scrollTop: $("body").offset().top
+        }, 700);
+        //});
+    })
+
 });
