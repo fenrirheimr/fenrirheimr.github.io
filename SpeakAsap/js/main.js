@@ -34,6 +34,11 @@ $(function() {
             scrollTop: $("body").offset().top
         }, 700);
         //});
+    });
+
+    $('.lang-nav .nav-tabs a').click(function(e) {
+        e.preventDefault()
+        $(this).tab('show')
     })
 
 });

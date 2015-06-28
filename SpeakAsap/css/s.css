@@ -200,9 +200,29 @@ nav .social-btns .btn.gp:before {background: url('data:image/png;base64,iVBORw0K
 .promo .video a i {margin: 0 auto 10px; display: block;}
 .promo .video a span {display: block;}
 
-/*---------------------------------------------------------------------- */
+/* Lang Nav
+------------------------------------------------------------------------ */
 
-.lang-nav {height: 144px; background: #044b92}
+/*.lang-nav { font-size: 0; }*/
+.lang-nav .nav-tabs {margin: 0; height: 144px; background: #044b92; padding: 40px 0 30px; text-align: center; border: none;}
+.lang-nav .nav-tabs > li {display: inline-block; margin: 0 30px;}
+.lang-nav .nav-tabs > li > a {
+    display: block !important; width: 52px !important; height: 52px !important;
+    -webkit-border-radius: 18px !important;
+    -moz-border-radius: 18px !important;
+    border-radius: 18px !important;
+    overflow: hidden; padding: 0 !important; margin: 4px 0 3px !important;
+    border: 1px solid #044383 !important;
+}
+.lang-nav .nav-tabs > li > span {color: #d7ebff; font-size: 12px; display: block;}
+
+.lang-nav  .nav-tabs > li.active {}
+
+.lang-nav  .nav-tabs > li.active > a {
+    border: 5px solid #0865b8 !important; width: 60px !important; height: 60px !important;
+    margin: 0px 0px 4px !important;
+}
+/*---------------------------------------------------------------------- */
 .products {height: 144px; background: #cdebf7}
 .reviews {}
 
