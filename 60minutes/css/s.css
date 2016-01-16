@@ -71,4 +71,4 @@ body {
 
 .footer {height: 64px; width: 100%; position: absolute; bottom: 0; background: #333332;}
 .footer .container {line-height: 64px;}
-.footer .container p {color: #959595; font-size: 15px;}
+.footer .container p {color: #959595; font-size: 15px; margin-bottom: 0;}
