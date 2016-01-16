@@ -26,8 +26,6 @@
             if(isTouchDevice()===false) {
                 $('[data-toggle="tooltip"]').tooltip();
             }
-
-
         },
         equalHeight:function(){
             var equalBlock = $('[class^=col-] .block');
