@@ -34,8 +34,6 @@
                 e.preventDefault();
                 var userMenu = $(this).next('.user-menu');
 
-                //userMenu.toggle();
-
                 if (userMenu.css('display') != 'block') {
                     userMenu.show();
 
@@ -51,9 +49,6 @@
 
             });
             $('.user-menu li:last').addClass('last');
-
-
-
 
         },
         equalHeight:function(){

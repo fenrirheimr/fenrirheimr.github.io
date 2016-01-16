@@ -24,8 +24,10 @@ body {
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
+/* Header */
+
 .header {background: #333332;}
-.header .top-row {height: 64px;}
+.header .top-row {height: 64px; overflow: hidden;}
 .header a:hover,
 .header a:active,
 .header a:focus {text-decoration: none;}
@@ -66,6 +68,18 @@ body {
 .user-wrapper .user-menu li a {color: #000;}
 .user-wrapper .user-menu li a:hover {text-decoration: none; color: #da5857;}
 .user-wrapper .user-menu li.last {border-top: 1px solid #e5e5e5;}
+
+/* Nav */
+
+.navigation {
+    background: #fff; border-bottom: 1px solid #dedddb; height: 71px;
+}
+
+.navigation ul {margin: 0; padding: 0;}
+.navigation ul li {list-style: none; float: left; padding: 24px 15px;}
+.navigation ul li a {color: #000; font-size: 16px;}
+
+/* Main */
 
 /* Footer */
 
