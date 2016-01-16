@@ -76,8 +76,18 @@ body {
 }
 
 .navigation ul {margin: 0; padding: 0;}
-.navigation ul li {list-style: none; float: left; padding: 24px 15px;}
-.navigation ul li a {color: #000; font-size: 16px;}
+.navigation ul li {list-style: none; float: left; padding: 24px 15px; position: relative; margin-right: 10px;}
+.navigation ul li a {color: #000; font-size: 16px; display: inline-block}
+.navigation ul li a:hover {text-decoration: none;}
+.navigation ul li.current {border-bottom: 2px solid #ff6665; padding-bottom: 23px;}
+.navigation ul li sup {
+    color: #fff; background: #ff6665; font-size: 16px; display: inline-block; text-align: center;
+    width: 24px; height: 24px; line-height: 24px; font-family: 'Roboto', sans-serif; font-size: 12px;
+    position: absolute; top: 12px; right: -10px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+}
 
 /* Main */
 
