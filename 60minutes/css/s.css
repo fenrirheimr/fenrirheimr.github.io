@@ -67,7 +67,6 @@ body {
 .user-wrapper .user-menu li a:hover {text-decoration: none; color: #da5857;}
 .user-wrapper .user-menu li.last {border-top: 1px solid #e5e5e5;}
 
-
 /* Footer */
 
 .footer {height: 64px; width: 100%; position: absolute; bottom: 0; background: #333332;}
