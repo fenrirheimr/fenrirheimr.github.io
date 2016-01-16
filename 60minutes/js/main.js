@@ -5,6 +5,7 @@
     window.App = Class.extend({
         init: function(){
             var utils = new window.Utils;
+            utils.userNav();
             utils.validateForm();
             utils.burgerBtn();
             utils.bootstrap();
@@ -26,6 +27,34 @@
             if(isTouchDevice()===false) {
                 $('[data-toggle="tooltip"]').tooltip();
             }
+        },
+        userNav:function(){
+            var userLink = $('.user-wrapper .user');
+            userLink.click(function(e){
+                e.preventDefault();
+                var userMenu = $(this).next('.user-menu');
+
+                //userMenu.toggle();
+
+                if (userMenu.css('display') != 'block') {
+                    userMenu.show();
+
+                    var yourClick = true;
+                    $(document).bind('click.myEvent', function (e) {
+                        if (!yourClick && $(e.target).closest('.user-menu').length == 0) {
+                            userMenu.hide();
+                            $(document).unbind('click.myEvent');
+                        }
+                        yourClick = false;
+                    });
+                }
+
+            });
+            $('.user-menu li:last').addClass('last');
+
+
+
+
         },
         equalHeight:function(){
             var equalBlock = $('[class^=col-] .block');
