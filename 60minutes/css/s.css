@@ -1,0 +1,11 @@
+body {
+    padding: 30px;
+    height: 2000px
+}
+
+.affix + div {
+    margin-top:60px;
+}
+.affix + .page-header {
+    margin-top:100px;
+}
