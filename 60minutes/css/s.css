@@ -1,11 +1,36 @@
-body {
-    padding: 30px;
-    height: 2000px
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
 }
 
-.affix + div {
-    margin-top:60px;
+html {height: 100%; min-width: 1200px;}
+
+body {
+    font: 14px/21px Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    background: #f4f4f4;
 }
-.affix + .page-header {
-    margin-top:100px;
-}
+
+.material-icons {vertical-align: middle;}
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-20 { font-size: 20px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.header {background: #333332;}
+.header .top-row {height: 64px;}
+.header a:hover,
+.header a:active,
+.header a:focus {text-decoration: none;}
+
+.logo {}
+.logo span {color: #fff; display: inline-block; line-height: 64px; letter-spacing: 0.005em; font-size: 18px; margin-left: 11px;}
+
+.service {}
+.service a {font-size: 15px; color: #959595; display: inline-block;/* line-height: 64px;*/ padding: 20px;}
+.service a span {display: inline-block; line-height: 18px;}
+.service a:hover {background: #3a3a39;}
