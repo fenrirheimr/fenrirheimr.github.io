@@ -6,6 +6,7 @@
         init: function(){
             var utils = new window.Utils;
             utils.userNav();
+            utils.supportPanel();
             utils.validateForm();
             utils.burgerBtn();
             utils.bootstrap();
@@ -50,6 +51,10 @@
             });
             $('.user-menu li:last').addClass('last');
 
+        },
+        supportPanel:function(){
+            var equalBlock = $('[class^=col-] .block');
+            equalBlock.matchHeight();
         },
         equalHeight:function(){
             var equalBlock = $('[class^=col-] .block');

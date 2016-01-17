@@ -27,12 +27,13 @@ body {
 /* Header */
 
 .header {background: #333332;}
-.header .top-row {height: 64px; overflow: hidden;}
+.header .top-row {height: 64px;}
 .header a:hover,
 .header a:active,
 .header a:focus {text-decoration: none;}
 
 .logo {}
+.logo img {vertical-align: top;}
 .logo span {color: #fff; display: inline-block; line-height: 64px; letter-spacing: 0.005em; font-size: 18px; margin-left: 11px;}
 .logo span {
     color: #fff; display: inline-block; line-height: 64px; letter-spacing: 0.005em; font-size: 18px;
@@ -51,7 +52,7 @@ body {
 .user-wrapper {display: inline-block; position: relative;}
 .user-wrapper .user-menu {
     display: none; margin: 0; padding: 0; background: #fff;
-    position: absolute; top: 64px; right: 40px; left: 20px;
+    position: absolute; top: 64px; right: 40px; left: 20px; z-index: 9;
     -moz-box-shadow: 0 0 40px 6px rgba(0,0,0,0.16), 0 0 53px 2px rgba(0,0,0,0.24);
     -webkit-box-shadow: 0 0 40px 6px rgba(0,0,0,0.16), 0 0 53px 2px rgba(0,0,0,0.24);
     box-shadow: 0 0 40px 6px rgba(0,0,0,0.16), 0 0 53px 2px rgba(0,0,0,0.24);
