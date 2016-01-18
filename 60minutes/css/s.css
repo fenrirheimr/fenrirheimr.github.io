@@ -209,7 +209,6 @@ body {
     position: fixed;
     width: 304px;
     height: 180px;
-    line-height: 50px;
     background: #f9f9f9;
     z-index: 2;
     border-bottom: 1px solid #ebebeb;
@@ -226,14 +225,6 @@ body {
     -moz-transition: top 0.3s 0.3s;
     transition: top 0.3s 0.3s;
 }
-/*
-@media only screen and (min-width: 768px) {
-    .cd-panel-header {width: 70%;}
-}
-@media only screen and (min-width: 1170px) {
-    .cd-panel-header { width: 50%;}
-}
-*/
 
 .cd-panel-close {
     position: absolute;
@@ -341,14 +332,6 @@ body {
     -moz-transition-delay: 0s;
     transition-delay: 0s;
 }
-/*
-@media only screen and (min-width: 768px) {
-    .cd-panel-container {width: 70%;}
-}
-@media only screen and (min-width: 1170px) {
-    .cd-panel-container {width: 50%;}
-}
-*/
 
 .cd-panel-content {
     position: absolute;
@@ -362,6 +345,11 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+.cd-panel .cd-panel-header .support {padding: 52px 12px 40px 12px;}
+.cd-panel .cd-panel-header .support img {margin-right: 8px;}
+.cd-panel .cd-panel-header .support .contacts {padding-top: 15px;}
+.cd-panel .cd-panel-header .support .contacts span {display: block; font-size: 18px; margin-bottom: 6px;}
+.cd-panel .cd-panel-header .support .contacts a {margin-top: 10px; display: inline-block;}
 /* Main */
 
 /* Footer */
