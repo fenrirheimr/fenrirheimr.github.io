@@ -7,6 +7,7 @@
             var utils = new window.Utils;
             utils.userNav();
             utils.supportPanel();
+            utils.customJS();
             utils.validateForm();
             utils.burgerBtn();
             utils.bootstrap();
@@ -53,16 +54,35 @@
 
         },
         supportPanel:function(){
-            $('.help-link').on('click', function(event){
-                event.preventDefault();
+            $('.help-link').on('click', function(e){
+                e.preventDefault();
                 $('.cd-panel').addClass('is-visible');
             });
-            $('.cd-panel').on('click', function(event){
-                if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) {
+            $('.cd-panel').on('click', function(e){
+                if( $(e.target).is('.cd-panel') || $(e.target).is('.cd-panel-close') ) {
                     $('.cd-panel').removeClass('is-visible');
-                    event.preventDefault();
+                    e.preventDefault();
                 }
             });
+        },
+        customJS:function(){
+            var passInput = $('.login-wrapper input[type="password"]');
+
+            passInput.on("focus", function(){
+                $(this).parents('.fake-input').addClass('focus');
+            });
+
+            passInput.focusout(function(){
+                $(this).parents('.fake-input').removeClass('focus');
+                if( !this.value ) {
+                    $(this).parents('.fake-input').removeClass('notempty');
+                }
+            });
+
+            passInput.keyup(function(){
+                passInput.parents('.fake-input').addClass('notempty');
+            });
+
         },
         equalHeight:function(){
             var equalBlock = $('[class^=col-] .block');
