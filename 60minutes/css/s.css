@@ -26,7 +26,7 @@ body {
 
 /* Header */
 
-.header {background: #333332;}
+.header {background: #333332; position: relative; z-index: 9;}
 .header .top-row {height: 64px;}
 .header a:hover,
 .header a:active,
@@ -293,7 +293,7 @@ body {
     position: fixed;
     width: 304px;
     /*height: 100%;*/
-    top: 0; bottom: 64px;
+    top: 64px; bottom: 64px;
     background: #fff;
     z-index: 1;
     -webkit-transition-property: -webkit-transform;
@@ -339,8 +339,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 244px 10px 0;
-    overflow: auto;
+    padding: 180px 10px 0;
+    /*overflow: auto;*/
     /* smooth scrolling on touch devices */
     -webkit-overflow-scrolling: touch;
 }
@@ -352,6 +352,9 @@ body {
 .cd-panel .cd-panel-header .support .contacts a {margin-top: 10px; display: inline-block;}
 
 
+.cd-panel .cd-panel-content .manual {
+    overflow: auto;position: absolute; top: 180px; bottom: 0; right: 0; left: 0; padding: 0 10px;
+}
 .cd-panel .cd-panel-content h3 {
     font-size: 16px; line-height: 24px; font-weight: bold; color: #000; padding-left: 28px;
     position: relative;
@@ -364,7 +367,7 @@ body {
 .cd-panel .cd-panel-content h3.question:before {background-position: 0 -24px;}
 
 .cd-panel .cd-panel-content ul {margin: 0; padding: 0; border-top: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb}
-.cd-panel .cd-panel-content ul li {margin: 0; padding: 18px 10px; border-top: 1px solid #ebebeb; list-style: none;}
+.cd-panel .cd-panel-content ul li {margin: 0; padding: 14px 10px; border-top: 1px solid #ebebeb; list-style: none;}
 .cd-panel .cd-panel-content ul li:first-child {border-top: none;}
 .cd-panel .cd-panel-content ul li a {color: #000;}
 .cd-panel .cd-panel-content ul li a:hover {text-decoration: none;}
