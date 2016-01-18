@@ -24,6 +24,17 @@ body {
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
+/* Login */
+
+.login-wrapper {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.login-wrapper .logo {display: block; margin: 0 auto 20px;}
+.login-wrapper form {
+    background: #fff; padding: 60px 80px 45px; width: 400px;
+    -moz-box-shadow: 15px 0 81px 6px rgba(0,0,0,0.16), 8px 8px 60px 2px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 15px 0 81px 6px rgba(0,0,0,0.16), 8px 8px 60px 2px rgba(0,0,0,0.24);
+    box-shadow: 15px 0 81px 6px rgba(0,0,0,0.16), 8px 8px 60px 2px rgba(0,0,0,0.24);
+}
+
 /* Header */
 
 .header {background: #333332; position: relative; z-index: 9;}
@@ -143,7 +154,7 @@ body {
 
 @-webkit-keyframes cd-close-1 {
     0%, 50% {
-        -webkit-transform: rotate(0);
+        -webkit-transform: rotate(0deg);
     }
     100% {
         -webkit-transform: rotate(45deg);
@@ -151,7 +162,7 @@ body {
 }
 @-moz-keyframes cd-close-1 {
     0%, 50% {
-        -moz-transform: rotate(0);
+        -moz-transform: rotate(0deg);
     }
     100% {
         -moz-transform: rotate(45deg);
@@ -159,11 +170,11 @@ body {
 }
 @keyframes cd-close-1 {
     0%, 50% {
-        -webkit-transform: rotate(0);
-        -moz-transform: rotate(0);
-        -ms-transform: rotate(0);
-        -o-transform: rotate(0);
-        transform: rotate(0);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
         -webkit-transform: rotate(45deg);
@@ -175,7 +186,7 @@ body {
 }
 @-webkit-keyframes cd-close-2 {
     0%, 50% {
-        -webkit-transform: rotate(0);
+        -webkit-transform: rotate(0deg);
     }
     100% {
         -webkit-transform: rotate(-45deg);
@@ -183,7 +194,7 @@ body {
 }
 @-moz-keyframes cd-close-2 {
     0%, 50% {
-        -moz-transform: rotate(0);
+        -moz-transform: rotate(0deg);
     }
     100% {
         -moz-transform: rotate(-45deg);
@@ -191,11 +202,11 @@ body {
 }
 @keyframes cd-close-2 {
     0%, 50% {
-        -webkit-transform: rotate(0);
-        -moz-transform: rotate(0);
-        -ms-transform: rotate(0);
-        -o-transform: rotate(0);
-        transform: rotate(0);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
         -webkit-transform: rotate(-45deg);
