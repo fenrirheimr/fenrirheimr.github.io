@@ -90,24 +90,24 @@
         },
         validateForm:function(){
 
-            $('#callback form').validate({
+            $('#login-form').validate({
 
                 errorClass: "error",
                 rules : {
-                    uname: {
+                    login: {
                         required : true
                     },
-                    tel: {
+                    pass: {
                         required : true
                     }
                 },
                 highlight: function(element, errorClass, showErrors) {
                     $(element).parent().addClass(errorClass);
-                    $(".error-mess").text('Заполните все поля!');
+                    //$(".error-mess").text('Заполните все поля!');
                 },
                 unhighlight: function(element, errorClass, showErrors) {
                     $(element).parent().removeClass(errorClass);
-                    $(".error-mess").text('');
+                    //$(".error-mess").text('');
                 },
                 errorPlacement: function(error,element) {}
 
