@@ -61,11 +61,13 @@
         supportPanel:function(){
             $('.help-link').on('click', function(e){
                 e.preventDefault();
-                $('.cd-panel').addClass('is-visible');
+                $('.cd-panel').toggleClass('is-visible');
+                $('body').toggleClass('fix');
             });
             $('.cd-panel').on('click', function(e){
                 if( $(e.target).is('.cd-panel') || $(e.target).is('.cd-panel-close') ) {
                     $('.cd-panel').removeClass('is-visible');
+                    $('body').removeClass('fix');
                     e.preventDefault();
                 }
             });
