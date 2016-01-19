@@ -446,6 +446,56 @@ h1 {font-size: 28px; font-weight: bold; margin-top: 35px; margin-bottom: 25px;}
 
 .content {background: #fff; border: 1px solid #ececec; padding-top: 20px; padding-bottom: 20px;}
 
+/* Tabs */
+
+.nav-tabs {border-bottom: none; font-size: 0; margin-bottom: 30px;}
+.nav-tabs > li {margin-bottom: 0;}
+.nav-tabs > li > a {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 14px; margin: 0; border-left: 0; padding: 9px 20px;
+}
+.nav-tabs > li:first-child > a {
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    border-left: 1px solid #ccc;
+}
+
+.nav-tabs > li:last-child > a {
+    -moz-border-radius: 0 3px 3px 0;
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    cursor: default;
+    color: #fff;
+    background-color: #6bb6e5;
+    border: 1px solid #6bb6e5;
+    border-bottom-color: #6bb6e5;
+}
+
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover {
+    background: #fff; color: #da5857; border-color: #ccc;
+}
+
+/* Report */
+
+.report-service {}
+.report-service .more-settings {
+    display: inline-block; border: 1px solid #ccc; padding: 7px 10px 7px 20px; color: #000; margin-right: 15px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+.report-service .more-settings:hover {color: #da5857;}
 /* Footer */
 
 .footer {height: 64px; width: 100%; position: absolute; bottom: 0; background: #333332;}

@@ -87,17 +87,26 @@
         <div class="row content">
             <div class="col-md-12">
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist" id="reports-tab">
-                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                </ul>
+                <div class="clearfix">
+                    <ul class="nav nav-tabs pull-left" role="tablist" id="reports-tab">
+                        <li role="presentation" class="active"><a href="#alltime" aria-controls="alltime" role="tab" data-toggle="tab">За всё время</a></li>
+                        <li role="presentation"><a href="#today" aria-controls="today" role="tab" data-toggle="tab">За сегодня</a></li>
+                        <li role="presentation"><a href="#month" aria-controls="month" role="tab" data-toggle="tab">За месяц</a></li>
+                    </ul>
+
+                    <div class="report-service pull-right">
+
+                        <a href="#" class="more-settings">Еще настройки <i class="material-icons">&#xE313;</i></a>
+                        <a href="#" class="export"><i class="material-icons">&#xE2C4;</i> Экспорт в Excel</a>
+
+                    </div>
+                </div>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="home">1</div>
-                    <div role="tabpanel" class="tab-pane" id="profile">2</div>
-                    <div role="tabpanel" class="tab-pane" id="messages">3</div>
+                    <div role="tabpanel" class="tab-pane active" id="alltime">1</div>
+                    <div role="tabpanel" class="tab-pane" id="today">2</div>
+                    <div role="tabpanel" class="tab-pane" id="month">3</div>
                 </div>
             </div>
         </div>
