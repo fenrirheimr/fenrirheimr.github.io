@@ -27,264 +27,265 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container top-row">
-            <div class="row">
-                <div class="col-md-6 pull-left">
-                    <a href="index.html" class="logo">
-                        <img src="img/logo.png" alt="" title="">
-                        <span>Система управления отелем</span>
-                    </a>
-                </div>
-                <div class="service pull-right">
-                    <div class="user-wrapper">
-                        <a href="#" class="user">
-                            <i class="glyphicon glyphicon-user"></i>
-                            <span>Александр Христорождественский</span>
-                            <i class="material-icons md-20">&#xE313;</i>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container top-row">
+                <div class="row">
+                    <div class="col-md-6 pull-left">
+                        <a href="index.html" class="logo">
+                            <img src="img/logo.png" alt="" title="">
+                            <span>Система управления отелем</span>
                         </a>
-                        <ul class="user-menu">
-                            <li><a href="#">Мой профиль</a></li>
-                            <li><a href="#">Профили администраторов</a></li>
-                            <li><a href="#">Выйти</a></li>
-                        </ul>
-
                     </div>
+                    <div class="service pull-right">
+                        <div class="user-wrapper">
+                            <a href="#" class="user">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span>Александр Христорождественский</span>
+                                <i class="material-icons md-20">&#xE313;</i>
+                            </a>
+                            <ul class="user-menu">
+                                <li><a href="#">Мой профиль</a></li>
+                                <li><a href="#">Профили администраторов</a></li>
+                                <li><a href="#">Выйти</a></li>
+                            </ul>
 
-                    <a href="#" class="help-link">
-                        <i class="material-icons md-18">&#xE887;</i>
-                        <span>Помощь</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+                        </div>
 
-    <nav class="navigation">
-
-        <div class="container">
-            <div class="row">
-                <ul class="col-md-12 clearfix">
-                    <li><a href="checkerboard.html"><strong>Шахматка</strong></a></li>
-                    <li><a href="#"><strong>Заявки и брони</strong></a> <sup>4</sup></li>
-                    <li><a href="#"><strong>Поручения</strong></a></li>
-                    <li class="current"><a href="reports.html">Отчеты</a></li>
-                    <li><a href="#">Акции и скидки</a></li>
-                    <li><a href="#">Категории и цены</a></li>
-                    <li><a href="#">Номера</a></li>
-                </ul>
-            </div>
-        </div>
-
-    </nav>
-
-    <main class="container">
-
-        <div class="row">
-            <h1 class="col-md-12">Отчеты</h1>
-        </div>
-
-        <div class="row content">
-            <div class="col-md-12">
-                <!-- Nav tabs -->
-                <div class="clearfix">
-                    <ul class="nav nav-tabs pull-left" role="tablist" id="reports-tab">
-                        <li role="presentation" class="active"><a href="#alltime" aria-controls="alltime" role="tab" data-toggle="tab">За всё время</a></li>
-                        <li role="presentation"><a href="#today" aria-controls="today" role="tab" data-toggle="tab">За сегодня</a></li>
-                        <li role="presentation"><a href="#month" aria-controls="month" role="tab" data-toggle="tab">За месяц</a></li>
-                    </ul>
-
-                    <div class="report-service pull-right">
-
-                        <a href="#" data-toggle="modal" data-target="#myModal" class="more-settings">Еще настройки <i class="material-icons">&#xE313;</i></a>
-                        <a href="#" class="export"><i class="material-icons">&#xE2C4;</i> Экспорт в Excel</a>
-
+                        <a href="#" class="help-link">
+                            <i class="material-icons md-18">&#xE887;</i>
+                            <span>Помощь</span>
+                        </a>
                     </div>
                 </div>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="alltime">
-                        <table class="table table-striped reports">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <a href="#" class="table-settings"><i class="glyphicon glyphicon-cog"></i></a>
-                                        <form action="#" method="" class="reports-rows">
-                                            <select class="form-control">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                            Строк на странице
-                                        </form>
-                                    </th>
-                                    <th>Номер<br>брони</th>
-                                    <th>Статус</th>
-                                    <th>Категория<br>и номер</th>
-                                    <th>Дата и время<br>заезда и выезда</th>
-                                    <th>Дата<br>создания брони</th>
-                                    <th>Сумма<br>прожив.</th>
-                                    <th>Общая<br>сумма</th>
-                                    <th>Источник</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td>71</td>
-                                    <td><a href="#">Ожидается заселение</a></td>
-                                    <td>Стандарт,<br>110</td>
-                                    <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
-                                    <td>20 сентября 17.10</td>
-                                    <td>175&thinsp;600</td>
-                                    <td>935&thinsp;900</td>
-                                    <td>60 минут.ру</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>72</td>
-                                    <td><a href="#">Гость проживает</a></td>
-                                    <td>Фиолето...<br>323</td>
-                                    <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
-                                    <td>20 сентября 17.10</td>
-                                    <td>5&thinsp;200</td>
-                                    <td>5&thinsp;900</td>
-                                    <td>Островок.ру</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>73</td>
-                                    <td><a href="#">Заявка</a></td>
-                                    <td>Полулюкс,<br>210</td>
-                                    <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
-                                    <td>20 сентября 17.10</td>
-                                    <td>5&thinsp;200</td>
-                                    <td>5&thinsp;900</td>
-                                    <td>60 минут.ру</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>74</td>
-                                    <td><a href="#">Ожидается заселение</a></td>
-                                    <td>Стандарт,<br>110</td>
-                                    <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
-                                    <td>20 сентября 17.10</td>
-                                    <td>175&thinsp;600</td>
-                                    <td>935&thinsp;900</td>
-                                    <td>60 минут.ру</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>75</td>
-                                    <td><a href="#">Гость проживает</a></td>
-                                    <td>Фиолето...<br>323</td>
-                                    <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
-                                    <td>20 сентября 17.10</td>
-                                    <td>5&thinsp;200</td>
-                                    <td>5&thinsp;900</td>
-                                    <td>Островок.ру</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>76</td>
-                                    <td><a href="#">Заявка</a></td>
-                                    <td>Полулюкс,<br>210</td>
-                                    <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
-                                    <td>20 сентября 17.10</td>
-                                    <td>5&thinsp;200</td>
-                                    <td>5&thinsp;900</td>
-                                    <td>60 минут.ру</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>77</td>
-                                    <td><a href="#">Ожидается заселение</a></td>
-                                    <td>Стандарт,<br>110</td>
-                                    <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
-                                    <td>20 сентября 17.10</td>
-                                    <td>175&thinsp;600</td>
-                                    <td>935&thinsp;900</td>
-                                    <td>60 минут.ру</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>78</td>
-                                    <td><a href="#">Гость проживает</a></td>
-                                    <td>Фиолето...<br>323</td>
-                                    <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
-                                    <td>20 сентября 17.10</td>
-                                    <td>5&thinsp;200</td>
-                                    <td>5&thinsp;900</td>
-                                    <td>Островок.ру</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>79</td>
-                                    <td><a href="#">Заявка</a></td>
-                                    <td>Полулюкс,<br>210</td>
-                                    <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
-                                    <td>20 сентября 17.10</td>
-                                    <td>5&thinsp;200</td>
-                                    <td>5&thinsp;900</td>
-                                    <td>60 минут.ру</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <a href="#" class="load-more">Следующие 50</a>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="today">2</div>
-                    <div role="tabpanel" class="tab-pane" id="month">3</div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <div class="cd-panel from-right">
-        <header class="cd-panel-header">
-            <a href="#0" class="cd-panel-close">Close</a>
-            <div class="support clearfix">
-
-                <img src="img/support.png" alt="" title="" class="pull-left">
-
-                <div class="contacts">
-                    <span>+7 (495) 133-65-44</span>
-                    &mdash; с 09.00 до 20.00 мск
-                    <a href="mailto:support@4inn.ru">support@4inn.ru</a>
-                </div>
-
             </div>
         </header>
 
-        <div class="cd-panel-container">
-            <div class="cd-panel-content">
-                <div class="manual">
-                    <h3 class="star">Руководство</h3>
-                    <ul>
-                        <li><a href="#">Для администратора</a></li>
-                        <li><a href="#">Для управляющего</a></li>
-                    </ul>
+        <nav class="navigation">
 
-                    <h3 class="question">Частые вопросы</h3>
-
-                    <ul>
-                        <li><a href="#">Как создать номер?</a></li>
-                        <li><a href="#">Как создать бронь?</a></li>
-                        <li><a href="#">Как редактировать данные гостя?</a></li>
-                        <li><a href="#">Как сформировать отчет в Excel?</a></li>
-                        <li><a href="#">Как добавить администратора?</a></li>
-                        <li><a href="#">Как создать акцию?</a></li>
-                        <li><a href="#">Как выселить гостя?</a></li>
+            <div class="container">
+                <div class="row">
+                    <ul class="col-md-12 clearfix">
+                        <li><a href="checkerboard.html"><strong>Шахматка</strong></a></li>
+                        <li><a href="#"><strong>Заявки и брони</strong></a> <sup>4</sup></li>
+                        <li><a href="#"><strong>Поручения</strong></a></li>
+                        <li class="current"><a href="reports.html">Отчеты</a></li>
+                        <li><a href="#">Акции и скидки</a></li>
+                        <li><a href="#">Категории и цены</a></li>
+                        <li><a href="#">Номера</a></li>
                     </ul>
                 </div>
-            </div> <!-- cd-panel-content -->
-        </div> <!-- cd-panel-container -->
-    </div> <!-- cd-panel -->
+            </div>
 
+        </nav>
+
+        <main class="container">
+
+            <div class="row">
+                <h1 class="col-md-12">Отчеты</h1>
+            </div>
+
+            <div class="row content">
+                <div class="col-md-12">
+                    <!-- Nav tabs -->
+                    <div class="clearfix">
+                        <ul class="nav nav-tabs pull-left" role="tablist" id="reports-tab">
+                            <li role="presentation" class="active"><a href="#alltime" aria-controls="alltime" role="tab" data-toggle="tab">За всё время</a></li>
+                            <li role="presentation"><a href="#today" aria-controls="today" role="tab" data-toggle="tab">За сегодня</a></li>
+                            <li role="presentation"><a href="#month" aria-controls="month" role="tab" data-toggle="tab">За месяц</a></li>
+                        </ul>
+
+                        <div class="report-service pull-right">
+
+                            <a href="#" data-toggle="modal" data-target="#myModal" class="more-settings">Еще настройки <i class="material-icons">&#xE313;</i></a>
+                            <a href="#" class="export"><i class="material-icons">&#xE2C4;</i> Экспорт в Excel</a>
+
+                        </div>
+                    </div>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="alltime">
+                            <table class="table table-striped reports">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <a href="#" class="table-settings"><i class="glyphicon glyphicon-cog"></i></a>
+                                            <form action="#" method="" class="reports-rows">
+                                                <select class="form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                                Строк на странице
+                                            </form>
+                                        </th>
+                                        <th>Номер<br>брони</th>
+                                        <th>Статус</th>
+                                        <th>Категория<br>и номер</th>
+                                        <th>Дата и время<br>заезда и выезда</th>
+                                        <th>Дата<br>создания брони</th>
+                                        <th>Сумма<br>прожив.</th>
+                                        <th>Общая<br>сумма</th>
+                                        <th>Источник</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>71</td>
+                                        <td><a href="#">Ожидается заселение</a></td>
+                                        <td>Стандарт,<br>110</td>
+                                        <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
+                                        <td>20 сентября 17.10</td>
+                                        <td>175&thinsp;600</td>
+                                        <td>935&thinsp;900</td>
+                                        <td>60 минут.ру</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>72</td>
+                                        <td><a href="#">Гость проживает</a></td>
+                                        <td>Фиолето...<br>323</td>
+                                        <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
+                                        <td>20 сентября 17.10</td>
+                                        <td>5&thinsp;200</td>
+                                        <td>5&thinsp;900</td>
+                                        <td>Островок.ру</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>73</td>
+                                        <td><a href="#">Заявка</a></td>
+                                        <td>Полулюкс,<br>210</td>
+                                        <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
+                                        <td>20 сентября 17.10</td>
+                                        <td>5&thinsp;200</td>
+                                        <td>5&thinsp;900</td>
+                                        <td>60 минут.ру</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>74</td>
+                                        <td><a href="#">Ожидается заселение</a></td>
+                                        <td>Стандарт,<br>110</td>
+                                        <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
+                                        <td>20 сентября 17.10</td>
+                                        <td>175&thinsp;600</td>
+                                        <td>935&thinsp;900</td>
+                                        <td>60 минут.ру</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>75</td>
+                                        <td><a href="#">Гость проживает</a></td>
+                                        <td>Фиолето...<br>323</td>
+                                        <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
+                                        <td>20 сентября 17.10</td>
+                                        <td>5&thinsp;200</td>
+                                        <td>5&thinsp;900</td>
+                                        <td>Островок.ру</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>76</td>
+                                        <td><a href="#">Заявка</a></td>
+                                        <td>Полулюкс,<br>210</td>
+                                        <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
+                                        <td>20 сентября 17.10</td>
+                                        <td>5&thinsp;200</td>
+                                        <td>5&thinsp;900</td>
+                                        <td>60 минут.ру</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>77</td>
+                                        <td><a href="#">Ожидается заселение</a></td>
+                                        <td>Стандарт,<br>110</td>
+                                        <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
+                                        <td>20 сентября 17.10</td>
+                                        <td>175&thinsp;600</td>
+                                        <td>935&thinsp;900</td>
+                                        <td>60 минут.ру</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>78</td>
+                                        <td><a href="#">Гость проживает</a></td>
+                                        <td>Фиолето...<br>323</td>
+                                        <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
+                                        <td>20 сентября 17.10</td>
+                                        <td>5&thinsp;200</td>
+                                        <td>5&thinsp;900</td>
+                                        <td>Островок.ру</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>79</td>
+                                        <td><a href="#">Заявка</a></td>
+                                        <td>Полулюкс,<br>210</td>
+                                        <td>20 октября 18.00 &mdash;<br>20 октября 21.00</td>
+                                        <td>20 сентября 17.10</td>
+                                        <td>5&thinsp;200</td>
+                                        <td>5&thinsp;900</td>
+                                        <td>60 минут.ру</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <a href="#" class="load-more">Следующие 50</a>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="today">2</div>
+                        <div role="tabpanel" class="tab-pane" id="month">3</div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <div class="cd-panel from-right">
+            <header class="cd-panel-header">
+                <a href="#0" class="cd-panel-close">Close</a>
+                <div class="support clearfix">
+
+                    <img src="img/support.png" alt="" title="" class="pull-left">
+
+                    <div class="contacts">
+                        <span>+7 (495) 133-65-44</span>
+                        &mdash; с 09.00 до 20.00 мск
+                        <a href="mailto:support@4inn.ru">support@4inn.ru</a>
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div class="manual">
+                        <h3 class="star">Руководство</h3>
+                        <ul>
+                            <li><a href="#">Для администратора</a></li>
+                            <li><a href="#">Для управляющего</a></li>
+                        </ul>
+
+                        <h3 class="question">Частые вопросы</h3>
+
+                        <ul>
+                            <li><a href="#">Как создать номер?</a></li>
+                            <li><a href="#">Как создать бронь?</a></li>
+                            <li><a href="#">Как редактировать данные гостя?</a></li>
+                            <li><a href="#">Как сформировать отчет в Excel?</a></li>
+                            <li><a href="#">Как добавить администратора?</a></li>
+                            <li><a href="#">Как создать акцию?</a></li>
+                            <li><a href="#">Как выселить гостя?</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- cd-panel-content -->
+            </div> <!-- cd-panel-container -->
+        </div> <!-- cd-panel -->
+    </div>
     <footer class="footer">
         <div class="container">
             <p>&copy; 60 минут, 2014-2016</p>
