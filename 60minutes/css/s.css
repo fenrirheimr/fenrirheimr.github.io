@@ -445,7 +445,7 @@ body.fix {overflow: hidden;}
 
 h1 {font-size: 28px; font-weight: bold; margin-top: 35px; margin-bottom: 25px;}
 
-.content {background: #fff; border: 1px solid #ececec; padding-top: 20px; padding-bottom: 20px;}
+.content {background: #fff; border: 1px solid #ececec; padding-top: 20px; padding-bottom: 60px; margin-bottom: 40px;}
 
 /* Tabs */
 
@@ -500,8 +500,25 @@ h1 {font-size: 28px; font-weight: bold; margin-top: 35px; margin-bottom: 25px;}
 
 .table.reports > thead > tr > th {
     border-bottom: 1px solid #e1e2e4; font-weight: normal; color: #949494; vertical-align: top;
+    position: relative;
 }
-.table.reports > thead > tr > th:first-child {padding: 0 0 8px;}
+.table.reports > thead > tr > th {padding: 0 0 8px;}
+
+.load-more {
+    display: block; border: 1px solid #ccc; padding: 7px 10px 7px 20px; text-align: center;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.reports-rows {
+    position: absolute; background: #fff; padding: 10px 20px; z-index: 9; width: 265px; color: #000; display: none;
+    -moz-box-shadow: 0 0 40px 6px rgba(0,0,0,0.16), 0 0 53px 2px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 0 0 40px 6px rgba(0,0,0,0.16), 0 0 53px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 0 40px 6px rgba(0,0,0,0.16), 0 0 53px 2px rgba(0,0,0,0.24);
+}
+.reports-rows select.form-control {display: inline-block; width: auto; margin-right: 10px;}
+
 /* Footer */
 
 .footer {height: 64px; width: 100%; position: absolute; bottom: 0; background: #333332;}

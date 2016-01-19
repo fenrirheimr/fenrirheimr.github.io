@@ -108,7 +108,19 @@
                         <table class="table table-striped reports">
                             <thead>
                                 <tr>
-                                    <th><a href="#"><i class="glyphicon glyphicon-cog"></i></a></th>
+                                    <th>
+                                        <a href="#" class="table-settings"><i class="glyphicon glyphicon-cog"></i></a>
+                                        <form action="#" method="" class="reports-rows">
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            Строк на странице
+                                        </form>
+                                    </th>
                                     <th>Номер<br>брони</th>
                                     <th>Статус</th>
                                     <th>Категория<br>и номер</th>
@@ -221,6 +233,8 @@
                                 </tr>
                             </tbody>
                         </table>
+
+                        <a href="#" class="load-more">Следующие 50</a>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="today">2</div>
                     <div role="tabpanel" class="tab-pane" id="month">3</div>

@@ -90,6 +90,35 @@
                 passInput.parents('.fake-input').addClass('notempty');
             });
 
+            //////////////////////////////////////////////////////////////
+
+            var tabSet = $('.table-settings');
+
+            //tabSet.click(function(e){
+            //    e.preventDefault();
+            //    tabSetForm.toggleClass('hidden visible');
+            //})
+
+            tabSet.click(function(e){
+                e.preventDefault();
+                var tabSetForm = $('.reports-rows');
+
+                if (tabSetForm.css('display') != 'block') {
+                    tabSetForm.show();
+
+                    var yourClick = true;
+                    $(document).bind('click.myEvent', function (e) {
+                        if (!yourClick && $(e.target).closest('.reports-rows').length == 0) {
+                            tabSetForm.hide();
+                            $(document).unbind('click.myEvent');
+                        }
+                        yourClick = false;
+                    });
+                }
+
+            });
+
+
         },
         equalHeight:function(){
             var equalBlock = $('[class^=col-] .block');
