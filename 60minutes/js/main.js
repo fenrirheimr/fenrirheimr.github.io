@@ -29,6 +29,11 @@
             if(isTouchDevice()===false) {
                 $('[data-toggle="tooltip"]').tooltip();
             }
+
+            $('#reports-tab a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show')
+            })
         },
         userNav:function(){
             var userLink = $('.user-wrapper .user');
