@@ -126,6 +126,24 @@ form .form-control:placeholder-shown {color: #999;}
 .btn-info:active:focus,
 .btn-info:focus {background-color: #3d92c4; border-color: #3d92c4; color: #fff;}
 
+.btn-success {background-color: #63c673; border-color: #63c673; color: #fff;}
+.btn-success:hover {background-color: #6dd97e; border-color: #6dd97e; color: #fff;}
+.btn-success:active,
+.btn-success:active:focus,
+.btn-success:focus {background-color: #59a666; border-color: #59a666; color: #fff;}
+
+.btn-danger {background-color: #ff6665; border-color: #ff6665; color: #fff;}
+.btn-danger:hover {background-color: #ff8d7a; border-color: #ff8d7a; color: #fff;}
+.btn-danger:active,
+.btn-danger:active:focus,
+.btn-danger:focus {background-color: #da5857; border-color: #da5857; color: #fff;}
+
+.btn-gray {background-color: #bfbfbf; border-color: #bfbfbf; color: #fff;}
+.btn-gray:hover {background-color: #b0b0b0; border-color: #b0b0b0; color: #fff;}
+.btn-gray:active,
+.btn-gray:active:focus,
+.btn-gray:focus {background-color: #b0b0b0; border-color: #b0b0b0; color: #fff;}
+
 /* Custom checkbox */
 
 /* Base for label styling */
@@ -577,11 +595,12 @@ h3 {font-size: 18px; font-weight: bold;}
 }
 .report-service .more-settings:hover {color: #da5857;}
 
-.table.reports > thead > tr > th {
+.table > thead > tr > th {
     border-bottom: 1px solid #e1e2e4; font-weight: normal; color: #949494; vertical-align: top;
     position: relative;
 }
 .table.reports > thead > tr > th {padding: 0 0 8px;}
+.table.bid > tbody > tr > td:last-child {width: 260px;}
 
 .load-more {
     display: block; border: 1px solid #ccc; padding: 7px 10px 7px 20px; text-align: center;
