@@ -66,11 +66,11 @@
             <div class="container">
                 <div class="row">
                     <ul class="col-md-12 clearfix">
-                        <li class="current"><a href="checkerboard.html"><strong>Шахматка</strong></a></li>
-                        <li><a href="#"><strong>Заявки и брони</strong></a> <sup>4</sup></li>
-                        <li><a href="bid.html"><strong>Поручения</strong></a></li>
+                        <li><a href="checkerboard.html"><strong>Шахматка</strong></a></li>
+                        <li><a href="bid.html"><strong>Заявки и брони</strong></a> <sup>4</sup></li>
+                        <li><a href="#"><strong>Поручения</strong></a></li>
                         <li><a href="reports.html">Отчеты</a></li>
-                        <li><a href="promotions.html">Акции и скидки</a></li>
+                        <li class="current"><a href="promotions.html">Акции и скидки</a></li>
                         <li><a href="#">Категории и цены</a></li>
                         <li><a href="#">Номера</a></li>
                     </ul>
@@ -79,10 +79,18 @@
 
         </nav>
 
-        <main>
+        <main class="container">
 
-            <div class="container">
+            <div class="row">
+                <h2 class="col-md-12">Акции</h2>
 
+                <div class="col-md-12 content"></div>
+            </div>
+
+            <div class="row">
+                <h2 class="col-md-12">Скидки</h2>
+
+                <div class="col-md-12 content"></div>
             </div>
 
         </main>
@@ -134,6 +142,84 @@
         </div>
     </footer>
 
+    <!-- Modal -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
+                <form method="" action="#" class="form-inline">
+                    <div class="modal-body">
+                        <div class="row report-date">
+                            <div class="col-md-6">
+                                <h3>Даты заезда</h3>
+                                <div class="form-group">
+                                    <label for="date1">с</label>
+                                    <input type="text" class="form-control" id="date1" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date2">по</label>
+                                    <input type="text" class="form-control" id="date2" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <h3>Даты создания брони</h3>
+                                <div class="form-group">
+                                    <label for="date3">с</label>
+                                    <input type="text" class="form-control" id="date3" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date4">по</label>
+                                    <input type="text" class="form-control" id="date4" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row reports-filters">
+                            <div class="col-md-12">
+                                <select class="form-control">
+                                    <option>Все статусы</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+
+                                <select class="form-control">
+                                    <option>Все категории номеров</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+
+                                <select class="form-control">
+                                    <option>Все источники</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="test1" value="">
+                                    <label for="test1">сохранить в формате xsl</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-info">Создать отчет</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 <!-- Bootstrap core JavaScript
    ================================================== -->

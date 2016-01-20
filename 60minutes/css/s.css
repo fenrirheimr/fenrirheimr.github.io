@@ -538,12 +538,13 @@ body.fix {overflow: hidden;}
 
 /* Main */
 
-main {padding-bottom: 64px;}
+main {padding-bottom: 104px;}
 
 h1 {font-size: 28px; font-weight: bold; margin-top: 35px; margin-bottom: 25px;}
+h2 {font-size: 28px; font-weight: bold; margin-top: 35px; margin-bottom: 25px;}
 h3 {font-size: 18px; font-weight: bold;}
 
-.content {background: #fff; border: 1px solid #ececec; padding-top: 20px; padding-bottom: 60px; margin-bottom: 40px;}
+.content {background: #fff; border: 1px solid #ececec; padding-top: 20px; padding-bottom: 60px;}
 
 /* Tabs */
 
@@ -600,7 +601,7 @@ h3 {font-size: 18px; font-weight: bold;}
     position: relative;
 }
 .table.reports > thead > tr > th {padding: 0 0 8px;}
-.table.bid > tbody > tr > td:last-child {width: 260px;}
+.table.bid > tbody > tr > td:last-child {width: 264px;}
 
 .load-more {
     display: block; border: 1px solid #ccc; padding: 7px 10px 7px 20px; text-align: center;
