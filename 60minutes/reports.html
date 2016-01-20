@@ -298,13 +298,75 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                    <button type="button" class="btn btn-info">Создать отчет</button>
-                </div>
+                <form method="" action="#" class="form-inline">
+                    <div class="modal-body">
+                        <div class="row report-date">
+                            <div class="col-md-6">
+                                <h3>Даты заезда</h3>
+                                <div class="form-group">
+                                    <label for="date1">с</label>
+                                    <input type="text" class="form-control" id="date1" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date2">по</label>
+                                    <input type="text" class="form-control" id="date2" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <h3>Даты создания брони</h3>
+                                <div class="form-group">
+                                    <label for="date3">с</label>
+                                    <input type="text" class="form-control" id="date3" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date4">по</label>
+                                    <input type="text" class="form-control" id="date4" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row reports-filters">
+                            <div class="col-md-12">
+                                <select class="form-control">
+                                    <option>Все статусы</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+
+                                <select class="form-control">
+                                    <option>Все категории номеров</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+
+                                <select class="form-control">
+                                    <option>Все источники</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="test1" value="">
+                                    <label for="test1">сохранить в формате xsl</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                        <button type="button" class="btn btn-info">Создать отчет</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -322,6 +384,7 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/modernizr.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

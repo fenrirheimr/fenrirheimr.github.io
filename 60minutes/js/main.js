@@ -8,6 +8,7 @@
             utils.userNav();
             utils.supportPanel();
             utils.customJS();
+            utils.datePicker();
             utils.validateForm();
             utils.burgerBtn();
             utils.bootstrap();
@@ -119,6 +120,14 @@
             });
 
 
+        },
+        datePicker:function(){
+            $('.report-date input').datepicker({
+                showOn: "button",
+                buttonImage: "img/calendar.png",
+                buttonImageOnly: true,
+                buttonText: "Выбрать дату"
+            });
         },
         equalHeight:function(){
             var equalBlock = $('[class^=col-] .block');
