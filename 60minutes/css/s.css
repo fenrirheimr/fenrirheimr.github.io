@@ -626,6 +626,9 @@ h3 {font-size: 18px; font-weight: bold;}
 .reports-filters {padding-top: 40px;}
 .reports-filters select {min-width: 190px; margin-right: 6px; margin-bottom: 30px;}
 
+/* Promotions */
+
+h2 + .add {margin-top: 35px;}
 
 /* Modal */
 
