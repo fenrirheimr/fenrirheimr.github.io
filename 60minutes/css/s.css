@@ -113,6 +113,7 @@ form .form-control:placeholder-shown {color: #999;}
     -moz-border-radius: 2px;
     border-radius: 2px;
     outline: none !important;
+    padding: 8px 20px;
 }
 .btn-default {background-color: #fff; border-color: #fff; color: #949494;}
 .btn-default:hover,
@@ -600,8 +601,10 @@ h3 {font-size: 18px; font-weight: bold;}
     border-bottom: 1px solid #e1e2e4; font-weight: normal; color: #949494; vertical-align: top;
     position: relative;
 }
+.table > tbody > tr > td {vertical-align: middle;}
 .table.reports > thead > tr > th {padding: 0 0 8px;}
-.table.bid > tbody > tr > td:last-child {width: 264px;}
+.table.bid {margin-bottom: 0;}
+.table.bid > tbody > tr > td:last-child {width: 296px; text-align: right;}
 
 .load-more {
     display: block; border: 1px solid #ccc; padding: 7px 10px 7px 20px; text-align: center;
@@ -629,6 +632,7 @@ h3 {font-size: 18px; font-weight: bold;}
 /* Promotions */
 
 h2 + .add {margin-top: 35px;}
+.promo-title {font-size: 18px;}
 
 /* Modal */
 
