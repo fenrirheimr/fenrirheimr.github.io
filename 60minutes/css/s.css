@@ -131,7 +131,7 @@ form .form-control:placeholder-shown {color: #999;}
 /* Base for label styling */
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
-    position: absolute;
+    position: absolute !important;
     left: -9999px;
 }
 [type="checkbox"]:not(:checked) + label,
@@ -516,7 +516,7 @@ body.fix {overflow: hidden;}
 .cd-panel .cd-panel-content ul li {margin: 0; padding: 14px 10px; border-top: 1px solid #ebebeb; list-style: none;}
 .cd-panel .cd-panel-content ul li:first-child {border-top: none;}
 .cd-panel .cd-panel-content ul li a {color: #000;}
-.cd-panel .cd-panel-content ul li a:hover {text-decoration: none;}
+.cd-panel .cd-panel-content ul li a:hover {text-decoration: none; color: #da5857;}
 
 /* Main */
 
