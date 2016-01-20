@@ -563,10 +563,9 @@ h3 {font-size: 18px; font-weight: bold;}
 }
 
 .nav-tabs > li > a:focus,
-.nav-tabs > li > a:hover {
-    background: #fff; color: #da5857; border-color: #ccc;
-}
-
+.nav-tabs > li > a:hover {background: #fff; color: #da5857; border-color: #ccc;}
+.nav-tabs > li > a sup {font-size: 12px; color: #9b9b9b;}
+.nav-tabs > li.active > a sup {color: #fff;}
 /* Report */
 
 .report-service {}

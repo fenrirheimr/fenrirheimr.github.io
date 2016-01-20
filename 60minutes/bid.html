@@ -67,9 +67,9 @@
                 <div class="row">
                     <ul class="col-md-12 clearfix">
                         <li><a href="checkerboard.html"><strong>Шахматка</strong></a></li>
-                        <li><a href="bid.html"><strong>Заявки и брони</strong></a> <sup>4</sup></li>
+                        <li class="current"><a href="bid.html"><strong>Заявки и брони</strong></a> <sup>4</sup></li>
                         <li><a href="#"><strong>Поручения</strong></a></li>
-                        <li class="current"><a href="reports.html">Отчеты</a></li>
+                        <li><a href="reports.html">Отчеты</a></li>
                         <li><a href="#">Акции и скидки</a></li>
                         <li><a href="#">Категории и цены</a></li>
                         <li><a href="#">Номера</a></li>
@@ -82,7 +82,7 @@
         <main class="container">
 
             <div class="row">
-                <h1 class="col-md-12">Отчеты</h1>
+                <h1 class="col-md-12">Заявки и брони</h1>
             </div>
 
             <div class="row content">
@@ -90,22 +90,17 @@
                     <!-- Nav tabs -->
                     <div class="clearfix">
                         <ul class="nav nav-tabs pull-left" role="tablist" id="reports-tab">
-                            <li role="presentation" class="active"><a href="#alltime" aria-controls="alltime" role="tab" data-toggle="tab">За всё время</a></li>
-                            <li role="presentation"><a href="#today" aria-controls="today" role="tab" data-toggle="tab">За сегодня</a></li>
-                            <li role="presentation"><a href="#month" aria-controls="month" role="tab" data-toggle="tab">За месяц</a></li>
+                            <li role="presentation" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">Все<sup>12</sup></a></li>
+                            <li role="presentation"><a href="#bid" aria-controls="bid" role="tab" data-toggle="tab">Заявка<sup>6</sup></a></a></li>
+                            <li role="presentation"><a href="#expected" aria-controls="expected" role="tab" data-toggle="tab">Ожидается заселение<sup>1</sup></a></a></li>
+                            <li role="presentation"><a href="#visitor" aria-controls="visitor" role="tab" data-toggle="tab">Гость проживает<sup>5</sup></a></a></li>
                         </ul>
 
-                        <div class="report-service pull-right">
-
-                            <a href="#" data-toggle="modal" data-target="#myModal" class="more-settings">Еще настройки <i class="material-icons">&#xE313;</i></a>
-                            <a href="#" class="export"><i class="material-icons">&#xE2C4;</i> Экспорт в Excel</a>
-
-                        </div>
                     </div>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="alltime">
+                        <div role="tabpanel" class="tab-pane active" id="all">
                             <table class="table table-striped reports">
                                 <thead>
                                     <tr>
@@ -237,8 +232,9 @@
 
                             <a href="#" class="load-more">Следующие 50</a>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="today">2</div>
-                        <div role="tabpanel" class="tab-pane" id="month">3</div>
+                        <div role="tabpanel" class="tab-pane" id="bid">2</div>
+                        <div role="tabpanel" class="tab-pane" id="expected">3</div>
+                        <div role="tabpanel" class="tab-pane" id="visitor">4</div>
                     </div>
                 </div>
             </div>
