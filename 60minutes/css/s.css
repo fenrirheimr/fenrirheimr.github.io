@@ -653,6 +653,12 @@ h2 + .add {margin-top: 35px;}
 
 .modal-footer {background: #f9f9f9; border-top: 1px solid #e5e5e5;}
 
+/* Rooms */
+
+
+.table.rooms > tbody > tr > td {vertical-align: top}
+.table.rooms > tbody > tr > td:last-child {text-align: right}
+
 /* Footer */
 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}
