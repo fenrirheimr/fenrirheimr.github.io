@@ -127,8 +127,7 @@
 
 .wizard > .steps .current a,
 .wizard > .steps .current a:hover,
-.wizard > .steps .current a:active
-{
+.wizard > .steps .current a:active {
     color: #000;
     cursor: default;
 }
@@ -144,29 +143,21 @@
 .wizard > .steps .done a:active {color: #000;}
 
 .atc-item {display: none;}
+.atc-item .checkbox {display: inline-block; margin-right: 10px;}
 
 .wizard > .steps .error a,
 .wizard > .steps .error a:hover,
-.wizard > .steps .error a:active
-{
-    /*background: #ff3111;*/
-    color: #ff3111;
-}
+.wizard > .steps .error a:active {color: #ff3111;}
 
-.wizard > .content
-{
-    /*background: #eee;*/
+.wizard > .content {
     display: block;
     border: 0;
-    /*margin: 0.5em;*/
-    /*min-height: 35em;*/
     overflow: hidden;
     position: relative;
     width: auto;
 }
 
-.wizard.vertical > .content
-{
+.wizard.vertical > .content {
     display: inline;
     float: left;
     margin: 0 2.5% 0.5em 2.5%;

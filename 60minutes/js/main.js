@@ -8,7 +8,7 @@
             utils.userNav();
             utils.supportPanel();
             utils.customJS();
-            utils.datePicker();
+            utils.reportDatePicker();
             utils.actionSetupWizard();
             utils.validateForm();
             utils.burgerBtn();
@@ -74,7 +74,7 @@
                 }
             });
         },
-        datePicker:function(){
+        reportDatePicker:function(){
             $('.report-date input').datepicker({
                 showOn: "button",
                 buttonImage: "img/calendar.png",
@@ -111,8 +111,6 @@
                         buttonText: "Выбрать дату"
                     });
 
-
-
                     var actionTimeRBtn = $('.action-time input[type="radio"]');
                     var actionTimeContent = $('.action-time .action-time-content .atc-item');
 
@@ -126,42 +124,11 @@
                         actionTimeRBtn.eq(i).on('click', function(){
                             if (actionTimeRBtn.eq(i).prop('checked')){
                                 $('.atc-item').hide();
-                                actionTimeRBtn.eq(i).parents('.action-time').find('.atc-item').eq(i).show();
+                                actionTimeRBtn.eq(i).parents('.action-time').find('.atc-item').eq(i).fadeIn(300);
                             }
                         });
                     });
 
-                    //$('#datepicker').datepicker();
-                    //
-                    ////$('.report-date input').datepicker({
-                    ////    showOn: "button",
-                    ////    buttonImage: "img/calendar.png",
-                    ////    buttonImageOnly: true,
-                    ////    buttonText: "Выбрать дату"
-                    ////});
-                    //var datePickerInput = $('.wizard .report-date input');
-                    //
-                    //datePickerInput.each(function(){
-                    //    console.log(datePickerInput)
-                    //})
-                    //
-                    //datePickerInput.click(function(){
-                    //    console.log('бля!')
-                    //    $(this).datepicker("show")
-                    //})
-                    //utils.datePicker();
-                },
-                onContentLoaded: function (event, currentIndex) {
-
-
-                    //datePickerInput.datepicker({
-                    //    showOn: "button",
-                    //    defaultDate: +7,
-                    //    setDate: "10/12/2012",
-                    //    buttonImage: "img/calendar.png",
-                    //    //buttonImageOnly: false,
-                    //    buttonText: "Выбрать дату"
-                    //});
                 },
                 onStepChanging: function (event, currentIndex, newIndex)
                 {
@@ -227,7 +194,6 @@
             });
 
             //////////////////////////////////////////////////////////////
-
 
         },
         equalHeight:function(){
