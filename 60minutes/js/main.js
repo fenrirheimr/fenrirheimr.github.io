@@ -99,8 +99,20 @@
                 headerTag: "h3",
                 bodyTag: "section",
                 transitionEffect: "fade",
+                preloadContent: true,
 
                 onInit: function(event, currentIndex){
+
+                    var datePickerInput = $('.wizard .action-date input');
+                    datePickerInput.datepicker({
+                        showOn: "button",
+                        buttonImage: "img/calendar.png",
+                        buttonImageOnly: true,
+                        buttonText: "Выбрать дату"
+                    });
+
+
+
                     var actionTimeRBtn = $('.action-time input[type="radio"]');
                     var actionTimeContent = $('.action-time .action-time-content .atc-item');
 
@@ -119,7 +131,37 @@
                         });
                     });
 
+                    //$('#datepicker').datepicker();
+                    //
+                    ////$('.report-date input').datepicker({
+                    ////    showOn: "button",
+                    ////    buttonImage: "img/calendar.png",
+                    ////    buttonImageOnly: true,
+                    ////    buttonText: "Выбрать дату"
+                    ////});
+                    //var datePickerInput = $('.wizard .report-date input');
+                    //
+                    //datePickerInput.each(function(){
+                    //    console.log(datePickerInput)
+                    //})
+                    //
+                    //datePickerInput.click(function(){
+                    //    console.log('бля!')
+                    //    $(this).datepicker("show")
+                    //})
+                    //utils.datePicker();
+                },
+                onContentLoaded: function (event, currentIndex) {
 
+
+                    //datePickerInput.datepicker({
+                    //    showOn: "button",
+                    //    defaultDate: +7,
+                    //    setDate: "10/12/2012",
+                    //    buttonImage: "img/calendar.png",
+                    //    //buttonImageOnly: false,
+                    //    buttonText: "Выбрать дату"
+                    //});
                 },
                 onStepChanging: function (event, currentIndex, newIndex)
                 {

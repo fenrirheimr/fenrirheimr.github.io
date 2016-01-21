@@ -204,11 +204,9 @@
     display: block;
     border: 1px solid #ccc;
 }
+.wizard > .content > .body .action-date input {display: inline-block;}
 
-.wizard > .content > .body input[type="checkbox"]
-{
-    display: inline-block;
-}
+.wizard > .content > .body input[type="checkbox"] {display: inline-block;}
 
 .wizard > .content > .body input.error
 {

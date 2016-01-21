@@ -629,12 +629,17 @@ h3 {font-size: 18px; font-weight: bold;}
 .reports-filters {padding-top: 40px;}
 .reports-filters select {min-width: 190px; margin-right: 6px; margin-bottom: 30px;}
 
+
 /* Promotions */
 
 h2 + .add {margin-top: 35px;}
 .promo-title {font-size: 18px;}
-
 .form-group.amount .form-control {width: 60px; display: inline-block; margin-right: 5px;}
+
+.action-date {}
+.action-date {border-bottom: 1px solid #e5e5e5; padding: 25px 0 60px;}
+.action-date .form-control {width: 160px; margin: 0 5px;}
+.action-date .form-group {position: relative;}
 
 /* Modal */
 
