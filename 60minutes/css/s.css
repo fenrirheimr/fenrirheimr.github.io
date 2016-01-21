@@ -634,6 +634,8 @@ h3 {font-size: 18px; font-weight: bold;}
 h2 + .add {margin-top: 35px;}
 .promo-title {font-size: 18px;}
 
+.form-group.amount .form-control {width: 60px; display: inline-block; margin-right: 5px;}
+
 /* Modal */
 
 .modal {text-align: center; padding: 0!important;}

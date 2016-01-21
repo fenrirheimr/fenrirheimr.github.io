@@ -122,11 +122,37 @@
 
             <div class="row">
                 <h2 class="pull-left">Скидки</h2>
-                <a href="#" class="pull-right btn btn-info add"><i class="material-icons">&#xE145;</i> Добавить клиентскую скидку</a>
+                <a href="#add-discounts" data-toggle="modal"  class="pull-right btn btn-info add"><i class="material-icons">&#xE145;</i> Добавить клиентскую скидку</a>
 
                 <div class="col-md-12 content">
 
-
+                    <form action="#" method="">
+                        <table class="table table-striped bid">
+                            <thead>
+                            <tr>
+                                <th class="col-md-2">Название и размер скидки</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><a href="#" class="promo-title">Постоянный клиент</a></td>
+                                <td>5%</td>
+                                <td>
+                                    <button type="submit" class="btn btn-danger">Удалить</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="promo-title">VIP</a></td>
+                                <td>10%</td>
+                                <td>
+                                    <button type="submit" class="btn btn-danger">Удалить</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
 
                 </div>
             </div>
@@ -253,6 +279,31 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
                         <button type="submit" class="btn btn-info">Создать отчет</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="add-discounts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
+                <form method="" action="#">
+                    <div class="modal-body">
+                        <h3>Название клиентской скидки</h3>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="text1" placeholder="">
+                        </div>
+                        <h3>Размер скидки</h3>
+                        <div class="form-group amount">
+                            <input type="text" class="form-control" id="text2" placeholder=""> %
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-info">Добавить скудку</button>
                     </div>
                 </form>
             </div>
