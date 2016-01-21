@@ -74,6 +74,75 @@
                 }
             });
         },
+        datePicker:function(){
+            $('.report-date input').datepicker({
+                showOn: "button",
+                buttonImage: "img/calendar.png",
+                buttonImageOnly: true,
+                buttonText: "Выбрать дату"
+            });
+        },
+        actionSetupWizard:function(){
+
+            var form = $("#example-form").show();
+
+            form.validate({
+                errorPlacement: function errorPlacement(error, element) { element.before(error); },
+                rules: {
+                    confirm: {
+                        equalTo: "#password"
+                    }
+                }
+            });
+
+            form.children("div").steps({
+                headerTag: "h3",
+                bodyTag: "section",
+                transitionEffect: "fade",
+
+                onInit: function(event, currentIndex){
+                    var actionTimeRBtn = $('.action-time input[type="radio"]');
+                    var actionTimeContent = $('.action-time .action-time-content .atc-item');
+
+                    actionTimeRBtn.each(function(i){
+                        var checkedRBtn = actionTimeRBtn.eq(i).prop("checked");
+
+                        if(checkedRBtn) {
+                            actionTimeContent.eq(i).show();
+                        }
+
+                        actionTimeRBtn.eq(i).on('click', function(){
+                            if (actionTimeRBtn.eq(i).prop('checked')){
+                                $('.atc-item').hide();
+                                actionTimeRBtn.eq(i).parents('.action-time').find('.atc-item').eq(i).show();
+                            }
+                        });
+                    });
+
+
+                },
+                onStepChanging: function (event, currentIndex, newIndex)
+                {
+                    if (currentIndex > newIndex){return true}
+
+                    form.validate().settings.ignore = ":disabled,:hidden";
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex) {
+                    $('.done .number').html('<i class="material-icons">&#xE876;</i>');
+                },
+                onFinishing: function (event, currentIndex)
+                {
+                    form.validate().settings.ignore = ":disabled";
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex)
+                {
+                    alert("Submitted!");
+                }
+            });
+
+        },
         customJS:function(){
             var passInput = $('.login-wrapper input[type="password"]');
 
@@ -117,69 +186,6 @@
 
             //////////////////////////////////////////////////////////////
 
-            var actionTimeRBtn = $('.action-time input[type="radio"]');
-            //var actionTimeContent = $('.action-time .action-time-content .atc-item');
-
-            if (actionTimeRBtn.prop( "checked", true )) {
-                $(this).parent().css('background', 'red')
-            }
-
-            //actionTimeRBtn.on('click', function(){
-            //    //actionTimeContent.hide();
-            //    console.log('еблысь!!');
-            //    $(this).addClass('ok')
-            //    if ($(this).prop('checked')){
-            //        $(this).parents('.action-time').find('.atc-item').show();
-            //    }
-            //});
-
-        },
-        datePicker:function(){
-            $('.report-date input').datepicker({
-                showOn: "button",
-                buttonImage: "img/calendar.png",
-                buttonImageOnly: true,
-                buttonText: "Выбрать дату"
-            });
-        },
-        actionSetupWizard:function(){
-
-            var form = $("#example-form").show();
-
-            form.validate({
-                errorPlacement: function errorPlacement(error, element) { element.before(error); },
-                rules: {
-                    confirm: {
-                        equalTo: "#password"
-                    }
-                }
-            });
-
-            form.children("div").steps({
-                headerTag: "h3",
-                bodyTag: "section",
-                transitionEffect: "slideLeft",
-                onStepChanging: function (event, currentIndex, newIndex)
-                {
-                    if (currentIndex > newIndex){return true}
-
-                    form.validate().settings.ignore = ":disabled,:hidden";
-                    return form.valid();
-                },
-                onStepChanged: function (event, currentIndex, priorIndex) {
-                    $('.done .number').html('<i class="material-icons">&#xE876;</i>')
-                    console.log('Change')
-                },
-                onFinishing: function (event, currentIndex)
-                {
-                    form.validate().settings.ignore = ":disabled";
-                    return form.valid();
-                },
-                onFinished: function (event, currentIndex)
-                {
-                    alert("Submitted!");
-                }
-            });
 
         },
         equalHeight:function(){
