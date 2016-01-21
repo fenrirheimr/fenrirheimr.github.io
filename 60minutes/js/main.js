@@ -144,6 +144,8 @@
                 {
                     form.validate().settings.ignore = ":disabled";
                     return form.valid();
+
+                    $('.actions li:last-child a').addClass('btn btn-success');
                 },
                 onFinished: function (event, currentIndex)
                 {
