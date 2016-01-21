@@ -656,8 +656,12 @@ h2 + .add {margin-top: 35px;}
 /* Rooms */
 
 
-.table.rooms > tbody > tr > td {vertical-align: top}
-.table.rooms > tbody > tr > td:last-child {text-align: right}
+.table.rooms > tbody > tr > td {vertical-align: top;}
+.table.rooms > tbody > tr > td:last-child {text-align: right;}
+
+.table.service > tbody > tr > td {vertical-align: top;}
+.table.service ol li {margin-bottom: 20px;}
+.table.service ol span {line-height: 40px; display: inline-block;}
 
 /* Footer */
 
