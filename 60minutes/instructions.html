@@ -69,10 +69,10 @@
                     <ul class="col-md-12 clearfix">
                         <li><a href="checkerboard.html"><strong>Шахматка</strong></a></li>
                         <li><a href="bid.html"><strong>Заявки и брони</strong></a> <sup>4</sup></li>
-                        <li><a href="instructions.html"><strong>Поручения</strong></a></li>
+                        <li><a href="#"><strong>Поручения</strong></a></li>
                         <li><a href="reports.html">Отчеты</a></li>
-                        <li class="current"><a href="promotions.html">Акции и скидки</a></li>
-                        <li><a href="categories.html">Категории и цены</a></li>
+                        <li><a href="promotions.html">Акции и скидки</a></li>
+                        <li class="current"><a href="categories.html">Категории и цены</a></li>
                         <li><a href="#">Номера</a></li>
                     </ul>
                 </div>
@@ -83,37 +83,84 @@
         <main class="container">
 
             <div class="row">
-                <h2 class="pull-left">Акции</h2>
-                <a href="#add-action" data-toggle="modal" class="pull-right btn btn-info add"><i class="material-icons">&#xE145;</i> Добавить акцию</a>
+                <h2 class="pull-left">Категории номеров</h2>
+                <a href="#add-categories" data-toggle="modal" class="pull-right btn btn-info add"><i class="material-icons">&#xE145;</i> Добавить категорию номера</a>
 
                 <div class="col-md-12 content">
 
                     <form action="#" method="">
-                        <table class="table table-striped bid">
+
+
+                        <table class="table table-striped rooms">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col width="250">
+                                <col>
+                                <col>
+                            </colgroup>
                             <thead>
                                 <tr>
-                                    <th>Название акции</th>
-                                    <th>Состояние</th>
+                                    <th>Категория номеров</th>
+                                    <th>1 час</th>
+                                    <th>3 часа</th>
+                                    <th>Ночь</th>
+                                    <th>
+                                        <div class="row">
+                                            <div class="col-md-6">Сутки, 1 местн.</div>
+                                            <div class="col-md-6">Сутки, 2 местн.</div>
+                                        </div>
+                                    </th>
+                                    <th>Минимальный срок проживания</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
+
                                 <tr>
-                                    <td><a href="#" class="promo-title">Летняя</a></td>
-                                    <td></td>
+                                    <td><a href="#edit-category"  data-toggle="modal" class="promo-title">Комфорт</a></td>
+                                    <td>1 400</td>
+                                    <td>3 500</td>
+                                    <td>8 500</td>
                                     <td>
-                                        <button type="submit" class="btn btn-gray">Остановить</button>
+                                        <div class="row">
+                                            <div class="col-md-6">14 600</div>
+                                            <div class="col-md-6">15 600</div>
+                                            <div class="col-md-12 text-muted">
+                                                500 Р за ранний заезд<br>
+                                                800 Р за ранний выезд
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>4 часа,<br> 150 руб.следущий час</td>
+                                    <td>
                                         <button type="submit" class="btn btn-danger">Удалить</button>
                                     </td>
                                 </tr>
+
                                 <tr>
-                                    <td><a href="#" class="promo-title">Ночная</a></td>
-                                    <td>Временно приостановлена</td>
+                                    <td><a href="#" class="promo-title">Люкс</a></td>
+                                    <td>1 400</td>
+                                    <td>3 500</td>
+                                    <td>8 500</td>
                                     <td>
-                                        <button type="submit" class="btn btn-success">Запустить</button>
+                                        <div class="row">
+                                            <div class="col-md-6">14 600</div>
+                                            <div class="col-md-6">15 600</div>
+                                            <div class="col-md-12 text-muted">
+                                                500 Р за ранний заезд<br>
+                                                800 Р за ранний выезд
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>4 часа,<br> 150 руб.следущий час</td>
+                                    <td>
                                         <button type="submit" class="btn btn-danger">Удалить</button>
                                     </td>
                                 </tr>
+
                             </tbody>
                         </table>
                     </form>
@@ -122,8 +169,8 @@
             </div>
 
             <div class="row">
-                <h2 class="pull-left">Скидки</h2>
-                <a href="#add-discounts" data-toggle="modal" class="pull-right btn btn-info add"><i class="material-icons">&#xE145;</i> Добавить клиентскую скидку</a>
+                <h2 class="pull-left">Услуги</h2>
+                <a href="#add-service" data-toggle="modal" class="pull-right btn btn-info add"><i class="material-icons">&#xE145;</i> Добавить услугу</a>
 
                 <div class="col-md-12 content">
 
@@ -131,22 +178,22 @@
                         <table class="table table-striped bid">
                             <thead>
                             <tr>
-                                <th class="col-md-2">Название и размер скидки</th>
-                                <th></th>
+                                <th class="col-md-2">Название услуги</th>
+                                <th>Стоимость</th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td><a href="#" class="promo-title">Постоянный клиент</a></td>
-                                <td>5%</td>
+                                <td><a href="#" class="promo-title">Чай</a></td>
+                                <td>300</td>
                                 <td>
                                     <button type="submit" class="btn btn-danger">Удалить</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td><a href="#" class="promo-title">VIP</a></td>
-                                <td>10%</td>
+                                <td><a href="#" class="promo-title">Кофе</a></td>
+                                <td>400</td>
                                 <td>
                                     <button type="submit" class="btn btn-danger">Удалить</button>
                                 </td>
@@ -157,7 +204,6 @@
 
                 </div>
             </div>
-
         </main>
 
         <div class="cd-panel from-right">
@@ -577,6 +623,209 @@
         </div>
     </div>
 
+    <div class="modal fade" id="add-categories" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
+                <form method="" action="#">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Название новой категории</h3>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="category1" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-inline">
+                                <h3>Минимальный срок бронирования</h3>
+
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>&nbsp; час
+                            </div>
+                        </div>
+                        <fieldset class="room-price">
+                            <h3>Цены</h3>
+                            <div class="row pull-left">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price1" placeholder="">
+                                        <label for="price1">за  1 час</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price2" placeholder="">
+                                        <label for="price2">за  3 часа</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price3" placeholder="">
+                                        <label for="price3">за  ночь</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row pull-left">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price4" placeholder="">
+                                        <label for="price4">за сутки, 1 местный</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price5" placeholder="">
+                                        <label for="price5">за сутки, 2 местный</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price6" placeholder="">
+                                        <label for="price6">за каждый дополнительный час</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price6" placeholder="">
+                                        <label for="price6">за ранний заезд или выезд</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-info">Добавить категорию</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="edit-category" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
+                <form method="" action="#">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Название новой категории</h3>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="category1" placeholder="" value="Комфорт">
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-inline">
+                                <h3>Минимальный срок бронирования</h3>
+
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>&nbsp; час
+                            </div>
+                        </div>
+                        <fieldset class="room-price">
+                            <h3>Цены</h3>
+                            <div class="row pull-left">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price1" placeholder="">
+                                        <label for="price1">за  1 час</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price2" placeholder="">
+                                        <label for="price2">за  3 часа</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price3" placeholder="">
+                                        <label for="price3">за  ночь</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row pull-left">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price4" placeholder="">
+                                        <label for="price4">за сутки, 1 местный</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price5" placeholder="">
+                                        <label for="price5">за сутки, 2 местный</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price6" placeholder="">
+                                        <label for="price6">за каждый дополнительный час</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="price6" placeholder="">
+                                        <label for="price6">за ранний заезд или выезд</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-info">Добавить категорию</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="add-service" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
+                <form method="" action="#">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Название новой услуги</h3>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="category1" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-inline">
+                                <h3>Цена</h3>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="category1" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-info">Добавить услугу</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 <!-- Bootstrap core JavaScript
    ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -592,7 +841,7 @@
 <script src="js/modernizr.js"></script>
 
 <script src="js/jquery.steps.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
