@@ -9,6 +9,7 @@
             utils.supportPanel();
             utils.customJS();
             utils.datePicker();
+            utils.actionSetupWizard();
             utils.validateForm();
             utils.burgerBtn();
             utils.bootstrap();
@@ -95,11 +96,6 @@
 
             var tabSet = $('.table-settings');
 
-            //tabSet.click(function(e){
-            //    e.preventDefault();
-            //    tabSetForm.toggleClass('hidden visible');
-            //})
-
             tabSet.click(function(e){
                 e.preventDefault();
                 var tabSetForm = $('.reports-rows');
@@ -119,6 +115,23 @@
 
             });
 
+            //////////////////////////////////////////////////////////////
+
+            var actionTimeRBtn = $('.action-time input[type="radio"]');
+            //var actionTimeContent = $('.action-time .action-time-content .atc-item');
+
+            if (actionTimeRBtn.prop( "checked", true )) {
+                $(this).parent().css('background', 'red')
+            }
+
+            //actionTimeRBtn.on('click', function(){
+            //    //actionTimeContent.hide();
+            //    console.log('еблысь!!');
+            //    $(this).addClass('ok')
+            //    if ($(this).prop('checked')){
+            //        $(this).parents('.action-time').find('.atc-item').show();
+            //    }
+            //});
 
         },
         datePicker:function(){
@@ -128,6 +141,46 @@
                 buttonImageOnly: true,
                 buttonText: "Выбрать дату"
             });
+        },
+        actionSetupWizard:function(){
+
+            var form = $("#example-form").show();
+
+            form.validate({
+                errorPlacement: function errorPlacement(error, element) { element.before(error); },
+                rules: {
+                    confirm: {
+                        equalTo: "#password"
+                    }
+                }
+            });
+
+            form.children("div").steps({
+                headerTag: "h3",
+                bodyTag: "section",
+                transitionEffect: "slideLeft",
+                onStepChanging: function (event, currentIndex, newIndex)
+                {
+                    if (currentIndex > newIndex){return true}
+
+                    form.validate().settings.ignore = ":disabled,:hidden";
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex) {
+                    $('.done .number').html('<i class="material-icons">&#xE876;</i>')
+                    console.log('Change')
+                },
+                onFinishing: function (event, currentIndex)
+                {
+                    form.validate().settings.ignore = ":disabled";
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex)
+                {
+                    alert("Submitted!");
+                }
+            });
+
         },
         equalHeight:function(){
             var equalBlock = $('[class^=col-] .block');

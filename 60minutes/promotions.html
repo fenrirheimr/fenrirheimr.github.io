@@ -17,6 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <link href="css/steps.css" rel="stylesheet">
     <link href="css/s.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -314,25 +315,60 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
-                <form method="" action="#">
-                    <div class="modal-header">
+                <form id="example-form" action="#">
+                    <div>
+                        <h3>Период действия акции</h3>
+                        <section class="action-time">
+                            <div class="radio-group">
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="action-time" id="optionsRadios1" value="option1">
+                                        Определённые даты
+                                    </label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="action-time" id="optionsRadios2" value="option2">
+                                        Определённые дни недели
+                                    </label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label>
+                                        <input type="radio" name="action-time" id="optionsRadios3" value="option3">
+                                        Определённые часы
+                                    </label>
+                                </div>
+                            </div>
 
-                    </div>
-                    <div class="modal-body">
-                        <h3>Название клиентской скидки</h3>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="text1" placeholder="">
-                        </div>
-                        <h3>Размер скидки</h3>
-                        <div class="form-group amount">
-                            <input type="text" class="form-control" id="text2" placeholder=""> %
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                        <button type="submit" class="btn btn-info">Добавить скудку</button>
+                            <div class="action-time-content">
+                                <div class="atc-item">1</div>
+                                <div class="atc-item">2</div>
+                                <div class="atc-item">3</div>
+                            </div>
+                        </section>
+                        <h3>Установка цен</h3>
+                        <section>
+                            <label for="name">First name *</label>
+                            <input id="name" name="name" type="text" class="required">
+                            <label for="surname">Last name *</label>
+                            <input id="surname" name="surname" type="text" class="required">
+                            <label for="email">Email *</label>
+                            <input id="email" name="email" type="text" class="required email">
+                            <label for="address">Address</label>
+                            <input id="address" name="address" type="text">
+                            <p>(*) Mandatory</p>
+                        </section>
+                        <h3>Готово!</h3>
+                        <section>
+                            <ul>
+                                <li>Foo</li>
+                                <li>Bar</li>
+                                <li>Foobar</li>
+                            </ul>
+                        </section>
                     </div>
                 </form>
+            </div>
             </div>
         </div>
     </div>
