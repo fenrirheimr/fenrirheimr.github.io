@@ -149,6 +149,7 @@
 .day {margin-bottom: 20px;}
 .day:last-child {margin-bottom: 0;}
 .day .form-control {width: 80px; margin: 0 10px;}
+.room-type {display: inline-block; width: 218px;}
 
 .wizard > .steps .error a,
 .wizard > .steps .error a:hover,
