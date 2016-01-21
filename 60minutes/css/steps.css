@@ -150,7 +150,7 @@
 .day:last-child {margin-bottom: 0;}
 .day .form-control {width: 80px; margin: 0 10px;}
 .room-type {display: inline-block; width: 218px; margin-bottom: 20px;}
-.room-price .row {width: 228px;}
+.room-price .row {width: 370px;}
 .room-price .form-control {width: 80px; margin: 0 10px 0 0; display: inline-block;}
 .room-price .form-group label {position: relative; padding-left: 20px; font-size: 15px; color: #949494;}
 .room-price .form-group label:before {
