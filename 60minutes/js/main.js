@@ -14,7 +14,7 @@
             utils.burgerBtn();
             utils.bootstrap();
             utils.equalHeight();
-            utils.phoneMask();
+            utils.timeMask();
             utils.customFile();
             utils.collapseLinkText();
             utils.scrollToYear();
@@ -243,9 +243,9 @@
             };
         },
 
-        phoneMask:function(){
-            var phoneInput = $('input[type="tel"]');
-            phoneInput.mask('+7 (999) 999-9999');
+        timeMask:function(){
+            var timeMask = $('.day .form-control');
+            timeMask.mask("99:99",{placeholder:"00:00"});
         },
         collapseLinkText:function(){
             $('.collapse-link').click(function(){

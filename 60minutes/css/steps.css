@@ -145,6 +145,11 @@
 .atc-item {display: none;}
 .atc-item .checkbox {display: inline-block; margin-right: 10px;}
 
+.radio-group {margin-bottom: 40px;}
+.day {margin-bottom: 20px;}
+.day:last-child {margin-bottom: 0;}
+.day .form-control {width: 80px; margin: 0 10px;}
+
 .wizard > .steps .error a,
 .wizard > .steps .error a:hover,
 .wizard > .steps .error a:active {color: #ff3111;}
@@ -155,6 +160,7 @@
     overflow: hidden;
     position: relative;
     width: auto;
+    padding: 0;
 }
 
 .wizard.vertical > .content {
@@ -190,12 +196,11 @@
     height: 100%;
 }
 
-.wizard > .content > .body input
-{
-    display: block;
+.wizard > .content > .body input {
+    /*display: block;*/
     border: 1px solid #ccc;
 }
-.wizard > .content > .body .action-date input {display: inline-block;}
+/*.wizard > .content > .body .action-date input {display: inline-block;}*/
 
 .wizard > .content > .body input[type="checkbox"] {display: inline-block;}
 
@@ -206,11 +211,7 @@
     color: #8a1f11;
 }
 
-.wizard > .content > .body label
-{
-    display: inline-block;
-    margin-bottom: 0.5em;
-}
+.wizard > .content > .body label {display: inline-block;}
 
 .wizard > .content > .body label.error
 {
@@ -225,6 +226,9 @@
     display: block;
     text-align: right;
     width: 100%;
+    background: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+    padding: 20px 0 40px;
 }
 
 .wizard.vertical > .actions
