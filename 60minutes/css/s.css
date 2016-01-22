@@ -624,7 +624,7 @@ h3 {font-size: 18px; font-weight: bold;}
 .report-date .form-control {width: 160px; margin: 0 5px;}
 .report-date .form-group {position: relative; }
 
-.ui-datepicker-trigger {position: absolute; top: 50%; right: 16px; margin-top: -9px; cursor: pointer;}
+.ui-datepicker-trigger {position: absolute; top: 50%; right: 10px; margin-top: -9px; cursor: pointer;}
 
 .reports-filters {padding-top: 40px;}
 .reports-filters select {min-width: 190px; margin-right: 6px; margin-bottom: 30px;}
@@ -662,6 +662,41 @@ h2 + .add {margin-top: 35px;}
 .table.service > tbody > tr > td {vertical-align: top;}
 .table.service ol li {margin-bottom: 20px;}
 .table.service ol span {line-height: 40px; display: inline-block;}
+
+/* Checkerboard */
+
+.select-date {
+    position: relative;
+    border: 1px solid #ccc;
+    width: 218px;
+    height: 38px;
+}
+.select-date label {display: inline-block; height: 38px; line-height: 38px; margin: 0 0 0 10px; font-weight: normal;}
+.select-date .form-control {
+    display: inline-block;
+    width: 145px;
+    height: 36px;
+    float: right;
+    padding: 7px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.select-date .form-control:focus {
+    border-color: transparent;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
 /* Footer */
 

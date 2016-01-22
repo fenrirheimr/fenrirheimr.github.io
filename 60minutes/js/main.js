@@ -8,7 +8,7 @@
             utils.userNav();
             utils.supportPanel();
             utils.customJS();
-            utils.reportDatePicker();
+            utils.selectDate();
             utils.actionSetupWizard();
             utils.validateForm();
             utils.burgerBtn();
@@ -74,8 +74,15 @@
                 }
             });
         },
-        reportDatePicker:function(){
+        selectDate:function(){
             $('.report-date input').datepicker({
+                showOn: "button",
+                buttonImage: "img/calendar.png",
+                buttonImageOnly: true,
+                buttonText: "Выбрать дату"
+            });
+
+            $('.select-date input').datepicker({
                 showOn: "button",
                 buttonImage: "img/calendar.png",
                 buttonImageOnly: true,
