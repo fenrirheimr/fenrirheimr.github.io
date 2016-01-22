@@ -666,10 +666,7 @@ h2 + .add {margin-top: 35px;}
 /* Checkerboard */
 
 .select-date {
-    position: relative;
-    border: 1px solid #ccc;
-    width: 218px;
-    height: 38px;
+    position: relative; border: 1px solid #ccc; width: 218px; height: 38px;
 }
 .select-date label {display: inline-block; height: 38px; line-height: 38px; margin: 0 0 0 10px; font-weight: normal;}
 .select-date .form-control {
@@ -697,6 +694,101 @@ h2 + .add {margin-top: 35px;}
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
+.legend {margin-top: 20px;}
+.legend .legend-item {color: #000; font-size: 15px; height: 30px; line-height: 30px; margin-left: 40px; display: inline-block;}
+.legend .legend-item:first-child {margin-left: 0;}
+.legend .legend-item .color {
+    display: inline-block; width: 30px; height: 30px; margin-right: 6px; vertical-align: middle;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.legend .legend-item .c1 {background: #febc62;}
+.legend .legend-item .c2 {background: #97cc64;}
+.legend .legend-item .c3 {background: #77b6e7;}
+.legend .legend-item .c4 {background: #c9c9c9;}
+.legend .legend-item .c5 {background: #fff; border: 1px solid #dbdbdb;}
+
+/**/
+
+.scheduler{overflow: hidden; margin: 20px 0 0; border-radius: 15px ; background-color: #fff; position: relative; user-select: none; -moz-user-select: none;}
+.scheduler .header{height: 44px; background-color: #d7e4ff;}
+.scheduler .addresses{float: left; width: 235px; margin-bottom: 25px;}
+.scheduler .addresses .items,
+.scheduler .new-counters .items{margin: 0; padding-top: 26px;border-right: 1px solid #dcdfe6; border-bottom: 1px solid #dcdfe6;}
+.scheduler .addresses .items li{height: 26px; line-height: 26px; border-top: 1px solid #dcdfe6; padding: 0 10px; overflow: hidden; white-space: nowrap;}
+.scheduler .addresses .items li:hover{background-color: #a7c4fe;}
+.scheduler .new-counters{text-align: center; width: 55px; background-color: #becce7; float: left;}
+.scheduler .new-counters .items li{height: 26px; line-height: 26px; border-top: 1px solid #dcdfe6; list-style: none;}
+.scheduler .months-holder{float: left; width:740px ; position: relative; overflow: auto;}
+.scheduler .months-holder .months{ display: table; position: relative; padding-bottom: 25px; }
+.scheduler .months-holder .months .month{display: table-cell; position: relative; /*border-right: 1px solid #abbde4;*/}
+.scheduler .months-holder .months .month:before{height: 100%; width: 1px ; content: ''; margin-left: -1px; background-color: #abbde4; position: absolute;}
+.scheduler .months-holder .months .month .header{position: relative; min-width: 250px; max-width: 100%; text-align: center; line-height: 42px;}
+.scheduler .months-holder .months .table{border-collapse: collapse;}
+.scheduler .months-holder .months .table td{height: 26px; vertical-align: middle; border: 1px solid #dcdfe6; padding: 0;}
+body[data-platform=opera] .scheduler .months-holder .months .table td { height: 27px;  }
+
+.scheduler .months-holder .months .table td:first-child{border-left: none;}
+.scheduler .months-holder .months .table td:before{content: ''; display: block; }
+.scheduler .months-holder .months .table-dates{ margin-bottom: 0px;}
+.scheduler .months-holder .months .table-dates td{width: 47px; text-align: center; border-bottom: none;}
+.scheduler .months-holder .months .table-dates td.today{font-weight: bold;}
+.scheduler .months-holder .months .table-dates td:before{width: 47px; }
+.scheduler .months-holder .months .table-halves td{width: 23px;}
+.scheduler .months-holder .months .table-halves tr.hover td{background-color: #a7c4fe;}
+.scheduler .months-holder .records-holder{width: 100%; position: absolute; top: 70px; /*background-color: rgba(0,155,0,.4); */bottom:0; left: 0;}
+.scheduler .months-holder .record{height: 26px; background-color: #93c301; position: absolute; top: 0; left: 0; margin: 0; cursor: pointer;}
+.scheduler .months-holder .record.trace{box-shadow: 0 0 0 1px #F00;}
+.scheduler .months-holder .record.state1{background-color: #93c301;}
+.scheduler .months-holder .record.state2{background-color: #00ccff;}
+.scheduler .months-holder .record.state3{background-color: #ff004e;}
+.scheduler .months-holder .record.state4{background-color: #ffc000;}
+.scheduler .months-holder .record.splitter:before{position: absolute; height: 100%; width: 4px; border: solid #000; border-width: 1px 0 1px 2px; content: ''; top: -1px; left: -1px;}
+.scheduler .months-holder .record.splitter:after{position: absolute; height: 100%; width: 4px; border: solid #000; border-width: 1px 0; content: ''; top: -1px; left: -5px;}
+.scheduler .months-holder .record.ui-draggable-dragging{opacity: .4;filter: alpha(opacity=40); box-shadow: 0 0 0 1px #F00;}
+.scheduler .months-holder .record li{float: left; width: 23px; height: 26px; border-left: 1px solid #dcdfe6;list-style: none;}
+.scheduler .months-holder .record li:first-child{border: none; }
+.scheduler .months-holder .record li.collision{background-color: #000;}
+.scheduler .months-holder .today-block{position: absolute; border: 1px solid #eecf73; background-color: rgba(255,235,139,.5); -pie-background: rgba(255,235,139,.5); width: 47px; height: 100%; top: 44px; left: 0; behavior: url(/bitrix/templates/innhome/js/PIE.htc);}
+.scheduler .months-holder .scroll-block{position: absolute; width: 1px; height:1px; }
+.scheduler .scroll{position: absolute; top: 20px;  padding: 5px; cursor: pointer;}
+.scheduler .scroll.prev{left: 300px;}
+.scheduler .scroll.next{right: 25px;}
+
+
+.jspContainer{  overflow: hidden;  position: relative;}
+.jspPane{  position: absolute;}
+.jspVerticalBar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 100%;
+}
+
+.jspHorizontalBar{  position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+}
+.jspHorizontalBar .jspCap{  float: left;}
+.jspTrack{  background: #d9d9d9;  position: relative;}
+.jspDrag{  background: #bbd;  position: relative;  top: 0;  left: 0;  cursor: pointer;}
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag{  float: left;  height: 100%;}
+.jspHorizontalBar .jspDrag{
+    background: #0848c6;  position: relative;  top: 0;  left: 0;  cursor: pointer; border-radius: 5px;
+    background-image: linear-gradient(bottom, #0847C6 0%, #6497FE 100%);
+    background-image: -o-linear-gradient(bottom, #0847C6 0%, #6497FE 100%);
+    background-image: -moz-linear-gradient(bottom, #0847C6 0%, #6497FE 100%);
+    background-image: -webkit-linear-gradient(bottom, #0847C6 0%, #6497FE 100%);
+    background-image: -ms-linear-gradient(bottom, #0847C6 0%, #6497FE 100%);
+}
+.jspArrow,
+.jspCorner,
+.jspCap{ display: none;}
 
 /* Footer */
 
