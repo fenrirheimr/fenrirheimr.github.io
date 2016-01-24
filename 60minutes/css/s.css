@@ -710,7 +710,7 @@ h2 + .add {margin-top: 35px;}
 .legend .legend-item .c4 {background: #c9c9c9;}
 .legend .legend-item .c5 {background: #fff; border: 1px solid #dbdbdb;}
 
-/**/
+/*
 
 .scheduler{overflow: hidden; margin: 20px 0 0; border-radius: 15px ; background-color: #fff; position: relative; user-select: none; -moz-user-select: none;}
 .scheduler .header{height: 44px; background-color: #d7e4ff;}
@@ -723,7 +723,7 @@ h2 + .add {margin-top: 35px;}
 .scheduler .new-counters .items li{height: 26px; line-height: 26px; border-top: 1px solid #dcdfe6; list-style: none;}
 .scheduler .months-holder{float: left; width:740px ; position: relative; overflow: auto;}
 .scheduler .months-holder .months{ display: table; position: relative; padding-bottom: 25px; }
-.scheduler .months-holder .months .month{display: table-cell; position: relative; /*border-right: 1px solid #abbde4;*/}
+.scheduler .months-holder .months .month{display: table-cell; position: relative;}
 .scheduler .months-holder .months .month:before{height: 100%; width: 1px ; content: ''; margin-left: -1px; background-color: #abbde4; position: absolute;}
 .scheduler .months-holder .months .month .header{position: relative; min-width: 250px; max-width: 100%; text-align: center; line-height: 42px;}
 .scheduler .months-holder .months .table{border-collapse: collapse;}
@@ -732,13 +732,13 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 
 .scheduler .months-holder .months .table td:first-child{border-left: none;}
 .scheduler .months-holder .months .table td:before{content: ''; display: block; }
-.scheduler .months-holder .months .table-dates{ margin-bottom: 0px;}
+.scheduler .months-holder .months .table-dates{ margin-bottom: 0;}
 .scheduler .months-holder .months .table-dates td{width: 47px; text-align: center; border-bottom: none;}
 .scheduler .months-holder .months .table-dates td.today{font-weight: bold;}
 .scheduler .months-holder .months .table-dates td:before{width: 47px; }
 .scheduler .months-holder .months .table-halves td{width: 23px;}
 .scheduler .months-holder .months .table-halves tr.hover td{background-color: #a7c4fe;}
-.scheduler .months-holder .records-holder{width: 100%; position: absolute; top: 70px; /*background-color: rgba(0,155,0,.4); */bottom:0; left: 0;}
+.scheduler .months-holder .records-holder{width: 100%; position: absolute; top: 70px; bottom:0; left: 0;}
 .scheduler .months-holder .record{height: 26px; background-color: #93c301; position: absolute; top: 0; left: 0; margin: 0; cursor: pointer;}
 .scheduler .months-holder .record.trace{box-shadow: 0 0 0 1px #F00;}
 .scheduler .months-holder .record.state1{background-color: #93c301;}
@@ -789,6 +789,14 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .jspArrow,
 .jspCorner,
 .jspCap{ display: none;}
+*/
+
+.scheduler {}
+.scheduler .rooms-wrapper {}
+.scheduler .rooms-wrapper .collapsed {}
+.scheduler .rooms-wrapper .caption {}
+.scheduler .rooms-wrapper .rooms {}
+
 
 /* Footer */
 
