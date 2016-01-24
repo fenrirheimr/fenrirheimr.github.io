@@ -212,7 +212,28 @@
                 e.preventDefault();
                 $(this).parent().toggleClass('current');
                 $(this).next().slideToggle();
-                //$(this).parent().siblings().find(subMenu).slideUp();
+            });
+
+            //////////////////////////////////////////////////////////////
+
+            var view = $(".days");
+            var move = "50px";
+            var sliderLimit = -750;
+
+            $("#rightArrow").click(function(){
+                console.log('еблысь вправо!')
+
+                var currentPosition = parseInt(view.css("left"));
+                if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 400})
+
+            });
+
+            $("#leftArrow").click(function(){
+                console.log('еблысь влево!')
+
+                var currentPosition = parseInt(view.css("left"));
+                if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 400})
+
             });
 
         },
@@ -231,9 +252,9 @@
             if (navigator.userAgent.indexOf("Opera") != -1) document.getElementsByTagName('body')[0].setAttribute('data-platform', 'opera')
 
             $(function() {
-                $.ajaxSetup({
+                /*$.ajaxSetup({
                     mimeType: "text/html; charset=windows-1251"
-                })
+                })*/
 
                 var scheduler = $('#scheduler');
                 var recordsHolder = $('.records-holder');
@@ -250,10 +271,10 @@
                 //подсвечиваем строки при наведении на адресс
                 addresses.hover(
                     function(){
-                        scheduler.find('tr[data-addr="'+$(this).attr('data-addr')+'"]').addClass('hover');
+                        scheduler.find('tr[data-room="'+$(this).attr('data-room')+'"]').addClass('hover');
                     },
                     function(){
-                        scheduler.find('tr[data-addr="'+$(this).attr('data-addr')+'"]').removeClass('hover');
+                        scheduler.find('tr[data-room="'+$(this).attr('data-room')+'"]').removeClass('hover');
                     }
                 );
 
@@ -331,7 +352,7 @@
                             // ui.helper
                             // 	.attr('data-half', td.attr('data-half'))
                             // 	.attr('data-day-no', td.attr('data-day-no'))
-                            // 	.attr('data-addr', td.parent().attr('data-addr'))
+                            // 	.attr('data-room', td.parent().attr('data-room'))
                             // 	.attr('data-month-no', td.parents('.month').attr('data-month-no'));
                             ui.helper.addClass('state4').removeClass('state1 state2 state3')
                         }
@@ -396,27 +417,27 @@
                     recordsHolder.height($('.table-halves').outerHeight()).css({'bottom': 'auto'})
                     todayBlock.height($('.table-halves').height()+$('.table-dates').height()).offset({left: scheduler.find('td.today').offset().left});
 
-                    monthsHolder.jScrollPane({
-                        horizontalGutter : 0,
-                        verticalGutter : 0
-                    }).bind('jsp-scroll-x',function(event, scrollPositionX, isAtLeft, isAtRight){
-                        headersWidth()
-                    });
-
-                    scrollApi = monthsHolder.data('jsp');
-
-                    scrollApi.scrollByX(todayBlock.position().left, 300)
-
-                    scrolls.click(function(){
-                        if($(this).hasClass('next')) scrollApi.scrollByX(monthsHolder.width(), 300)
-                        else scrollApi.scrollByX(-monthsHolder.width(), 300)
-                    });
+                    //monthsHolder.jScrollPane({
+                    //    horizontalGutter : 0,
+                    //    verticalGutter : 0
+                    //}).bind('jsp-scroll-x',function(event, scrollPositionX, isAtLeft, isAtRight){
+                    //    headersWidth()
+                    //});
+                    //
+                    //scrollApi = monthsHolder.data('jsp');
+                    //
+                    //scrollApi.scrollByX(todayBlock.position().left, 300)
+                    //
+                    //scrolls.click(function(){
+                    //    if($(this).hasClass('next')) scrollApi.scrollByX(monthsHolder.width(), 300)
+                    //    else scrollApi.scrollByX(-monthsHolder.width(), 300)
+                    //});
 
                     records.each(function(){
                         var r = $(this);
                         var correction = 1;
                         var td = monthsBlock.find('.month[data-month-no="'+r.attr('data-month-no')+'"]')
-                            .find('.addr[data-addr="'+r.attr('data-addr')+'"]')
+                            .find('.addr[data-room="'+r.attr('data-room')+'"]')
                             .find('td[data-day-no="'+r.attr('data-day-no')+'"][data-half="'+r.attr('data-half')+'"]')
                         r.offset({left: td.offset().left, top: td.offset().top+1})
                     });

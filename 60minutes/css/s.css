@@ -25,7 +25,7 @@ a {color: #519cc8;}
 a:hover {color: #da5857; text-decoration: none;}
 a:focus {text-decoration: none;}
 
-.container {max-width: 1280px;}
+.container {max-width: 1280px; min-width: 970px;}
 
 .material-icons {vertical-align: middle;}
 .material-icons.md-18 { font-size: 18px; }
@@ -712,17 +712,15 @@ h2 + .add {margin-top: 35px;}
 
 /**/
 
-.scheduler{overflow: hidden; margin: 20px 0 0; border-radius: 15px ; background-color: #fff; position: relative; user-select: none; -moz-user-select: none;}
+.scheduler{overflow: hidden; background-color: #fff; position: relative; user-select: none; -moz-user-select: none;}
 .scheduler .header{height: 44px; background-color: #d7e4ff;}
-.scheduler .addresses{float: left; width: 235px; margin-bottom: 25px;}
-.scheduler .addresses .items,
-.scheduler .new-counters .items{margin: 0; padding-top: 26px;border-right: 1px solid #dcdfe6; border-bottom: 1px solid #dcdfe6;}
+.scheduler .addresses{margin-bottom: 25px;}
+.scheduler .addresses .items {margin: 0; padding: 0; padding-top: 26px;border-right: 1px solid #dcdfe6; border-bottom: 1px solid #dcdfe6;}
 .scheduler .addresses .items li{height: 26px; line-height: 26px; border-top: 1px solid #dcdfe6; padding: 0 10px; overflow: hidden; white-space: nowrap;}
 .scheduler .addresses .items li:hover{background-color: #a7c4fe;}
-.scheduler .new-counters{text-align: center; width: 55px; background-color: #becce7; float: left;}
-.scheduler .new-counters .items li{height: 26px; line-height: 26px; border-top: 1px solid #dcdfe6; list-style: none;}
-.scheduler .months-holder{float: left; width:740px ; position: relative; overflow: auto;}
-.scheduler .months-holder .months{ display: table; position: relative; padding-bottom: 25px; }
+
+.scheduler .months-holder{position: relative; overflow: auto; overflow-y: hidden}
+.scheduler .months-holder .months{ display: table; position: relative;}
 .scheduler .months-holder .months .month{display: table-cell; position: relative;}
 .scheduler .months-holder .months .month:before{height: 100%; width: 1px ; content: ''; margin-left: -1px; background-color: #abbde4; position: absolute;}
 .scheduler .months-holder .months .month .header{position: relative; min-width: 250px; max-width: 100%; text-align: center; line-height: 42px;}
@@ -789,13 +787,40 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .jspArrow,
 .jspCorner,
 .jspCap{ display: none;}
-
+/**/
 
 .scheduler {}
 .scheduler .rooms-wrapper {}
 .scheduler .rooms-wrapper .collapsed {}
-.scheduler .rooms-wrapper .caption {}
-.scheduler .rooms-wrapper .rooms {margin: 0; padding: 0;}
+.scheduler .rooms-wrapper .caption {
+    display: block; background: #f9f9f9; font-size: 18px; color: #519cc8; height: 50px; line-height: 48px;
+    padding: 0 20px; border: 1px solid #e5e5e5;
+}
+.scheduler .rooms-wrapper .caption i {color: #aeaeae;}
+.scheduler .rooms-wrapper .rooms {margin: 0; padding: 0; width: 165px;}
+.scheduler .rooms-wrapper .rooms li {
+    list-style: none; color: #000; font-size: 15px; height: 50px; line-height: 48px;
+    padding: 0 20px; border: 1px solid #e5e5e5; border-bottom: 0;
+}
+.scheduler .rooms-wrapper .rooms li:first-child {border-top: 0;}
+.scheduler .rooms-wrapper .collapsed:last-child .rooms li:last-child {border-bottom: 1px solid #e5e5e5;}
+
+.scheduler .rooms-wrapper .schedule-wrapper {overflow: hidden; overflow-x: auto;}
+.scheduler .rooms-wrapper .table-wrapper {
+    position: relative; overflow: hidden; overflow-y: hidden;
+    top: 0;
+}
+.scheduler .rooms-wrapper .table-wrapper .days-holder {width: 100%;}
+.scheduler .rooms-wrapper .days {border-collapse: collapse; position:relative; left:0; width: 100%;}
+.scheduler .rooms-wrapper .days tr {}
+/*.scheduler .rooms-wrapper .days tr td {height: 52px;}*/
+.scheduler .rooms-wrapper .days tr td div {
+    border-right: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; width: 50px; height: 50px;
+}
+.scheduler .rooms-wrapper .days tr:first-child td div {border-top: none;}
+.scheduler .rooms-wrapper .collapsed:last-child .days tr:last-child td div {border-bottom: 1px solid #e5e5e5;}
+
+/*.scheduler .rooms-wrapper .days tr td:before {content: ''; display: block; width: 50px;}*/
 
 
 /* Footer */
@@ -803,3 +828,24 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}
 .footer .container {line-height: 64px;}
 .footer .container p {color: #959595; font-size: 15px; margin-bottom: 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
