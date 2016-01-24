@@ -710,7 +710,7 @@ h2 + .add {margin-top: 35px;}
 .legend .legend-item .c4 {background: #c9c9c9;}
 .legend .legend-item .c5 {background: #fff; border: 1px solid #dbdbdb;}
 
-/*
+/**/
 
 .scheduler{overflow: hidden; margin: 20px 0 0; border-radius: 15px ; background-color: #fff; position: relative; user-select: none; -moz-user-select: none;}
 .scheduler .header{height: 44px; background-color: #d7e4ff;}
@@ -789,13 +789,13 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .jspArrow,
 .jspCorner,
 .jspCap{ display: none;}
-*/
+
 
 .scheduler {}
 .scheduler .rooms-wrapper {}
 .scheduler .rooms-wrapper .collapsed {}
 .scheduler .rooms-wrapper .caption {}
-.scheduler .rooms-wrapper .rooms {}
+.scheduler .rooms-wrapper .rooms {margin: 0; padding: 0;}
 
 
 /* Footer */
