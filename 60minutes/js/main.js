@@ -216,39 +216,42 @@
 
             //////////////////////////////////////////////////////////////
 
-            $('.scheduler-arrow.right').click(function() {
-                event.preventDefault();
-                $('.days').animate({
-                    marginLeft: "-=150px"
-                }, "fast");
-            });
-            $('.scheduler-arrow.left').click(function() {
-                event.preventDefault();
-                $('.days').animate({
-                    marginLeft: "+=150px"
-                }, "fast");
-            });
+            //$('.scheduler-arrow.right').click(function() {
+            //    event.preventDefault();
+            //    $('.days').animate({
+            //        marginLeft: "-=150px"
+            //    }, "fast");
+            //});
+            //$('.scheduler-arrow.left').click(function() {
+            //    event.preventDefault();
+            //    $('.days').animate({
+            //        marginLeft: "+=150px"
+            //    }, "fast");
+            //});
 
 
-            //var view = $(".days");
-            //var move = "50px";
-            //var sliderLimit = -500;
-            //
-            //$(".scheduler-arrow.right").click(function(){
-            //    console.log('еблысь вправо!')
-            //
-            //    var currentPosition = parseInt(view.css("left"));
-            //    if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 200})
-            //
-            //});
-            //
-            //$(".scheduler-arrow.left").click(function(){
-            //    console.log('еблысь влево!')
-            //
-            //    var currentPosition = parseInt(view.css("left"));
-            //    if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 200})
-            //
-            //});
+            var view = $(".days");
+            var move = "100px";
+            var sliderWrapper = view.parent().width();
+            var sliderLimit = -((view.position().left + view.width())-sliderWrapper);
+
+            console.log(sliderLimit)
+
+            $(".scheduler-arrow.right").click(function(){
+                console.log('еблысь вправо!')
+
+                var currentPosition = parseInt(view.css("left"));
+                if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 200})
+
+            });
+
+            $(".scheduler-arrow.left").click(function(){
+                console.log('еблысь влево!')
+
+                var currentPosition = parseInt(view.css("left"));
+                if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 200})
+
+            });
 
         },
         scheduler:function(){
