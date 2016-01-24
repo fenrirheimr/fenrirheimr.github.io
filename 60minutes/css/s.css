@@ -117,32 +117,38 @@ form .form-control:placeholder-shown {color: #999;}
 }
 .btn-default {background-color: #fff; border-color: #fff; color: #949494;}
 .btn-default:hover,
-.btn-default:active:focus,
 .btn-default:active,
-.btn-default:focus {background-color: #eaeaea; border-color: #eaeaea; color: #949494}
+.btn-default:focus,
+.btn-default:active:focus,
+.btn-default:active:hover {background-color: #eaeaea; border-color: #eaeaea; color: #949494}
+
 
 .btn-info {background-color: #59abdb; border-color: #59abdb; color: #fff;}
 .btn-info:hover {background-color: #5cb9f0; border-color: #5cb9f0; color: #fff;}
 .btn-info:active,
 .btn-info:active:focus,
-.btn-info:focus {background-color: #3d92c4; border-color: #3d92c4; color: #fff;}
+.btn-info:focus,
+.btn-info:active:hover {background-color: #3d92c4; border-color: #3d92c4; color: #fff;}
 
 .btn-success {background-color: #63c673; border-color: #63c673; color: #fff;}
 .btn-success:hover {background-color: #6dd97e; border-color: #6dd97e; color: #fff;}
 .btn-success:active,
 .btn-success:active:focus,
+.btn-success:active:hover,
 .btn-success:focus {background-color: #59a666; border-color: #59a666; color: #fff;}
 
 .btn-danger {background-color: #ff6665; border-color: #ff6665; color: #fff;}
 .btn-danger:hover {background-color: #ff8d7a; border-color: #ff8d7a; color: #fff;}
 .btn-danger:active,
 .btn-danger:active:focus,
+.btn-danger:active:hover,
 .btn-danger:focus {background-color: #da5857; border-color: #da5857; color: #fff;}
 
 .btn-gray {background-color: #bfbfbf; border-color: #bfbfbf; color: #fff;}
 .btn-gray:hover {background-color: #b0b0b0; border-color: #b0b0b0; color: #fff;}
 .btn-gray:active,
 .btn-gray:active:focus,
+.btn-gray:active:hover,
 .btn-gray:focus {background-color: #b0b0b0; border-color: #b0b0b0; color: #fff;}
 
 /* Custom checkbox */
@@ -820,7 +826,13 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .scheduler .rooms-wrapper .days tr:first-child td div {border-top: none;}
 .scheduler .rooms-wrapper .collapsed:last-child .days tr:last-child td div {border-bottom: 1px solid #e5e5e5;}
 
-/*.scheduler .rooms-wrapper .days tr td:before {content: ''; display: block; width: 50px;}*/
+.scheduler-header {position: relative; border: 1px solid #e5e5e5; height: 50px;}
+.scheduler-header .scheduler-arrow {
+    position: absolute; top: 0; display: block; width: 48px; height: 48px; padding: 11px 0; color: #000;
+}
+.scheduler-header .scheduler-arrow.left {left: 0;}
+.scheduler-header .scheduler-arrow.right {right: 0;}
+    /*.scheduler .rooms-wrapper .days tr td:before {content: ''; display: block; width: 50px;}*/
 
 
 /* Footer */
