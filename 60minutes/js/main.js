@@ -230,55 +230,38 @@
             //});
 
 
-            //var view = $(".days");
-            //var move = "100px";
-            //var sliderWrapper = view.parent().width();
-            //var sliderLimit = -((view.position().left + view.width())-sliderWrapper);
-            //
-            //console.log(sliderLimit)
-            //
-            //$(".scheduler-arrow.right").click(function(){
-            //    console.log('еблысь вправо!')
-            //
-            //    var currentPosition = parseInt(view.css("left"));
-            //    if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 200})
-            //
-            //});
-            //
-            //$(".scheduler-arrow.left").click(function(){
-            //    console.log('еблысь влево!')
-            //
-            //    var currentPosition = parseInt(view.css("left"));
-            //    if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 200})
-            //
-            //});
+            function slideMonth() {
+                var view = $(".days");
+                var holder = view.parent().parent().width();
+                var holderWrapper = view.parent().parent().parent().width();
+                var sliderLimit = -(holder-holderWrapper);
 
-            /*var $item = $('div.item'), //Cache your DOM selector
-                visible = 2, //Set the number of items that will be visible
-                index = 0, //Starting index
-                endIndex = ( $item.length / visible ) - 1; //End index
+                var move = "50px";
 
-            $('div#arrowR').click(function(){
-                if(index < endIndex ){
-                    index++;
-                    $item.animate({'left':'-=300px'});
-                }
-            });
 
-            $('div#arrowL').click(function(){
-                if(index > 0){
-                    index--;
-                    $item.animate({'left':'+=300px'});
-                }
-            });*/
+                $(".scheduler-arrow.right").click(function(){
+                    console.log('еблысь вправо!')
 
+                    var currentPosition = parseInt(view.css("left"));
+                    if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 200})
+
+                });
+
+                $(".scheduler-arrow.left").click(function(){
+                    console.log('еблысь влево!')
+
+                    var currentPosition = parseInt(view.css("left"));
+                    if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 200})
+
+                });
+            }
+
+            slideMonth();
 
             //////////////////////////////////////////////////////////////////////////
 
             var headers = $('.scheduler-header .month-title');
             var monthsHolder = $('.rooms-wrapper .table-wrapper .month-holder');
-
-            console.log(monthsHolder)
 
             function headersWidth(){
                 headers.each(function(){
