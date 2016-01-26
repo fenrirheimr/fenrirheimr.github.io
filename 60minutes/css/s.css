@@ -846,10 +846,16 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .days-name-wrapper .week {}
 .days-name-wrapper .week .days {border-collapse: collapse; position:relative; left:0; width: 100%;}
 .days-name-wrapper .week .days tr {}
-.days-name-wrapper .week .days tr td div {
+.days-name-wrapper .week .days tr td > div {
     border-right: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; width: 50px; height: 50px;
+    font-size: 15px; color: #3f3f3f; line-height: 18px; padding: 8px;
 }
-.days-name-wrapper .week .days tr td:first-child div {border-left: 1px solid #e5e5e5;}
+.days-name-wrapper .week .days tr td:first-child > div {border-left: 1px solid #e5e5e5;}
+
+.days-name-wrapper .week .days tr td > div[data-wnd="wnd"] {
+    color: #ff6665; background: #fff7ed;
+}
+
 /* Footer */
 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}
