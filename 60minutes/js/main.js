@@ -10,7 +10,7 @@
             utils.customJS();
             utils.selectDate();
             utils.actionSetupWizard();
-            utils.scheduler();
+            //utils.scheduler();
             utils.validateForm();
             utils.burgerBtn();
             utils.bootstrap();
@@ -230,48 +230,71 @@
             //});
 
 
-            var view = $(".days");
-            var move = "100px";
-            var sliderWrapper = view.parent().width();
-            var sliderLimit = -((view.position().left + view.width())-sliderWrapper);
+            //var view = $(".days");
+            //var move = "100px";
+            //var sliderWrapper = view.parent().width();
+            //var sliderLimit = -((view.position().left + view.width())-sliderWrapper);
+            //
+            //console.log(sliderLimit)
+            //
+            //$(".scheduler-arrow.right").click(function(){
+            //    console.log('еблысь вправо!')
+            //
+            //    var currentPosition = parseInt(view.css("left"));
+            //    if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 200})
+            //
+            //});
+            //
+            //$(".scheduler-arrow.left").click(function(){
+            //    console.log('еблысь влево!')
+            //
+            //    var currentPosition = parseInt(view.css("left"));
+            //    if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 200})
+            //
+            //});
 
-            console.log(sliderLimit)
+            var headers = $('.scheduler-header .month-title');
+            var monthsHolder = $('.rooms-wrapper .table-wrapper .month-holder');
 
-            $(".scheduler-arrow.right").click(function(){
-                console.log('еблысь вправо!')
+            console.log(monthsHolder)
 
-                var currentPosition = parseInt(view.css("left"));
-                if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 200})
+            function headersWidth(){
+                headers.each(function(){
+                    var parentLeft = $(this).parent().offset().left;
+                    var holderLeft = monthsHolder.offset().left;
+                    var parentWidth = $(this).parent().width();
+                    var holderWidth = monthsHolder.width();
 
-            });
-
-            $(".scheduler-arrow.left").click(function(){
-                console.log('еблысь влево!')
-
-                var currentPosition = parseInt(view.css("left"));
-                if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 200})
-
-            });
+                    if (parentLeft > holderLeft){
+                        $(this).css('left', 0).width(holderLeft + holderWidth - parentLeft);
+                    }
+                    else{
+                        var a = [parentLeft + parentWidth - holderLeft, holderWidth, parentWidth];
+                        $(this).offset({left: parentLeft + parentWidth - holderLeft < 250 ?  parentLeft + parentWidth - 250 : holderLeft}).width(Math.min.apply(null,a) );
+                    }
+                });
+            };
+            headersWidth();
 
         },
-        scheduler:function(){
+        /*scheduler:function(){
 
-            //$( ".rooms" ).sortable({
-            //    revert: true
-            //});
-            //$( "#draggable" ).draggable({
-            //    connectToSortable: ".rooms",
-            //    //helper: "clone",
-            //    revert: "invalid"
-            //});
-            //$( "ul, li" ).disableSelection();
-            //
+            $( ".rooms" ).sortable({
+                revert: true
+            });
+            $( "#draggable" ).draggable({
+                connectToSortable: ".rooms",
+                //helper: "clone",
+                revert: "invalid"
+            });
+            $( "ul, li" ).disableSelection();
+
             if (navigator.userAgent.indexOf("Opera") != -1) document.getElementsByTagName('body')[0].setAttribute('data-platform', 'opera')
 
             $(function() {
-                /*$.ajaxSetup({
+                /!*$.ajaxSetup({
                     mimeType: "text/html; charset=windows-1251"
-                })*/
+                })*!/
 
                 var scheduler = $('#scheduler');
                 var recordsHolder = $('.records-holder');
@@ -470,7 +493,7 @@
                     return false;
                 });
             });
-        },
+        },*/
         equalHeight:function(){
             var equalBlock = $('[class^=col-] .block');
             equalBlock.matchHeight();
