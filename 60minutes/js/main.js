@@ -214,60 +214,16 @@
                 $(this).next().slideToggle();
             });
 
-            //////////////////////////////////////////////////////////////
-
-            //$('.scheduler-arrow.right').click(function() {
-            //    event.preventDefault();
-            //    $('.days').animate({
-            //        marginLeft: "-=150px"
-            //    }, "fast");
-            //});
-            //$('.scheduler-arrow.left').click(function() {
-            //    event.preventDefault();
-            //    $('.days').animate({
-            //        marginLeft: "+=150px"
-            //    }, "fast");
-            //});
-
-
-            function slideMonth() {
-                var view = $(".days");
-                var holder = view.parent().parent().width();
-                var holderWrapper = view.parent().parent().parent().width();
-                var sliderLimit = -(holder-holderWrapper);
-
-                var move = "50px";
-
-
-                $(".scheduler-arrow.right").click(function(){
-                    console.log('еблысь вправо!')
-
-                    var currentPosition = parseInt(view.css("left"));
-                    if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 200})
-
-                });
-
-                $(".scheduler-arrow.left").click(function(){
-                    console.log('еблысь влево!')
-
-                    var currentPosition = parseInt(view.css("left"));
-                    if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 200})
-
-                });
-            }
-
-            slideMonth();
-
             //////////////////////////////////////////////////////////////////////////
 
-            var headers = $('.scheduler-header .month-title');
-            var monthsHolder = $('.rooms-wrapper .table-wrapper .month-holder');
+            var headers = $('.scheduler-header .month-title > div');
+            var monthsHolder = $('.scheduler-header .days-name-wrapper .weeks-holder');
 
             function headersWidth(){
                 headers.each(function(){
-                    var parentLeft = $(this).parent().offset().left;
+                    var parentLeft = $(this).parents('.month-title').offset().left;
                     var holderLeft = monthsHolder.offset().left;
-                    var parentWidth = $(this).parent().width();
+                    var parentWidth = $(this).parents('.days-name-wrapper').width();
                     var holderWidth = monthsHolder.width();
 
                     if (parentLeft > holderLeft){
@@ -280,6 +236,44 @@
                 });
             };
             headersWidth();
+
+            //////////////////////////////////////////////////////////////
+
+            function slideMonth() {
+                var view = $(".days");
+                var holder = view.parent().parent().width();
+                var holderWrapper = view.parent().parent().parent().width();
+                var sliderLimit = -(holder-holderWrapper);
+
+                var move = "50px";
+
+                $(".scheduler-arrow.right").click(function(){
+                    headersWidth();
+                    var currentPosition = parseInt(view.css("left"));
+                    if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 100})
+                });
+
+                $(".scheduler-arrow.left").click(function(){
+                    headersWidth();
+                    var currentPosition = parseInt(view.css("left"));
+                    if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 100})
+                });
+            }
+
+            slideMonth();
+
+
+
+            /*var monthHeader = $('.scheduler-header .month-title > div');
+            var monthsHolder = $('.scheduler-header .days-name-wrapper .weeks-holder');
+
+            monthHeader.each(function(){
+                var parentLeft = $(this).parent().offset().left;
+                var holderLeft = monthsHolder.offset().left;
+
+                console.log(parentLeft, holderLeft)
+            });*/
+
 
         },
         /*scheduler:function(){

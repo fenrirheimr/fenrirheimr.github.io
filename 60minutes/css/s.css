@@ -832,19 +832,21 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
     position: relative; border: 1px solid #e5e5e5; border-bottom: none; text-align: center;
     overflow: hidden;
 }
-.scheduler-header .month-title {height: 48px; line-height: 48px;}
+.scheduler-header .month-title {height: 48px; line-height: 48px; position: relative;}
 .scheduler-header .scheduler-arrow {
     position: absolute; top: 0; display: block; width: 48px; height: 48px; padding: 11px 0;
     color: #000; z-index: 99;
 }
 .scheduler-header .scheduler-arrow.left {left: 0;}
 .scheduler-header .scheduler-arrow.right {right: 0;}
-.scheduler-header .rooms {margin: 0; padding: 0; width: 156px;height: 50px; border-top: 1px solid #e5e5e5;}
+.scheduler-header .rooms {margin: 0; padding: 0; width: 156px;height: 49px; border-bottom: 1px solid #e5e5e5;}
 
 
 .days-name-wrapper {position: relative; overflow: hidden; top: 0;}
-.days-name-wrapper .weeks-holder {display: table; width: 100%;}
-.days-name-wrapper .weeks {display: table-cell;}
+.days-name-wrapper .weeks-holder {display: table; width: 100%; position: relative;}
+.days-name-wrapper .weeks {display: table-cell; position: relative;}
+.days-name-wrapper .weeks caption {padding: 0; text-align: center; position: relative;}
+.days-name-wrapper .weeks caption .month-title > div {min-width: 250px;}
 .days-name-wrapper .weeks .days {border-collapse: collapse; position:relative; left:0; width: 100%;}
 .days-name-wrapper .weeks .days tr {}
 .days-name-wrapper .weeks .days tr td > div {
