@@ -207,31 +207,7 @@
 
 
 
-            //////////////////////////////////////////////////////////////
 
-            function slideMonth() {
-                var view = $(".days");
-                var holder = view.parent().parent().width();
-                var holderWrapper = view.parent().parent().parent().width();
-                var sliderLimit = -(holder-holderWrapper);
-
-                var move = "50px";
-                headersWidth();
-                $(".scheduler-arrow.right").click(function(){
-                    var currentPosition = parseInt(view.css("left"));
-                    if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 100})
-                    headersWidth();
-                });
-
-                $(".scheduler-arrow.left").click(function(){
-                    headersWidth();
-                    var currentPosition = parseInt(view.css("left"));
-                    if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 100})
-                    headersWidth();
-                });
-            }
-
-            slideMonth();
 
         },
         scheduler:function(){
@@ -276,6 +252,84 @@
                 });
             };
             headersWidth();
+
+            //////////////////////////////////////////////////////////////
+
+            function slideMonth() {
+                var view = $(".days");
+                var holder = view.parent().parent().width();
+                var holderWrapper = view.parent().parent().parent().width();
+                var sliderLimit = -(holder-holderWrapper);
+
+                var move = "50px";
+                headersWidth();
+                $(".scheduler-arrow.right").click(function(){
+                    var currentPosition = parseInt(view.css("left"));
+                    if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 100})
+                    headersWidth();
+                });
+
+                $(".scheduler-arrow.left").click(function(){
+                    headersWidth();
+                    var currentPosition = parseInt(view.css("left"));
+                    if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 100})
+                    headersWidth();
+                });
+            }
+
+            slideMonth();
+
+            //////////////////////////////////////////////////////////////
+
+            var weekend = $('.scheduler-header .days tr').find('[data-wnd="wnd"]');
+            weekend.parent().addClass('weekend');
+
+            $('.weeks .weekend').each(function(){
+                var wI = $(this).index("td");
+                console.log('Index: ' + wI);
+            });
+
+            $('.month-wrapper .days tr').each(function(){
+                var wB = $(this).find('td div');
+                wB.each(function(){
+                    wB.eq($('.scheduler-header .weekend').index()).addClass('weekend');
+                })
+
+            })
+
+
+
+            //$('.weekend').each(function(){
+            //    var wI = $(this).index("td");
+            //    console.log('Index: ' + wI);
+            //
+            //    var mR = $('.schedule-wrapper .days tr');
+            //
+            //    mR.each(function(){
+            //        $(this).addClass('row-' + $(this).index());
+            //        var wB = mR.find('td div');
+            //        wB.eq(wI).addClass('weekend').text(wI);
+            //    });
+            //    //mR.each(function(){
+            //    //    var wB = mR.find('td div');
+            //    //    wB.each(function(){
+            //    //        wB.eq(wI).addClass('weekend').text(wI);
+            //    //    });
+            //    //});
+            //
+            //});
+
+            //var weekendBlock = $('.scheduler-header .days').find('[data-wnd="wnd"]');
+
+            //var wB = $('.schedule-wrapper .days td div');
+            //
+            //wB.each(function(){
+            //    wB.eq(weekend.index()).addClass('your_new_class');
+            //});
+
+
+
+
 
         },
         equalHeight:function(){
