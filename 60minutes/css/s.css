@@ -821,7 +821,8 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 /*.scheduler .rooms-wrapper .table-wrapper .months-holder {width: 100%; display: table;}*/
 /*.scheduler .rooms-wrapper .table-wrapper .months-holder .month-table {width: 100%; display: table-cell;}*/
 .scheduler .rooms-wrapper .days {border-collapse: collapse; position:relative; left:0; width: 100%;}
-.scheduler .rooms-wrapper .days tr {}
+.scheduler .rooms-wrapper .days tr {position: relative;}
+.scheduler .rooms-wrapper .days tr td {position: relative;}
 .scheduler .rooms-wrapper .days tr td div {
     border-right: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; width: 50px; height: 50px;
 }
@@ -875,8 +876,8 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 }
 
 .scheduler .records-holder .record {
-    height: 26px;
-    background-color: #93c301;
+    height: 50px;
+    background: #519cc8;
     position: absolute;
     top: 0;
     left: 0;

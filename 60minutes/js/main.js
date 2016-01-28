@@ -268,8 +268,6 @@
                 var recordsHolderWidth = $('.month-holder').width();
                 recordsHolder.width(recordsHolderWidth);
 
-
-
                 $(".scheduler-arrow.right").click(function(){
                     var currentPosition = parseInt(view.css("left"));
                     if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 100})
@@ -295,6 +293,44 @@
 
             //////////////////////////////////////////////////////////////
 
+            function records() {
+                var recordItem = $('.records-holder .record');
+                var dayBlocks = $('.days td');
+
+                dayBlocks.each(function(){
+
+                    var hasRecord = !!$(this).data('record-num');
+                    if (hasRecord){
+                        var recordVal = $(this).data('record-num');
+                        $(this).addClass('rec-'+ recordVal);
+
+                        var firstElement = $('.days td[class*="rec-"]').first();
+                        var starPosTop = firstElement.parents('.schedule-wrapper').position().top;
+                        var starPosLeft = firstElement.position().left;
+                        var relevantRecord = recordItem.attr('data-record');
+
+                        var thisWidth = 0;
+                        var totalWidth = 0;
+                        var recordLength = $('.days td[class*="rec-'+recordVal+'"]').length;
+
+                        $(this).each(function() {
+                            thisWidth += parseInt($(this).width(), 10);
+                            totalWidth = thisWidth*recordLength;
+                        });
+
+                        if(recordItem.data('record') === recordVal) {
+                            $('.records-holder .record[data-record = '+relevantRecord+']').css({
+                                'top': starPosTop,
+                                'left': starPosLeft,
+                                'width': totalWidth
+                            });
+                        }
+
+                    }
+
+                });
+            }
+            records();
 
 
         },
