@@ -884,6 +884,9 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
     margin: 0;
     cursor: pointer;
 }
+
+.ui-resizable-e {right: 0;}
+.ui-resizable-s {bottom: 0;}
 /* Footer */
 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}

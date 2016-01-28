@@ -295,39 +295,53 @@
 
             function records() {
                 var recordItem = $('.records-holder .record');
-                var dayBlocks = $('.days td');
 
-                dayBlocks.each(function(){
+                recordItem.each(function(){
+                    var dayBlocks = $('.days td');
 
-                    var hasRecord = !!$(this).data('record-num');
-                    if (hasRecord){
-                        var recordVal = $(this).data('record-num');
-                        $(this).addClass('rec-'+ recordVal);
+                    dayBlocks.each(function(){
 
-                        var firstElement = $('.days td[class*="rec-"]').first();
-                        var starPosTop = firstElement.parents('.table-wrapper').position().top;
-                        var starPosLeft = firstElement.position().left;
-                        var relevantRecord = recordItem.attr('data-record');
+                        var hasRecord = !!$(this).data('record-num');
+                        if (hasRecord){
+                            var recordVal = $(this).data('record-num');
+                            $(this).addClass('rec-'+ recordVal);
 
-                        var thisWidth = 0;
-                        var totalWidth = 0;
-                        var recordLength = $('.days td[class*="rec-'+recordVal+'"]').length;
+                            //$('.days td[class*="rec-'+recordVal+'"]').each(function(){});
 
-                        $(this).each(function() {
-                            thisWidth += parseInt($(this).width(), 10);
-                            totalWidth = thisWidth*recordLength;
-                        });
+                            var firstElement = $('.days td[class*="rec-'+recordVal+'"]');
 
-                        if(recordItem.data('record') === recordVal) {
-                            $('.records-holder .record[data-record = '+relevantRecord+']').css({
-                                'top': starPosTop,
-                                'left': starPosLeft,
-                                'width': totalWidth
+                            firstElement.each(function(i){
+                                var starPosTop = firstElement.eq(i).parents('.table-wrapper tr').position().top;
+                                var starPosLeft = firstElement.eq(i).position().left;
+                                var relevantRecord = recordItem.eq(i).attr('data-record');
+
+                                var thisWidth = 0;
+                                var totalWidth = 0;
+                                var recordLength = $('.days td[class*="rec-'+recordVal+'"]').length;
+
+                                $(this).each(function() {
+                                    thisWidth += parseInt($(this).width(), 10);
+                                    totalWidth = thisWidth*recordLength;
+                                });
+
+                                if(recordItem.eq(i).data('record') === recordVal) {
+                                    $('.records-holder .record[data-record = '+relevantRecord+']').css({
+                                        'top': starPosTop,
+                                        'left': starPosLeft,
+                                        'width': totalWidth
+                                    });
+                                }
+
+                                recordItem.resizable({
+                                    grid: 50,
+                                    maxHeight: 50,
+                                });
+
                             });
+                            //console.log(firstElement.length)
                         }
 
-                    }
-
+                    });
                 });
             }
             records();
