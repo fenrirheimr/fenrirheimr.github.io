@@ -796,7 +796,7 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 */
 
 .scheduler {position: relative;}
-.scheduler .rooms-wrapper {position: relative; overflow: hidden;}
+.scheduler .rooms-wrapper {position: relative; /*overflow: hidden;*/}
 .scheduler .rooms-wrapper .collapsed {}
 .scheduler .rooms-wrapper .caption {
     display: block; background: #f9f9f9; font-size: 18px; color: #519cc8; height: 50px; line-height: 48px;

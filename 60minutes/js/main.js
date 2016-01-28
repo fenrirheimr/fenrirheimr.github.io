@@ -329,10 +329,64 @@
                                 recordItem.sortable({
                                     revert: true
                                 });
-                                recordItem.draggable({
-                                    connectToSortable: ".rooms-wrapper",
-                                    //helper: "clone",
-                                    cursor: 'move',
+                                //recordItem.draggable({
+                                //    connectToSortable: ".records-holder",
+                                //    grid: [ 50, 50 ],
+                                //    //helper: "clone",
+                                //    cursor: 'move',
+                                //    obstacle: recordItem,
+                                //    preventCollision: true,
+                                //    containment: ".records-holder"
+                                //});
+
+
+                                ////////////////////////////////////////////////////////////////////
+
+                                var selectedClass = 'ui-state-highlight',
+                                    clickDelay = 600,
+                                // click time (milliseconds)
+                                    lastClick, diffClick; // timestamps
+
+                                recordItem.bind('mousedown mouseup', function(e) {
+                                        if (e.type == "mousedown") {
+                                            lastClick = e.timeStamp; // get mousedown time
+                                        } else {
+                                            diffClick = e.timeStamp - lastClick;
+                                            if (diffClick < clickDelay) {
+                                                // add selected class to group draggable objects
+                                                $(this).toggleClass(selectedClass);
+                                            }
+                                        }
+                                    })
+                                    .draggable({
+                                        revertDuration: 10,
+                                        // grouped items animate separately, so leave this number low
+                                        containment: '.rooms-wrapper',
+                                        start: function(e, ui) {
+                                            ui.helper.addClass(selectedClass);
+                                        },
+                                        stop: function(e, ui) {
+                                            // reset group positions
+                                            $('.' + selectedClass).css({
+                                                top: 0,
+                                                left: 0
+                                            });
+                                        },
+                                        drag: function(e, ui) {
+                                            // set selected group position to main dragged object
+                                            // this works because the position is relative to the starting position
+                                            $('.' + selectedClass).css({
+                                                top: ui.position.top,
+                                                left: ui.position.left
+                                            });
+                                        }
+                                    });
+
+                                $(".records-holder").sortable().droppable({
+                                    drop: function(e, ui) {
+                                        $('.' + selectedClass).appendTo($(this)).add(ui.draggable) // ui.draggable is appended by the script, so add it after
+                                            .removeClass(selectedClass);
+                                    }
                                 });
 
                             });
