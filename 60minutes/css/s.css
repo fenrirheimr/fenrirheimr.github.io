@@ -856,9 +856,8 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .days-name-wrapper .weeks .days tr td:first-child > div {border-left: 1px solid #e5e5e5;}
 
 .days-name-wrapper .weeks .days tr td > div[data-wnd="wnd"],
-.schedule-wrapper .days td .weekend {
-    color: #ff6665; background: #fff7ed;
-}
+.schedule-wrapper .days td div[data-wnd="wnd"] {color: #ff6665; background: #fff7ed;}
+
 
 /* Footer */
 

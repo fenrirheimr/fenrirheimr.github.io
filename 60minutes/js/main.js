@@ -284,18 +284,63 @@
             var weekend = $('.scheduler-header .days tr').find('[data-wnd="wnd"]');
             weekend.parent().addClass('weekend');
 
-            $('.weeks .weekend').each(function(){
-                var wI = $(this).index("td");
-                console.log('Index: ' + wI);
+            //$('.weeks .weekend').each(function(){
+            //    var wI = $(this).index("td");
+            //    console.log('Index: ' + wI);
+            //});
+
+            var schedulerRow = $('.month-wrapper .days tr');
+
+            schedulerRow.each(function(){
+
+                var schedulerWrapper = $(this).parents('.scheduler');
+                var schedulerHeader = schedulerWrapper.find('.scheduler-header');
+                var week = schedulerHeader.find('.weeks');
+
+                week.each(function(){
+                    var weekTR = $(this).find('tr');
+                    var weekTD = weekTR.find('.weekend');
+
+                    weekTD.each(function(){
+                        var wI = $(this).index();
+                        console.log(wI);
+
+                        //var wB = schedulerRow.find('td').eq(wI);
+                        //wB.text(wI)
+                        //wB.each(function(){
+                        //    wB.eq(wI).addClass('weekend').text(wI);
+                        //})
+                    });
+
+                    //weekTR.each(function(){
+                    //    var weekendTD =  $(this).find('.weekend');
+                    //
+                    //
+                    //    //var weekendTD =  weekendBlock.parent();
+                    //    //weekendTD.css('background', 'red')
+                    //
+                    //
+                    //    //var wI = weekendTD.index();
+                    //    //weekendTD.find('div').text(wI);
+                    //    //console.log(wI);
+                    //});
+
+
+                });
+                //
+
+                //weekendTD.each(function(){
+                //    var wI = $(this).index("td");
+                //    console.log('Index: ' + wI);
+                //});
+                //console.log(weekendTD.length);
+
+                //var wB = $(this).find('td div');
+                //wB.each(function(){
+                //    wB.eq($('.scheduler-header .weekend').index()).addClass('weekend');
+                //})
+
             });
-
-            $('.month-wrapper .days tr').each(function(){
-                var wB = $(this).find('td div');
-                wB.each(function(){
-                    wB.eq($('.scheduler-header .weekend').index()).addClass('weekend');
-                })
-
-            })
 
 
 
