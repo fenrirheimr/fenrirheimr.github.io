@@ -211,18 +211,7 @@
 
         },
         scheduler:function(){
-
-            $( ".rooms" ).sortable({
-                revert: true
-            });
-            $( "#draggable" ).draggable({
-                connectToSortable: ".rooms",
-                //helper: "clone",
-                revert: "invalid"
-            });
-
             var collapsedLink = $('.collapsed > .caption');
-            //var subMenu = $('.collapsed > .rooms');
 
             collapsedLink.click(function(e){
                 e.preventDefault();
@@ -337,8 +326,17 @@
                                     maxHeight: 50,
                                 });
 
+                                recordItem.sortable({
+                                    revert: true
+                                });
+                                recordItem.draggable({
+                                    connectToSortable: ".rooms-wrapper",
+                                    //helper: "clone",
+                                    cursor: 'move',
+                                });
+
                             });
-                            //console.log(firstElement.length)
+
                         }
 
                     });
