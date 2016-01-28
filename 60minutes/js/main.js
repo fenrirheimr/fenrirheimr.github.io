@@ -263,10 +263,21 @@
 
                 var move = "50px";
                 headersWidth();
+
+                var recordsHolder = $('.records-holder')
+                var recordsHolderWidth = $('.month-holder').width();
+                recordsHolder.width(recordsHolderWidth);
+
+
+
                 $(".scheduler-arrow.right").click(function(){
                     var currentPosition = parseInt(view.css("left"));
                     if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 100})
                     headersWidth();
+
+                    var recordPosition = parseInt(recordsHolder.css("left"));
+                    if (recordPosition >= sliderLimit) recordsHolder.stop(false,true).animate({left:"-="+move},{ duration: 100})
+                    //console.log(recordPosition)
                 });
 
                 $(".scheduler-arrow.left").click(function(){
@@ -274,105 +285,15 @@
                     var currentPosition = parseInt(view.css("left"));
                     if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 100})
                     headersWidth();
+
+                    var recordPosition = parseInt(recordsHolder.css("left"));
+                    if (recordPosition < 0) recordsHolder.stop(false,true).animate({left:"+="+move},{ duration: 100})
                 });
             }
 
             slideMonth();
 
             //////////////////////////////////////////////////////////////
-
-            var weekend = $('.scheduler-header .days tr').find('[data-wnd="wnd"]');
-            weekend.parent().addClass('weekend');
-
-            //$('.weeks .weekend').each(function(){
-            //    var wI = $(this).index("td");
-            //    console.log('Index: ' + wI);
-            //});
-
-            var schedulerRow = $('.month-wrapper .days tr');
-
-            schedulerRow.each(function(){
-
-                var schedulerWrapper = $(this).parents('.scheduler');
-                var schedulerHeader = schedulerWrapper.find('.scheduler-header');
-                var week = schedulerHeader.find('.weeks');
-
-                week.each(function(){
-                    var weekTR = $(this).find('tr');
-                    var weekTD = weekTR.find('.weekend');
-
-                    weekTD.each(function(){
-                        var wI = $(this).index();
-                        console.log(wI);
-
-                        //var wB = schedulerRow.find('td').eq(wI);
-                        //wB.text(wI)
-                        //wB.each(function(){
-                        //    wB.eq(wI).addClass('weekend').text(wI);
-                        //})
-                    });
-
-                    //weekTR.each(function(){
-                    //    var weekendTD =  $(this).find('.weekend');
-                    //
-                    //
-                    //    //var weekendTD =  weekendBlock.parent();
-                    //    //weekendTD.css('background', 'red')
-                    //
-                    //
-                    //    //var wI = weekendTD.index();
-                    //    //weekendTD.find('div').text(wI);
-                    //    //console.log(wI);
-                    //});
-
-
-                });
-                //
-
-                //weekendTD.each(function(){
-                //    var wI = $(this).index("td");
-                //    console.log('Index: ' + wI);
-                //});
-                //console.log(weekendTD.length);
-
-                //var wB = $(this).find('td div');
-                //wB.each(function(){
-                //    wB.eq($('.scheduler-header .weekend').index()).addClass('weekend');
-                //})
-
-            });
-
-
-
-            //$('.weekend').each(function(){
-            //    var wI = $(this).index("td");
-            //    console.log('Index: ' + wI);
-            //
-            //    var mR = $('.schedule-wrapper .days tr');
-            //
-            //    mR.each(function(){
-            //        $(this).addClass('row-' + $(this).index());
-            //        var wB = mR.find('td div');
-            //        wB.eq(wI).addClass('weekend').text(wI);
-            //    });
-            //    //mR.each(function(){
-            //    //    var wB = mR.find('td div');
-            //    //    wB.each(function(){
-            //    //        wB.eq(wI).addClass('weekend').text(wI);
-            //    //    });
-            //    //});
-            //
-            //});
-
-            //var weekendBlock = $('.scheduler-header .days').find('[data-wnd="wnd"]');
-
-            //var wB = $('.schedule-wrapper .days td div');
-            //
-            //wB.each(function(){
-            //    wB.eq(weekend.index()).addClass('your_new_class');
-            //});
-
-
 
 
 

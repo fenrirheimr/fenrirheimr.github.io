@@ -795,8 +795,8 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .jspCap{ display: none;}
 */
 
-.scheduler {}
-.scheduler .rooms-wrapper {}
+.scheduler {position: relative;}
+.scheduler .rooms-wrapper {position: relative; overflow: hidden;}
 .scheduler .rooms-wrapper .collapsed {}
 .scheduler .rooms-wrapper .caption {
     display: block; background: #f9f9f9; font-size: 18px; color: #519cc8; height: 50px; line-height: 48px;
@@ -858,7 +858,31 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .days-name-wrapper .weeks .days tr td > div[data-wnd="wnd"],
 .schedule-wrapper .days td div[data-wnd="wnd"] {color: #ff6665; background: #fff7ed;}
 
+.scheduler .records-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 156px; overflow: hidden;
+}
+.scheduler .records-holder {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    /*background-color: rgba(0,155,0,.3);*/
+    bottom: 0;
+    left: 0;
+}
 
+.scheduler .records-holder .record {
+    height: 26px;
+    background-color: #93c301;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    cursor: pointer;
+}
 /* Footer */
 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}
