@@ -305,7 +305,7 @@
                         $(this).addClass('rec-'+ recordVal);
 
                         var firstElement = $('.days td[class*="rec-"]').first();
-                        var starPosTop = firstElement.parents('.schedule-wrapper').position().top;
+                        var starPosTop = firstElement.parents('.table-wrapper').position().top;
                         var starPosLeft = firstElement.position().left;
                         var relevantRecord = recordItem.attr('data-record');
 

@@ -811,7 +811,7 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .scheduler .rooms-wrapper .rooms li:first-child {border-top: 0;}
 .scheduler .rooms-wrapper .collapsed:last-child .rooms li:last-child {border-bottom: 1px solid #e5e5e5;}
 
-.scheduler .rooms-wrapper .schedule-wrapper {overflow: hidden; /*overflow-x: auto*/;}
+.scheduler .rooms-wrapper .schedule-wrapper {overflow: hidden; position: relative;}
 .scheduler .rooms-wrapper .table-wrapper {
     position: relative; overflow: hidden; /*overflow-x: auto;*/
     top: 0;
