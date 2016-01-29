@@ -285,115 +285,189 @@
             function records() {
                 var recordItem = $('.records-holder .record');
 
-                recordItem.each(function(){
-                    var dayBlocks = $('.days td');
+                $('.scheduler').each(function(){
+                    var dayRow = $('.table-wrapper .days tr');
+                    var records = dayRow.find('td[data-record-num]');
 
-                    dayBlocks.each(function(){
+                    //console.log(records);
+                    var recordVal =[];
+                    records.each(function(i){
+                        recordVal = $(this).data('recordNum');
+                        $(this).addClass('rec-'+ recordVal).html('<div>'+recordVal+'</div>');
 
-                        var hasRecord = !!$(this).data('record-num');
-                        if (hasRecord){
-                            var recordVal = $(this).data('record-num');
-                            $(this).addClass('rec-'+ recordVal);
-
-                            //$('.days td[class*="rec-'+recordVal+'"]').each(function(){});
-
-                            var firstElement = $('.days td[class*="rec-'+recordVal+'"]');
-
-                            firstElement.each(function(i){
-                                var starPosTop = firstElement.eq(i).parents('.table-wrapper tr').position().top;
-                                var starPosLeft = firstElement.eq(i).position().left;
-                                var relevantRecord = recordItem.eq(i).attr('data-record');
-
-                                var thisWidth = 0;
-                                var totalWidth = 0;
-                                var recordLength = $('.days td[class*="rec-'+recordVal+'"]').length;
-
-                                $(this).each(function() {
-                                    thisWidth += parseInt($(this).width(), 10);
-                                    totalWidth = thisWidth*recordLength;
-                                });
-
-                                if(recordItem.eq(i).data('record') === recordVal) {
-                                    $('.records-holder .record[data-record = '+relevantRecord+']').css({
-                                        'top': starPosTop,
-                                        'left': starPosLeft,
-                                        'width': totalWidth
-                                    });
-                                }
-
-                                recordItem.resizable({
-                                    grid: 50,
-                                    maxHeight: 50,
-                                });
-
-                                recordItem.sortable({
-                                    revert: true
-                                });
-                                //recordItem.draggable({
-                                //    connectToSortable: ".records-holder",
-                                //    grid: [ 50, 50 ],
-                                //    //helper: "clone",
-                                //    cursor: 'move',
-                                //    obstacle: recordItem,
-                                //    preventCollision: true,
-                                //    containment: ".records-holder"
-                                //});
+                        var firstElem = $('[class*="rec-'+recordVal+'"]');
+                        firstElem.css('background', 'red');
 
 
-                                ////////////////////////////////////////////////////////////////////
 
-                                var selectedClass = 'ui-state-highlight',
-                                    clickDelay = 600,
-                                // click time (milliseconds)
-                                    lastClick, diffClick; // timestamps
 
-                                recordItem.bind('mousedown mouseup', function(e) {
-                                        if (e.type == "mousedown") {
-                                            lastClick = e.timeStamp; // get mousedown time
-                                        } else {
-                                            diffClick = e.timeStamp - lastClick;
-                                            if (diffClick < clickDelay) {
-                                                // add selected class to group draggable objects
-                                                $(this).toggleClass(selectedClass);
-                                            }
-                                        }
-                                    })
-                                    .draggable({
-                                        revertDuration: 10,
-                                        // grouped items animate separately, so leave this number low
-                                        containment: '.rooms-wrapper',
-                                        start: function(e, ui) {
-                                            ui.helper.addClass(selectedClass);
-                                        },
-                                        stop: function(e, ui) {
-                                            // reset group positions
-                                            $('.' + selectedClass).css({
-                                                top: 0,
-                                                left: 0
-                                            });
-                                        },
-                                        drag: function(e, ui) {
-                                            // set selected group position to main dragged object
-                                            // this works because the position is relative to the starting position
-                                            $('.' + selectedClass).css({
-                                                top: ui.position.top,
-                                                left: ui.position.left
-                                            });
-                                        }
-                                    });
+                        //console.log(recordLength);
 
-                                $(".records-holder").sortable().droppable({
-                                    drop: function(e, ui) {
-                                        $('.' + selectedClass).appendTo($(this)).add(ui.draggable) // ui.draggable is appended by the script, so add it after
-                                            .removeClass(selectedClass);
-                                    }
-                                });
+                        recordItem.each(function(){
+                            var starPosTop = firstElem.parents('.table-wrapper tr').position().top;
+                            var starPosLeft = firstElem.position().left;
 
+                            var relevantRecord = recordItem.eq(i).attr('data-record');
+                            var currentLength = $('[data-record-num*="'+recordVal+'"]');
+                            var recordLength = currentLength.eq(i).length;
+
+                            var thisWidth = 0;
+                            var totalWidth = 0;
+
+                            $(this).each(function() {
+                                thisWidth += parseInt($(this).width(), 10);
+                                totalWidth = thisWidth*recordLength;
                             });
 
-                        }
+                            if(recordItem.eq(i).data('record') === recordVal) {
+                                $('.records-holder .record[data-record = '+relevantRecord+']').css({
+                                    'top': starPosTop,
+                                    'left': starPosLeft,
+                                    'width': totalWidth
+                                });
+                            }
+
+                            console.log(starPosTop, starPosLeft);
+
+                        });
 
                     });
+
+
+                    //var tempLength = $().length;
+                    //
+                    //console.log(tempLength);
+
+                    //recordItem.each(function(){
+                    //
+                    //    var hasRecord = !!dayBlocks.data('record-num');
+                    //    console.log(hasRecord);
+                    //
+                    //
+                    //    if (hasRecord){
+                    //        var recordVal = $(this).data('record-num');
+                    //        $(this).addClass('rec-'+ recordVal);
+                    //
+                    //        var rec = $('.table-wrapper .days td[class*="rec-'+recordVal+'"]');
+                    //        console.log(recordVal);
+                    //
+                    //        //.each(function(){
+                    //        //
+                    //        //});
+                    //
+                    //        /*firstElement.each(function(i){
+                    //
+                    //         var starPosTop = firstElement.parents('.table-wrapper tr').position().top;
+                    //         var starPosLeft = firstElement.position().left;
+                    //         var relevantRecord = recordItem.eq(i).attr('data-record');
+                    //
+                    //         var thisWidth = 0;
+                    //         var totalWidth = 0;
+                    //         var recordLength = $('.days td[class*="rec-'+recordVal+'"]').length;
+                    //
+                    //         $(this).each(function() {
+                    //         thisWidth += parseInt($(this).width(), 10);
+                    //         totalWidth = thisWidth*recordLength;
+                    //         });
+                    //
+                    //         if(recordItem.eq(i).data('record') === recordVal) {
+                    //         $('.records-holder .record[data-record = '+relevantRecord+']').css({
+                    //         'top': starPosTop,
+                    //         'left': starPosLeft,
+                    //         'width': totalWidth
+                    //         });
+                    //         }
+                    //
+                    //         //recordItem.resizable({
+                    //         //    grid: 50,
+                    //         //    maxHeight: 50,
+                    //         //});
+                    //         //
+                    //         //recordItem.sortable({
+                    //         //    revert: true
+                    //         //});
+                    //         //recordItem.draggable({
+                    //         //    connectToSortable: ".records-holder",
+                    //         //    grid: [ 50, 50 ],
+                    //         //    //helper: "clone",
+                    //         //    cursor: 'move',
+                    //         //    obstacle: recordItem,
+                    //         //    preventCollision: true,
+                    //         //    containment: ".records-holder"
+                    //         //});
+                    //
+                    //
+                    //         ////////////////////////////////////////////////////////////////////
+                    //
+                    //         //var selectedClass = 'ui-state-highlight',
+                    //         //    clickDelay = 600,
+                    //         //// click time (milliseconds)
+                    //         //    lastClick, diffClick; // timestamps
+                    //         //
+                    //         //recordItem.bind('mousedown mouseup', function(e) {
+                    //         //        if (e.type == "mousedown") {
+                    //         //            lastClick = e.timeStamp; // get mousedown time
+                    //         //        } else {
+                    //         //            diffClick = e.timeStamp - lastClick;
+                    //         //            if (diffClick < clickDelay) {
+                    //         //                // add selected class to group draggable objects
+                    //         //                $(this).toggleClass(selectedClass);
+                    //         //            }
+                    //         //        }
+                    //         //    })
+                    //         //    .draggable({
+                    //         //        revertDuration: 10,
+                    //         //        opacity: 0.7,
+                    //         //        // grouped items animate separately, so leave this number low
+                    //         //        containment: '.rooms-wrapper',
+                    //         //        start: function(e, ui) {
+                    //         //            ui.helper.addClass(selectedClass);
+                    //         //        },
+                    //         //        stop: function(e, ui) {
+                    //         //            // reset group positions
+                    //         //            $('.' + selectedClass).css({
+                    //         //                top: 0,
+                    //         //                left: 0
+                    //         //            });
+                    //         //        },
+                    //         //        drag: function(e, ui) {
+                    //         //            // set selected group position to main dragged object
+                    //         //            // this works because the position is relative to the starting position
+                    //         //            $('.' + selectedClass).css({
+                    //         //                top: ui.position.top,
+                    //         //                left: ui.position.left
+                    //         //            });
+                    //         //        }
+                    //         //    });
+                    //         //
+                    //         //$(".records-holder").sortable().droppable({
+                    //         //    drop: function(e, ui) {
+                    //         //        $('.' + selectedClass).appendTo($(this)).add(ui.draggable) // ui.draggable is appended by the script, so add it after
+                    //         //            .removeClass(selectedClass);
+                    //         //    }
+                    //         //});
+                    //
+                    //         });*/
+                    //
+                    //    }
+                    //
+                    //
+                    //    //rec.each(function(){
+                    //    //
+                    //    //    var firstElement = $('.table-wrapper .days td[class*="rec-'+recordVal+'"]').first();
+                    //    //    var elementLength = $(this).length;
+                    //    //    var recWidth = elementLength*50;
+                    //    //
+                    //    //    firstElement.css('background', 'red').html('<div>'+recordVal+'</div>');
+                    //    //
+                    //    //    var starPosTop = firstElement.position().top;
+                    //    //    var starPosLeft = firstElement.position().left;
+                    //    //
+                    //    //    //console.log(recWidth);
+                    //    //});
+                    //
+                    //
+                    //});
                 });
             }
             records();
