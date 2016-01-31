@@ -282,195 +282,282 @@
 
             //////////////////////////////////////////////////////////////
 
-            function records() {
-                var recordItem = $('.records-holder .record');
+            var recordItem = $('.records-holder .record');
 
-                $('.scheduler').each(function(){
-                    var dayRow = $('.table-wrapper .days tr');
-                    var records = dayRow.find('td[data-record-num]');
-
-                    //console.log(records);
-                    var recordVal =[];
-                    records.each(function(i){
-                        recordVal = $(this).data('recordNum');
-                        $(this).addClass('rec-'+ recordVal).html('<div>'+recordVal+'</div>');
-
-                        var firstElem = $('[class*="rec-'+recordVal+'"]');
-                        firstElem.css('background', 'red');
-
-
-
-
-                        //console.log(recordLength);
-
-                        recordItem.each(function(){
-                            var starPosTop = firstElem.parents('.table-wrapper tr').position().top;
-                            var starPosLeft = firstElem.position().left;
-
-                            var relevantRecord = recordItem.eq(i).attr('data-record');
-                            var currentLength = $('[data-record-num*="'+recordVal+'"]');
-                            var recordLength = currentLength.eq(i).length;
-
-                            var thisWidth = 0;
-                            var totalWidth = 0;
-
-                            $(this).each(function() {
-                                thisWidth += parseInt($(this).width(), 10);
-                                totalWidth = thisWidth*recordLength;
-                            });
-
-                            if(recordItem.eq(i).data('record') === recordVal) {
-                                $('.records-holder .record[data-record = '+relevantRecord+']').css({
-                                    'top': starPosTop,
-                                    'left': starPosLeft,
-                                    'width': totalWidth
-                                });
-                            }
-
-                            console.log(starPosTop, starPosLeft);
-
-                        });
-
-                    });
+            //recordItem.resizable({
+            //    grid: 50,
+            //    maxHeight: 50,
+            //});
+            //
+            //recordItem.sortable({
+            //    revert: true
+            //});
+            //recordItem.draggable({
+            //    connectToSortable: ".records-holder",
+            //    grid: [ 50, 50 ],
+            //    //helper: "clone",
+            //    //revert: true,
+            //    cursor: 'move',
+            //    obstacle: recordItem,
+            //    preventCollision: true,
+            //    containment: ".records-holder"
+            //});
 
 
-                    //var tempLength = $().length;
-                    //
-                    //console.log(tempLength);
+            //////////////////////////////////////////////////////////////////
 
-                    //recordItem.each(function(){
-                    //
-                    //    var hasRecord = !!dayBlocks.data('record-num');
-                    //    console.log(hasRecord);
-                    //
-                    //
-                    //    if (hasRecord){
-                    //        var recordVal = $(this).data('record-num');
-                    //        $(this).addClass('rec-'+ recordVal);
-                    //
-                    //        var rec = $('.table-wrapper .days td[class*="rec-'+recordVal+'"]');
-                    //        console.log(recordVal);
-                    //
-                    //        //.each(function(){
-                    //        //
-                    //        //});
-                    //
-                    //        /*firstElement.each(function(i){
-                    //
-                    //         var starPosTop = firstElement.parents('.table-wrapper tr').position().top;
-                    //         var starPosLeft = firstElement.position().left;
-                    //         var relevantRecord = recordItem.eq(i).attr('data-record');
-                    //
-                    //         var thisWidth = 0;
-                    //         var totalWidth = 0;
-                    //         var recordLength = $('.days td[class*="rec-'+recordVal+'"]').length;
-                    //
-                    //         $(this).each(function() {
-                    //         thisWidth += parseInt($(this).width(), 10);
-                    //         totalWidth = thisWidth*recordLength;
-                    //         });
-                    //
-                    //         if(recordItem.eq(i).data('record') === recordVal) {
-                    //         $('.records-holder .record[data-record = '+relevantRecord+']').css({
-                    //         'top': starPosTop,
-                    //         'left': starPosLeft,
-                    //         'width': totalWidth
-                    //         });
-                    //         }
-                    //
-                    //         //recordItem.resizable({
-                    //         //    grid: 50,
-                    //         //    maxHeight: 50,
-                    //         //});
-                    //         //
-                    //         //recordItem.sortable({
-                    //         //    revert: true
-                    //         //});
-                    //         //recordItem.draggable({
-                    //         //    connectToSortable: ".records-holder",
-                    //         //    grid: [ 50, 50 ],
-                    //         //    //helper: "clone",
-                    //         //    cursor: 'move',
-                    //         //    obstacle: recordItem,
-                    //         //    preventCollision: true,
-                    //         //    containment: ".records-holder"
-                    //         //});
-                    //
-                    //
-                    //         ////////////////////////////////////////////////////////////////////
-                    //
-                    //         //var selectedClass = 'ui-state-highlight',
-                    //         //    clickDelay = 600,
-                    //         //// click time (milliseconds)
-                    //         //    lastClick, diffClick; // timestamps
-                    //         //
-                    //         //recordItem.bind('mousedown mouseup', function(e) {
-                    //         //        if (e.type == "mousedown") {
-                    //         //            lastClick = e.timeStamp; // get mousedown time
-                    //         //        } else {
-                    //         //            diffClick = e.timeStamp - lastClick;
-                    //         //            if (diffClick < clickDelay) {
-                    //         //                // add selected class to group draggable objects
-                    //         //                $(this).toggleClass(selectedClass);
-                    //         //            }
-                    //         //        }
-                    //         //    })
-                    //         //    .draggable({
-                    //         //        revertDuration: 10,
-                    //         //        opacity: 0.7,
-                    //         //        // grouped items animate separately, so leave this number low
-                    //         //        containment: '.rooms-wrapper',
-                    //         //        start: function(e, ui) {
-                    //         //            ui.helper.addClass(selectedClass);
-                    //         //        },
-                    //         //        stop: function(e, ui) {
-                    //         //            // reset group positions
-                    //         //            $('.' + selectedClass).css({
-                    //         //                top: 0,
-                    //         //                left: 0
-                    //         //            });
-                    //         //        },
-                    //         //        drag: function(e, ui) {
-                    //         //            // set selected group position to main dragged object
-                    //         //            // this works because the position is relative to the starting position
-                    //         //            $('.' + selectedClass).css({
-                    //         //                top: ui.position.top,
-                    //         //                left: ui.position.left
-                    //         //            });
-                    //         //        }
-                    //         //    });
-                    //         //
-                    //         //$(".records-holder").sortable().droppable({
-                    //         //    drop: function(e, ui) {
-                    //         //        $('.' + selectedClass).appendTo($(this)).add(ui.draggable) // ui.draggable is appended by the script, so add it after
-                    //         //            .removeClass(selectedClass);
-                    //         //    }
-                    //         //});
-                    //
-                    //         });*/
-                    //
-                    //    }
-                    //
-                    //
-                    //    //rec.each(function(){
-                    //    //
-                    //    //    var firstElement = $('.table-wrapper .days td[class*="rec-'+recordVal+'"]').first();
-                    //    //    var elementLength = $(this).length;
-                    //    //    var recWidth = elementLength*50;
-                    //    //
-                    //    //    firstElement.css('background', 'red').html('<div>'+recordVal+'</div>');
-                    //    //
-                    //    //    var starPosTop = firstElement.position().top;
-                    //    //    var starPosLeft = firstElement.position().left;
-                    //    //
-                    //    //    //console.log(recWidth);
-                    //    //});
-                    //
-                    //
-                    //});
-                });
-            }
-            records();
+            //var selectedClass = 'ui-state-highlight',
+            //    clickDelay = 600,
+            //// click time (milliseconds)
+            //    lastClick, diffClick; // timestamps
+            //
+            //recordItem.bind('mousedown mouseup', function(e) {
+            //        if (e.type == "mousedown") {
+            //            lastClick = e.timeStamp; // get mousedown time
+            //        } else {
+            //            diffClick = e.timeStamp - lastClick;
+            //            if (diffClick < clickDelay) {
+            //                // add selected class to group draggable objects
+            //                $(this).toggleClass(selectedClass);
+            //            }
+            //        }
+            //    })
+            //    .draggable({
+            //        connectToSortable: ".records-holder",
+            //        revertDuration: 10,
+            //        cursor: 'move',
+            //        preventCollision: true,
+            //        obstacle: recordItem,
+            //        opacity: 0.7,
+            //        grid: [ 50, 50 ],
+            //        // grouped items animate separately, so leave this number low
+            //        containment: ".records-holder",
+            //        start: function(e, ui) {
+            //            ui.helper.addClass(selectedClass);
+            //        },
+            //        stop: function(e, ui) {
+            //            // reset group positions
+            //            $('.' + selectedClass).css({
+            //                top: 0,
+            //                left: 0
+            //            });
+            //        },
+            //        drag: function(e, ui) {
+            //            // set selected group position to main dragged object
+            //            // this works because the position is relative to the starting position
+            //            $('.' + selectedClass).css({
+            //                top: ui.position.top,
+            //                left: ui.position.left
+            //            });
+            //        }
+            //    });
+            //
+            //$(".records-holder").sortable().droppable({
+            //    drop: function(e, ui) {
+            //        $('.' + selectedClass).appendTo($(this)).add(ui.draggable) // ui.draggable is appended by the script, so add it after
+            //            .removeClass(selectedClass);
+            //    }
+            //});
+
+            //////////////////////////////////////////////////////////////////
+
+            //function records() {
+            //    var recordItem = $('.records-holder .record');
+            //
+            //    $('.scheduler').each(function(){
+            //        var dayRow = $('.table-wrapper .days tr');
+            //        var records = dayRow.find('td[data-record-num]');
+            //
+            //        recordItem.each(function(){
+            //
+            //            records.each(function(){
+            //                var recordVal = $(this).data('recordNum');
+            //
+            //                $(this).addClass('rec-'+ recordVal).html('<div>'+recordVal+'</div>');
+            //
+            //                var recordElems = $('[class*="rec-'+recordVal+'"]');
+            //
+            //                recordElems.each(function(){
+            //
+            //                    var firstElem = recordElems.first();
+            //                    firstElem.css('background', 'red');
+            //
+            //                    //console.log(recordElems.length);
+            //
+            //
+            //                    firstElem.each(function(starPosTop, starPosLeft, totalWidth){
+            //                        //console.log(firstElem.length);
+            //                        //$(this).css('background', 'red');
+            //                        var starPosTop = $(this).parents('.table-wrapper tr').position().top;
+            //                        var starPosLeft = $(this).position().left;
+            //                        var recordLength = $('[data-record-num*="'+recordVal+'"]').length;
+            //
+            //                        var thisWidth = [];
+            //                        thisWidth += parseInt($(this).width(), 10);
+            //                        var totalWidth = thisWidth*recordLength;
+            //
+            //
+            //                    });
+            //
+            //                    if(recordItem.data('record') === recordVal) {
+            //                        var relevantRecord = recordItem.attr('data-record');
+            //
+            //                        $('.records-holder .record[data-record = '+relevantRecord+']').css({
+            //                            'top': starPosTop,
+            //                            'left': starPosLeft,
+            //                            'width': totalWidth
+            //                        });
+            //                    }
+            //                });
+            //
+            //
+            //
+            //                //console.log(firstElem.length);
+            //                //console.log(recordLength);
+            //
+            //            });
+            //
+            //        });
+            //
+            //
+            //
+            //        //var tempLength = $().length;
+            //        //
+            //        //console.log(tempLength);
+            //
+            //        //recordItem.each(function(){
+            //        //
+            //        //    var hasRecord = !!dayBlocks.data('record-num');
+            //        //    console.log(hasRecord);
+            //        //
+            //        //
+            //        //    if (hasRecord){
+            //        //        var recordVal = $(this).data('record-num');
+            //        //        $(this).addClass('rec-'+ recordVal);
+            //        //
+            //        //        var rec = $('.table-wrapper .days td[class*="rec-'+recordVal+'"]');
+            //        //        console.log(recordVal);
+            //        //
+            //        //        //.each(function(){
+            //        //        //
+            //        //        //});
+            //        //
+            //        //        /*firstElement.each(function(i){
+            //        //
+            //        //         var starPosTop = firstElement.parents('.table-wrapper tr').position().top;
+            //        //         var starPosLeft = firstElement.position().left;
+            //        //         var relevantRecord = recordItem.eq(i).attr('data-record');
+            //        //
+            //        //         var thisWidth = 0;
+            //        //         var totalWidth = 0;
+            //        //         var recordLength = $('.days td[class*="rec-'+recordVal+'"]').length;
+            //        //
+            //        //         $(this).each(function() {
+            //        //         thisWidth += parseInt($(this).width(), 10);
+            //        //         totalWidth = thisWidth*recordLength;
+            //        //         });
+            //        //
+            //        //         if(recordItem.eq(i).data('record') === recordVal) {
+            //        //         $('.records-holder .record[data-record = '+relevantRecord+']').css({
+            //        //         'top': starPosTop,
+            //        //         'left': starPosLeft,
+            //        //         'width': totalWidth
+            //        //         });
+            //        //         }
+            //        //
+            //        //         //recordItem.resizable({
+            //        //         //    grid: 50,
+            //        //         //    maxHeight: 50,
+            //        //         //});
+            //        //         //
+            //        //         //recordItem.sortable({
+            //        //         //    revert: true
+            //        //         //});
+            //        //         //recordItem.draggable({
+            //        //         //    connectToSortable: ".records-holder",
+            //        //         //    grid: [ 50, 50 ],
+            //        //         //    //helper: "clone",
+            //        //         //    cursor: 'move',
+            //        //         //    obstacle: recordItem,
+            //        //         //    preventCollision: true,
+            //        //         //    containment: ".records-holder"
+            //        //         //});
+            //        //
+            //        //
+            //        //         ////////////////////////////////////////////////////////////////////
+            //        //
+            //        //         //var selectedClass = 'ui-state-highlight',
+            //        //         //    clickDelay = 600,
+            //        //         //// click time (milliseconds)
+            //        //         //    lastClick, diffClick; // timestamps
+            //        //         //
+            //        //         //recordItem.bind('mousedown mouseup', function(e) {
+            //        //         //        if (e.type == "mousedown") {
+            //        //         //            lastClick = e.timeStamp; // get mousedown time
+            //        //         //        } else {
+            //        //         //            diffClick = e.timeStamp - lastClick;
+            //        //         //            if (diffClick < clickDelay) {
+            //        //         //                // add selected class to group draggable objects
+            //        //         //                $(this).toggleClass(selectedClass);
+            //        //         //            }
+            //        //         //        }
+            //        //         //    })
+            //        //         //    .draggable({
+            //        //         //        revertDuration: 10,
+            //        //         //        opacity: 0.7,
+            //        //         //        // grouped items animate separately, so leave this number low
+            //        //         //        containment: '.rooms-wrapper',
+            //        //         //        start: function(e, ui) {
+            //        //         //            ui.helper.addClass(selectedClass);
+            //        //         //        },
+            //        //         //        stop: function(e, ui) {
+            //        //         //            // reset group positions
+            //        //         //            $('.' + selectedClass).css({
+            //        //         //                top: 0,
+            //        //         //                left: 0
+            //        //         //            });
+            //        //         //        },
+            //        //         //        drag: function(e, ui) {
+            //        //         //            // set selected group position to main dragged object
+            //        //         //            // this works because the position is relative to the starting position
+            //        //         //            $('.' + selectedClass).css({
+            //        //         //                top: ui.position.top,
+            //        //         //                left: ui.position.left
+            //        //         //            });
+            //        //         //        }
+            //        //         //    });
+            //        //         //
+            //        //         //$(".records-holder").sortable().droppable({
+            //        //         //    drop: function(e, ui) {
+            //        //         //        $('.' + selectedClass).appendTo($(this)).add(ui.draggable) // ui.draggable is appended by the script, so add it after
+            //        //         //            .removeClass(selectedClass);
+            //        //         //    }
+            //        //         //});
+            //        //
+            //        //         });*/
+            //        //
+            //        //    }
+            //        //
+            //        //
+            //        //    //rec.each(function(){
+            //        //    //
+            //        //    //    var firstElement = $('.table-wrapper .days td[class*="rec-'+recordVal+'"]').first();
+            //        //    //    var elementLength = $(this).length;
+            //        //    //    var recWidth = elementLength*50;
+            //        //    //
+            //        //    //    firstElement.css('background', 'red').html('<div>'+recordVal+'</div>');
+            //        //    //
+            //        //    //    var starPosTop = firstElement.position().top;
+            //        //    //    var starPosLeft = firstElement.position().left;
+            //        //    //
+            //        //    //    //console.log(recWidth);
+            //        //    //});
+            //        //
+            //        //
+            //        //});
+            //    });
+            //}
+            //records();
 
 
         },
