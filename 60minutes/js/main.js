@@ -291,7 +291,6 @@
                     grid: 50,
                     maxHeight: 50
                 });
-                // 
 
                 //recordItem.draggable({
                 //    connectToSortable: recordWrapper,
