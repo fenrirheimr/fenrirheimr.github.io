@@ -287,10 +287,6 @@
 
             recordWrapper.each(function(){
                 var recordItem = $(this).find('.record');
-                recordItem.resizable({
-                    grid: 50,
-                    maxHeight: 50
-                });
 
                 //recordItem.draggable({
                 //    connectToSortable: recordWrapper,
