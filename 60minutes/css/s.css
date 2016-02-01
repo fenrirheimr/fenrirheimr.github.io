@@ -890,6 +890,11 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 
 .ui-resizable-e {right: 0;}
 .ui-resizable-s {bottom: 0;}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {border: none;}
+
 /* Footer */
 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}

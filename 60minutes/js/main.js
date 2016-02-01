@@ -282,36 +282,87 @@
 
             //////////////////////////////////////////////////////////////
 
-            var recordItem = $('.records-holder .record');
+            var recordWrapper = $('.records-holder');
 
-            //recordItem.resizable({
-            //    grid: 50,
-            //    maxHeight: 50,
-            //});
-            //
-            //recordItem.sortable({
-            //    revert: true
-            //});
-            //recordItem.draggable({
-            //    connectToSortable: ".records-holder",
-            //    grid: [ 50, 50 ],
-            //    //helper: "clone",
-            //    //revert: true,
-            //    cursor: 'move',
-            //    obstacle: recordItem,
-            //    preventCollision: true,
-            //    containment: ".records-holder"
-            //});
+
+            recordWrapper.each(function(){
+                var recordItem = $(this).find('.record');
+                //recordItem.resizable({
+                //    grid: 50,
+                //    maxHeight: 50
+                //});
+                //$(this).sortable({
+                //    revert: false,
+                //    connectWith: recordWrapper,
+                //    grid: [ 50, 50 ]
+                //}).disableSelection();
+
+                //recordItem.draggable({
+                //    connectToSortable: recordWrapper,
+                //    grid: [ 50, 50 ],
+                //    cursor: 'move',
+                //    snap: true
+                //    //containment: recordWrapper
+                //    //helper: "clone",
+                //    //revert: "invalid"
+                //});
+                //recordItem.disableSelection();
+
+                recordItem.resizable({
+                    grid: 50,
+                    maxHeight: 50,
+                    ghost: true
+                });
+
+                recordItem.draggable({
+                    connectToSortable: recordWrapper,
+                    refreshPositions: true,
+                    grid: [ 50, 50 ],
+                    //helper: "clone",
+                    //revert : "invalid",
+                    cursor: 'move',
+                    opacity: 0.7,
+                    obstacle: recordItem,
+                    preventCollision: true,
+                    containment: recordWrapper,
+                    //drag: function(e, ui) {
+                    //    $(this).css({
+                    //        background: "red",
+                    //        top: ui.position.top,
+                    //        left: ui.position.left
+                    //    });
+                    //}
+                    drag: function(e, ui) {
+                        ui.position.left = Math.floor(ui.position.left / 10) * 10;
+                        ui.position.top = Math.floor(ui.position.top / 10) * 10;
+                    },
+                    drop: function(e, ui) {
+                        $(this).sortable( "refreshPositions" );
+                    }
+                });
+            });
+
+
 
 
             //////////////////////////////////////////////////////////////////
 
+            //var recordWrapper = $('.records-holder');
+            //var recordItem = recordWrapper.find('.record');
+            //
+            //recordItem.resizable({
+            //    grid: 50,
+            //    maxHeight: 50
+            //});
+            //
             //var selectedClass = 'ui-state-highlight',
             //    clickDelay = 600,
             //// click time (milliseconds)
             //    lastClick, diffClick; // timestamps
             //
-            //recordItem.bind('mousedown mouseup', function(e) {
+            //recordItem
+            //// Script to deferentiate a click from a mousedown for drag event
+            //    .bind('mousedown mouseup', function(e) {
             //        if (e.type == "mousedown") {
             //            lastClick = e.timeStamp; // get mousedown time
             //        } else {
@@ -323,24 +374,12 @@
             //        }
             //    })
             //    .draggable({
-            //        connectToSortable: ".records-holder",
             //        revertDuration: 10,
-            //        cursor: 'move',
-            //        preventCollision: true,
-            //        obstacle: recordItem,
-            //        opacity: 0.7,
             //        grid: [ 50, 50 ],
             //        // grouped items animate separately, so leave this number low
-            //        containment: ".records-holder",
+            //        containment: '#scheduler',
             //        start: function(e, ui) {
             //            ui.helper.addClass(selectedClass);
-            //        },
-            //        stop: function(e, ui) {
-            //            // reset group positions
-            //            $('.' + selectedClass).css({
-            //                top: 0,
-            //                left: 0
-            //            });
             //        },
             //        drag: function(e, ui) {
             //            // set selected group position to main dragged object
@@ -352,12 +391,18 @@
             //        }
             //    });
             //
-            //$(".records-holder").sortable().droppable({
+            ////recordWrapper.sortable().disableSelection();
+            //
+            //recordWrapper.sortable({
+            //    revert: false,
+            //    connectWith: recordWrapper
+            //}).droppable({
             //    drop: function(e, ui) {
             //        $('.' + selectedClass).appendTo($(this)).add(ui.draggable) // ui.draggable is appended by the script, so add it after
             //            .removeClass(selectedClass);
             //    }
             //});
+
 
             //////////////////////////////////////////////////////////////////
 
