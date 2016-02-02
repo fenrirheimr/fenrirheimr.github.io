@@ -37,6 +37,57 @@
                 e.preventDefault();
                 $(this).tab('show')
             })
+
+
+            //$('.record .record-inner').each(function() {
+            //    var options = {
+            //        //placement: function (context, source) {
+            //        //    var position = $(source).position();
+            //        //
+            //        //    if (position.left < 280) {
+            //        //        return "right";
+            //        //    }
+            //        //
+            //        //    if (position.top < 280){
+            //        //        return "bottom";
+            //        //    }
+            //        //
+            //        //    else {
+            //        //        return "left";
+            //        //    }
+            //        //} ,
+            //        trigger: "hover",
+            //        html : true,
+            //        content: function() {
+            //            return $(this).next().html();
+            //        }
+            //    };
+            //    $('.record .record-inner').popover(options);
+            //});
+
+            //$.widget.bridge('uitooltip', $.ui.tooltip);
+
+            $('.record .record-inner').tooltip({
+                //show: null,
+                //position: {
+                //    my: "left top",
+                //    at: "left bottom"
+                //},
+                //open: function( event, ui ) {
+                //    ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
+                //},
+                content: function() {
+                    var element = $(this).next();
+                    var text = element.html();
+                    return text;
+                    //if ( element.is( "[title]" ) ) {
+                    //    return element.attr( "title" );
+                    //}
+                    //if ( element.is( "img" ) ) {
+                    //    return element.attr( "alt" );
+                    //}
+                }
+            });
         },
         userNav:function(){
             var userLink = $('.user-wrapper .user');
