@@ -209,7 +209,15 @@
 
         },
         customJS:function(){
+            var loginInput = $('.login-wrapper input[type="text"]');
             var passInput = $('.login-wrapper input[type="password"]');
+
+            loginInput.focus(function () {
+                $(this).data('placeholder', $(this).attr('placeholder'))
+                    .attr('placeholder', '');
+            }).blur(function () {
+                $(this).attr('placeholder', $(this).data('placeholder'));
+            });
 
             passInput.on("focus", function(){
                 $(this).parents('.fake-input').addClass('focus');
