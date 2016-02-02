@@ -279,10 +279,10 @@
     border-radius: 3px;
 }
 
+.wizard > .actions a[href$="previous"],
 .wizard > .actions .disabled a,
 .wizard > .actions .disabled a:hover,
-.wizard > .actions .disabled a:active
-{
+.wizard > .actions .disabled a:active {
     background: #eee;
     color: #aaa;
 }
