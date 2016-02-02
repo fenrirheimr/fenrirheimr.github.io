@@ -289,7 +289,7 @@
                 var recordItem = $(this).find('.record');
 
                 recordItem.resizable({
-                    grid: 50,
+                    grid: 25,
                     maxHeight: 50,
                     ghost: true
                 });
@@ -297,16 +297,17 @@
                 recordItem.draggable({
                     connectToSortable: recordWrapper,
                     refreshPositions: true,
-                    grid: [ 50, 50 ],
+                    grid: [ 25, 50 ],
                     cursor: 'move',
                     opacity: 0.7,
                     obstacle: recordItem,
                     preventCollision: true,
                     containment: recordWrapper,
+                    //cursorAt: {left: -10, top: -10},
 
                     drag: function(e, ui) {
-                        ui.position.left = Math.floor(ui.position.left / 10) * 10;
-                        ui.position.top = Math.floor(ui.position.top / 10) * 10;
+                        //ui.position.left = Math.floor(ui.position.left / 10) * 10;
+                        //ui.position.top = Math.floor(ui.position.top / 10) * 10;
                     },
                     drop: function(e, ui) {
                         $(this).sortable( "refreshPositions" );

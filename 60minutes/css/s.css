@@ -716,87 +716,8 @@ h2 + .add {margin-top: 35px;}
 .legend .legend-item .c4 {background: #c9c9c9;}
 .legend .legend-item .c5 {background: #fff; border: 1px solid #dbdbdb;}
 
-/*
-
-.scheduler{overflow: hidden; background-color: #fff; position: relative; user-select: none; -moz-user-select: none;}
-.scheduler .header{height: 44px; background-color: #d7e4ff;}
-.scheduler .addresses{margin-bottom: 25px;}
-.scheduler .addresses .items {margin: 0; padding: 0; padding-top: 26px;border-right: 1px solid #dcdfe6; border-bottom: 1px solid #dcdfe6;}
-.scheduler .addresses .items li{height: 26px; line-height: 26px; border-top: 1px solid #dcdfe6; padding: 0 10px; overflow: hidden; white-space: nowrap;}
-.scheduler .addresses .items li:hover{background-color: #a7c4fe;}
-
-.scheduler .months-holder{position: relative; overflow: auto; overflow-y: hidden}
-.scheduler .months-holder .months{ display: table; position: relative;}
-.scheduler .months-holder .months .month{display: table-cell; position: relative;}
-.scheduler .months-holder .months .month:before{height: 100%; width: 1px ; content: ''; margin-left: -1px; background-color: #abbde4; position: absolute;}
-.scheduler .months-holder .months .month .header{position: relative; min-width: 250px; max-width: 100%; text-align: center; line-height: 42px;}
-.scheduler .months-holder .months .table{border-collapse: collapse;}
-.scheduler .months-holder .months .table td{height: 26px; vertical-align: middle; border: 1px solid #dcdfe6; padding: 0;}
-body[data-platform=opera] .scheduler .months-holder .months .table td { height: 27px;  }
-
-.scheduler .months-holder .months .table td:first-child{border-left: none;}
-.scheduler .months-holder .months .table td:before{content: ''; display: block; }
-.scheduler .months-holder .months .table-dates{ margin-bottom: 0;}
-.scheduler .months-holder .months .table-dates td{width: 47px; text-align: center; border-bottom: none;}
-.scheduler .months-holder .months .table-dates td.today{font-weight: bold;}
-.scheduler .months-holder .months .table-dates td:before{width: 47px; }
-.scheduler .months-holder .months .table-halves td{width: 23px;}
-.scheduler .months-holder .months .table-halves tr.hover td{background-color: #a7c4fe;}
-.scheduler .months-holder .records-holder{width: 100%; position: absolute; top: 70px; bottom:0; left: 0;}
-.scheduler .months-holder .record{height: 26px; background-color: #93c301; position: absolute; top: 0; left: 0; margin: 0; cursor: pointer;}
-.scheduler .months-holder .record.trace{box-shadow: 0 0 0 1px #F00;}
-.scheduler .months-holder .record.state1{background-color: #93c301;}
-.scheduler .months-holder .record.state2{background-color: #00ccff;}
-.scheduler .months-holder .record.state3{background-color: #ff004e;}
-.scheduler .months-holder .record.state4{background-color: #ffc000;}
-.scheduler .months-holder .record.splitter:before{position: absolute; height: 100%; width: 4px; border: solid #000; border-width: 1px 0 1px 2px; content: ''; top: -1px; left: -1px;}
-.scheduler .months-holder .record.splitter:after{position: absolute; height: 100%; width: 4px; border: solid #000; border-width: 1px 0; content: ''; top: -1px; left: -5px;}
-.scheduler .months-holder .record.ui-draggable-dragging{opacity: .4;filter: alpha(opacity=40); box-shadow: 0 0 0 1px #F00;}
-.scheduler .months-holder .record li{float: left; width: 23px; height: 26px; border-left: 1px solid #dcdfe6;list-style: none;}
-.scheduler .months-holder .record li:first-child{border: none; }
-.scheduler .months-holder .record li.collision{background-color: #000;}
-.scheduler .months-holder .today-block{position: absolute; border: 1px solid #eecf73; background-color: rgba(255,235,139,.5); -pie-background: rgba(255,235,139,.5); width: 47px; height: 100%; top: 44px; left: 0; behavior: url(/bitrix/templates/innhome/js/PIE.htc);}
-.scheduler .months-holder .scroll-block{position: absolute; width: 1px; height:1px; }
-.scheduler .scroll{position: absolute; top: 20px;  padding: 5px; cursor: pointer;}
-.scheduler .scroll.prev{left: 300px;}
-.scheduler .scroll.next{right: 25px;}
-
-
-.jspContainer{  overflow: hidden;  position: relative;}
-.jspPane{  position: absolute;}
-.jspVerticalBar{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 25px;
-    height: 100%;
-}
-
-.jspHorizontalBar{  position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 25px;
-}
-.jspHorizontalBar .jspCap{  float: left;}
-.jspTrack{  background: #d9d9d9;  position: relative;}
-.jspDrag{  background: #bbd;  position: relative;  top: 0;  left: 0;  cursor: pointer;}
-.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag{  float: left;  height: 100%;}
-.jspHorizontalBar .jspDrag{
-    background: #0848c6;  position: relative;  top: 0;  left: 0;  cursor: pointer; border-radius: 5px;
-    background-image: linear-gradient(bottom, #0847C6 0%, #6497FE 100%);
-    background-image: -o-linear-gradient(bottom, #0847C6 0%, #6497FE 100%);
-    background-image: -moz-linear-gradient(bottom, #0847C6 0%, #6497FE 100%);
-    background-image: -webkit-linear-gradient(bottom, #0847C6 0%, #6497FE 100%);
-    background-image: -ms-linear-gradient(bottom, #0847C6 0%, #6497FE 100%);
-}
-.jspArrow,
-.jspCorner,
-.jspCap{ display: none;}
-*/
-
 .scheduler {position: relative;}
-.scheduler .rooms-wrapper {position: relative; /*overflow: hidden;*/}
+.scheduler .rooms-wrapper {position: relative;}
 .scheduler .rooms-wrapper .collapsed {}
 .scheduler .rooms-wrapper .caption {
     display: block; background: #f9f9f9; font-size: 18px; color: #519cc8; height: 50px; line-height: 48px;
@@ -812,14 +733,9 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .scheduler .rooms-wrapper .collapsed:last-child .rooms li:last-child {border-bottom: 1px solid #e5e5e5;}
 
 .scheduler .rooms-wrapper .schedule-wrapper {overflow: hidden; position: relative;}
-.scheduler .rooms-wrapper .table-wrapper {
-    position: relative; overflow: hidden; /*overflow-x: auto;*/
-    top: 0;
-}
+.scheduler .rooms-wrapper .table-wrapper {position: relative; overflow: hidden; top: 0;}
 .scheduler .rooms-wrapper .table-wrapper .month-holder {width: 100%; display: table;}
 .scheduler .rooms-wrapper .table-wrapper .month-wrapper {width: 100%; display: table-cell;}
-/*.scheduler .rooms-wrapper .table-wrapper .months-holder {width: 100%; display: table;}*/
-/*.scheduler .rooms-wrapper .table-wrapper .months-holder .month-table {width: 100%; display: table-cell;}*/
 .scheduler .rooms-wrapper .days {border-collapse: collapse; position:relative; left:0; width: 100%;}
 .scheduler .rooms-wrapper .days tr {position: relative;}
 .scheduler .rooms-wrapper .days tr td {position: relative;}
@@ -857,36 +773,42 @@ body[data-platform=opera] .scheduler .months-holder .months .table td { height: 
 .days-name-wrapper .weeks .days tr td:first-child > div {border-left: 1px solid #e5e5e5;}
 
 .days-name-wrapper .weeks .days tr td > div[data-wnd="wnd"],
-.schedule-wrapper .days td div[data-wnd="wnd"] {color: #ff6665; /*background: #fff7ed;*/}
+.schedule-wrapper .days td div[data-wnd="wnd"] {color: #ff6665; background: #fff7ed;}
 
-.scheduler .records-wrapper {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 156px; overflow: hidden;
-    /*display: none;*/
-}
-.scheduler .records-holder {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    /*background-color: rgba(0,155,0,.3);*/
-    bottom: 0;
-    left: 0;
-}
+.scheduler .records-wrapper {width: 100%; position: absolute;top: 0; bottom: 0; left: 156px; overflow: hidden;}
+.scheduler .records-holder {width: 100%; position: absolute; top: 0; bottom: 0; left: 0;}
 
 .scheduler .records-holder .record {
-    min-width: 50px;
-    height: 50px;
-    background: #519cc8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    cursor: pointer;
-
+    min-width: 50px !important; height: 50px !important; padding: 7px 0; position: absolute; top: 0;left: 0; margin: 0;
+    cursor: pointer; outline: 20px;
 }
+
+.scheduler .records-holder .record .record-inner {
+    height: 36px; line-height: 36px; font-size: 15px; color: #000; text-align: center;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+}
+/*.scheduler .records-holder .record .record-inner {background: #519cc8;}*/
+
+.scheduler .records-holder .record .record-inner.c1 {background: #febc62;}
+.scheduler .records-holder .record .record-inner.c2 {background: #97cc64;}
+.scheduler .records-holder .record .record-inner.c3 {background: #77b6e7;}
+.legend .legend-item .c4 {background: #c9c9c9;}
+
+.scheduler .records-holder .record .ui-icon-gripsmall-diagonal-se {
+    background: #fff;
+    width: 12px; height: 12px;
+    border: 1px solid #cdcdcd;
+    position: absolute; top: 50%; margin-top: -6px; right: -17px;
+    bottom: auto; left: auto;
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+
 
 .ui-resizable-e {right: 0;}
 .ui-resizable-s {bottom: 0;}
