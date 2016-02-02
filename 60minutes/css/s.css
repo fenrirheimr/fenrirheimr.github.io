@@ -812,7 +812,7 @@ h2 + .add {margin-top: 35px;}
 .legend .legend-item .c2 {background: #97cc64;}
 .legend .legend-item .c3 {background: #77b6e7;}
 .legend .legend-item .c4 {background: #c9c9c9;}
-.legend .legend-item .c5 {background: #fff; border: 1px solid #dbdbdb;}
+.legend .legend-item .c5 {background: #fff url("../img/repairs.png") no-repeat -6px -20px; border: 1px solid #dbdbdb;}
 
 .scheduler {position: relative;}
 .scheduler .rooms-wrapper {position: relative;}
@@ -842,7 +842,7 @@ h2 + .add {margin-top: 35px;}
 }
 .scheduler .rooms-wrapper .days tr:first-child td div {border-top: none;}
 .scheduler .rooms-wrapper .collapsed:last-child .days tr:last-child td div {border-bottom: 1px solid #e5e5e5;}
-
+.scheduler .rooms-wrapper .days tr td div.repair {background: url("../img/repairs.png") no-repeat;}
 .scheduler-header {
     position: relative; border: 1px solid #e5e5e5; border-bottom: none; text-align: center;
     overflow: hidden;
@@ -893,6 +893,7 @@ h2 + .add {margin-top: 35px;}
 
 .scheduler .records-holder .record .record-inner {
     height: 36px; line-height: 36px; font-size: 15px; color: #000; text-align: center;
+    border: none !important;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     border-radius: 1px;
