@@ -133,6 +133,8 @@
                 buttonImageOnly: true,
                 buttonText: "Выбрать дату"
             });
+            $('.select-date input').datepicker('setDate', new Date());
+
         },
         actionSetupWizard:function(){
 
@@ -286,6 +288,27 @@
             };
             headersWidth();
 
+            function highlightCurrentDay() {
+                var schedulerWrapper = $('.scheduler');
+                schedulerWrapper.each(function(){
+
+                    var markCurrentDay = $('<div class="mark-current-day"></div>');
+                    var currentDay = $('.scheduler-header .current-day');
+                    var offsetLeft = currentDay.position().left - currentDay.closest($(this)).position().left+170;
+                    var schedulerHeight = $(this).height();
+
+                    if(markCurrentDay.is('div')){
+                        markCurrentDay.appendTo($(this));
+                    }
+                    markCurrentDay.css({
+                        'left': offsetLeft,
+                        'height': schedulerHeight-99
+                    })
+                });
+            };
+            highlightCurrentDay();
+
+
             //////////////////////////////////////////////////////////////
 
             function slideMonth() {
@@ -304,7 +327,7 @@
                 $(".scheduler-arrow.right").click(function(){
                     var currentPosition = parseInt(view.css("left"));
                     if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 100})
-                    headersWidth();
+                    headersWidth(); highlightCurrentDay();
 
                     var recordPosition = parseInt(recordsHolder.css("left"));
                     if (recordPosition >= sliderLimit) recordsHolder.stop(false,true).animate({left:"-="+move},{ duration: 100})
@@ -315,7 +338,7 @@
                     headersWidth();
                     var currentPosition = parseInt(view.css("left"));
                     if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 100})
-                    headersWidth();
+                    headersWidth(); highlightCurrentDay();
 
                     var recordPosition = parseInt(recordsHolder.css("left"));
                     if (recordPosition < 0) recordsHolder.stop(false,true).animate({left:"+="+move},{ duration: 100})
