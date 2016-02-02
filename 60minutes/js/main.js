@@ -36,34 +36,8 @@
             $('#reports-tab a').click(function (e) {
                 e.preventDefault();
                 $(this).tab('show')
-            })
+            });
 
-
-            //$('.record .record-inner').each(function() {
-            //    var options = {
-            //        //placement: function (context, source) {
-            //        //    var position = $(source).position();
-            //        //
-            //        //    if (position.left < 280) {
-            //        //        return "right";
-            //        //    }
-            //        //
-            //        //    if (position.top < 280){
-            //        //        return "bottom";
-            //        //    }
-            //        //
-            //        //    else {
-            //        //        return "left";
-            //        //    }
-            //        //} ,
-            //        trigger: "hover",
-            //        html : true,
-            //        content: function() {
-            //            return $(this).next().html();
-            //        }
-            //    };
-            //    $('.record .record-inner').popover(options);
-            //});
 
             //$.widget.bridge('uitooltip', $.ui.tooltip);
 
@@ -127,6 +101,25 @@
             });
         },
         selectDate:function(){
+
+            $.datepicker.regional['ru'] = {
+                closeText: 'Закрыть',
+                prevText: '&#x3c;Пред',
+                nextText: 'След&#x3e;',
+                currentText: 'Сегодня',
+                monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+                    'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+                monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+                    'Июл','Авг','Сен','Окт','Ноя','Дек'],
+                dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+                dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+                dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+                dateFormat: 'dd.mm.yy',
+                firstDay: 1,
+                isRTL: false
+            };
+            $.datepicker.setDefaults($.datepicker.regional['ru']);
+
             $('.report-date input').datepicker({
                 showOn: "button",
                 buttonImage: "img/calendar.png",
