@@ -245,7 +245,11 @@ label:hover:before {
 
 .service .user:hover,
 .service .help-link:hover {background: #3a3a39;}
-.service .record-tooltip {display: none;}
+.service .record-tooltip,
+.bid .record-tooltip,
+.reports .record-tooltip {display: none;}
+
+[title="tooltip"] {text-decoration: none; border-bottom: 1px dotted;}
 
 .user-wrapper {display: inline-block; position: relative;}
 .user-wrapper .user-menu {
@@ -536,6 +540,7 @@ body.fix {overflow: hidden;}
     display: block; width: 24px; height: 24px; background: url("../img/icon24.png") no-repeat;
     position: absolute; top: 0; left: 0; content: ' ';
 }
+.cd-panel .cd-panel-content h3.star + ul {margin-bottom: 40px;}
 .cd-panel .cd-panel-content h3.star:before {background-position: 0 0;}
 .cd-panel .cd-panel-content h3.question:before {background-position: 0 -24px;}
 
@@ -855,13 +860,24 @@ h2 + .add {margin-top: 35px;}
 }
 
 .num-tooltip.ui-widget-content:before {left: 0; margin-left: 0; top: -10px;}
-.ui-tooltip.ui-widget-content span {display: inline-block; width: 80px;}
+
+.ui-tooltip.ui-widget-content span {display: inline-block; width: 95px;}
+.ui-tooltip.ui-widget-content span.price {width: auto; position: relative; font-weight: normal;}
+.ui-tooltip.ui-widget-content span.price:after {
+    display: inline-block; margin-left: 10px;
+    content: '\20bd';
+}
+
+.ui-tooltip.ui-widget-content .total {margin-top: 5px; padding-top: 5px; border-top: 1px solid #c3c3c3;}
+.ui-tooltip.ui-widget-content .total span {font-weight: bold;}
+
 .ui-resizable-e {right: 0;}
 .ui-resizable-s {bottom: 0;}
 
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {border: none;}
+
 
 .ui-datepicker-trigger {position: absolute; top: 50%; right: 10px; margin-top: -9px; cursor: pointer;}
 

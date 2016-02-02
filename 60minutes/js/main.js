@@ -49,7 +49,7 @@
                 }
             });
 
-            $('.service a[title="tooltip"]').tooltip({
+            $('[title="tooltip"]').tooltip({
                 tooltipClass:"num-tooltip",
                 content: function() {
                     var element = $(this).next();
@@ -57,6 +57,7 @@
                     return text;
                 }
             });
+            $('a[data-help="tooltip"]').css('color', 'red')
         },
         userNav:function(){
             var userLink = $('.user-wrapper .user');
