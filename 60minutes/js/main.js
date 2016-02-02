@@ -42,24 +42,19 @@
             //$.widget.bridge('uitooltip', $.ui.tooltip);
 
             $('.record .record-inner').tooltip({
-                //show: null,
-                //position: {
-                //    my: "left top",
-                //    at: "left bottom"
-                //},
-                //open: function( event, ui ) {
-                //    ui.tooltip.animate({ top: ui.tooltip.position().top + 10 }, "fast" );
-                //},
                 content: function() {
                     var element = $(this).next();
                     var text = element.html();
                     return text;
-                    //if ( element.is( "[title]" ) ) {
-                    //    return element.attr( "title" );
-                    //}
-                    //if ( element.is( "img" ) ) {
-                    //    return element.attr( "alt" );
-                    //}
+                }
+            });
+
+            $('.service a[title="tooltip"]').tooltip({
+                tooltipClass:"num-tooltip",
+                content: function() {
+                    var element = $(this).next();
+                    var text = element.html();
+                    return text;
                 }
             });
         },

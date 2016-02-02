@@ -245,6 +245,7 @@ label:hover:before {
 
 .service .user:hover,
 .service .help-link:hover {background: #3a3a39;}
+.service .record-tooltip {display: none;}
 
 .user-wrapper {display: inline-block; position: relative;}
 .user-wrapper .user-menu {
@@ -852,6 +853,8 @@ h2 + .add {margin-top: 35px;}
     border-width: 0 9px 10px 9px;
     border-color: transparent transparent #575757 transparent;
 }
+
+.num-tooltip.ui-widget-content:before {left: 0; margin-left: 0; top: -10px;}
 .ui-tooltip.ui-widget-content span {display: inline-block; width: 80px;}
 .ui-resizable-e {right: 0;}
 .ui-resizable-s {bottom: 0;}
