@@ -778,7 +778,7 @@ h3 {font-size: 18px; font-weight: bold;}
 .table > tbody > tr > td {vertical-align: middle;}
 .table.reports > thead > tr > th {padding: 0 0 8px;}
 .table.bid {margin-bottom: 0;}
-.table.bid > tbody > tr > td:last-child {width: 315px; text-align: right;}
+.table.bid > tbody > tr > td:last-child {width: 320px; text-align: right;}
 
 .load-more {
     display: block; border: 1px solid #ccc; padding: 7px 10px 7px 20px; text-align: center;
@@ -929,7 +929,7 @@ h2 + .add {margin-top: 35px;}
     position: relative; border: 1px solid #e5e5e5; border-bottom: none; text-align: center;
     overflow: hidden;
 }
-.scheduler-header .month-title {height: 48px; line-height: 48px; position: relative;}
+.scheduler-header .month-title {height: 48px; line-height: 48px; position: relative; font-size: 18px; color: #000;}
 .scheduler-header .scheduler-arrow {
     position: absolute; top: 0; display: block; width: 48px; height: 48px; padding: 11px 0;
     color: #000; z-index: 99;
