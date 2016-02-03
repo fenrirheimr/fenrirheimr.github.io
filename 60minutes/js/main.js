@@ -131,6 +131,12 @@
             });
             $('.select-date input').datepicker('setDate', new Date());
 
+            $(document).click(function(e) {
+                var ele = $(e.toElement);
+                if (!ele.hasClass("hasDatepicker") && !ele.hasClass("ui-datepicker") && !ele.hasClass("ui-icon") && !$(ele).parent().parents(".ui-datepicker").length)
+                    $(".hasDatepicker").datepicker("hide");
+            });
+
         },
         actionSetupWizard:function(){
 
@@ -387,9 +393,10 @@
                 recordsHolder.width(recordsHolderWidth);
 
                 $(".scheduler-arrow.right").click(function(){
+                    headersWidth();
                     var currentPosition = parseInt(view.css("left"));
                     if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 100})
-                    //headersWidth();
+
 
                     var recordPosition = parseInt(recordsHolder.css("left"));
                     if (recordPosition >= sliderLimit) recordsHolder.stop(false,true).animate({left:"-="+move},{ duration: 100})
@@ -397,9 +404,10 @@
                 });
 
                 $(".scheduler-arrow.left").click(function(){
+                    headersWidth();
                     var currentPosition = parseInt(view.css("left"));
                     if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 100})
-                    //headersWidth();
+
 
                     var recordPosition = parseInt(recordsHolder.css("left"));
                     if (recordPosition < 0) recordsHolder.stop(false,true).animate({left:"+="+move},{ duration: 100})
