@@ -16,9 +16,6 @@
             utils.bootstrap();
             utils.equalHeight();
             utils.timeMask();
-            utils.customFile();
-            utils.collapseLinkText();
-            utils.scrollToYear();
         }
     });
 
@@ -36,8 +33,13 @@
             $('#reports-tab a').click(function (e) {
                 e.preventDefault();
                 $(this).tab('show');
-
             });
+
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                highlightCurrentDay();
+                //e.target // newly activated tab
+                //e.relatedTarget // previous active tab
+            })
 
             $('.record .record-inner').tooltip({
                 content: function() {
@@ -316,32 +318,40 @@
 
             //////////////////////////////////////////////////////////////////////////
 
+
+            var schedulerWrapper = $('.scheduler');
+
+
             var headers = $('.scheduler-header .month-title > div');
             var monthsHolder = $('.scheduler-header .days-name-wrapper .weeks-holder');
 
             function headersWidth(){
-                headers.each(function(){
-                    var parentLeft = $(this).parents('.weeks').offset().left;
-                    var holderLeft = monthsHolder.offset().left;
-                    var parentWidth = $(this).parents('.days-name-wrapper').width();
-                    var holderWidth = monthsHolder.width();
 
-                    if (parentLeft > holderLeft){
-                        $(this).css('left', 0).width(parentWidth);
-                    }
-                    else{
-                        var a = [parentLeft + parentWidth - holderLeft, holderWidth, parentWidth];
-                        $(this).offset({left: parentLeft + parentWidth - holderLeft < 250 ?  parentLeft + parentWidth - 250 : holderLeft}).width(Math.min.apply(null,a) );
-                    }
+                schedulerWrapper.each(function(){
+                    headers.each(function(){
+                        var parentLeft = $(this).parents('.weeks').offset().left;
+                        var holderLeft = monthsHolder.offset().left;
+                        var parentWidth = $(this).parents('.days-name-wrapper').width();
+                        var holderWidth = monthsHolder.width();
+
+                        if (parentLeft > holderLeft){
+                            $(this).css('left', 0).width(parentWidth);
+                        }
+                        else{
+                            var a = [parentLeft + parentWidth - holderLeft, holderWidth, parentWidth];
+                            $(this).offset({left: parentLeft + parentWidth - holderLeft < 250 ?  parentLeft + parentWidth - 250 : holderLeft}).width(Math.min.apply(null,a) );
+                        }
+                    });
                 });
+
             };
             headersWidth();
 
             function highlightCurrentDay() {
-                var schedulerWrapper = $('.scheduler');
-                schedulerWrapper.each(function(){
 
+                schedulerWrapper.each(function(){
                     var thisParent = $(this).parents('.tab-pane');
+
                     var markCurrentDay = $('<div class="mark-current-day"></div>');
 
 
@@ -379,7 +389,7 @@
                 $(".scheduler-arrow.right").click(function(){
                     var currentPosition = parseInt(view.css("left"));
                     if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 100})
-                    headersWidth(); highlightCurrentDay();
+                    //headersWidth();
 
                     var recordPosition = parseInt(recordsHolder.css("left"));
                     if (recordPosition >= sliderLimit) recordsHolder.stop(false,true).animate({left:"-="+move},{ duration: 100})
@@ -387,10 +397,9 @@
                 });
 
                 $(".scheduler-arrow.left").click(function(){
-                    headersWidth();
                     var currentPosition = parseInt(view.css("left"));
                     if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 100})
-                    headersWidth(); highlightCurrentDay();
+                    //headersWidth();
 
                     var recordPosition = parseInt(recordsHolder.css("left"));
                     if (recordPosition < 0) recordsHolder.stop(false,true).animate({left:"+="+move},{ duration: 100})
@@ -487,57 +496,7 @@
         timeMask:function(){
             var timeMask = $('.day .form-control');
             timeMask.mask("99:99",{placeholder:"00:00"});
-        },
-        collapseLinkText:function(){
-            $('.collapse-link').click(function(){
-                //$(this).text(function(i,old){
-                //    return old=='подробнее о вакансии' ?  'скрыть' : 'подробнее о вакансии';
-                //});
-
-                if ($(this).text() == 'подробнее о вакансии') {
-                    $(this).text('скрыть');
-                } else {
-                    $(this).text('подробнее о вакансии');
-                }
-            });
-        },
-        customFile:function(){
-            $(document).on('change', '.btn-file :file', function() {
-                var input = $(this),
-                    numFiles = input.get(0).files ? input.get(0).files.length : 1,
-                    label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-                input.trigger('fileselect', [numFiles, label]);
-            });
-
-            $(document).ready( function() {
-                $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
-
-                    var input = $(this).parents('.input-group').find(':text'),
-                        log = numFiles > 1 ? numFiles + ' files selected' : label;
-
-                    if( input.length ) {
-                        input.val(log);
-                    } else {
-                        if( log ) alert(log);
-                    }
-
-                });
-            });
-        },
-        scrollToYear:function(){
-            $('.history .years li a').click(function(e){
-                e.preventDefault();
-                $('html, body').animate({
-                    scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-                }, "slow");
-            });
-            $(".gototop").click(function(e) {
-                e.preventDefault();
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-            });
         }
-
-
     });
 
     $(document).ready(function() {
