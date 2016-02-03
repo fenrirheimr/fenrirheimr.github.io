@@ -1137,6 +1137,14 @@ h2 + .add {margin-top: 35px;}
 .hotel-options .small {width: 80px; vertical-align: middle; margin-right: 6px;}
 .hotel-options .btn {margin-top: 30px;}
 
+
+/* toggleShowPassword */
+
+.visibility {}
+.visibility .off {display: none;}
+.visibility.active .on {display: none;}
+.visibility.active .off {display: inline;}
+
 /* Footer */
 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}

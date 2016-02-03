@@ -38,9 +38,6 @@
                 $(this).tab('show')
             });
 
-
-            //$.widget.bridge('uitooltip', $.ui.tooltip);
-
             $('.record .record-inner').tooltip({
                 content: function() {
                     var element = $(this).next();
@@ -277,7 +274,32 @@
                 effect: "slide"
             });
 
+            //////////////////////////////////////////////////////////////
 
+            $.toggleShowPassword = function (options) {
+                var settings = $.extend({
+                    field: "#password",
+                    control: "#toggle_show_password",
+                }, options);
+
+                var control = $(settings.control);
+                var field = $(settings.field)
+                control.click(function(e){
+                    $(this).toggleClass('active');
+                });
+                control.bind('click', function () {
+                    if (control.is('.active')) {
+                        field.attr('type', 'text');
+                    } else {
+                        field.attr('type', 'password');
+                    }
+                })
+            };
+
+            $.toggleShowPassword({
+                field: '#hiddenpass',
+                control: '.visibility'
+            });
 
         },
         scheduler:function(){
