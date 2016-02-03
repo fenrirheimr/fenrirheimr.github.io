@@ -1145,6 +1145,7 @@ h2 + .add {margin-top: 35px;}
 .visibility.active .on {display: none;}
 .visibility.active .off {display: inline;}
 
+.admin-form .btn-link {margin-top: 25px;}
 /* Footer */
 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}

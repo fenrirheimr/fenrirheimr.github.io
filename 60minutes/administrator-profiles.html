@@ -117,7 +117,7 @@
                             <tbody>
 
                                 <tr>
-                                    <td><a href="#">Alexeenko1567</a></td>
+                                    <td><a href="#edit-admin" data-toggle="modal">Alexeenko1567</a></td>
                                     <td>Игорь Алексеенко</td>
                                     <td>alexeenko@yandex.ru</td>
                                     <td>
@@ -198,576 +198,118 @@
 
     <!-- Modal -->
 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
-                <form method="" action="#" class="form-inline">
-                    <div class="modal-body">
-                        <div class="row report-date">
-                            <div class="col-md-6">
-                                <h3>Даты заезда</h3>
-                                <div class="form-group">
-                                    <label for="date1">с</label>
-                                    <input type="text" class="form-control" id="date1" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="date2">по</label>
-                                    <input type="text" class="form-control" id="date2" placeholder="">
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <h3>Даты создания брони</h3>
-                                <div class="form-group">
-                                    <label for="date3">с</label>
-                                    <input type="text" class="form-control" id="date3" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="date4">по</label>
-                                    <input type="text" class="form-control" id="date4" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row reports-filters">
-                            <div class="col-md-12">
-                                <select class="form-control">
-                                    <option>Все статусы</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-
-                                <select class="form-control">
-                                    <option>Все категории номеров</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-
-                                <select class="form-control">
-                                    <option>Все источники</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="test1" value="">
-                                    <label for="test1">сохранить в формате xsl</label>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                        <button type="submit" class="btn btn-info">Создать отчет</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="add-discounts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade admin-form" id="add-admin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
                 <form method="" action="#">
-                    <div class="modal-body">
-                        <h3>Название клиентской скидки</h3>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="text1" placeholder="">
-                        </div>
-                        <h3>Размер скидки</h3>
-                        <div class="form-group amount">
-                            <input type="text" class="form-control" id="text2" placeholder=""> %
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                        <button type="submit" class="btn btn-info">Добавить скидку</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="add-action" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
-                <form id="example-form" action="#">
-                    <div>
-                        <h3>Период действия акции</h3>
-                        <section class="action-time">
-                            <div class="radio-group">
-                                <div class="radio-inline">
-                                    <label>
-                                        <input type="radio" name="action-time" id="optionsRadios1" value="option1" checked>
-                                        Определённые даты
-                                    </label>
-                                </div>
-                                <div class="radio-inline">
-                                    <label>
-                                        <input type="radio" name="action-time" id="optionsRadios2" value="option2">
-                                        Определённые дни недели
-                                    </label>
-                                </div>
-                                <div class="radio-inline">
-                                    <label>
-                                        <input type="radio" name="action-time" id="optionsRadios3" value="option3">
-                                        Определённые часы
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="action-time-content">
-                                <div class="atc-item form-inline">
-                                    <div class="row action-date">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="date5">с</label>
-                                                <input type="text" class="form-control" id="date5" placeholder="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="date6">по</label>
-                                                <input type="text" class="form-control" id="date6" placeholder="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="atc-item">
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="day1" value="">
-                                        <label for="day1">Пн</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="day2" value="">
-                                        <label for="day2">Вт</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="day3" value="">
-                                        <label for="day3">Ср</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="day4" value="">
-                                        <label for="day4">Чт</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="day5" value="">
-                                        <label for="day5">Пт</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="day6" value="">
-                                        <label for="day6">Сб</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" id="day7" value="">
-                                        <label for="day7">Вс</label>
-                                    </div>
-                                </div>
-                                <div class="atc-item form-inline">
-
-                                    <div class="day">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="day01" value="">
-                                            <label for="day01">Пн</label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="time11">с</label>
-                                            <input type="text" class="form-control" id="time11" placeholder="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="time12">по</label>
-                                            <input type="text" class="form-control" id="time12" placeholder="">
-                                        </div>
-                                    </div>
-
-                                    <div class="day">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="day02" value="">
-                                            <label for="day02">Вт</label>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="time21">с</label>
-                                            <input type="text" class="form-control" id="time21" placeholder="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="time22">по</label>
-                                            <input type="text" class="form-control" id="time22" placeholder="">
-                                        </div>
-                                    </div>
-
-                                    <div class="day">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="day03" value="">
-                                            <label for="day03">Ср</label>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="time31">с</label>
-                                            <input type="text" class="form-control" id="time31" placeholder="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="time32">по</label>
-                                            <input type="text" class="form-control" id="time32" placeholder="">
-                                        </div>
-                                    </div>
-
-                                    <div class="day">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="day04" value="">
-                                            <label for="day04">Чт</label>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="time41">с</label>
-                                            <input type="text" class="form-control" id="time41" placeholder="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="time42">по</label>
-                                            <input type="text" class="form-control" id="time42" placeholder="">
-                                        </div>
-                                    </div>
-
-                                    <div class="day">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="day05" value="">
-                                            <label for="day05">Пт</label>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="time51">с</label>
-                                            <input type="text" class="form-control" id="time51" placeholder="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="time52">по</label>
-                                            <input type="text" class="form-control" id="time52" placeholder="">
-                                        </div>
-                                    </div>
-
-                                    <div class="day">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="day06" value="">
-                                            <label for="day06">Сб</label>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="time61">с</label>
-                                            <input type="text" class="form-control" id="time61" placeholder="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="time62">по</label>
-                                            <input type="text" class="form-control" id="time62" placeholder="">
-                                        </div>
-                                    </div>
-
-                                    <div class="day">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="day07" value="">
-                                            <label for="day07">Вс</label>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="time71">с</label>
-                                            <input type="text" class="form-control" id="time71" placeholder="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="time72">по</label>
-                                            <input type="text" class="form-control" id="time72" placeholder="">
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </section>
-                        <h3>Установка цен</h3>
-                        <section>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <p>Цены на категорию со скидкой</p>
-
-                                    <select class="form-control room-type">
-                                        <option>Стандартный</option>
-                                        <option>Полулюкс</option>
-                                        <option>Люкс</option>
-                                    </select>
-
-                                    <fieldset class="room-price">
-                                        <div class="row pull-left">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="price1" placeholder="">
-                                                    <label for="price1">за  1 час</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="price2" placeholder="">
-                                                    <label for="price2">за  2 часа</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="price3" placeholder="">
-                                                    <label for="price3">за  3 часа</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row pull-left">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="price4" placeholder="">
-                                                    <label for="price4">за сутки, 1 местный</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="price5" placeholder="">
-                                                    <label for="price5">за сутки, 2 местный</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="price6" placeholder="">
-                                                    <label for="price6">за каждый дополнительный час</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <button type="button" class="btn btn-success">Сохранить цены для категории «Стандарт»</button>
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </section>
-                        <h3>Готово!</h3>
-                        <section>
-                            <h3>Всё готово!</h3>
-
-                            <p>Осталось запустить акцию</p>
-                        </section>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="add-categories" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
-                <form method="" action="#">
+                    <input type="hidden" name="length" value="10">
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-6">
-                                <h3>Название новой категории</h3>
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="category1" placeholder="">
+                                    <label for="exampleInputText1">Имя пользователя<br>(логин для авторизации)</label>
+                                    <input type="text" class="form-control" id="exampleInputText1" placeholder="">
                                 </div>
                             </div>
-                            <div class="col-md-6 form-inline">
-                                <h3>Минимальный срок бронирования</h3>
 
-                                <select class="form-control">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>&nbsp; час
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputText2">Имя, фамилия</label>
+                                    <input type="text" class="form-control" id="exampleInputText2" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">E-mail</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputPass1">Пароль</label>
+                                    <input type="password" class="form-control" id="exampleInputPass1" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputPass2">Пароль еще раз</label>
+                                    <input type="password" class="form-control" id="exampleInputPass2" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-link">Сгенерировать пароль</button>
                             </div>
                         </div>
-                        <fieldset class="room-price">
-                            <h3>Цены</h3>
-                            <div class="row pull-left">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price1" placeholder="">
-                                        <label for="price1">за  1 час</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price2" placeholder="">
-                                        <label for="price2">за  3 часа</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price3" placeholder="">
-                                        <label for="price3">за  ночь</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row pull-left">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price4" placeholder="">
-                                        <label for="price4">за сутки, 1 местный</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price5" placeholder="">
-                                        <label for="price5">за сутки, 2 местный</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price6" placeholder="">
-                                        <label for="price6">за каждый дополнительный час</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price6" placeholder="">
-                                        <label for="price6">за ранний заезд или выезд</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </fieldset>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                        <button type="submit" class="btn btn-info">Добавить категорию</button>
+                        <button type="submit" class="btn btn-info">Создать профиль</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="edit-category" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade admin-form" id="edit-admin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
                 <form method="" action="#">
+                    <input type="hidden" name="length" value="10">
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-6">
-                                <h3>Название новой категории</h3>
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="category1" placeholder="" value="Комфорт">
+                                    <label for="exampleInputText1">Имя пользователя<br>(логин для авторизации)</label>
+                                    <input type="text" class="form-control" id="exampleInputText1" placeholder="" value="Alexeenko1567">
                                 </div>
                             </div>
-                            <div class="col-md-6 form-inline">
-                                <h3>Минимальный срок бронирования</h3>
 
-                                <select class="form-control">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>&nbsp; час
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputText2">Имя, фамилия</label>
+                                    <input type="text" class="form-control" id="exampleInputText2" placeholder="" value="Игорь Алексеенко">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">E-mail</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" value="alexeenko@yandex.ru">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputPass1">Пароль</label>
+                                    <input type="password" class="form-control" id="exampleInputPass1" placeholder="" value="asdfasfad">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputPass2">Пароль еще раз</label>
+                                    <input type="password" class="form-control" id="exampleInputPass2" placeholder="" value="asdfasfad">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-link">Сгенерировать пароль</button>
                             </div>
                         </div>
-                        <fieldset class="room-price">
-                            <h3>Цены</h3>
-                            <div class="row pull-left">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price1" placeholder="">
-                                        <label for="price1">за  1 час</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price2" placeholder="">
-                                        <label for="price2">за  3 часа</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price3" placeholder="">
-                                        <label for="price3">за  ночь</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row pull-left">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price4" placeholder="">
-                                        <label for="price4">за сутки, 1 местный</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price5" placeholder="">
-                                        <label for="price5">за сутки, 2 местный</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price6" placeholder="">
-                                        <label for="price6">за каждый дополнительный час</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="price6" placeholder="">
-                                        <label for="price6">за ранний заезд или выезд</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </fieldset>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                        <button type="submit" class="btn btn-info">Добавить категорию</button>
+                        <button type="submit" class="btn btn-info">Сохранить</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="add-service" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
-                <form method="" action="#">
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>Название новой услуги</h3>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="category1" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-md-6 form-inline">
-                                <h3>Цена</h3>
-
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="category1" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                        <button type="submit" class="btn btn-info">Добавить услугу</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 </body>
 </html>

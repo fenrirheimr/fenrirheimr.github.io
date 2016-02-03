@@ -301,6 +301,8 @@
                 control: '.visibility'
             });
 
+            //////////////////////////////////////////////////////////////
+
         },
         scheduler:function(){
             var collapsedLink = $('.collapsed > .caption');
@@ -432,7 +434,7 @@
 
         },
         equalHeight:function(){
-            var equalBlock = $('[class^=col-] .block');
+            var equalBlock = $('.modal label');
             equalBlock.matchHeight();
         },
         validateForm:function(){
