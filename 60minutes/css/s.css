@@ -829,8 +829,8 @@ h2 + .add {margin-top: 35px;}
 
 .modal-footer {background: #f9f9f9; border-top: 1px solid #e5e5e5;}
 
-.modal-title {font-size: 28px; color: #000;}
-.modal-title small {font-size: 15px; color: #949494;}
+.modal-title {font-size: 28px; color: #000; line-height: 40px;}
+.modal-title small {font-size: 15px; color: #949494;display: inline-block; line-height: 40px; vertical-align: top;}
 
 /* Rooms */
 
@@ -1149,6 +1149,16 @@ h2 + .add {margin-top: 35px;}
 .visibility.active .off {display: inline;}
 
 .admin-form .btn-link {margin-top: 25px;}
+
+/* ////////////////// */
+
+.total-price {display: inline-block; margin-right: 20px;}
+.total-price span {display: inline-block;}
+.total-price span.price {width: auto; position: relative; font-weight: normal; font-size: 18px; color: #519cc8;}
+.total-price span.price:after {
+    display: inline-block; margin-left: 4px;
+    content: '\20bd';
+}
 /* Footer */
 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}
