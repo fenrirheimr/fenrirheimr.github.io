@@ -684,7 +684,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="record" data-record="2" style="top: 50px; left: 0; width: 150px;">
-                                                        <div class="record-inner c2" title="tooltip">37</div>
+                                                        <div class="record-inner c2" title="tooltip" data-toggle="modal" data-target="#bid37">37</div>
                                                         <div class="record-tooltip">
                                                             <div><span>Заезд:</span> 22.12.2015&nbsp;20:00</div>
                                                             <div><span>Выезд:</span> 26.12.2015&nbsp;12:00</div>
@@ -1440,6 +1440,240 @@
             </div>
         </div>
     </div>
+    <div class="modal fade bid" id="bid37" tabindex="-1" role="dialog" aria-labelledby="bidlLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h4 class="modal-title" id="myModalLabel">Бронь 37 <span class="label label-success">Ожидает заселения</span></h4>
+                        </div>
+                        <div class="col-md-7">
+
+                            <div class="total-price">
+                                К оплате <span class="price">182&thinsp;870</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-success">Заселить</button>
+                            <button type="submit" class="btn btn-danger">Отменить бронь</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form method="" action="#">
+                        <div class="row">
+                            <table class="table table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Дата и время заезда</th>
+                                        <th>Дата и время выезда</th>
+                                        <th>Категория</th>
+                                        <th>Номер и количество гостей</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>
+                                        <span class="date">18.10.2015</span>
+                                        <select class="form-control">
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                        </select>
+
+                                        <select class="form-control">
+                                            <option>00</option>
+                                            <option>10</option>
+                                            <option>20</option>
+                                            <option>30</option>
+                                            <option>40</option>
+                                            <option>50</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <span class="date">22.10.2015</span>
+                                        <select class="form-control">
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                        </select>
+
+                                        <select class="form-control">
+                                            <option>00</option>
+                                            <option>10</option>
+                                            <option>20</option>
+                                            <option>30</option>
+                                            <option>40</option>
+                                            <option>50</option>
+                                        </select>
+                                    </td>
+                                    <td>Полулюкс</td>
+                                    <td>
+                                        <span class="date">211</span>
+                                        <select class="form-control">
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                        гостя
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+                            <table class="table table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Имя, фамилия гостя</th>
+                                        <th>Телефон</th>
+                                        <th>E-mail</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>Александр Христорождественский</td>
+                                    <td>+ 7 (927) 248 56 04</td>
+                                    <td>alexander.christo@yandex.ru</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Имя, фамилия гостя</th>
+                                    <th>Телефон</th>
+                                    <th>E-mail</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td><input  type="text" class="form-control" value="Александр Христорождественский"></td>
+                                    <td><input  type="text" class="form-control" value="+ 7 (927) 248 56 04"></td>
+                                    <td><input  type="text" class="form-control" value="alexander.christo@yandex.ru"></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-info">Сохранить</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <form method="" action="#" class="add-services">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Дополнительные услуги</h3>
+
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Тапочки</td>
+                                            <td>2</td>
+                                            <td>
+                                                <span class="price">250</span>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="text-danger">Удалить</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Кофе (кофейник)</td>
+                                            <td>3</td>
+                                            <td>
+                                                <span class="price">250</span>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="text-danger">Удалить</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>Итого</td>
+                                            <td></td>
+                                            <td>
+                                                <span class="price">1500</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+
+                                <div class="add-serv-row">
+
+                                    <div class="choose-serv">
+                                        <select class="form-control">
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="amount">
+                                        <select class="form-control">
+                                            <option>00</option>
+                                            <option>10</option>
+                                            <option>20</option>
+                                            <option>30</option>
+                                            <option>40</option>
+                                            <option>50</option>
+                                        </select>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-info">Сохранить</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <h3>Новое поручение</h3>
+
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="row">
+                                    <div class="col-md-12 text-right">
+                                        <button type="submit" class="btn btn-info">Добавить поручение</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </body>
 </html>

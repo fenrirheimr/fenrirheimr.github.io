@@ -833,8 +833,9 @@ h2 + .add {margin-top: 35px;}
 
 .modal-title {font-size: 28px; color: #000; line-height: 40px;}
 .modal-title small {font-size: 15px; color: #949494;display: inline-block; line-height: 40px; vertical-align: top;}
-.modal-title .label {font-size: 15px; color: #59abdb; font-weight: normal;}
-.modal-title .label-info {background: #d0edff; vertical-align: middle; position: relative; top: -4px;}
+.modal-title .label {font-size: 15px; font-weight: normal;}
+.modal-title .label-info {background: #d0edff; color: #59abdb; vertical-align: middle; position: relative; top: -4px;}
+.modal-title .label-success {background: #d7ffc5; color: #58af66; vertical-align: middle; position: relative; top: -4px;}
 
 /* Rooms */
 
