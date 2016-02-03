@@ -470,6 +470,7 @@ body.fix {overflow: hidden;}
     -moz-transition: visibility 0s 0.6s;
     transition: visibility 0s 0.6s;
     background: rgba(103,103,103, 0.5);
+    z-index: 999;
 }
 .cd-panel::after {
     /* overlay layer */
@@ -943,7 +944,7 @@ h2 + .add {margin-top: 35px;}
 .days-name-wrapper .weeks-holder {display: table; width: 100%; position: relative;}
 .days-name-wrapper .weeks {display: table-cell; position: relative;}
 .days-name-wrapper .weeks caption {padding: 0; text-align: center; position: relative;}
-.days-name-wrapper .weeks caption .month-title > div {min-width: 250px;}
+.days-name-wrapper .weeks caption .month-title > div {min-width: 250px !important;}
 .days-name-wrapper .weeks .days {border-collapse: collapse; position:relative; left:0; width: 100%;}
 .days-name-wrapper .weeks .days tr {}
 .days-name-wrapper .weeks .days tr td > div {
@@ -951,6 +952,8 @@ h2 + .add {margin-top: 35px;}
     font-size: 15px; color: #3f3f3f; line-height: 18px; padding: 8px; position: relative;
 }
 .days-name-wrapper .weeks .days tr td:first-child > div {border-left: 1px solid #e5e5e5;}
+
+.days-name-wrapper .weeks .days tr td[colspan="4"] > div {width: 200px; height: 32px;}
 
 .days-name-wrapper .weeks .days tr td > div[data-wnd="wnd"],
 .schedule-wrapper .days td div[data-wnd="wnd"] {color: #ff6665; background: #fff7ed;}

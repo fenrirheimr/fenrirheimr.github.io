@@ -35,7 +35,8 @@
 
             $('#reports-tab a').click(function (e) {
                 e.preventDefault();
-                $(this).tab('show')
+                $(this).tab('show');
+
             });
 
             $('.record .record-inner').tooltip({
@@ -340,18 +341,22 @@
                 var schedulerWrapper = $('.scheduler');
                 schedulerWrapper.each(function(){
 
+                    var thisParent = $(this).parents('.tab-pane');
                     var markCurrentDay = $('<div class="mark-current-day"></div>');
-                    var currentDay = $('.scheduler-header .current-day');
-                    var offsetLeft = currentDay.position().left - currentDay.closest($(this)).position().left+170;
-                    var schedulerHeight = $(this).height();
 
-                    if(markCurrentDay.is('div')){
+
+                    if(thisParent.is('.active')){
                         markCurrentDay.appendTo($(this));
+                        var currentDay = $('.scheduler-header .current-day');
+                        var offsetLeft = currentDay.position().left - currentDay.closest($(this)).position().left+170;
+                        var schedulerHeight = $(this).height();
+
+                        markCurrentDay.css({
+                            'left': offsetLeft,
+                            'height': schedulerHeight-99
+                        })
                     }
-                    markCurrentDay.css({
-                        'left': offsetLeft,
-                        'height': schedulerHeight-99
-                    })
+
                 });
             };
             highlightCurrentDay();
@@ -366,7 +371,6 @@
                 var sliderLimit = -(holder-holderWrapper);
 
                 var move = "50px";
-                headersWidth();
 
                 var recordsHolder = $('.records-holder')
                 var recordsHolderWidth = $('.month-holder').width();
