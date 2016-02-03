@@ -94,12 +94,14 @@ a:focus {text-decoration: none;}
 form {}
 form label {font-size: 15px; color: #000; font-weight: normal;}
 form .form-group {margin-bottom: 25px;}
+
 form .form-control {
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     border-radius: 1px;
-    color: #000; height: 38px;
+    color: #000;
 }
+form input.form-control {height: 38px;}
 form .form-group.error input.form-control {border-color: #ff6665;}
 
 form .form-control::-webkit-input-placeholder {color: #999;}
@@ -831,6 +833,8 @@ h2 + .add {margin-top: 35px;}
 
 .modal-title {font-size: 28px; color: #000; line-height: 40px;}
 .modal-title small {font-size: 15px; color: #949494;display: inline-block; line-height: 40px; vertical-align: top;}
+.modal-title .label {font-size: 15px; color: #59abdb; font-weight: normal;}
+.modal-title .label-info {background: #d0edff; vertical-align: middle; position: relative; top: -4px;}
 
 /* Rooms */
 
@@ -1159,6 +1163,44 @@ h2 + .add {margin-top: 35px;}
     display: inline-block; margin-left: 4px;
     content: '\20bd';
 }
+
+.modal.bid .table > thead > tr > th,
+.modal.bid .table > tbody > tr > td,
+.modal.bid .table > tfoot > tr > td {padding: 15px 8px;}
+
+.modal.bid .table > thead > tr > th:first-child,
+.modal.bid .table > tbody > tr > td:first-child {padding-left: 30px;}
+
+.modal.bid .table > thead > tr > th:last-child,
+.modal.bid .table > tbody > tr > td:last-child {padding-right: 30px;}
+
+.modal.bid .table > tbody > tr > td .date {display: inline-block; vertical-align: middle; margin-right: 10px;}
+.modal.bid .table > tbody > tr > td .sbHolder {display: inline-block; vertical-align: middle; width: 70px;}
+
+.modal.bid .add-services {margin-bottom: 40px;}
+.modal.bid .add-services span.price {display: inline-block; width: auto; position: relative;}
+.modal.bid .add-services span.price:after {
+    display: inline-block; margin-left: 4px;
+    content: '\20bd';
+}
+
+.modal.bid .add-services .table > thead > tr > th:first-child,
+.modal.bid .add-services .table > tbody > tr > td:first-child,
+.modal.bid .add-services .table > tfoot > tr > td:first-child {padding-left: 15px;}
+
+.modal.bid .add-services .table > thead > tr > th:last-child,
+.modal.bid .add-services .table > tbody > tr > td:last-child {padding-right: 15px;}
+
+.modal.bid .add-services .table > tfoot > tr > td:first-child {color: #949494;}
+
+.add-serv-row .choose-serv,
+.add-serv-row .choose-serv .sbHolder {width: 190px; display: inline-block; vertical-align: middle;}
+
+.add-serv-row .amount,
+.add-serv-row .amount .sbHolder {width: 70px; display: inline-block; vertical-align: middle;}
+
+.text-danger {color: #ff6665;}
+
 /* Footer */
 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}
