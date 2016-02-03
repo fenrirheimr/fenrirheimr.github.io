@@ -1135,6 +1135,7 @@ h2 + .add {margin-top: 35px;}
 .hotel-options h3 {margin-bottom: 20px;}
 .hotel-options .sbHolder {display: inline-block;width: 70px; vertical-align: middle;}
 .hotel-options .small {width: 80px; vertical-align: middle; margin-right: 6px;}
+.hotel-options .btn {margin-top: 30px;}
 
 /* Footer */
 
