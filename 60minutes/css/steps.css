@@ -287,13 +287,9 @@
     color: #aaa;
 }
 
-.wizard > .loading
-{
-}
+.wizard > .loading{}
 
-.wizard > .loading .spinner
-{
-}
+.wizard > .loading .spinner {}
 
 
 

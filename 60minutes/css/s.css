@@ -170,7 +170,7 @@ form .form-control:placeholder-shown {color: #999;}
 /* checkbox aspect */
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before {
-    content: '';
+    content: ' ';
     position: absolute;
     left:0; top: 2px;
     width: 18px; height: 18px;
@@ -179,6 +179,7 @@ form .form-control:placeholder-shown {color: #999;}
     border-radius: 1px;
 }
 /* checked mark aspect */
+
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
     content: ' ';
@@ -219,7 +220,85 @@ form .form-control:placeholder-shown {color: #999;}
 label:hover:before {
     border: 1px solid #4778d9!important;
 }
+/*///////////////////////////////////////////////////////////////////////*/
 
+/* Custom radio */
+
+/* Base for label styling */
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+    position: absolute !important;
+    left: -9999px;
+}
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+    content: ' ';
+    position: absolute;
+    left:0; top: 2px;
+    width: 18px; height: 18px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+/* checked mark aspect */
+
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+    content: ' ';
+    position: absolute;
+    top: 8px; left: 6px; width: 6px; height: 6px;
+    transition: all .2s;
+    display: block;
+    background: #000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+/* checked mark aspect changes */
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+/* disabled checkbox */
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+[type="radio"]:disabled:checked + label:after {
+    color: #999;
+}
+[type="radio"]:disabled + label {
+    color: #aaa;
+}
+/* accessibility */
+/*[type="radio"]:checked:focus + label:before,
+[type="radio"]:not(:checked):focus + label:before {
+    border: 1px dotted blue;
+}*/
+
+/* hover style just for information */
+label:hover:before {
+    border: 1px solid #4778d9!important;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////*/
 
 /* Header */
 
