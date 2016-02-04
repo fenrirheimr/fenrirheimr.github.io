@@ -933,7 +933,10 @@ h2 + .add {margin-top: 35px;}
 }
 .scheduler .rooms-wrapper .days tr:first-child td div {border-top: none;}
 .scheduler .rooms-wrapper .collapsed:last-child .days tr:last-child td div {border-bottom: 1px solid #e5e5e5;}
-.scheduler .rooms-wrapper .days tr td div.repair {background: url("../img/repairs.png");}
+
+td[data-repair="true"] div {background: url("../img/repairs.png");}
+td[data-repair="true"] + td[data-repair="true"] div {background-position: -10px 0;}
+
 .scheduler-header {
     position: relative; border: 1px solid #e5e5e5; border-bottom: none; text-align: center;
     overflow: hidden;
