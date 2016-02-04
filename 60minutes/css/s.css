@@ -843,6 +843,8 @@ h2 + .add {margin-top: 35px;}
 .modal-title .label {font-size: 15px; font-weight: normal;}
 .modal-title .label-info {background: #d0edff; color: #59abdb; vertical-align: middle; position: relative; top: -4px;}
 .modal-title .label-success {background: #d7ffc5; color: #58af66; vertical-align: middle; position: relative; top: -4px;}
+.modal .collapsed .caption {font-size: 18px; line-height: 38px;}
+.modal .collapsed .caption + form {display: none;}
 
 /* Rooms */
 
@@ -1230,6 +1232,8 @@ form > .table.bid th {white-space: nowrap;}
 
 .modal.bid .add-services .table > tfoot > tr > td:first-child {color: #949494;}
 
+.add-services h3.pull-left + a.pull-left {margin-top: 20px;margin-left: 10px;}
+
 .add-serv-row .choose-serv,
 .add-serv-row .choose-serv .sbHolder {width: 190px; display: inline-block; vertical-align: middle;}
 
@@ -1240,7 +1244,8 @@ form > .table.bid th {white-space: nowrap;}
 
 .discount {height: 38px;}
 .discount > div {padding: 0 30px}
-.discount .sbHolder {display: none;width: 300px; vertical-align: middle;  margin-left: 10px;}
+.discount .discount-list {display: none;vertical-align: middle;}
+.discount .discount-list .sbHolder {display: inline-block; width: 300px; vertical-align: middle; margin-right: 10px;}
 
 /* //// */
 

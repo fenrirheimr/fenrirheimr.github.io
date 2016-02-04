@@ -252,7 +252,8 @@
 
             discountLink.click(function(e){
                 e.preventDefault();
-                $(this).siblings('.sbHolder').show().css("display", "inline-block");;
+                $(this).hide();
+                $(this).siblings('.discount-list').show().css("display", "inline-block");
             });
 
             //////////////////////////////////////////////////////////////
@@ -349,7 +350,7 @@
 
             collapsedLink.click(function(e){
                 e.preventDefault();
-                $(this).parent().toggleClass('current');
+                $(this).parent().toggleClass('show');
                 $(this).next().slideToggle();
             });
 
