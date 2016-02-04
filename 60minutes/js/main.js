@@ -259,9 +259,13 @@
 
             // Для примера
 
+            $('.rooms .btn-gray').click(function(){
+                $('.message.success').show();
+            });
+
             $('.rooms .btn-danger').click(function(){
-                $('.message').show();
-            })
+                $('.message.error').show();
+            });
 
             //////////////////////////////////////////////////////////////
 

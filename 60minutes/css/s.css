@@ -1251,6 +1251,8 @@ form > .table.bid th {white-space: nowrap;}
 }
 .message.payment {background: #ffd963; color: #000;}
 .message.success {background: #63c673; color: #fff; text-align: center;}
+.message.error {background: #ff6665; color: #fff; text-align: center;}
+
 .message .btn-border {background: transparent; color: #000; border: 1px solid #bf8b4e;}
 /* Footer */
 
