@@ -1206,7 +1206,7 @@ form > .table.bid th {white-space: nowrap;}
 
 .modal.bid .table > thead > tr > th,
 .modal.bid .table > tbody > tr > td,
-.modal.bid .table > tfoot > tr > td {padding: 15px 8px;}
+.modal.bid .table > tfoot > tr > td {padding: 15px 8px; line-height: 38px;}
 
 .modal.bid .table > thead > tr > th:first-child,
 .modal.bid .table > tbody > tr > td:first-child {padding-left: 30px;}
