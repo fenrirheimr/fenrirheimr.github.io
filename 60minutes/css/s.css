@@ -1185,6 +1185,7 @@ td[data-repair="true"] div {background: url("../img/repairs.png");}
 }
 
 form > .table.bid td {white-space: nowrap;}
+form > .table.bid th {white-space: nowrap;}
 .table.bid span,
 .table.rooms span {display: inline-block;}
 .table.bid span.price,
