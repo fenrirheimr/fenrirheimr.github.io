@@ -1958,25 +1958,7 @@
                                 <tbody>
 
                                 <tr>
-                                    <td>
-                                        <span class="date">18.10.2015</span>
-                                        <select class="form-control">
-                                            <option>12</option>
-                                            <option>13</option>
-                                            <option>14</option>
-                                            <option>15</option>
-                                            <option>16</option>
-                                        </select>
-
-                                        <select class="form-control">
-                                            <option>00</option>
-                                            <option>10</option>
-                                            <option>20</option>
-                                            <option>30</option>
-                                            <option>40</option>
-                                            <option>50</option>
-                                        </select>
-                                    </td>
+                                    <td><span class="date">18.10.2015</span> 12:45</td>
                                     <td>
                                         <span class="date">22.10.2015</span>
                                         <select class="form-control">
@@ -2041,14 +2023,19 @@
                         </div>
                     </form>
 
-                    <form method="" action="#" class="add-services">
+                    <div class="collapsed">
+                        <div class="caption">
+                            <a href="">Дополнительные услуги и поручения  <i class="material-icons">&#xE313;</i></a>
+                        </div>
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3>Дополнительные услуги</h3>
+                        <form method="" action="#" class="add-services">
 
-                                <table class="table table-striped">
-                                    <tbody>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Дополнительные услуги</h3>
+
+                                    <table class="table table-striped">
+                                        <tbody>
                                         <tr>
                                             <td>Тапочки</td>
                                             <td>2</td>
@@ -2069,8 +2056,8 @@
                                                 <a href="#" class="text-danger">Удалить</a>
                                             </td>
                                         </tr>
-                                    </tbody>
-                                    <tfoot>
+                                        </tbody>
+                                        <tfoot>
                                         <tr>
                                             <td>Итого</td>
                                             <td></td>
@@ -2079,6 +2066,105 @@
                                             </td>
                                             <td></td>
                                         </tr>
+                                        </tfoot>
+                                    </table>
+
+                                    <div class="add-serv-row">
+
+                                        <div class="choose-serv">
+                                            <select class="form-control">
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="amount">
+                                            <select class="form-control">
+                                                <option>00</option>
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>30</option>
+                                                <option>40</option>
+                                                <option>50</option>
+                                            </select>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-info">Сохранить</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="clearfix">
+                                        <h3 class="pull-left">Новое поручение</h3>
+                                        <a href="#" class="pull-left">2 поручения</a>
+                                    </div>
+
+                                    <table class="table table-striped">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="row">
+                                        <div class="col-md-12 text-right">
+                                            <button type="submit" class="btn btn-info">Добавить поручение</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div><div class="collapsed">
+                    <div class="caption">
+                        <a href="">Дополнительные услуги и поручения  <i class="material-icons">&#xE313;</i></a>
+                    </div>
+
+                    <form method="" action="#" class="add-services">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Дополнительные услуги</h3>
+
+                                <table class="table table-striped">
+                                    <tbody>
+                                    <tr>
+                                        <td>Тапочки</td>
+                                        <td>2</td>
+                                        <td>
+                                            <span class="price">250</span>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="text-danger">Удалить</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кофе (кофейник)</td>
+                                        <td>3</td>
+                                        <td>
+                                            <span class="price">250</span>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="text-danger">Удалить</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <td>Итого</td>
+                                        <td></td>
+                                        <td>
+                                            <span class="price">1500</span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
                                     </tfoot>
                                 </table>
 
@@ -2086,36 +2172,42 @@
 
                                     <div class="choose-serv">
                                         <select class="form-control">
-                                            <option>Кофе (кофейник)</option>
-                                            <option>Вискарь</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
                                         </select>
                                     </div>
 
                                     <div class="amount">
                                         <select class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
+                                            <option>00</option>
+                                            <option>10</option>
+                                            <option>20</option>
+                                            <option>30</option>
+                                            <option>40</option>
+                                            <option>50</option>
                                         </select>
                                     </div>
 
-                                    <button type="submit" class="btn btn-info">Добавить</button>
+                                    <button type="submit" class="btn btn-info">Сохранить</button>
                                 </div>
                             </div>
                             <div class="col-md-6">
 
-                                <h3>Новое поручение</h3>
+                                <div class="clearfix">
+                                    <h3 class="pull-left">Новое поручение</h3>
+                                    <a href="#" class="pull-left">2 поручения</a>
+                                </div>
 
                                 <table class="table table-striped">
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <textarea class="form-control" rows="3"></textarea>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
 
@@ -2130,9 +2222,11 @@
 
                     </form>
                 </div>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="modal fade bid" id="bid37" tabindex="-1" role="dialog" aria-labelledby="bidlLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
