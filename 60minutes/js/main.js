@@ -338,7 +338,7 @@
             var schedulerWrapper = $('.scheduler');
 
 
-            var headers = $('.scheduler-header .month-title');
+            var headers = $('.scheduler-header .month-title > div');
             var monthsHolder = $('.scheduler-header .days-name-wrapper .weeks-holder');
 
             function headersWidth(){
