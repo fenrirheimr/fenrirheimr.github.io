@@ -43,7 +43,7 @@
                 }
             });
 
-            $('.service a[title="tooltip"], .bid a[title="tooltip"], .reports a[title="tooltip"], .reports span[title="tooltip"]').tooltip({
+            $('.service a[title="tooltip"], .bid a[title="tooltip"], .reports a[title="tooltip"], .reports span[title="tooltip"], .total-price span[title="tooltip"]').tooltip({
                 tooltipClass:"num-tooltip",
                 content: function() {
                     var element = $(this).next();
