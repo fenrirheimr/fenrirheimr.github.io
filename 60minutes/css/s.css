@@ -983,7 +983,7 @@ td[data-repair="true"] div {background: url("../img/repairs.png");}
     background: #ff6665; content: ' ';
 }
 .mark-current-day:after {
-    display: block; width: 2px; height: 100%; position: absolute; top: 49px; left: 23px;
+    display: block; width: 2px; height: 100%; position: absolute; top: 49px; left: 25px;
     background: #ff6665; content: ' ';
 }
 .scheduler .records-wrapper {width: 100%; position: absolute;top: 0; bottom: 0; left: 156px; overflow: hidden;}
