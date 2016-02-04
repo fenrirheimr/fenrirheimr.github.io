@@ -1168,6 +1168,7 @@ td[data-repair="true"] div {background: url("../img/repairs.png");}
 .hotel-options .sbHolder {display: inline-block;width: 70px; vertical-align: middle;}
 .hotel-options .small {width: 80px; vertical-align: middle; margin-right: 6px;}
 .hotel-options .btn {margin-top: 30px;}
+.hotel-options label {text-align: left !important;}
 
 
 /* toggleShowPassword */

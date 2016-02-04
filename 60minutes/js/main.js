@@ -177,23 +177,31 @@
                         buttonText: "Выбрать дату"
                     });
 
-                    var actionTimeRBtn = $('.action-time input[type="radio"]');
-                    var actionTimeContent = $('.action-time .action-time-content .atc-item');
+                    var actionTime = $('.action-time');
 
-                    actionTimeRBtn.each(function(i){
-                        var checkedRBtn = actionTimeRBtn.eq(i).prop("checked");
 
-                        if(checkedRBtn) {
-                            actionTimeContent.eq(i).show();
-                        }
 
-                        actionTimeRBtn.eq(i).on('click', function(){
-                            if (actionTimeRBtn.eq(i).prop('checked')){
-                                $('.atc-item').hide();
-                                actionTimeRBtn.eq(i).parents('.action-time').find('.atc-item').eq(i).fadeIn(300);
+                    actionTime.each(function(){
+
+                        var actionTimeRBtn = $(this).find('input[type="radio"]');
+                        var actionTimeContent = $(this).find('.action-time-content .atc-item');
+
+                        actionTimeRBtn.each(function(i){
+                            var checkedRBtn = actionTimeRBtn.eq(i).prop("checked");
+
+                            if(checkedRBtn) {
+                                actionTimeContent.eq(i).show();
                             }
+
+                            actionTimeRBtn.eq(i).on('click', function(){
+                                if (actionTimeRBtn.eq(i).prop('checked')){
+                                    $('.atc-item').hide();
+                                    actionTimeRBtn.eq(i).parents('.action-time').find('.atc-item').eq(i).fadeIn(300);
+                                }
+                            });
                         });
                     });
+
 
                 },
                 onStepChanging: function (event, currentIndex, newIndex)
@@ -261,11 +269,11 @@
             // Для примера
 
             $('.rooms .btn-gray').click(function(){
-                $('.message.success').show();
+                $('.message.success').fadeIn(800).delay(2000).fadeOut(800);
             });
 
             $('.rooms .btn-danger').click(function(){
-                $('.message.error').show();
+                $('.message.error').fadeIn(800).delay(2000).fadeOut(800);
             });
 
             //////////////////////////////////////////////////////////////
