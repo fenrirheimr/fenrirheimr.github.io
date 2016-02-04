@@ -781,6 +781,9 @@ h3 {font-size: 18px; font-weight: bold;}
 }
 .table > tbody > tr > td {vertical-align: middle;}
 .table.reports > thead > tr > th {padding: 0 0 8px;}
+.table.reports > thead > tr > th span,
+.table.reports > thead > tr > th a {display: inline-block; vertical-align: top;}
+.table.reports > thead > tr > th span + a {margin-top: -2px;}
 .table.bid {margin-bottom: 0;}
 .table.bid > tbody > tr > td:last-child {width: 320px; text-align: right;}
 
@@ -835,7 +838,7 @@ h2 + .add {margin-top: 35px;}
 
 .modal-footer {background: #f9f9f9; border-top: 1px solid #e5e5e5;}
 
-.modal-title {font-size: 28px; color: #000; line-height: 40px;}
+.modal-title {font-size: 28px; color: #000; line-height: 40px; margin-left: 15px;}
 .modal-title small {font-size: 15px; color: #949494;display: inline-block; line-height: 40px; vertical-align: top;}
 .modal-title .label {font-size: 15px; font-weight: normal;}
 .modal-title .label-info {background: #d0edff; color: #59abdb; vertical-align: middle; position: relative; top: -4px;}
@@ -1235,6 +1238,20 @@ form > .table.bid th {white-space: nowrap;}
 
 .text-danger {color: #ff6665;}
 
+.discount {height: 38px;}
+.discount > div {padding: 0 30px}
+.discount .sbHolder {display: none;width: 300px; vertical-align: middle;  margin-left: 10px;}
+
+/* //// */
+
+.message {
+    display: none; line-height: 38px;
+    position: absolute; z-index: 999;
+    top:0; left: 0; right: 0; padding: 13px 0;
+}
+.message.payment {background: #ffd963; color: #000;}
+.message.success {background: #63c673; color: #fff; text-align: center;}
+.message .btn-border {background: transparent; color: #000; border: 1px solid #bf8b4e;}
 /* Footer */
 
 .footer {height: 64px; margin-top: -64px; width: 100%; background: #333332;}

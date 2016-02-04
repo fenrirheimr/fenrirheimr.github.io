@@ -248,6 +248,23 @@
 
             //////////////////////////////////////////////////////////////
 
+            var discountLink = $('.discount .add-discount');
+
+            discountLink.click(function(e){
+                e.preventDefault();
+                $(this).siblings('.sbHolder').show().css("display", "inline-block");;
+            });
+
+            //////////////////////////////////////////////////////////////
+
+            // Для примера
+
+            $('.rooms .btn-danger').click(function(){
+                $('.message').show();
+            })
+
+            //////////////////////////////////////////////////////////////
+
             var tabSet = $('.table-settings');
 
             tabSet.click(function(e){
