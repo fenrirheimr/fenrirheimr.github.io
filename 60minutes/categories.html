@@ -197,7 +197,7 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td><a href="#" class="promo-title">Чай</a></td>
+                                <td><a href="#edit-service" data-toggle="modal"  class="promo-title">Чай</a></td>
                                 <td><span class="price">300</span></td>
                                 <td>
                                     <button type="submit" class="btn btn-danger">Удалить</button>
@@ -246,6 +246,20 @@
                         <h3 class="question">Частые вопросы</h3>
 
                         <ul>
+                            <li><a href="#">Как создать номер?</a></li>
+                            <li><a href="#">Как создать бронь?</a></li>
+                            <li><a href="#">Как редактировать данные гостя?</a></li>
+                            <li><a href="#">Как сформировать отчет в Excel?</a></li>
+                            <li><a href="#">Как добавить администратора?</a></li>
+                            <li><a href="#">Как создать акцию?</a></li>
+                            <li><a href="#">Как выселить гостя?</a></li>
+                            <li><a href="#">Как создать номер?</a></li>
+                            <li><a href="#">Как создать бронь?</a></li>
+                            <li><a href="#">Как редактировать данные гостя?</a></li>
+                            <li><a href="#">Как сформировать отчет в Excel?</a></li>
+                            <li><a href="#">Как добавить администратора?</a></li>
+                            <li><a href="#">Как создать акцию?</a></li>
+                            <li><a href="#">Как выселить гостя?</a></li>
                             <li><a href="#">Как создать номер?</a></li>
                             <li><a href="#">Как создать бронь?</a></li>
                             <li><a href="#">Как редактировать данные гостя?</a></li>
@@ -833,6 +847,37 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
                         <button type="submit" class="btn btn-info">Добавить услугу</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="edit-service" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
+                <form method="" action="#">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Название новой услуги</h3>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="category2" placeholder="" value="Чай">
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-inline">
+                                <h3>Цена</h3>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="category4" placeholder="" value="300">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-info">Сохранить</button>
                     </div>
                 </form>
             </div>

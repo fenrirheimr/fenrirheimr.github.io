@@ -326,6 +326,7 @@ label:hover:before {
 .reports .record-tooltip {display: none;}
 
 [title="tooltip"] {text-decoration: none; border-bottom: 1px dotted;}
+span[title="tooltip"] {color: #519cc8;}
 
 .user-wrapper {display: inline-block; position: relative;}
 .user-wrapper .user-menu {
@@ -772,6 +773,8 @@ h3 {font-size: 18px; font-weight: bold;}
 }
 .report-service .more-settings:hover {color: #da5857;}
 
+.report-service .more-settings i {color: #ccc}
+
 .table > thead > tr > th {
     border-bottom: 1px solid #e1e2e4; font-weight: normal; color: #949494; vertical-align: top;
     position: relative;
@@ -806,8 +809,8 @@ h3 {font-size: 18px; font-weight: bold;}
 .reports-rows .sbOptions {width: 80px;}
 .reports-rows .sbSelector {width: 50px;}
 
-.form-inline .sbHolder {width: 200px; display: inline-block; vertical-align: middle;}
-.form-inline .sbOptions {width: 200px;}
+.form-inline .sbHolder {width: 230px; display: inline-block; vertical-align: middle;}
+.form-inline .sbOptions {width: 230px;}
 
 /* Promotions */
 
@@ -855,7 +858,8 @@ h2 + .add {margin-top: 35px;}
 .select-date {
     position: relative; border: 1px solid #ccc; width: 218px; height: 38px;
 }
-.select-date label {
+.select-date label,
+.select-date > a {
     display: inline-block; height: 38px; margin: 0 0 0 10px; font-weight: normal;
     line-height: 1.42857143;
     padding: 7px 0;
@@ -934,7 +938,8 @@ h2 + .add {margin-top: 35px;}
     position: relative; border: 1px solid #e5e5e5; border-bottom: none; text-align: center;
     overflow: hidden;
 }
-.scheduler-header .month-title {height: 48px; line-height: 48px; position: relative; font-size: 18px; color: #000;}
+.scheduler-header .month-title {
+    height: 48px; line-height: 48px; position: absolute; font-size: 18px; color: #000;}
 .scheduler-header .scheduler-arrow {
     position: absolute; top: 0; display: block; width: 48px; height: 48px; padding: 11px 0;
     color: #000; z-index: 99;
@@ -947,8 +952,9 @@ h2 + .add {margin-top: 35px;}
 .days-name-wrapper {position: relative; overflow: hidden; top: 0;}
 .days-name-wrapper .weeks-holder {display: table; width: 100%; position: relative;}
 .days-name-wrapper .weeks {display: table-cell; position: relative;}
-.days-name-wrapper .weeks caption {padding: 0; text-align: center; position: relative;}
-.days-name-wrapper .weeks caption .month-title > div {min-width: 250px !important;}
+.days-name-wrapper .weeks caption {padding: 0; text-align: center; position: relative; left: -156px; height: 48px;}
+.days-name-wrapper .weeks caption .month-title {min-width: 250px !important; }
+.days-name-wrapper .weeks caption .month-title > div {min-width: 250px !important; }
 .days-name-wrapper .weeks .days {border-collapse: collapse; position:relative; left:0; width: 100%;}
 .days-name-wrapper .weeks .days tr {}
 .days-name-wrapper .weeks .days tr td > div {
@@ -961,6 +967,8 @@ h2 + .add {margin-top: 35px;}
 
 .days-name-wrapper .weeks .days tr td > div[data-wnd="wnd"],
 .schedule-wrapper .days td div[data-wnd="wnd"] {color: #ff6665; background: #fff7ed;}
+
+.days-name-wrapper .weeks .days tr td > div[data-time="night"] {color: #000; background: #ededff;}
 
 .mark-current-day {width: 50px; height: 50px; position: absolute; top: 50px;}
 
@@ -1165,7 +1173,7 @@ h2 + .add {margin-top: 35px;}
 
 /* ////////////////// */
 
-.total-price {display: inline-block; margin-right: 20px;}
+.total-price {display: inline-block; margin-right: 15px;}
 .total-price span {display: inline-block;}
 .total-price span.price {width: auto; position: relative; font-weight: normal; font-size: 18px; color: #519cc8;}
 .total-price span.price:after {

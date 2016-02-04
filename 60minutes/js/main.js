@@ -35,12 +35,6 @@
                 $(this).tab('show');
             });
 
-            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                highlightCurrentDay();
-                //e.target // newly activated tab
-                //e.relatedTarget // previous active tab
-            })
-
             $('.record .record-inner').tooltip({
                 content: function() {
                     var element = $(this).next();
@@ -49,7 +43,7 @@
                 }
             });
 
-            $('.service a[title="tooltip"], .bid a[title="tooltip"], .reports a[title="tooltip"]').tooltip({
+            $('.service a[title="tooltip"], .bid a[title="tooltip"], .reports a[title="tooltip"], .reports span[title="tooltip"]').tooltip({
                 tooltipClass:"num-tooltip",
                 content: function() {
                     var element = $(this).next();
@@ -123,13 +117,29 @@
                 buttonText: "Выбрать дату"
             });
 
-            $('.select-date input').datepicker({
+            var selectDate = $('.select-date input');
+
+            selectDate.datepicker({
+                //defaultDate: new Date(),
                 showOn: "button",
                 buttonImage: "img/calendar.png",
                 buttonImageOnly: true,
-                buttonText: "Выбрать дату"
-            });
-            $('.select-date input').datepicker('setDate', new Date());
+                buttonText: "Выбрать дату",
+                onSelect: function(date) {
+                    var thisLabel = $(this).prev('label');
+                    var labelText = thisLabel.text();
+                    var todayLink = $('<a href="#">'+labelText+'</a>');
+                    todayLink.insertBefore($(this));
+                    thisLabel.remove();
+                    todayLink.click(function(e){
+                        e.preventDefault();
+                        $(this).remove();
+                        thisLabel.insertBefore(selectDate);
+                        selectDate.datepicker('setDate', new Date());
+                    })
+                },
+            }).datepicker('setDate', new Date());
+
 
             $(document).click(function(e) {
                 var ele = $(e.toElement);
@@ -140,7 +150,7 @@
         },
         actionSetupWizard:function(){
 
-            var form = $("#example-form").show();
+            var form = $(".wizard").show();
 
             form.validate({
                 errorPlacement: function errorPlacement(error, element) { element.before(error); },
@@ -328,16 +338,16 @@
             var schedulerWrapper = $('.scheduler');
 
 
-            var headers = $('.scheduler-header .month-title > div');
+            var headers = $('.scheduler-header .month-title');
             var monthsHolder = $('.scheduler-header .days-name-wrapper .weeks-holder');
 
             function headersWidth(){
-
+            // что-то пошло не так
                 schedulerWrapper.each(function(){
                     headers.each(function(){
                         var parentLeft = $(this).parents('.weeks').offset().left;
-                        var holderLeft = monthsHolder.offset().left;
-                        var parentWidth = $(this).parents('.days-name-wrapper').width();
+                        var holderLeft = monthsHolder.offset().left -156;
+                        var parentWidth = $(this).parents('.days-name-wrapper').width() + 156;
                         var holderWidth = monthsHolder.width();
 
                         if (parentLeft > holderLeft){
@@ -352,6 +362,10 @@
 
             };
             headersWidth();
+
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                headersWidth();
+            });
 
             function highlightCurrentDay() {
 
