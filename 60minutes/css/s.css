@@ -839,10 +839,10 @@ h2 + .add {margin-top: 35px;}
 .modal-footer {background: #f9f9f9; border-top: 1px solid #e5e5e5;}
 
 .modal-title {font-size: 28px; color: #000; line-height: 40px; margin-left: 15px;}
-.modal-title small {font-size: 15px; color: #949494;display: inline-block; line-height: 40px; vertical-align: top;}
-.modal-title .label {font-size: 15px; font-weight: normal;}
-.modal-title .label-info {background: #d0edff; color: #59abdb; vertical-align: middle; position: relative; top: -4px;}
-.modal-title .label-success {background: #d7ffc5; color: #58af66; vertical-align: middle; position: relative; top: -4px;}
+.modal-title small {font-size: 14px; color: #949494;display: inline-block; line-height: 40px; vertical-align: top;}
+.modal-title .label {font-size: 14px; font-weight: normal; padding: 6px 12px; vertical-align: middle; position: relative; top: -4px;}
+.modal-title .label-info {background: #d0edff; color: #59abdb; }
+.modal-title .label-success {background: #d7ffc5; color: #58af66;}
 .modal .collapsed .caption {font-size: 18px; line-height: 38px;}
 .modal .collapsed .caption + form {display: none;}
 
