@@ -9,7 +9,8 @@
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
-	
+	<link href="css/reservation.css" rel="stylesheet">
+
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<![endif]-->
@@ -24,7 +25,7 @@
 	
 	<link href="js/bootstrap-datepicker/datepicker.css" rel="stylesheet">
 	<script src="js/bootstrap-datepicker/bootstrap-datepicker.js"></script>
-	
+
 	<script src="js/jquery.maskedinput.min.js"></script>
 	
 	<script src="js/jquery.sticky.js"></script>
@@ -271,18 +272,146 @@
 	</div>
 </footer>
 
-<!-- Формы бронирования для обычных номеров -->
-<div class="modal fade modal-scroll in" id="bf-date" tabindex="-1" role="dialog">
+<!-- Формы бронирования переделанные -->
+<div class="modal fade modal-scroll in reserv" id="bf-date" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">Закрыть</button>
-				<h1 class="modal-title" id="myModalLabel">Выбор номера и дат бронирования</h1>
-			</div>
-			<div class="modal-body">
-				<form>
+			<form method="" action="">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">Закрыть</button>
+					<strong>Отель «Милана»</strong>
+					<h1 class="modal-title" id="myModalLabel">Номер «Фиолетовая бабочка»</h1>
+				</div>
+				<div class="modal-body">
+
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-4">
+									<label>Заезд</label>
+									<div class="input-group">
+										<input name="bf-date" id="bf-input-date1" class="form-control datepicker">
+										<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
+									</div>
+								</div>
+								<div class="col-md-3 time">
+									<div class="form-group form-inline clearfix">
+										<label>В</label>
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">01</option>
+											<option value="1">02</option>
+											<option value="1">03</option>
+											<option value="1">04</option>
+											<option value="1">05</option>
+											<option value="1">06</option>
+											<option value="1">07</option>
+											<option value="1">08</option>
+											<option value="1">09</option>
+											<option value="1">10</option>
+											<option value="1">11</option>
+											<option value="1">12</option>
+											<option value="1">13</option>
+											<option value="1">14</option>
+											<option value="1">15</option>
+											<option value="1">16</option>
+											<option value="1">17</option>
+											<option value="1">18</option>
+											<option value="1">19</option>
+											<option value="1">20</option>
+											<option value="1">21</option>
+											<option value="1">22</option>
+											<option value="1">23</option>
+											<option value="1">24</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3 time">
+									<div class="form-group form-inline clearfix">
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">00</option>
+											<option value="1">15</option>
+											<option value="1">30</option>
+											<option value="1">45</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-4">
+									<label>Выезд</label>
+									<div class="input-group">
+										<input name="bf-date" id="bf-input-date2" class="form-control datepicker">
+										<div class="input-group-addon"><label for="bf-input-date2"><i class="glyphicon glyphicon-calendar"></i></label></div>
+									</div>
+								</div>
+								<div class="col-md-3 time">
+									<div class="form-group form-inline clearfix">
+										<label>В</label>
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">01</option>
+											<option value="1">02</option>
+											<option value="1">03</option>
+											<option value="1">04</option>
+											<option value="1">05</option>
+											<option value="1">06</option>
+											<option value="1">07</option>
+											<option value="1">08</option>
+											<option value="1">09</option>
+											<option value="1">10</option>
+											<option value="1">11</option>
+											<option value="1">12</option>
+											<option value="1">13</option>
+											<option value="1">14</option>
+											<option value="1">15</option>
+											<option value="1">16</option>
+											<option value="1">17</option>
+											<option value="1">18</option>
+											<option value="1">19</option>
+											<option value="1">20</option>
+											<option value="1">21</option>
+											<option value="1">22</option>
+											<option value="1">23</option>
+											<option value="1">24</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3 time">
+									<div class="form-group form-inline clearfix">
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">00</option>
+											<option value="1">15</option>
+											<option value="1">30</option>
+											<option value="1">45</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mess mess-success">
+										<div class="title">Номер свободен</div>
+										<p>Сумма за проживание составит <span class="price">2 500</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-green btn-next" data-next="bf-error" data-current="bf-date">Далее</button>
+
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade modal-scroll in reserv" id="bf-error" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form method="" action="">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">Закрыть</button>
+					<strong>Отель «Милана»</strong>
 					<div class="form-group">
-						<label>Выберите номер</label>
 						<select name="bf-room" class="form-control selectpicker" title="Выберите номер">
 							<option value="1">Эконом "Фиолетовая бабочка" 700 Р час</option>
 							<option value="2">Стандарт "Красный слон" 1200 Р час</option>
@@ -290,33 +419,133 @@
 							<option value="4">Эконом "Яркая звезда" 800 Р час</option>
 						</select>
 					</div>
-					<div class="form-group">
-						<div class="row">
-							<div class="col-md-5">
-								<label for="bf-input-date">Дата бронирования</label>
-								<div class="input-group">
-									<input name="bf-date" id="bf-input-date" class="form-control datepicker">
-									<div class="input-group-addon"><label for="bf-input-date"><i class="glyphicon glyphicon-calendar"></i></label></div>
+				</div>
+				<div class="modal-body">
+
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-4">
+									<label>Заезд</label>
+									<div class="input-group">
+										<input name="bf-date" id="bf-input-date1" class="form-control datepicker">
+										<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
+									</div>
 								</div>
-							</div>
-							<div class="col-md-6 time">
-								<label for="bf-inpit-timein">Время бронирования</label>
-								<div class="form-inline">
-									<div class="form-group">
-										с <input name="bf-timein" id="bf-inpit-timein" class="form-control" maxlength="5">
-										до <input name="bf-timeout" id="bf-inpit-timeout" class="form-control" maxlength="5">
-										<span class="info-time"></span>
+								<div class="col-md-3 time">
+									<div class="form-group form-inline clearfix">
+										<label>В</label>
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">01</option>
+											<option value="1">02</option>
+											<option value="1">03</option>
+											<option value="1">04</option>
+											<option value="1">05</option>
+											<option value="1">06</option>
+											<option value="1">07</option>
+											<option value="1">08</option>
+											<option value="1">09</option>
+											<option value="1">10</option>
+											<option value="1">11</option>
+											<option value="1">12</option>
+											<option value="1">13</option>
+											<option value="1">14</option>
+											<option value="1">15</option>
+											<option value="1">16</option>
+											<option value="1">17</option>
+											<option value="1">18</option>
+											<option value="1">19</option>
+											<option value="1">20</option>
+											<option value="1">21</option>
+											<option value="1">22</option>
+											<option value="1">23</option>
+											<option value="1">24</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3 time">
+									<div class="form-group form-inline clearfix">
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">00</option>
+											<option value="1">15</option>
+											<option value="1">30</option>
+											<option value="1">45</option>
+										</select>
 									</div>
 								</div>
 							</div>
+
+							<div class="row">
+								<div class="col-md-4">
+									<label>Выезд</label>
+									<div class="input-group">
+										<input name="bf-date" id="bf-input-date2" class="form-control datepicker">
+										<div class="input-group-addon"><label for="bf-input-date2"><i class="glyphicon glyphicon-calendar"></i></label></div>
+									</div>
+								</div>
+								<div class="col-md-3 time">
+									<div class="form-group form-inline clearfix">
+										<label>В</label>
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">01</option>
+											<option value="1">02</option>
+											<option value="1">03</option>
+											<option value="1">04</option>
+											<option value="1">05</option>
+											<option value="1">06</option>
+											<option value="1">07</option>
+											<option value="1">08</option>
+											<option value="1">09</option>
+											<option value="1">10</option>
+											<option value="1">11</option>
+											<option value="1">12</option>
+											<option value="1">13</option>
+											<option value="1">14</option>
+											<option value="1">15</option>
+											<option value="1">16</option>
+											<option value="1">17</option>
+											<option value="1">18</option>
+											<option value="1">19</option>
+											<option value="1">20</option>
+											<option value="1">21</option>
+											<option value="1">22</option>
+											<option value="1">23</option>
+											<option value="1">24</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3 time">
+									<div class="form-group form-inline clearfix">
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">00</option>
+											<option value="1">15</option>
+											<option value="1">30</option>
+											<option value="1">45</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mess mess-error">
+										<div class="title">На это время номер занят</div>
+										<p>Укажите другое время или другой номер</p>
+									</div>
+								</div>
+
+								<div class="col-md-12">
+
+								</div>
+							</div>
 						</div>
-					</div>
-					<button class="btn btn-green btn-next" data-next="bf-info" data-current="bf-date">Далее</button>
-				</form>
-			</div>
+						<button class="btn btn-gray btn-next" data-next="bf-info" data-current="bf-error">Далее</button>
+
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
+
 <div class="modal fade modal-scroll in" id="bf-info" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">

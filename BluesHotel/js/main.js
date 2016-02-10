@@ -23,12 +23,13 @@ $(document).ready(function() {
 	// Селекты и даты
 	$('.selectpicker').selectpicker();
 	$('.datepicker').datepicker({
-		format: 'dd.mm.yyyy'
+		format: 'dd.mm.yyyy',
+		weekStart: 1
 	});
 	
 	// Маска времени
 	$('.time input').mask("99:99");
-	
+
 	// Маска телефона
 	$('input.phone').mask("+7 (999) 999-99-99");
 	
