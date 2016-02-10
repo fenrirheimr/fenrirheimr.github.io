@@ -122,7 +122,49 @@
 .mess-error .title {color: #e74c3c;}
 
 
+/* time slider */
+
+.time-slider {position: relative; overflow: hidden;}
+.time-slider .ts-day-wrapper {position: relative; display: table;}
+.time-slider .ts-day-wrapper .ts-caption {color: #8b8b8b; display: table-row;}
+.time-slider .ts-day-wrapper .ts-holder {font-size: 0; display: table-row;}
+.time-slider .ts-day-wrapper .ts-holder .ts-item {
+    font-size: 15px; color: #333434; display: table-cell; background: #7dd8a3;
+}
+
+.cont{
+    width: 532px;
+    height:100px;
+    position:absolute;
+    background:#000;
+    overflow:hidden;
+}
+.box-cont{
+    width:auto;
+    height:100px;
+    position:absolute;
+    background:yellow;
+
+}
+.box{
+    width:100px;
+    height:100px;
+    position:relative;
+    float:left;
+    margin-left:5px;
+    background:#F00;
+    text-align:center;
+    font-size:32px;
+}
+.cont + .btn{
+
+    position:absolute;
+    left:0px;
+    top:120px;
+}
+
 /* Buttons */
+.modal-content .bootstrap-select .btn:focus {outline: 0 !important;}
 .btn {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
