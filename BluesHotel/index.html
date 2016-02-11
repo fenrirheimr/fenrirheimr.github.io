@@ -284,8 +284,132 @@
 					<h1 class="modal-title" id="myModalLabel">Номер «Фиолетовая бабочка»</h1>
 				</div>
 				<div class="modal-body">
+					<div class="form-group">
+							<div class="row">
+								<div class="col-md-4">
+									<label>Заезд</label>
+									<div class="input-group">
+										<input name="bf-date" id="bf-input-date1" class="form-control datepicker">
+										<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
+										<div class="fs-datepicker"></div>
+									</div>
+								</div>
+								<div class="col-md-3 col-xs-6 time">
+									<div class="form-group form-inline clearfix">
+										<label>В</label>
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">01</option>
+											<option value="1">02</option>
+											<option value="1">03</option>
+											<option value="1">04</option>
+											<option value="1">05</option>
+											<option value="1">06</option>
+											<option value="1">07</option>
+											<option value="1">08</option>
+											<option value="1">09</option>
+											<option value="1">10</option>
+											<option value="1">11</option>
+											<option value="1">12</option>
+											<option value="1">13</option>
+											<option value="1">14</option>
+											<option value="1">15</option>
+											<option value="1">16</option>
+											<option value="1">17</option>
+											<option value="1">18</option>
+											<option value="1">19</option>
+											<option value="1">20</option>
+											<option value="1">21</option>
+											<option value="1">22</option>
+											<option value="1">23</option>
+											<option value="1">24</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3 col-xs-6 time">
+									<div class="form-group form-inline clearfix">
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">00</option>
+											<option value="1">15</option>
+											<option value="1">30</option>
+											<option value="1">45</option>
+										</select>
+									</div>
+								</div>
+							</div>
 
-						<div class="form-group">
+							<div class="row">
+								<div class="col-md-4">
+									<label>Выезд</label>
+									<div class="input-group">
+										<input name="bf-date" id="bf-input-date2" class="form-control datepicker">
+										<div class="input-group-addon"><label for="bf-input-date2"><i class="glyphicon glyphicon-calendar"></i></label></div>
+									</div>
+								</div>
+								<div class="col-md-3 col-xs-6 time">
+									<div class="form-group form-inline clearfix">
+										<label>В</label>
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">01</option>
+											<option value="1">02</option>
+											<option value="1">03</option>
+											<option value="1">04</option>
+											<option value="1">05</option>
+											<option value="1">06</option>
+											<option value="1">07</option>
+											<option value="1">08</option>
+											<option value="1">09</option>
+											<option value="1">10</option>
+											<option value="1">11</option>
+											<option value="1">12</option>
+											<option value="1">13</option>
+											<option value="1">14</option>
+											<option value="1">15</option>
+											<option value="1">16</option>
+											<option value="1">17</option>
+											<option value="1">18</option>
+											<option value="1">19</option>
+											<option value="1">20</option>
+											<option value="1">21</option>
+											<option value="1">22</option>
+											<option value="1">23</option>
+											<option value="1">24</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3 col-xs-6 time">
+									<div class="form-group form-inline clearfix">
+										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">00</option>
+											<option value="1">15</option>
+											<option value="1">30</option>
+											<option value="1">45</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-green btn-next" data-next="bf-date2" data-current="bf-date">Далее</button>
+					<button type="button" class="btn btn-gray" data-dismiss="modal">Отмена</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade modal-scroll in reserv" id="bf-date2" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form method="" action="">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">Закрыть</button>
+					<strong>Отель «Милана»</strong>
+					<h1 class="modal-title" id="myModalLabel">Номер «Фиолетовая бабочка»</h1>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
 							<div class="row">
 								<div class="col-md-4">
 									<label>Заезд</label>
@@ -397,9 +521,11 @@
 								</div>
 							</div>
 						</div>
-						<button type="button" class="btn btn-green btn-next" data-next="bf-error" data-current="bf-date">Далее</button>
-						<!--<button type="button" class="btn btn-green btn-next" data-toggle="modal" data-target="#bf-error" data-dismiss="modal">Далее</button>-->
+				</div>
 
+				<div class="modal-footer">
+					<button type="button" class="btn btn-green btn-next" data-next="bf-error" data-current="bf-date2">Далее</button>
+					<button type="button" class="btn btn-gray" data-dismiss="modal">Отмена</button>
 				</div>
 			</form>
 		</div>
@@ -423,8 +549,7 @@
 					</div>
 				</div>
 				<div class="modal-body">
-
-						<div class="form-group">
+					<div class="form-group">
 							<div class="row">
 								<div class="col-md-4">
 									<label>Заезд</label>
@@ -654,8 +779,11 @@
 								</div>
 							</div>
 						</div>
-						<button class="btn btn-gray btn-next" data-next="bf-info" data-current="bf-error">Далее</button>
+				</div>
 
+				<div class="modal-footer">
+					<button class="btn btn-gray btn-next" data-next="bf-info" data-current="bf-error">Далее</button>
+					<button type="button" class="btn btn-gray" data-dismiss="modal">Отмена</button>
 				</div>
 			</form>
 		</div>
@@ -665,13 +793,13 @@
 <div class="modal fade modal-scroll in" id="bf-info" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">Закрыть</button>
-				<h1 class="modal-title" id="myModalLabel">Бронирование номера «Стандарт»</h1>
-				<strong>в отеле «Милана»</strong>
-			</div>
-			<div class="modal-body">
-				<form>
+			<form method="" action="">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">Закрыть</button>
+					<h1 class="modal-title" id="myModalLabel">Бронирование номера «Стандарт»</h1>
+					<strong>в отеле «Милана»</strong>
+				</div>
+				<div class="modal-body">
 
 					<div class="row">
 						<div class="col-md-12">
@@ -689,8 +817,8 @@
 					<hr>
 
 					<div class="row total-price">
-						<div class="col-md-6 col-xs-6">Стоимость проживания:</div>
-						<div class="col-md-6 col-xs-6">
+						<div class="col-xs-6">Стоимость проживания:</div>
+						<div class="col-xs-6">
 							<div class="price">12 000</div>
 						</div>
 					</div>
@@ -720,9 +848,14 @@
 						<input type="checkbox" id="day1" value="">
 						<label for="day1">Я ознакомлен с <a href="#">условиями и отмены брони</a></label>
 					</div>
+
+				</div>
+
+				<div class="modal-footer">
 					<button class="btn btn-green btn-next" data-next="modal-success" data-current="bf-info">Забронировать</button>
-				</form>
-			</div>
+					<button type="button" class="btn btn-gray" data-dismiss="modal">Отмена</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
@@ -752,8 +885,8 @@
 				<hr>
 
 				<div class="row total-price">
-					<div class="col-md-6">Стоимость проживания:</div>
-					<div class="col-md-6">
+					<div class="col-xs-6">Стоимость проживания:</div>
+					<div class="col-xs-6">
 						<div class="price">12 000</div>
 					</div>
 				</div>
@@ -768,17 +901,12 @@
 								<strong>бронь будет аннулирована</strong>
 							</li>
 							<li>Для заселения нужен хотя бы один документ</li>
-
-
-
-
-
-
-
 						</ul>
 					</div>
 				</div>
-
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-gray" data-dismiss="modal">Закрыть</button>
 			</div>
 		</div>
 	</div>

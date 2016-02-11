@@ -4,7 +4,7 @@
     background: rgb(50, 50, 50);
     opacity: 0.8 !important;
 }
-/*.modal .modal-dialog {width: 616px;}*/
+
 .modal-content {
     box-shadow: none; border: none; padding: 34px;/* width: 616px;*/
     border-radius: 0;
@@ -71,6 +71,7 @@
 .modal-body .total-price .price:after {
     display: inline-block; margin-left: 4px;
     content: '\20bd';
+    font-family: Arial;
 }
 
 .modal-body .total-price + .form-group + .form-group{margin: 40px 0 20px;}
@@ -84,18 +85,9 @@
 .time .bootstrap-select.form-control:not([class*="col-"]) { width: 111px !important; height: 100%;}
 .modal-header .bootstrap-select.form-control:not([class*="col-"]) {margin-top: 10px;}
 
-@media (max-width: 768px) {
-    .time .bootstrap-select.form-control:not([class*="col-"]) { width: 104px !important; height: 100%;}
-    .modal-header h1 {font-size: 25px;}
-}
-
 .modal-body a.btn-next { margin-right: 20px; }
-.modal-footer {
-    border: 0;
-    background: #fffec8;
-    padding: 20px;
-}
-.modal-footer p { text-align: left; }
+.modal-footer { border: 0; background: transparent; padding: 0; text-align: left;}
+.modal-footer p {  }
 
 .modal-header button.close {
     opacity: 1;
@@ -118,6 +110,7 @@
 .mess p span.price:after {
     display: inline-block; margin-left: 4px;
     content: '\20bd';
+    font-family: Arial;
 }
 .mess-success {border-color: #27ae60;}
 .mess-error {border-color: #e74c3c;}
@@ -324,6 +317,33 @@ label:hover:before {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    color: #fff;
+    padding: 16px 40px;
+    font-size: 112.5%;
 }
+
 .btn-gray {background: #c9c9c9; color: #fff; border: 1px solid #c9c9c9;}
 .btn-gray:hover {background: #c9c9c9; color: #fff; border: 1px solid #c9c9c9;}
+
+@media (max-width: 768px) {
+    .time .bootstrap-select.form-control:not([class*="col-"]) { width: 104px !important; height: 100%;}
+    .modal-header h1 {font-size: 25px;}
+    .modal-dialog {margin: 0;}
+
+    .tooltip-help {
+        position: relative; left: auto; margin-top: 0;
+        background: #27ae60; width: 100%; line-height: 20px; color: #fff; padding: 10px;
+    }
+    .tooltip-help:after {display: none;}
+    .modal-content {padding: 30px 25px;}
+    .modal-body .total-price {line-height: normal;}
+
+    .modal-footer .btn {width: 100%;}
+
+    .modal-footer .btn+.btn {margin: 40px 0 0;}
+}
+
+.fs-datepicker {
+    position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: #fff; z-index: 10001;
+    display: none;
+}
