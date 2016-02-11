@@ -85,7 +85,7 @@
 .modal-header .bootstrap-select.form-control:not([class*="col-"]) {margin-top: 10px;}
 
 @media (max-width: 768px) {
-    .time .bootstrap-select.form-control:not([class*="col-"]) { width: 105px !important; height: 100%;}
+    .time .bootstrap-select.form-control:not([class*="col-"]) { width: 104px !important; height: 100%;}
     .modal-header h1 {font-size: 25px;}
 }
 
@@ -128,7 +128,7 @@
 
 /* time slider */
 
-.col-md-12 .custom-container {margin: 20px 0; height: 70px; position: relative;}
+.col-md-12 .custom-container {margin: 20px 0; height: 70px; position: relative; overflow: hidden;}
 
 .col-md-12 .carousel,
 .col-md-12 .carousel * {box-sizing: content-box;}
