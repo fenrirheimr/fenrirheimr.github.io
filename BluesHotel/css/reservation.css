@@ -328,7 +328,7 @@ label:hover:before {
 @media (max-width: 768px) {
     .time .bootstrap-select.form-control:not([class*="col-"]) { width: 104px !important; height: 100%;}
     .modal-header h1 {font-size: 25px;}
-    .modal-dialog {margin: 0;}
+    .modal-dialog {margin: 0 auto;}
 
     .tooltip-help {
         position: relative; left: auto; margin-top: 0;
@@ -343,7 +343,9 @@ label:hover:before {
     .modal-footer .btn+.btn {margin: 40px 0 0;}
 }
 
-.fs-datepicker {
+.fs-datepicker-wrapper {
     position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: #fff; z-index: 10001;
-    display: none;
+    display: none; padding: 20px;
 }
+.fs-datepicker-wrapper .modal-header button.close {margin: 0; position: absolute; top: 15px; right: 11px;}
+.fs-datepicker-wrapper .modal-footer {margin: 30px 0 0; }

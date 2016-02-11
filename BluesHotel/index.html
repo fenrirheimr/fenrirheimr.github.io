@@ -285,70 +285,36 @@
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-							<div class="row">
-								<div class="col-md-4">
-									<label>Заезд</label>
-									<div class="input-group">
-										<input name="bf-date" id="bf-input-date1" class="form-control datepicker">
-										<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
-										<div class="fs-datepicker"></div>
-									</div>
+
+						<div class="row">
+							<div class="col-md-4 hidden-xs hidden-sm">
+								<label>Заезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date1" class="form-control datepicker">
+									<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
 								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<label>В</label>
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
-											<option value="1">01</option>
-											<option value="1">02</option>
-											<option value="1">03</option>
-											<option value="1">04</option>
-											<option value="1">05</option>
-											<option value="1">06</option>
-											<option value="1">07</option>
-											<option value="1">08</option>
-											<option value="1">09</option>
-											<option value="1">10</option>
-											<option value="1">11</option>
-											<option value="1">12</option>
-											<option value="1">13</option>
-											<option value="1">14</option>
-											<option value="1">15</option>
-											<option value="1">16</option>
-											<option value="1">17</option>
-											<option value="1">18</option>
-											<option value="1">19</option>
-											<option value="1">20</option>
-											<option value="1">21</option>
-											<option value="1">22</option>
-											<option value="1">23</option>
-											<option value="1">24</option>
-										</select>
-									</div>
+							</div>
+							<div class="col-xs-12 visible-xs visible-sm">
+								<label>Заезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date01" class="form-control date-input">
+									<div class="input-group-addon"><label for="bf-input-date01"><i class="glyphicon glyphicon-calendar"></i></label></div>
 								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
-											<option value="1">00</option>
-											<option value="1">15</option>
-											<option value="1">30</option>
-											<option value="1">45</option>
-										</select>
+								<div class="fs-datepicker-wrapper">
+									<div class="modal-header">
+										<button type="button" class="close">Закрыть</button>
+										<h1 class="modal-title">Выберите дату заезда</h1>
+									</div>
+									<div class="fs-datepicker" data-date="dd.mm.yyyy"></div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-green">Выбрать</button>
 									</div>
 								</div>
 							</div>
-
-							<div class="row">
-								<div class="col-md-4">
-									<label>Выезд</label>
-									<div class="input-group">
-										<input name="bf-date" id="bf-input-date2" class="form-control datepicker">
-										<div class="input-group-addon"><label for="bf-input-date2"><i class="glyphicon glyphicon-calendar"></i></label></div>
-									</div>
-								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<label>В</label>
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<label>В</label>
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
 											<option value="1">01</option>
 											<option value="1">02</option>
 											<option value="1">03</option>
@@ -374,20 +340,89 @@
 											<option value="1">23</option>
 											<option value="1">24</option>
 										</select>
-									</div>
 								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
-											<option value="1">00</option>
-											<option value="1">15</option>
-											<option value="1">30</option>
-											<option value="1">45</option>
-										</select>
-									</div>
+							</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+										<option value="1">00</option>
+										<option value="1">15</option>
+										<option value="1">30</option>
+										<option value="1">45</option>
+									</select>
 								</div>
 							</div>
 						</div>
+
+						<div class="row">
+							<div class="col-md-4 hidden-xs hidden-sm">
+								<label>Выезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date001" class="form-control datepicker">
+									<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
+								</div>
+							</div>
+							<div class="col-xs-12 visible-xs visible-sm">
+								<label>Выезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date0001" class="form-control date-input">
+									<div class="input-group-addon"><label for="bf-input-date01"><i class="glyphicon glyphicon-calendar"></i></label></div>
+								</div>
+								<div class="fs-datepicker-wrapper">
+									<div class="modal-header">
+										<button type="button" class="close">Закрыть</button>
+										<h1 class="modal-title">Выберите дату выезда</h1>
+									</div>
+									<div class="fs-datepicker" data-date="dd.mm.yyyy"></div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-green">Выбрать</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<label>В</label>
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">01</option>
+											<option value="1">02</option>
+											<option value="1">03</option>
+											<option value="1">04</option>
+											<option value="1">05</option>
+											<option value="1">06</option>
+											<option value="1">07</option>
+											<option value="1">08</option>
+											<option value="1">09</option>
+											<option value="1">10</option>
+											<option value="1">11</option>
+											<option value="1">12</option>
+											<option value="1">13</option>
+											<option value="1">14</option>
+											<option value="1">15</option>
+											<option value="1">16</option>
+											<option value="1">17</option>
+											<option value="1">18</option>
+											<option value="1">19</option>
+											<option value="1">20</option>
+											<option value="1">21</option>
+											<option value="1">22</option>
+											<option value="1">23</option>
+											<option value="1">24</option>
+										</select>
+								</div>
+							</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+										<option value="1">00</option>
+										<option value="1">15</option>
+										<option value="1">30</option>
+										<option value="1">45</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+					</div>
 				</div>
 
 				<div class="modal-footer">
@@ -410,18 +445,36 @@
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-							<div class="row">
-								<div class="col-md-4">
-									<label>Заезд</label>
-									<div class="input-group">
-										<input name="bf-date" id="bf-input-date1" class="form-control datepicker">
-										<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
+
+						<div class="row">
+							<div class="col-md-4 hidden-xs hidden-sm">
+								<label>Заезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date1" class="form-control datepicker">
+									<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
+								</div>
+							</div>
+							<div class="col-xs-12 visible-xs visible-sm">
+								<label>Заезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date01" class="form-control date-input">
+									<div class="input-group-addon"><label for="bf-input-date01"><i class="glyphicon glyphicon-calendar"></i></label></div>
+								</div>
+								<div class="fs-datepicker-wrapper">
+									<div class="modal-header">
+										<button type="button" class="close">Закрыть</button>
+										<h1 class="modal-title">Выберите дату заезда</h1>
+									</div>
+									<div class="fs-datepicker" data-date="dd.mm.yyyy"></div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-green">Выбрать</button>
 									</div>
 								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<label>В</label>
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+							</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<label>В</label>
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
 											<option value="1">01</option>
 											<option value="1">02</option>
 											<option value="1">03</option>
@@ -447,80 +500,98 @@
 											<option value="1">23</option>
 											<option value="1">24</option>
 										</select>
-									</div>
-								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
-											<option value="1">00</option>
-											<option value="1">15</option>
-											<option value="1">30</option>
-											<option value="1">45</option>
-										</select>
-									</div>
 								</div>
 							</div>
-
-							<div class="row">
-								<div class="col-md-4">
-									<label>Выезд</label>
-									<div class="input-group">
-										<input name="bf-date" id="bf-input-date2" class="form-control datepicker">
-										<div class="input-group-addon"><label for="bf-input-date2"><i class="glyphicon glyphicon-calendar"></i></label></div>
-									</div>
-								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<label>В</label>
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
-											<option value="1">01</option>
-											<option value="1">02</option>
-											<option value="1">03</option>
-											<option value="1">04</option>
-											<option value="1">05</option>
-											<option value="1">06</option>
-											<option value="1">07</option>
-											<option value="1">08</option>
-											<option value="1">09</option>
-											<option value="1">10</option>
-											<option value="1">11</option>
-											<option value="1">12</option>
-											<option value="1">13</option>
-											<option value="1">14</option>
-											<option value="1">15</option>
-											<option value="1">16</option>
-											<option value="1">17</option>
-											<option value="1">18</option>
-											<option value="1">19</option>
-											<option value="1">20</option>
-											<option value="1">21</option>
-											<option value="1">22</option>
-											<option value="1">23</option>
-											<option value="1">24</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
-											<option value="1">00</option>
-											<option value="1">15</option>
-											<option value="1">30</option>
-											<option value="1">45</option>
-										</select>
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-md-12">
-									<div class="mess mess-success">
-										<div class="title">Номер свободен</div>
-										<p>Сумма за проживание составит <span class="price">2 500</span></p>
-									</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+										<option value="1">00</option>
+										<option value="1">15</option>
+										<option value="1">30</option>
+										<option value="1">45</option>
+									</select>
 								</div>
 							</div>
 						</div>
+
+						<div class="row">
+							<div class="col-md-4 hidden-xs hidden-sm">
+								<label>Выезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date001" class="form-control datepicker">
+									<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
+								</div>
+							</div>
+							<div class="col-xs-12 visible-xs visible-sm">
+								<label>Выезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date0001" class="form-control date-input">
+									<div class="input-group-addon"><label for="bf-input-date01"><i class="glyphicon glyphicon-calendar"></i></label></div>
+								</div>
+								<div class="fs-datepicker-wrapper">
+									<div class="modal-header">
+										<button type="button" class="close">Закрыть</button>
+										<h1 class="modal-title">Выберите дату выезда</h1>
+									</div>
+									<div class="fs-datepicker" data-date="dd.mm.yyyy"></div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-green">Выбрать</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<label>В</label>
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">01</option>
+											<option value="1">02</option>
+											<option value="1">03</option>
+											<option value="1">04</option>
+											<option value="1">05</option>
+											<option value="1">06</option>
+											<option value="1">07</option>
+											<option value="1">08</option>
+											<option value="1">09</option>
+											<option value="1">10</option>
+											<option value="1">11</option>
+											<option value="1">12</option>
+											<option value="1">13</option>
+											<option value="1">14</option>
+											<option value="1">15</option>
+											<option value="1">16</option>
+											<option value="1">17</option>
+											<option value="1">18</option>
+											<option value="1">19</option>
+											<option value="1">20</option>
+											<option value="1">21</option>
+											<option value="1">22</option>
+											<option value="1">23</option>
+											<option value="1">24</option>
+										</select>
+								</div>
+							</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+										<option value="1">00</option>
+										<option value="1">15</option>
+										<option value="1">30</option>
+										<option value="1">45</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mess mess-success">
+									<div class="title">Номер свободен</div>
+									<p>Сумма за проживание составит <span class="price">2 500</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="modal-footer">
@@ -550,18 +621,36 @@
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-							<div class="row">
-								<div class="col-md-4">
-									<label>Заезд</label>
-									<div class="input-group">
-										<input name="bf-date" id="bf-input-date1" class="form-control datepicker">
-										<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
+
+						<div class="row">
+							<div class="col-md-4 hidden-xs hidden-sm">
+								<label>Заезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date1" class="form-control datepicker">
+									<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
+								</div>
+							</div>
+							<div class="col-xs-12 visible-xs visible-sm">
+								<label>Заезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date01" class="form-control date-input">
+									<div class="input-group-addon"><label for="bf-input-date01"><i class="glyphicon glyphicon-calendar"></i></label></div>
+								</div>
+								<div class="fs-datepicker-wrapper">
+									<div class="modal-header">
+										<button type="button" class="close">Закрыть</button>
+										<h1 class="modal-title">Выберите дату заезда</h1>
+									</div>
+									<div class="fs-datepicker" data-date="dd.mm.yyyy"></div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-green">Выбрать</button>
 									</div>
 								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<label>В</label>
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+							</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<label>В</label>
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
 											<option value="1">01</option>
 											<option value="1">02</option>
 											<option value="1">03</option>
@@ -587,198 +676,215 @@
 											<option value="1">23</option>
 											<option value="1">24</option>
 										</select>
-									</div>
-								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
-											<option value="1">00</option>
-											<option value="1">15</option>
-											<option value="1">30</option>
-											<option value="1">45</option>
-										</select>
-									</div>
 								</div>
 							</div>
-
-							<div class="row">
-								<div class="col-md-4">
-									<label>Выезд</label>
-									<div class="input-group">
-										<input name="bf-date" id="bf-input-date2" class="form-control datepicker">
-										<div class="input-group-addon"><label for="bf-input-date2"><i class="glyphicon glyphicon-calendar"></i></label></div>
-									</div>
-								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<label>В</label>
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
-											<option value="1">01</option>
-											<option value="1">02</option>
-											<option value="1">03</option>
-											<option value="1">04</option>
-											<option value="1">05</option>
-											<option value="1">06</option>
-											<option value="1">07</option>
-											<option value="1">08</option>
-											<option value="1">09</option>
-											<option value="1">10</option>
-											<option value="1">11</option>
-											<option value="1">12</option>
-											<option value="1">13</option>
-											<option value="1">14</option>
-											<option value="1">15</option>
-											<option value="1">16</option>
-											<option value="1">17</option>
-											<option value="1">18</option>
-											<option value="1">19</option>
-											<option value="1">20</option>
-											<option value="1">21</option>
-											<option value="1">22</option>
-											<option value="1">23</option>
-											<option value="1">24</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-md-3 col-xs-6 time">
-									<div class="form-group form-inline clearfix">
-										<select name="bf-room" class="form-control selectpicker" title="Выберите время">
-											<option value="1">00</option>
-											<option value="1">15</option>
-											<option value="1">30</option>
-											<option value="1">45</option>
-										</select>
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-md-12">
-									<div class="mess mess-error">
-										<div class="title">На это время номер занят</div>
-										<p>Укажите другое время или другой номер</p>
-									</div>
-								</div>
-
-								<div class="col-md-12">
-									<div class="custom-container default">
-										<div class="caption"></div>
-										<a href="#" class="prev"></a>
-										<a href="#" class="next"></a>
-										<div class="carousel">
-											<ul>
-												<li  data-day="22 января 2016" class="ts-item">00:00</li>
-												<li  data-day="22 января 2016" class="ts-item">00:30</li>
-												<li  data-day="22 января 2016" class="ts-item">01:00</li>
-												<li  data-day="22 января 2016" class="ts-item">01:30</li>
-												<li  data-day="22 января 2016" class="ts-item reserved">02:00</li>
-												<li  data-day="22 января 2016" class="ts-item reserved">02:30</li>
-												<li  data-day="22 января 2016" class="ts-item reserved">03:00</li>
-												<li  data-day="22 января 2016" class="ts-item reserved">03:30</li>
-												<li  data-day="22 января 2016" class="ts-item reserved">04:00</li>
-												<li  data-day="22 января 2016" class="ts-item">04:30</li>
-												<li  data-day="22 января 2016" class="ts-item">05:00</li>
-												<li  data-day="22 января 2016" class="ts-item">05:30</li>
-												<li  data-day="22 января 2016" class="ts-item">06:00</li>
-												<li  data-day="22 января 2016" class="ts-item">06:30</li>
-												<li  data-day="22 января 2016" class="ts-item">07:00</li>
-												<li  data-day="22 января 2016" class="ts-item">07:30</li>
-												<li  data-day="22 января 2016" class="ts-item">08:00</li>
-												<li  data-day="22 января 2016" class="ts-item">08:30</li>
-												<li  data-day="22 января 2016" class="ts-item">09:00</li>
-												<li  data-day="22 января 2016" class="ts-item">09:30</li>
-												<li  data-day="22 января 2016" class="ts-item">10:00</li>
-												<li  data-day="22 января 2016" class="ts-item">10:30</li>
-												<li  data-day="22 января 2016" class="ts-item">11:00</li>
-												<li  data-day="22 января 2016" class="ts-item">11:30</li>
-												<li  data-day="22 января 2016" class="ts-item">12:00</li>
-												<li  data-day="22 января 2016" class="ts-item">12:30</li>
-												<li  data-day="22 января 2016" class="ts-item">13:00</li>
-												<li  data-day="22 января 2016" class="ts-item">13:30</li>
-												<li  data-day="22 января 2016" class="ts-item">14:00</li>
-												<li  data-day="22 января 2016" class="ts-item">14:30</li>
-												<li  data-day="22 января 2016" class="ts-item">15:00</li>
-												<li  data-day="22 января 2016" class="ts-item">15:30</li>
-												<li  data-day="22 января 2016" class="ts-item">16:00</li>
-												<li  data-day="22 января 2016" class="ts-item">16:30</li>
-												<li  data-day="22 января 2016" class="ts-item">17:00</li>
-												<li  data-day="22 января 2016" class="ts-item">17:30</li>
-												<li  data-day="22 января 2016" class="ts-item">18:00</li>
-												<li  data-day="22 января 2016" class="ts-item">18:30</li>
-												<li  data-day="22 января 2016" class="ts-item">19:00</li>
-												<li  data-day="22 января 2016" class="ts-item">19:30</li>
-												<li  data-day="22 января 2016" class="ts-item">20:00</li>
-												<li  data-day="22 января 2016" class="ts-item">20:30</li>
-												<li  data-day="22 января 2016" class="ts-item">21:00</li>
-												<li  data-day="22 января 2016" class="ts-item">21:30</li>
-												<li  data-day="22 января 2016" class="ts-item">22:00</li>
-												<li  data-day="22 января 2016" class="ts-item">22:30</li>
-												<li  data-day="22 января 2016" class="ts-item">23:00</li>
-												<li  data-day="22 января 2016" class="ts-item">23:30</li>
-												<li  data-day="22 января 2016" class="ts-item">23:00</li>
-												<li  data-day="22 января 2016" class="ts-item">23:30</li>
-
-												<li  data-day="23 января 2016" class="ts-item">00:00</li>
-												<li  data-day="23 января 2016" class="ts-item">00:30</li>
-												<li  data-day="23 января 2016" class="ts-item">01:00</li>
-												<li  data-day="23 января 2016" class="ts-item">01:30</li>
-												<li  data-day="23 января 2016" class="ts-item reserved">02:00</li>
-												<li  data-day="23 января 2016" class="ts-item reserved">02:30</li>
-												<li  data-day="23 января 2016" class="ts-item reserved">03:00</li>
-												<li  data-day="23 января 2016" class="ts-item reserved">03:30</li>
-												<li  data-day="23 января 2016" class="ts-item reserved">04:00</li>
-												<li  data-day="23 января 2016" class="ts-item">04:30</li>
-												<li  data-day="23 января 2016" class="ts-item">05:00</li>
-												<li  data-day="23 января 2016" class="ts-item">05:30</li>
-												<li  data-day="23 января 2016" class="ts-item">06:00</li>
-												<li  data-day="23 января 2016" class="ts-item">06:30</li>
-												<li  data-day="23 января 2016" class="ts-item">07:00</li>
-												<li  data-day="23 января 2016" class="ts-item">07:30</li>
-												<li  data-day="23 января 2016" class="ts-item">08:00</li>
-												<li  data-day="23 января 2016" class="ts-item">08:30</li>
-												<li  data-day="23 января 2016" class="ts-item">09:00</li>
-												<li  data-day="23 января 2016" class="ts-item">09:30</li>
-												<li  data-day="23 января 2016" class="ts-item">10:00</li>
-												<li  data-day="23 января 2016" class="ts-item">10:30</li>
-												<li  data-day="23 января 2016" class="ts-item">11:00</li>
-												<li  data-day="23 января 2016" class="ts-item">11:30</li>
-												<li  data-day="23 января 2016" class="ts-item">12:00</li>
-												<li  data-day="23 января 2016" class="ts-item">12:30</li>
-												<li  data-day="23 января 2016" class="ts-item">13:00</li>
-												<li  data-day="23 января 2016" class="ts-item">13:30</li>
-												<li  data-day="23 января 2016" class="ts-item">14:00</li>
-												<li  data-day="23 января 2016" class="ts-item">14:30</li>
-												<li  data-day="23 января 2016" class="ts-item">15:00</li>
-												<li  data-day="23 января 2016" class="ts-item">15:30</li>
-												<li  data-day="23 января 2016" class="ts-item">16:00</li>
-												<li  data-day="23 января 2016" class="ts-item">16:30</li>
-												<li  data-day="23 января 2016" class="ts-item">17:00</li>
-												<li  data-day="23 января 2016" class="ts-item">17:30</li>
-												<li  data-day="23 января 2016" class="ts-item">18:00</li>
-												<li  data-day="23 января 2016" class="ts-item">18:30</li>
-												<li  data-day="23 января 2016" class="ts-item">19:00</li>
-												<li  data-day="23 января 2016" class="ts-item">19:30</li>
-												<li  data-day="23 января 2016" class="ts-item">20:00</li>
-												<li  data-day="23 января 2016" class="ts-item">20:30</li>
-												<li  data-day="23 января 2016" class="ts-item">21:00</li>
-												<li  data-day="23 января 2016" class="ts-item">21:30</li>
-												<li  data-day="23 января 2016" class="ts-item">22:00</li>
-												<li  data-day="23 января 2016" class="ts-item">22:30</li>
-												<li  data-day="23 января 2016" class="ts-item">23:00</li>
-												<li  data-day="23 января 2016" class="ts-item">23:30</li>
-												<li  data-day="23 января 2016" class="ts-item">23:00</li>
-												<li  data-day="23 января 2016" class="ts-item">23:30</li>
-											</ul>
-										</div>
-										<div class="clear"></div>
-									</div>
-
-									<div class="tooltip-help">
-										Зелёным отмечены свободные даты
-									</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+										<option value="1">00</option>
+										<option value="1">15</option>
+										<option value="1">30</option>
+										<option value="1">45</option>
+									</select>
 								</div>
 							</div>
 						</div>
+
+						<div class="row">
+							<div class="col-md-4 hidden-xs hidden-sm">
+								<label>Выезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date001" class="form-control datepicker">
+									<div class="input-group-addon"><label for="bf-input-date1"><i class="glyphicon glyphicon-calendar"></i></label></div>
+								</div>
+							</div>
+							<div class="col-xs-12 visible-xs visible-sm">
+								<label>Выезд</label>
+								<div class="input-group">
+									<input name="bf-date" id="bf-input-date0001" class="form-control date-input">
+									<div class="input-group-addon"><label for="bf-input-date01"><i class="glyphicon glyphicon-calendar"></i></label></div>
+								</div>
+								<div class="fs-datepicker-wrapper">
+									<div class="modal-header">
+										<button type="button" class="close">Закрыть</button>
+										<h1 class="modal-title">Выберите дату выезда</h1>
+									</div>
+									<div class="fs-datepicker" data-date="dd.mm.yyyy"></div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-green">Выбрать</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<label>В</label>
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+											<option value="1">01</option>
+											<option value="1">02</option>
+											<option value="1">03</option>
+											<option value="1">04</option>
+											<option value="1">05</option>
+											<option value="1">06</option>
+											<option value="1">07</option>
+											<option value="1">08</option>
+											<option value="1">09</option>
+											<option value="1">10</option>
+											<option value="1">11</option>
+											<option value="1">12</option>
+											<option value="1">13</option>
+											<option value="1">14</option>
+											<option value="1">15</option>
+											<option value="1">16</option>
+											<option value="1">17</option>
+											<option value="1">18</option>
+											<option value="1">19</option>
+											<option value="1">20</option>
+											<option value="1">21</option>
+											<option value="1">22</option>
+											<option value="1">23</option>
+											<option value="1">24</option>
+										</select>
+								</div>
+							</div>
+							<div class="col-md-3 col-xs-6 time">
+								<div class="form-group form-inline clearfix">
+									<select name="bf-room" class="form-control selectpicker" title="Выберите время">
+										<option value="1">00</option>
+										<option value="1">15</option>
+										<option value="1">30</option>
+										<option value="1">45</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mess mess-error">
+									<div class="title">На это время номер занят</div>
+									<p>Укажите другое время или другой номер</p>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<div class="custom-container default">
+									<div class="caption"></div>
+									<a href="#" class="prev"></a>
+									<a href="#" class="next"></a>
+									<div class="carousel">
+										<ul>
+											<li  data-day="22 января 2016" class="ts-item">00:00</li>
+											<li  data-day="22 января 2016" class="ts-item">00:30</li>
+											<li  data-day="22 января 2016" class="ts-item">01:00</li>
+											<li  data-day="22 января 2016" class="ts-item">01:30</li>
+											<li  data-day="22 января 2016" class="ts-item reserved">02:00</li>
+											<li  data-day="22 января 2016" class="ts-item reserved">02:30</li>
+											<li  data-day="22 января 2016" class="ts-item reserved">03:00</li>
+											<li  data-day="22 января 2016" class="ts-item reserved">03:30</li>
+											<li  data-day="22 января 2016" class="ts-item reserved">04:00</li>
+											<li  data-day="22 января 2016" class="ts-item">04:30</li>
+											<li  data-day="22 января 2016" class="ts-item">05:00</li>
+											<li  data-day="22 января 2016" class="ts-item">05:30</li>
+											<li  data-day="22 января 2016" class="ts-item">06:00</li>
+											<li  data-day="22 января 2016" class="ts-item">06:30</li>
+											<li  data-day="22 января 2016" class="ts-item">07:00</li>
+											<li  data-day="22 января 2016" class="ts-item">07:30</li>
+											<li  data-day="22 января 2016" class="ts-item">08:00</li>
+											<li  data-day="22 января 2016" class="ts-item">08:30</li>
+											<li  data-day="22 января 2016" class="ts-item">09:00</li>
+											<li  data-day="22 января 2016" class="ts-item">09:30</li>
+											<li  data-day="22 января 2016" class="ts-item">10:00</li>
+											<li  data-day="22 января 2016" class="ts-item">10:30</li>
+											<li  data-day="22 января 2016" class="ts-item">11:00</li>
+											<li  data-day="22 января 2016" class="ts-item">11:30</li>
+											<li  data-day="22 января 2016" class="ts-item">12:00</li>
+											<li  data-day="22 января 2016" class="ts-item">12:30</li>
+											<li  data-day="22 января 2016" class="ts-item">13:00</li>
+											<li  data-day="22 января 2016" class="ts-item">13:30</li>
+											<li  data-day="22 января 2016" class="ts-item">14:00</li>
+											<li  data-day="22 января 2016" class="ts-item">14:30</li>
+											<li  data-day="22 января 2016" class="ts-item">15:00</li>
+											<li  data-day="22 января 2016" class="ts-item">15:30</li>
+											<li  data-day="22 января 2016" class="ts-item">16:00</li>
+											<li  data-day="22 января 2016" class="ts-item">16:30</li>
+											<li  data-day="22 января 2016" class="ts-item">17:00</li>
+											<li  data-day="22 января 2016" class="ts-item">17:30</li>
+											<li  data-day="22 января 2016" class="ts-item">18:00</li>
+											<li  data-day="22 января 2016" class="ts-item">18:30</li>
+											<li  data-day="22 января 2016" class="ts-item">19:00</li>
+											<li  data-day="22 января 2016" class="ts-item">19:30</li>
+											<li  data-day="22 января 2016" class="ts-item">20:00</li>
+											<li  data-day="22 января 2016" class="ts-item">20:30</li>
+											<li  data-day="22 января 2016" class="ts-item">21:00</li>
+											<li  data-day="22 января 2016" class="ts-item">21:30</li>
+											<li  data-day="22 января 2016" class="ts-item">22:00</li>
+											<li  data-day="22 января 2016" class="ts-item">22:30</li>
+											<li  data-day="22 января 2016" class="ts-item">23:00</li>
+											<li  data-day="22 января 2016" class="ts-item">23:30</li>
+											<li  data-day="22 января 2016" class="ts-item">23:00</li>
+											<li  data-day="22 января 2016" class="ts-item">23:30</li>
+
+											<li  data-day="23 января 2016" class="ts-item">00:00</li>
+											<li  data-day="23 января 2016" class="ts-item">00:30</li>
+											<li  data-day="23 января 2016" class="ts-item">01:00</li>
+											<li  data-day="23 января 2016" class="ts-item">01:30</li>
+											<li  data-day="23 января 2016" class="ts-item reserved">02:00</li>
+											<li  data-day="23 января 2016" class="ts-item reserved">02:30</li>
+											<li  data-day="23 января 2016" class="ts-item reserved">03:00</li>
+											<li  data-day="23 января 2016" class="ts-item reserved">03:30</li>
+											<li  data-day="23 января 2016" class="ts-item reserved">04:00</li>
+											<li  data-day="23 января 2016" class="ts-item">04:30</li>
+											<li  data-day="23 января 2016" class="ts-item">05:00</li>
+											<li  data-day="23 января 2016" class="ts-item">05:30</li>
+											<li  data-day="23 января 2016" class="ts-item">06:00</li>
+											<li  data-day="23 января 2016" class="ts-item">06:30</li>
+											<li  data-day="23 января 2016" class="ts-item">07:00</li>
+											<li  data-day="23 января 2016" class="ts-item">07:30</li>
+											<li  data-day="23 января 2016" class="ts-item">08:00</li>
+											<li  data-day="23 января 2016" class="ts-item">08:30</li>
+											<li  data-day="23 января 2016" class="ts-item">09:00</li>
+											<li  data-day="23 января 2016" class="ts-item">09:30</li>
+											<li  data-day="23 января 2016" class="ts-item">10:00</li>
+											<li  data-day="23 января 2016" class="ts-item">10:30</li>
+											<li  data-day="23 января 2016" class="ts-item">11:00</li>
+											<li  data-day="23 января 2016" class="ts-item">11:30</li>
+											<li  data-day="23 января 2016" class="ts-item">12:00</li>
+											<li  data-day="23 января 2016" class="ts-item">12:30</li>
+											<li  data-day="23 января 2016" class="ts-item">13:00</li>
+											<li  data-day="23 января 2016" class="ts-item">13:30</li>
+											<li  data-day="23 января 2016" class="ts-item">14:00</li>
+											<li  data-day="23 января 2016" class="ts-item">14:30</li>
+											<li  data-day="23 января 2016" class="ts-item">15:00</li>
+											<li  data-day="23 января 2016" class="ts-item">15:30</li>
+											<li  data-day="23 января 2016" class="ts-item">16:00</li>
+											<li  data-day="23 января 2016" class="ts-item">16:30</li>
+											<li  data-day="23 января 2016" class="ts-item">17:00</li>
+											<li  data-day="23 января 2016" class="ts-item">17:30</li>
+											<li  data-day="23 января 2016" class="ts-item">18:00</li>
+											<li  data-day="23 января 2016" class="ts-item">18:30</li>
+											<li  data-day="23 января 2016" class="ts-item">19:00</li>
+											<li  data-day="23 января 2016" class="ts-item">19:30</li>
+											<li  data-day="23 января 2016" class="ts-item">20:00</li>
+											<li  data-day="23 января 2016" class="ts-item">20:30</li>
+											<li  data-day="23 января 2016" class="ts-item">21:00</li>
+											<li  data-day="23 января 2016" class="ts-item">21:30</li>
+											<li  data-day="23 января 2016" class="ts-item">22:00</li>
+											<li  data-day="23 января 2016" class="ts-item">22:30</li>
+											<li  data-day="23 января 2016" class="ts-item">23:00</li>
+											<li  data-day="23 января 2016" class="ts-item">23:30</li>
+											<li  data-day="23 января 2016" class="ts-item">23:00</li>
+											<li  data-day="23 января 2016" class="ts-item">23:30</li>
+										</ul>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="tooltip-help">
+									Зелёным отмечены свободные даты
+								</div>
+							</div>
+						</div>
+
+					</div>
 				</div>
 
 				<div class="modal-footer">
