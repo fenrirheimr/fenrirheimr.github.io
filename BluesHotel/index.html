@@ -30,6 +30,7 @@
 	
 	<script src="js/jquery.sticky.js"></script>
 	
+	<script src="js/jquery.jcarousellite.min.js"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
@@ -474,7 +475,7 @@
 								</div>
 							</div>
 
-							<!--<div class="row">
+							<div class="row">
 								<div class="col-md-4">
 									<label>Выезд</label>
 									<div class="input-group">
@@ -523,101 +524,131 @@
 										</select>
 									</div>
 								</div>
-							</div>-->
+							</div>
 
 							<div class="row">
-								<!--<div class="col-md-12">
+								<div class="col-md-12">
 									<div class="mess mess-error">
 										<div class="title">На это время номер занят</div>
 										<p>Укажите другое время или другой номер</p>
 									</div>
-								</div>-->
+								</div>
 
 								<div class="col-md-12">
-									<!--<div class="time-slider">
+									<div class="custom-container default">
+										<div class="caption"></div>
+										<a href="#" class="prev"></a>
+										<a href="#" class="next"></a>
+										<div class="carousel">
+											<ul>
+												<li  data-day="22 января 2016" class="ts-item">00:00</li>
+												<li  data-day="22 января 2016" class="ts-item">00:30</li>
+												<li  data-day="22 января 2016" class="ts-item">01:00</li>
+												<li  data-day="22 января 2016" class="ts-item">01:30</li>
+												<li  data-day="22 января 2016" class="ts-item reserved">02:00</li>
+												<li  data-day="22 января 2016" class="ts-item reserved">02:30</li>
+												<li  data-day="22 января 2016" class="ts-item reserved">03:00</li>
+												<li  data-day="22 января 2016" class="ts-item reserved">03:30</li>
+												<li  data-day="22 января 2016" class="ts-item reserved">04:00</li>
+												<li  data-day="22 января 2016" class="ts-item">04:30</li>
+												<li  data-day="22 января 2016" class="ts-item">05:00</li>
+												<li  data-day="22 января 2016" class="ts-item">05:30</li>
+												<li  data-day="22 января 2016" class="ts-item">06:00</li>
+												<li  data-day="22 января 2016" class="ts-item">06:30</li>
+												<li  data-day="22 января 2016" class="ts-item">07:00</li>
+												<li  data-day="22 января 2016" class="ts-item">07:30</li>
+												<li  data-day="22 января 2016" class="ts-item">08:00</li>
+												<li  data-day="22 января 2016" class="ts-item">08:30</li>
+												<li  data-day="22 января 2016" class="ts-item">09:00</li>
+												<li  data-day="22 января 2016" class="ts-item">09:30</li>
+												<li  data-day="22 января 2016" class="ts-item">10:00</li>
+												<li  data-day="22 января 2016" class="ts-item">10:30</li>
+												<li  data-day="22 января 2016" class="ts-item">11:00</li>
+												<li  data-day="22 января 2016" class="ts-item">11:30</li>
+												<li  data-day="22 января 2016" class="ts-item">12:00</li>
+												<li  data-day="22 января 2016" class="ts-item">12:30</li>
+												<li  data-day="22 января 2016" class="ts-item">13:00</li>
+												<li  data-day="22 января 2016" class="ts-item">13:30</li>
+												<li  data-day="22 января 2016" class="ts-item">14:00</li>
+												<li  data-day="22 января 2016" class="ts-item">14:30</li>
+												<li  data-day="22 января 2016" class="ts-item">15:00</li>
+												<li  data-day="22 января 2016" class="ts-item">15:30</li>
+												<li  data-day="22 января 2016" class="ts-item">16:00</li>
+												<li  data-day="22 января 2016" class="ts-item">16:30</li>
+												<li  data-day="22 января 2016" class="ts-item">17:00</li>
+												<li  data-day="22 января 2016" class="ts-item">17:30</li>
+												<li  data-day="22 января 2016" class="ts-item">18:00</li>
+												<li  data-day="22 января 2016" class="ts-item">18:30</li>
+												<li  data-day="22 января 2016" class="ts-item">19:00</li>
+												<li  data-day="22 января 2016" class="ts-item">19:30</li>
+												<li  data-day="22 января 2016" class="ts-item">20:00</li>
+												<li  data-day="22 января 2016" class="ts-item">20:30</li>
+												<li  data-day="22 января 2016" class="ts-item">21:00</li>
+												<li  data-day="22 января 2016" class="ts-item">21:30</li>
+												<li  data-day="22 января 2016" class="ts-item">22:00</li>
+												<li  data-day="22 января 2016" class="ts-item">22:30</li>
+												<li  data-day="22 января 2016" class="ts-item">23:00</li>
+												<li  data-day="22 января 2016" class="ts-item">23:30</li>
+												<li  data-day="22 января 2016" class="ts-item">23:00</li>
+												<li  data-day="22 января 2016" class="ts-item">23:30</li>
 
-										<div class="ts-day-wrapper">
-											<div class="ts-caption">22 января 2016</div>
-											<div class="ts-holder">
-												<div class="ts-item">00:00</div>
-												<div class="ts-item">00:30</div>
-												<div class="ts-item">01:00</div>
-												<div class="ts-item">01:30</div>
-												<div class="ts-item">02:00</div>
-												<div class="ts-item">02:30</div>
-												<div class="ts-item">03:00</div>
-												<div class="ts-item">03:30</div>
-												<div class="ts-item">04:00</div>
-												<div class="ts-item">04:30</div>
-												<div class="ts-item">05:00</div>
-												<div class="ts-item">05:30</div>
-												<div class="ts-item">06:00</div>
-												<div class="ts-item">06:30</div>
-												<div class="ts-item">07:00</div>
-												<div class="ts-item">07:30</div>
-												<div class="ts-item">08:00</div>
-												<div class="ts-item">08:30</div>
-												<div class="ts-item">09:00</div>
-												<div class="ts-item">09:30</div>
-												<div class="ts-item">10:00</div>
-												<div class="ts-item">10:30</div>
-												<div class="ts-item">11:00</div>
-												<div class="ts-item">11:30</div>
-												<div class="ts-item">12:00</div>
-												<div class="ts-item">12:30</div>
-												<div class="ts-item">13:00</div>
-												<div class="ts-item">13:30</div>
-												<div class="ts-item">14:00</div>
-												<div class="ts-item">14:30</div>
-												<div class="ts-item">15:00</div>
-												<div class="ts-item">15:30</div>
-												<div class="ts-item">16:00</div>
-												<div class="ts-item">16:30</div>
-												<div class="ts-item">17:00</div>
-												<div class="ts-item">17:30</div>
-												<div class="ts-item">18:00</div>
-												<div class="ts-item">18:30</div>
-												<div class="ts-item">19:00</div>
-												<div class="ts-item">19:30</div>
-												<div class="ts-item">20:00</div>
-												<div class="ts-item">20:30</div>
-												<div class="ts-item">21:00</div>
-												<div class="ts-item">21:30</div>
-												<div class="ts-item">22:00</div>
-												<div class="ts-item">22:30</div>
-												<div class="ts-item">23:00</div>
-												<div class="ts-item">23:30</div>
-												<div class="ts-item">23:00</div>
-												<div class="ts-item">23:30</div>
-											</div>
+												<li  data-day="23 января 2016" class="ts-item">00:00</li>
+												<li  data-day="23 января 2016" class="ts-item">00:30</li>
+												<li  data-day="23 января 2016" class="ts-item">01:00</li>
+												<li  data-day="23 января 2016" class="ts-item">01:30</li>
+												<li  data-day="23 января 2016" class="ts-item reserved">02:00</li>
+												<li  data-day="23 января 2016" class="ts-item reserved">02:30</li>
+												<li  data-day="23 января 2016" class="ts-item reserved">03:00</li>
+												<li  data-day="23 января 2016" class="ts-item reserved">03:30</li>
+												<li  data-day="23 января 2016" class="ts-item reserved">04:00</li>
+												<li  data-day="23 января 2016" class="ts-item">04:30</li>
+												<li  data-day="23 января 2016" class="ts-item">05:00</li>
+												<li  data-day="23 января 2016" class="ts-item">05:30</li>
+												<li  data-day="23 января 2016" class="ts-item">06:00</li>
+												<li  data-day="23 января 2016" class="ts-item">06:30</li>
+												<li  data-day="23 января 2016" class="ts-item">07:00</li>
+												<li  data-day="23 января 2016" class="ts-item">07:30</li>
+												<li  data-day="23 января 2016" class="ts-item">08:00</li>
+												<li  data-day="23 января 2016" class="ts-item">08:30</li>
+												<li  data-day="23 января 2016" class="ts-item">09:00</li>
+												<li  data-day="23 января 2016" class="ts-item">09:30</li>
+												<li  data-day="23 января 2016" class="ts-item">10:00</li>
+												<li  data-day="23 января 2016" class="ts-item">10:30</li>
+												<li  data-day="23 января 2016" class="ts-item">11:00</li>
+												<li  data-day="23 января 2016" class="ts-item">11:30</li>
+												<li  data-day="23 января 2016" class="ts-item">12:00</li>
+												<li  data-day="23 января 2016" class="ts-item">12:30</li>
+												<li  data-day="23 января 2016" class="ts-item">13:00</li>
+												<li  data-day="23 января 2016" class="ts-item">13:30</li>
+												<li  data-day="23 января 2016" class="ts-item">14:00</li>
+												<li  data-day="23 января 2016" class="ts-item">14:30</li>
+												<li  data-day="23 января 2016" class="ts-item">15:00</li>
+												<li  data-day="23 января 2016" class="ts-item">15:30</li>
+												<li  data-day="23 января 2016" class="ts-item">16:00</li>
+												<li  data-day="23 января 2016" class="ts-item">16:30</li>
+												<li  data-day="23 января 2016" class="ts-item">17:00</li>
+												<li  data-day="23 января 2016" class="ts-item">17:30</li>
+												<li  data-day="23 января 2016" class="ts-item">18:00</li>
+												<li  data-day="23 января 2016" class="ts-item">18:30</li>
+												<li  data-day="23 января 2016" class="ts-item">19:00</li>
+												<li  data-day="23 января 2016" class="ts-item">19:30</li>
+												<li  data-day="23 января 2016" class="ts-item">20:00</li>
+												<li  data-day="23 января 2016" class="ts-item">20:30</li>
+												<li  data-day="23 января 2016" class="ts-item">21:00</li>
+												<li  data-day="23 января 2016" class="ts-item">21:30</li>
+												<li  data-day="23 января 2016" class="ts-item">22:00</li>
+												<li  data-day="23 января 2016" class="ts-item">22:30</li>
+												<li  data-day="23 января 2016" class="ts-item">23:00</li>
+												<li  data-day="23 января 2016" class="ts-item">23:30</li>
+												<li  data-day="23 января 2016" class="ts-item">23:00</li>
+												<li  data-day="23 января 2016" class="ts-item">23:30</li>
+											</ul>
 										</div>
-
-									</div>-->
-
-									<div class="cont">
-										<div class="box-cont" id="block">
-											<div class="box">1</div>
-											<div class="box">2</div>
-											<div class="box">3</div>
-											<div class="box">4</div>
-											<div class="box">5</div>
-											<div class="box">6</div>
-											<div class="box">7</div>
-											<div class="box">8</div>
-											<div class="box">9</div>
-											<div class="box">10</div>
-											<div class="box">11</div>
-											<div class="box">12</div>
-											<div class="box">13</div>
-											<div class="box">14</div>
-											<div class="box">15</div>
-											<div class="box">16</div>
-										</div>
+										<div class="clear"></div>
 									</div>
 
-									<div class="btn">
-										<button type="button" id="left">&laquo;</button>
-										<button type="button" id="right">&raquo;</button>
+									<div class="tooltip-help">
+										Зелёным отмечены свободные даты
 									</div>
 								</div>
 							</div>
@@ -635,10 +666,34 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">Закрыть</button>
-				<h1 class="modal-title" id="myModalLabel">Ваши данные</h1>
+				<h1 class="modal-title" id="myModalLabel">Бронирование номера «Стандарт»</h1>
+				<strong>в отеле «Милана»</strong>
 			</div>
 			<div class="modal-body">
 				<form>
+
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="summary">
+								<li>
+									<span>Заезд</span> 26 января 2016 г.  в 22:30
+								</li>
+								<li>
+									<span>Выезд</span> 27 января 2016 г. в 10:00
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="row total-price">
+						<div class="col-md-6">Стоимость проживания:</div>
+						<div class="col-md-6">
+							<div class="price">12 000</div>
+						</div>
+					</div>
+
 					<div class="form-group">
 						<div class="row">
 							<div class="col-md-6">
@@ -659,6 +714,11 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="checkbox">
+						<input type="checkbox" id="day1" value="">
+						<label for="day1">Я ознакомлен с <a href="#">условиями и отмены брони</a></label>
+					</div>
 					<button class="btn btn-green btn-next" data-next="modal-success" data-current="bf-info">Забронировать</button>
 				</form>
 			</div>
@@ -666,19 +726,57 @@
 	</div>
 </div>
 
-<!-- Окно успеха -->
 <div class="modal fade modal-scroll in" id="modal-success" tabindex="-1" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">Закрыть</button>
-				<h1 class="modal-title" id="myModalLabel">Спасибо</h1>
+				<h1 class="modal-title" id="myModalLabel">Ваша бронь №1748</h1>
+				<strong>Вы забронировали номер «Фиолетовая бабочка» в отеле «Милана»</strong>
 			</div>
 			<div class="modal-body">
-				Спасибо! Наш оператор свяжется с вами в ближайшее время для уточнения 
-				деталей. Если у вас возникнут вопросы или вы захотите отменить бронь, 
-				позвоните
-				+7 777 77 15
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="summary">
+							<li>
+								<span>Заезд</span> 26 января 2016 г.  в 22:30
+							</li>
+							<li>
+								<span>Выезд</span> 27 января 2016 г. в 10:00
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row total-price">
+					<div class="col-md-6">Стоимость проживания:</div>
+					<div class="col-md-6">
+						<div class="price">12 000</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="marked-info">
+							<li>В течение 10 минут вы получите SMS-подтверждение</li>
+							<li>
+								Номер сохраняется за вами до 20:45.<br>
+								Если вы не заехали до этого времени и не предупредили администратора,<br>
+								<strong>бронь будет аннулирована</strong>
+							</li>
+							<li>Для заселения нужен хотя бы один документ</li>
+
+
+
+
+
+
+
+						</ul>
+					</div>
+				</div>
 
 			</div>
 		</div>

@@ -49,35 +49,37 @@ $(document).ready(function() {
 
 	function timeSlider() {
 
-		$('.box-cont').each(function(){
-			var totalBlocks = $('#block div.box').length;
-			var blockViews = Math.round($('#block').width() / $('#block div.box').width());
-			var currentPosition = 0;
+		var caption = $('.custom-container .caption');
 
-			$( "#left" ).click(function() {
+		$(".default .carousel").jCarouselLite({
+			btnNext: ".default .next",
+			btnPrev: ".default .prev",
+			circular: false,
+			visible: 11,
+			afterEnd: function(a) {
+				var indexText = $(a[5]).attr('data-day');
+				caption.text(indexText);
+			}
+		});
 
-				if(currentPosition > 0) {
-					$( "#block" ).animate({ "left": "+=105px" }, "slow" );
-					currentPosition--;
-				}
-			});
 
-			$( "#right" ).click(function(){
-				if(blockViews + (currentPosition+6) <= totalBlocks) {
-					$( "#block" ).animate({ "left": "-=105px" }, "slow" );
-					currentPosition++;
-				}
+		var relativeDay = $('.carousel > ul li');
 
-				console.log(blockViews, totalBlocks);
-			});
-		})
+		var relativeDayText = relativeDay.attr('data-day');
+		caption.text(relativeDayText);
 
+		//relativeText()
 
 
 	};
 
 	timeSlider();
 
+	/*$('.reserv').on('shown.bs.modal', function () {
+		timeSlider();
+	})
+
+	$('[data-toggle="tooltip"]').tooltip()*/
 
 
 });
