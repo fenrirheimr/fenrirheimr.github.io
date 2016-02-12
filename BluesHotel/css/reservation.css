@@ -350,3 +350,5 @@ label:hover:before {
 .fs-datepicker-wrapper .modal-footer {margin: 30px 0 0; }
 
 .form-control[readonly] {background: #fff;}
+
+.personal .row > div {margin-bottom: 30px;}
