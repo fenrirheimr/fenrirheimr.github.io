@@ -70,7 +70,12 @@
 .modal-body .total-price .price {font-size: 24px; font-weight: bold; text-align: right; position: relative;}
 .modal-body .total-price .price:after {
     display: inline-block; margin-left: 4px;
-    content: '\20bd';
+    content: 'Р';
+}
+
+.modal-body .total-price .price:before {
+    display: block; width: 12px; height: 0; border-top: 2px solid #424242;
+    position: absolute; top: 21px; right: 3px; content: ' ';
 }
 
 .modal-body .total-price + .form-group + .form-group{margin: 40px 0 20px;}
@@ -108,7 +113,11 @@
 .mess p span.price {width: auto; border: 0; position: relative; font-weight: normal; font-size: 18px; color: #333434;}
 .mess p span.price:after {
     display: inline-block; margin-left: 4px;
-    content: '\20bd';
+    content: 'Р';
+}
+.mess p span.price:before {
+    display: block; width: 10px; height: 0; border-top: 1px solid #424242;
+    position: absolute; top: 14px; right: 1px; content: ' ';
 }
 .mess-success {border-color: #27ae60;}
 .mess-error {border-color: #e74c3c;}
@@ -347,3 +356,5 @@ label:hover:before {
 }
 .fs-datepicker-wrapper .modal-header button.close {margin: 0; position: absolute; top: 15px; right: 11px;}
 .fs-datepicker-wrapper .modal-footer {margin: 30px 0 0; }
+
+.form-control[readonly] {background: #fff;}
