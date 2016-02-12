@@ -73,11 +73,6 @@
     content: 'Р';
 }
 
-.modal-body .total-price .price:before {
-    display: block; width: 12px; height: 0; border-top: 2px solid #424242;
-    position: absolute; top: 21px; right: 3px; content: ' ';
-}
-
 .modal-body .total-price + .form-group + .form-group{margin: 40px 0 20px;}
 
 .modal-body .dropdown-menu {margin: -1px 0 0; padding-top: 0;}
@@ -115,10 +110,7 @@
     display: inline-block; margin-left: 4px;
     content: 'Р';
 }
-.mess p span.price:before {
-    display: block; width: 10px; height: 0; border-top: 1px solid #424242;
-    position: absolute; top: 14px; right: 1px; content: ' ';
-}
+
 .mess-success {border-color: #27ae60;}
 .mess-error {border-color: #e74c3c;}
 .mess-error .title {color: #e74c3c;}
