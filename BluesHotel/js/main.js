@@ -50,6 +50,7 @@ $(document).ready(function() {
 
 				var closeBtn = wrapper.find('.close');
 				var addBtn = wrapper.find('.btn-green');
+				var cancelBtn = wrapper.find('.btn-gray');
 
 				$(this).click(function(){
 					wrapper.show();
@@ -61,6 +62,10 @@ $(document).ready(function() {
 				});
 				addBtn.click(function(e){
 					$(this).parents('.fs-datepicker-wrapper').hide();
+				});
+				cancelBtn.click(function(e){
+					$(this).parents('.fs-datepicker-wrapper').hide();
+					fakeDateInput.val('');
 				});
 
 				fsDatepicker.datepicker({

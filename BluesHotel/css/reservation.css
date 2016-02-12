@@ -71,7 +71,6 @@
 .modal-body .total-price .price:after {
     display: inline-block; margin-left: 4px;
     content: '\20bd';
-    font-family: Arial;
 }
 
 .modal-body .total-price + .form-group + .form-group{margin: 40px 0 20px;}
@@ -110,7 +109,6 @@
 .mess p span.price:after {
     display: inline-block; margin-left: 4px;
     content: '\20bd';
-    font-family: Arial;
 }
 .mess-success {border-color: #27ae60;}
 .mess-error {border-color: #e74c3c;}
