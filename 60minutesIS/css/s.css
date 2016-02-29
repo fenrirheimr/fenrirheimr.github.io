@@ -73,7 +73,8 @@ a:focus {text-decoration: none;}
 .logo:hover {color: #fff;}
 .logo span {color: #45b1f9;}
 
-/* Main */
+
+/* Content //////////////////////////////////////////////////////////////////////*/
 
 h1 {font-size: 30px; color: #474e5f;}
 h2 {font-size: 28px; font-weight: bold; margin-top: 35px; margin-bottom: 25px;}
@@ -84,9 +85,9 @@ h3 {font-size: 18px; font-weight: bold;}
     margin: 0 auto;
 }
 
-.content .page-caption {padding: 5px 13px 26px; border-bottom: 5px solid #e8eaef;}
+.content .page-caption {padding: 5px 0 26px; border-bottom: 5px solid #e8eaef;}
 .content .page-caption .info {color: #acb5bf; font-size: 13px;}
-.content .page-caption .title {margin: 20px 15px 8px 30px; font-size: 30px; color: #474e5f; line-height: 33px;}
+.content .page-caption .title {margin: 20px 30px 8px 15px; font-size: 30px; color: #474e5f; line-height: 33px;}
 .content .page-caption .label {vertical-align: middle;}
 .content .page-caption .btns {vertical-align: middle; line-height: 33px; margin: 20px 15px 8px 0;}
 
@@ -152,7 +153,7 @@ h3 {font-size: 18px; font-weight: bold;}
 
 .btn {
     font-size: 15px; height: 38px; border: 2px solid; border-color: transparent !important; color: #fff;
-    position: relative;
+    position: relative; box-shadow: none !important;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -167,7 +168,9 @@ h3 {font-size: 18px; font-weight: bold;}
 
 .btn-primary {background: #45b1f9; color: #fff;}
 .btn-primary:hover {background: #5dbeff;}
-.btn-primary:focus {background: #56a4d8;}
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus {background: #56a4d8;}
 
 .btn-success {background: #5dca76;}
 .btn-info {}
@@ -176,6 +179,30 @@ h3 {font-size: 18px; font-weight: bold;}
 .btn-ghost {background: transparent;}
 .btn-link {background: transparent;}
 
+/* tabs */
+
+.tab-wrapper {padding-top: 20px;}
+.tab-wrapper > .nav-tabs {padding: 0 30px; border-bottom: 1px solid #e8eaef;}
+.tab-wrapper > .nav-tabs > li > a {
+    margin-right: 0; color: #545d6a;
+    line-height: 1.42857143;
+    border-width: 0 0 3px 0;
+    border-radius: 0;
+}
+
+.tab-wrapper > .nav-tabs > li.active> a,
+.tab-wrapper > .nav-tabs > li.active> a:focus,
+.tab-wrapper > .nav-tabs > li.active> a:hover,
+.tab-wrapper > .nav-tabs > li > a:hover {
+    color: #545d6a;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 0 0 3px 0;
+    border-bottom-color: #45b1f9;
+    cursor: pointer;
+}
+
+.tab-wrapper > .tab-content {padding: 30px;}
 /* Custom checkbox */
 
 /* Base for label styling */
