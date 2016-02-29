@@ -1,11 +1,37 @@
-@CHARSET "UTF-8";
+@font-face {
+    font-family: 'helveticaneuecyrbold';
+    src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr-bold-webfont.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr/helveticaneuecyr-bold-webfont.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr/helveticaneuecyr-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'helveticaneuecyrmedium';
+    src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr-medium-webfont.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr/helveticaneuecyr-medium-webfont.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr/helveticaneuecyr-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'helveticaneuecyrroman';
+    src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr-roman-webfont.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr/helveticaneuecyr-roman-webfont.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr/helveticaneuecyr-roman-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 .sbHolder{
     background-color: #fff;
-    border: solid 1px #ccc;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
+    border: solid 1px #d9dbe0;
+    font-family: 'helveticaneuecyrmedium';
+    font-size: 13px;
     font-weight: normal;
-    height: 38px;
+    height: 34px;
     position: relative;
     width: 100%;
 
@@ -19,31 +45,37 @@
 }
 .sbSelector{
     display: block;
-    height: 36px;
-    left: 0;
-    line-height: 36px;
+    height: 32px;
+    line-height: 34px;
     outline: none;
     overflow: hidden;
     position: absolute;
     text-indent: 20px;
     top: 0;
+    left: 0;
     width: 100%;
 }
 .sbSelector:link, .sbSelector:visited, .sbSelector:hover{
-    color: #000;
+    color: #474e5f;
     outline: none;
     text-decoration: none;
 }
 .sbToggle{
-    background: url("../img/arr-down.png") no-repeat;
+    /*background: url("../img/arr-down.png") no-repeat;*/
     display: block;
-    height: 36px;
+    height: 32px;
     outline: none;
     position: absolute;
     right: 0;
     top: 0;
-    width: 36px;
+    width: 34px;
+    border-left: solid 1px #d9dbe0;
 }
+.sbToggle:before {
+    display: block; width: 20px; height: 20px; background: url("../img/icons20.png") 0 -140px no-repeat;
+    content: ' '; position: absolute; top: 7px; left: 7px;
+}
+
 /*.sbToggle:hover{
     background: url(../img/select-icons.png) 0 -167px no-repeat;
 }
@@ -65,34 +97,32 @@
 }
 .sbOptions{
     background-color: #fff;
-    border: solid 1px #ccc;
+    border: solid 1px #d9dbe0;
     list-style: none;
     left: -1px;
+    right: -1px;
     margin: 0;
     padding: 0;
     position: absolute;
     top: 36px;
-    width: 100%;
     z-index: 1;
     overflow-y: auto;
 }
-.sbOptions li{
-    /*padding: 0 7px;*/
-}
+.sbOptions li {border-top: solid 1px #d9dbe0;}
+.sbOptions li:first-child {border-top: none;}
 .sbOptions a {
     display: block;
     outline: none;
     padding: 0 0 0 20px; height: 38px; line-height: 38px
 }
 .sbOptions a:link, .sbOptions a:visited{
-    color: #000;
+    color: #474e5f;
     text-decoration: none;
 }
-.sbOptions li:hover {background: #6bb6e5;}
+.sbOptions li:hover {background: #e6f5ff;}
 .sbOptions a:hover,
 .sbOptions a:focus,
-.sbOptions a.sbFocus{
-    color: #fff; background: #6bb6e5;
+.sbOptions a.sbFocus{background: #e6f5ff;
 }
 .sbOptions li.last a{
     border-bottom: none;

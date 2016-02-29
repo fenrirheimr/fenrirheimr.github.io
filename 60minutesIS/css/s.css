@@ -182,18 +182,18 @@ h3 {font-size: 18px; font-weight: bold;}
 /* tabs */
 
 .tab-wrapper {padding-top: 20px;}
-.tab-wrapper > .nav-tabs {padding: 0 30px; border-bottom: 1px solid #e8eaef;}
-.tab-wrapper > .nav-tabs > li > a {
+.tab-wrapper .nav-tabs {padding: 0 30px; border-bottom: 1px solid #e8eaef;}
+.tab-wrapper .nav-tabs > li > a {
     margin-right: 0; color: #545d6a;
     line-height: 1.42857143;
     border-width: 0 0 3px 0;
     border-radius: 0;
 }
 
-.tab-wrapper > .nav-tabs > li.active> a,
-.tab-wrapper > .nav-tabs > li.active> a:focus,
-.tab-wrapper > .nav-tabs > li.active> a:hover,
-.tab-wrapper > .nav-tabs > li > a:hover {
+.tab-wrapper .nav-tabs > li.active> a,
+.tab-wrapper .nav-tabs > li.active> a:focus,
+.tab-wrapper .nav-tabs > li.active> a:hover,
+.tab-wrapper .nav-tabs > li > a:hover {
     color: #545d6a;
     background-color: #fff;
     border-style: solid;
@@ -202,7 +202,11 @@ h3 {font-size: 18px; font-weight: bold;}
     cursor: pointer;
 }
 
-.tab-wrapper > .tab-content {padding: 30px;}
+.tab-wrapper .tab-content {padding: 30px;}
+
+/* Custom select */
+.export {float: right; width: 115px; margin-right: 30px;}
+
 /* Custom checkbox */
 
 /* Base for label styling */

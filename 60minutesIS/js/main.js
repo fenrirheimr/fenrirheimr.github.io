@@ -222,23 +222,13 @@
             //////////////////////////////////////////////////////////////
 
 
+            var firstRow = $('.sbOptions li:first-child');
             $('select').selectbox({
                 onOpen: function (inst) {
-                    //console.log("open", inst);
+                    firstRow.hide();
                 },
                 onClose: function (inst) {
-                    //console.log("close", inst);
-                },
-                onChange: function (val, inst) {
-                    /*$.ajax({
-                        type: "GET",
-                        data: {country_id: val},
-                        url: "ajax.php",
-                        success: function (data) {
-                            $("#boxCity").html(data);
-                            $("#city_id").selectbox();
-                        }
-                    });*/
+                    firstRow.show();
                 },
                 effect: "slide"
             });
