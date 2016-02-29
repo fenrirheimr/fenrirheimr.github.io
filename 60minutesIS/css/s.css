@@ -86,10 +86,31 @@ h3 {font-size: 18px; font-weight: bold;}
 
 .content .page-caption {padding: 5px 13px 26px; border-bottom: 5px solid #e8eaef;}
 .content .page-caption .info {color: #acb5bf; font-size: 13px;}
-.content .page-caption h1 {margin-bottom: 8px;}
-.content .page-caption .title {margin: 0 15px;}
+.content .page-caption .title {margin: 20px 15px 8px 30px; font-size: 30px; color: #474e5f; line-height: 33px;}
 .content .page-caption .label {vertical-align: middle;}
 .content .page-caption .btns {vertical-align: middle; line-height: 33px; margin: 20px 15px 8px 0;}
+
+.page-caption .evaluation {line-height: 33px; margin: 20px 0 8px;}
+.page-caption .evaluation .dot {
+    display: inline-block; width: 14px; height: 14px; vertical-align: middle; margin-right: 3px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background: #333;
+}
+.page-caption .evaluation .value {position: relative; color: #545d6a; font-family: 'helveticaneuecyrmedium'; font-size: 30px; vertical-align: middle;}
+.page-caption .evaluation .value sup {font-family: 'helveticaneuecyrbold'; font-size: 15px; display: inline-block; vertical-align: top; line-height: 18px; top: 0;}
+.page-caption .evaluation .value sub {font-family: 'helveticaneuecyrroman'; font-size: 15px; display: inline-block; vertical-align: bottom; line-height: 18px; bottom: 0; left: -32px;}
+.page-caption .evaluation .text {line-height: 18px; vertical-align: bottom; left: -30px; position: relative;}
+
+.page-caption .evaluation.good .dot {background: #5dd963;}
+.page-caption .evaluation.good .text {color: #5dca76;}
+
+.page-caption .evaluation.normal .dot {background: #dacd3c;}
+.page-caption .evaluation.normal .text {color: #dacd3c;}
+
+.page-caption .evaluation.bad .dot {background: #ff5277;}
+.page-caption .evaluation.bad .text {color: #ff5277;}
 
 
 /* label */
@@ -130,12 +151,11 @@ h3 {font-size: 18px; font-weight: bold;}
 /* btn */
 
 .btn {
-    font-size: 15px; height: 38px; border: 2px solid;
+    font-size: 15px; height: 38px; border: 2px solid; border-color: transparent !important; color: #fff;
+    position: relative;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    border-color: transparent !important; color: #fff;
-    position: relative;
 }
 .btn:hover,
 .btn:focus {color: #fff;}
