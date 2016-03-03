@@ -1,6 +1,6 @@
-@font-face {
+/*@font-face {
     font-family: 'helveticaneuecyrbold';
-    /*src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr-bold-webfont.woff2') format('woff2'),*/
+    !*src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr-bold-webfont.woff2') format('woff2'),*!
          url('../fonts/HelveticaNeueCyr/helveticaneuecyr-bold-webfont.woff') format('woff'),
          url('../fonts/HelveticaNeueCyr/helveticaneuecyr-bold-webfont.ttf') format('truetype');
     font-weight: normal;
@@ -9,7 +9,7 @@
 }
 @font-face {
     font-family: 'helveticaneuecyrmedium';
-    /*src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr-medium-webfont.woff2') format('woff2'),*/
+    !*src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr-medium-webfont.woff2') format('woff2'),*!
          url('../fonts/HelveticaNeueCyr/helveticaneuecyr-medium-webfont.woff') format('woff'),
          url('../fonts/HelveticaNeueCyr/helveticaneuecyr-medium-webfont.ttf') format('truetype');
     font-weight: normal;
@@ -18,12 +18,49 @@
 }
 @font-face {
     font-family: 'helveticaneuecyrroman';
-    /*src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr-roman-webfont.woff2') format('woff2'),*/
+    !*src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr-roman-webfont.woff2') format('woff2'),*!
          url('../fonts/HelveticaNeueCyr/helveticaneuecyr-roman-webfont.woff') format('woff'),
          url('../fonts/HelveticaNeueCyr/helveticaneuecyr-roman-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
+}*/
+
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-Bold.eot');
+    src: local('☺'), url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-Bold.woff') format('woff'),
+         url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-BoldItalic.eot');
+    src: local('☺'), url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-BoldItalic.woff') format('woff'), url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-Light.eot');
+    src: local('☺'), url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-Light.woff') format('woff'), url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-LightItalic.eot');
+    src: local('☺'), url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-LightItalic.woff') format('woff'), url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-LightItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'HelveticaNeueCyrRoman';
+    src: url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-Roman.eot');
+    src: local('☺'), url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-Roman.woff') format('woff'), url('../fonts/HelveticaNeueCyr2/HelveticaNeueCyr-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 *, *:before, *:after {
@@ -36,7 +73,7 @@
 html {height: 100%; min-width: 970px;}
 
 body {
-    font: 15px/20px 'helveticaneuecyrroman', Arial, Helvetica, sans-serif;
+    font: 15px/20px 'HelveticaNeueCyrRoman', Arial, Helvetica, sans-serif;
     width: 100%;
     height: 100%;
     background: #edf1f7;
@@ -116,8 +153,8 @@ h3 {font-size: 18px; font-weight: bold;}
     background: #333;
 }
 .page-caption .evaluation .value {position: relative; color: #545d6a; font-family: 'helveticaneuecyrmedium'; font-size: 30px; vertical-align: middle;}
-.page-caption .evaluation .value sup {font-family: 'helveticaneuecyrbold'; font-size: 15px; display: inline-block; vertical-align: top; line-height: 18px; top: 0;}
-.page-caption .evaluation .value sub {font-family: 'helveticaneuecyrroman'; font-size: 15px; display: inline-block; vertical-align: bottom; line-height: 18px; bottom: 0; left: -32px;}
+.page-caption .evaluation .value sup {font-family: 'HelveticaNeueCyr'; font-weight: bold font-size: 15px; display: inline-block; vertical-align: top; line-height: 18px; top: 0;}
+.page-caption .evaluation .value sub {font-family: 'HelveticaNeueCyrRoman'; font-size: 15px; display: inline-block; vertical-align: bottom; line-height: 18px; bottom: 0; left: -32px;}
 .page-caption .evaluation .text {line-height: 18px; vertical-align: bottom; left: -30px; position: relative;}
 
 .page-caption .evaluation.good .dot {background: #5dd963;}
