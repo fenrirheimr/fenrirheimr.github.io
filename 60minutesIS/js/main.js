@@ -198,25 +198,15 @@
 
             //////////////////////////////////////////////////////////////
 
-            var tabSet = $('.table-settings');
-
-            tabSet.click(function(e){
+            $('.add-ticket').click(function(e) {
                 e.preventDefault();
-                var tabSetForm = $('.reports-rows');
+                var nt = $('.new-ticket');
+                var close = nt.find('.icn-close');
 
-                if (tabSetForm.css('display') != 'block') {
-                    tabSetForm.show();
-
-                    var yourClick = true;
-                    $(document).bind('click.myEvent', function (e) {
-                        if (!yourClick && $(e.target).closest('.reports-rows').length == 0) {
-                            tabSetForm.hide();
-                            $(document).unbind('click.myEvent');
-                        }
-                        yourClick = false;
-                    });
-                }
-
+                nt.show();
+                close.click(function(e){
+                    nt.hide();
+                })
             });
 
             //////////////////////////////////////////////////////////////
