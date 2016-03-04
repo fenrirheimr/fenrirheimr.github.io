@@ -217,6 +217,8 @@
                     $this.removeClass('used');
             });
 
+            $('.textarea-scrollbar').scrollbar();
+
             //////////////////////////////////////////////////////////////
 
 

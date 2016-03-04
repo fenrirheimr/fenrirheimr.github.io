@@ -377,7 +377,7 @@ label:hover:before {
 }
 
 /* material input */
-
+.material {margin-bottom: 0;}
 .material .custom-input {position: relative;}
 .material .custom-input label {
     color:#757575;
@@ -402,12 +402,10 @@ label:hover:before {
 
 .material .custom-input input {height: 50px; position: relative; z-index: 9;}
 .material .custom-input textarea {
-    overflow: hidden;
+    overflow: auto; box-shadow: none;
     resize: none;
-    height: 50px;
-    /*-webkit-transition: height 0.2s;*/
-    /*-moz-transition: height 0.2s;*/
-    /*transition: height 0.2s;*/
+    height: 168px;
+    border-bottom:1px solid #e8eaef;
 }
 .material .custom-input input:focus,
 .material .custom-input textarea:focus { outline:none; }
@@ -425,7 +423,7 @@ label:hover:before {
 .material .custom-input input.used ~ label,
 .material .custom-input textarea:focus ~ label,
 .material .custom-input textarea.used ~ label  {
-    top: 0px;
+    top: 0;
     font-size: 12px;
     color: #757575;
     z-index: 9;
@@ -436,6 +434,16 @@ label:hover:before {
 .material .custom-input textarea:focus ~ .bar:before,
 .material .custom-input textarea:focus ~ .bar:after {width:50%;}
 
+.new-ticket .custom-scroll {height: 168px;}
+
+
+/* custom textarea scrollbar */
+
+
+.textarea-scrollbar {
+    height: 168px;
+    width: 470px;
+}
 /* Footer */
 
 .footer {height: 70px; margin-top: -70px; width: 100%;}
