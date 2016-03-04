@@ -51,7 +51,7 @@
     overflow: hidden !important;
 }
 .scroll-textarea > .scroll-content > textarea {
-    border: none !important;
+    /*border: none !important;*/
     box-sizing: border-box;
     height: 100% !important;
     margin: 0;

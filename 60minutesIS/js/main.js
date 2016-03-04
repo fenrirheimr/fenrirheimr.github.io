@@ -219,6 +219,58 @@
 
             $('.textarea-scrollbar').scrollbar();
 
+            var availableTags = [
+                "Руководитель колл-центра",
+                "Руководитель проекта"
+
+            ];
+
+            $('.new-ticket input[name="addressee"]').autocomplete({source: availableTags});
+
+
+            //////////////////////////////////////////////////////////////
+
+            if($('fieldset').is('.add-file')){
+                var fileSelect = document.getElementById('fileSelect'),
+                    fileElem = document.getElementById('fileElem');
+
+                fileSelect.addEventListener('click', function(e){
+                    if (fileElem) {fileElem.click();}
+                    e.preventDefault();
+                }, false);
+
+                $('#fileElem').change(function(event) {
+                    var files = this.files;
+                    var i = 0,
+                        len = files.length;
+                    (function readFile(n) {
+                        var reader = new FileReader();
+                        var f = files[n];
+                        reader.onload = function(e) {
+                            //console.log(f.name);
+                            var item = $('<span class="file-item">' + f.name + '</span>');
+                            item.append('<a href="#remove" class="del-btn"><i class="icn icn20 icn-remove"></i></a>');
+                            item.appendTo("#filelist");
+                            // if `n` is less than `len` ,
+                            // call `readFile` with incremented `n` as parameter
+                            if (n < len -1) readFile(++n)
+                        };
+                        reader.readAsDataURL(f); // `f` : current `File` object
+                    }(i)); // `i` : `n` within immediately invoked function expression
+                });
+
+                $.fn.live = function (types, data, fn) {
+                    $(this.context).on(types,this.selector,data,fn);
+                    return this;
+                };
+
+                $('.file-item .del-btn').live("click", function(event) {
+                    event.preventDefault();
+                    $(this).parent().remove();
+                    //reader.load();
+                });
+            }
+
             //////////////////////////////////////////////////////////////
 
 
