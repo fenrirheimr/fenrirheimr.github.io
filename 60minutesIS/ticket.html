@@ -12,8 +12,10 @@
     <title>60 минут - Система управления</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/jquery-ui.css" rel="stylesheet">
     <link href="css/jquery.selectbox-0.2.css" rel="stylesheet">
+    <link href="css/jquery.scrollbar.css" rel="stylesheet">
     <link href="css/s.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
@@ -31,6 +33,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.selectbox-0.2.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <!--
@@ -69,12 +72,25 @@
                     </div>
                 </header>
 
-                <form action="#" method="">
-                    <div class="button-bar">
-                        <button type="button" class="btn btn-small btn-primary"><i class="icn icn20 icn-ok"></i> Завершить</button>
-                        <button type="button" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Ответить</button>
-                    </div>
-                </form>
+                <div class="row">
+                    <form action="#" method="">
+                        <div class="button-bar">
+                            <button type="button" class="btn btn-small btn-primary"><i class="icn icn20 icn-ok"></i> Завершить</button>
+                            <button type="button" class="btn btn-small btn-default"><i class="icn icn20 icn-reply"></i> Ответить</button>
+                            <span class="dropdown">
+                                <button class="btn btn-small btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <i class="icn icn20 icn-toright"></i>
+                                    <span>Переадресовать</span>
+                                    <i class="icn icn20 icn-down"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Аккаунт-менеджер Сергей Иванов</a></li>
+                                    <li><a href="#">Руководитель проекта Игорь Кириллов</a></li>
+                                </ul>
+                            </span>
+                        </div>
+                    </form>
+                </div>
 
             </div>
         </section>
@@ -87,5 +103,48 @@
         </div>
     </footer>
 
+    <div class="new-ticket" id="nt">
+        <a href="#" class="btn-close pull-right"><i class="icn icn20 icn-close"></i></a>
+        <form action="#" method="">
+            <div class="t-header">Новый тикет 765</div>
+            <div class="t-content">
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" name="addressee" />
+                        <span class="bar"></span>
+                        <label>Кому</label>
+                    </div>
+                </div>
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" />
+                        <span class="bar"></span>
+                        <label>Суть проблемы</label>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <textarea class="textarea-scrollbar scrollbar-outer"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <fieldset class="add-file">
+
+                        <input id="fileElem" multiple="multiple" class="custom-file" type="file" />
+                        <div id="filelist" class="result clearfix"></div>
+
+                        <a href="#" id="fileSelect" class="file-select"><i class="icn icn20 icn-plus-grey"></i> Добавить файл</a>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="t-footer">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="reset" class="btn btn-default">Отменить</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

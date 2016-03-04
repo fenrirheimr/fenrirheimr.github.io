@@ -104,6 +104,10 @@ h3 {font-size: 18px; font-weight: bold;}
 .page-caption .evaluation.bad .text {color: #ff5277;}
 
 
+/* task page */
+
+.button-bar {background: #e8eaef; padding: 9px 30px 14px;}
+
 /* label */
 
 .label {font-size: 13px; color: #fff; padding: 5px 7px;}
@@ -141,11 +145,19 @@ h3 {font-size: 18px; font-weight: bold;}
 .icn-ok {background-position: 0 -60px;}
 .icn-close {background-position: 0 -100px;}
 .icn-remove {background-position: 0 -20px;}
+.icn-down {background-position: 0 -140px;}
+.icn-reply {background-position: 0 -180px;}
+.icn-toright {background-position: 0 -200px;}
 
 *:hover > .icn-alert {background-position: -20px -80px;}
 *:hover > .icn-ok {background-position: -20px -60px;}
 *:hover > .icn-close {background-position: -20px -100px;}
 *:hover > .icn-remove {background-position: -20px -20px;}
+*:hover > .icn-reply {background-position: -20px -180px;}
+*:hover > .icn-toright {background-position: -20px -200px;}
+
+.btn-primary > .icn-ok,
+.btn-success > .icn-ok {background-position: -40px -60px;}
 
 /* btn */
 
@@ -185,6 +197,52 @@ h3 {font-size: 18px; font-weight: bold;}
 .btn-ghost {background: transparent;}
 .btn-link {background: transparent;}
 
+/* dropdown */
+
+.export .dropdown .btn {border-width: 1px; padding: 0 6px 0 20px; height: 34px; font-size: 13px;}
+.export .dropdown .btn > span {border-right: 1px solid #d9dbe0; padding: 8px 8px 10px 0; margin-right: 4px;}
+
+.export .open > .dropdown-toggle.btn-default:focus,
+.export .open > .dropdown-toggle.btn-default:hover {
+    color: #474e5f;
+    background-color: #fff;
+    border-color: #d9dbe0;
+}
+.export .open > .btn {
+    -webkit-border-radius: 3px 3px 0 0 ;
+    -moz-border-radius: 3px 3px 0 0 ;
+    border-radius: 3px 3px 0 0 ;
+}
+.export .dropdown-menu {
+    margin: -1px 0 0; border-radius: 0; border: 1px solid #d9dbe0; min-width: 115px; padding: 0; font-size: 13px;
+}
+.export .dropdown-menu>li {border-top: 1px solid #d9dbe0;}
+.export .dropdown-menu>li:first-child {border-top: 0;}
+.export .dropdown-menu>li>a {padding: 9px 20px;color: #474e5f;}
+.export .dropdown-menu>li>a:focus,
+.export .dropdown-menu>li>a:hover {
+    color: #474e5f;
+    text-decoration: none;
+    background-color: #e6f5ff;
+}
+
+.button-bar .dropdown  {height: 32px; display: inline-block;}
+.button-bar .dropdown .btn {padding: 4px 6px 4px 10px;}
+.button-bar .dropdown .btn > span {border-right: 2px solid #d9dbe0; padding: 7px 8px 7px 0; margin: 0 4px;}
+
+.button-bar .dropdown-menu {
+    margin: -1px 0 0; border-radius: 0; border: 1px solid #d9dbe0; min-width: 100%; padding: 0; font-size: 13px;
+}
+
+.button-bar .dropdown-menu>li {border-top: 1px solid #d9dbe0;}
+.button-bar .dropdown-menu>li:first-child {border-top: 0;}
+.button-bar .dropdown-menu>li>a {padding: 9px 20px;color: #474e5f;}
+.button-bar .dropdown-menu>li>a:focus,
+.button-bar .dropdown-menu>li>a:hover {
+    color: #474e5f;
+    text-decoration: none;
+    background-color: #e6f5ff;
+}
 /* tabs */
 
 .tab-wrapper {padding-top: 20px;}
@@ -476,24 +534,7 @@ label:hover:before {
     opacity: 0;
     position: absolute; width: 0; height: 0;
 }
-.add-file .title {font-size: 24px; color: #000; margin-bottom: 20px;}
 .add-file .result {display: inline-block; float: left;}
-.add-file .result .items {margin: 0; padding: 0; display: inline-block;}
-.add-file .result .item {
-    position: relative;
-    float: left; padding-left: 0;
-    margin: 0 9px 9px 0;
-    width: 135px; height: 75px;
-    border: 1px solid #e7e7e7;
-}
-.add-file .result .item:nth-child(5n) {margin-right: 0;}
-.add-file .result li:before {display: none;}
-.add-file .result .item a {display: block; overflow: hidden; text-align: center;}
-.add-file .result .item img {float: none; height: 75px;}
-.add-file .result .item a.del {
-    z-index: 999; position: absolute; top: 9px; right: -9px; display: block; padding: 0;
-    width: 20px; height: 20px; background: url("../pic/icons.png") no-repeat 0 -560px;
-}
 .add-file .file-select,
 .add-file .file-item {
     width: auto; height: 34px; vertical-align: top; margin: 0 0 9px 0;
@@ -501,8 +542,6 @@ label:hover:before {
     z-index: 99; display: inline-block; padding: 5px 10px 5px 5px;
 }
 .add-file .file-item {margin-right: 9px;}
-/*.add-file .result.wi + .file-select {float: right; margin-top: -85px;}*/
-.add-file em {color: #646464; margin-bottom: 20px; display: block;}
 
 
 /* Footer */
