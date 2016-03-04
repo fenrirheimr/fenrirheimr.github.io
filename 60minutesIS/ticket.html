@@ -76,7 +76,7 @@
                     <form action="#" method="">
                         <div class="button-bar">
                             <button type="button" class="btn btn-small btn-primary"><i class="icn icn20 icn-ok"></i> Завершить</button>
-                            <button type="button" class="btn btn-small btn-default"><i class="icn icn20 icn-reply"></i> Ответить</button>
+                            <button type="button" class="btn btn-small btn-default reply-btn"><i class="icn icn20 icn-reply"></i> Ответить</button>
                             <span class="dropdown">
                                 <button class="btn btn-small btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     <i class="icn icn20 icn-toright"></i>
@@ -88,6 +88,51 @@
                                     <li><a href="#">Руководитель проекта Игорь Кириллов</a></li>
                                 </ul>
                             </span>
+                        </div>
+
+                        <fieldset class="new-mess">
+                            <div class="form-group">
+                                <label for="exampleTextarea1">Ваш ответ:</label>
+                                <textarea class="form-control" rows="3" id="exampleTextarea1"></textarea>
+                            </div>
+                        </fieldset>
+
+                        <div class="task-description">
+
+                            <div class="description-item new">
+                                <div class="col-left">
+                                    <div class="datetime">07.02.2016 <span>11:03</span></div>
+                                </div>
+                                <div class="col-right">
+                                    <div class="task-author">Сергей Пономарев (аккаунт-менеджер) ответил:</div>
+                                    <div class="task-mess">Далее очень длинный ответ менежера, вы можете загрузить файлы форматов JPEG, PNG, GIF, BMP. Размер одного файла не
+                                        должен превышать 20 Мб.Ограничений на количество загруженных фотографий нет — можно загружать любое количество
+                                        изображений. </div>
+                                    <div class="notice">Сергей Пономарев прочитал ваше сообщение 07.02. 2016 11:05</div>
+                                </div>
+                            </div>
+
+                            <div class="description-item your-reply">
+                                <div class="col-left">
+                                    <div class="datetime">07.02.2016 <span>11:03</span></div>
+                                </div>
+                                <div class="col-right">
+                                    <div class="task-author">Вы написали:</div>
+                                    <div class="task-mess">Сергей, я не получил фотографий.</div>
+                                    <div class="notice">Сергей Пономарев прочитал ваше сообщение 07.02. 2016 11:05</div>
+                                </div>
+                            </div>
+
+                            <div class="description-item">
+                                <div class="col-left">
+                                    <div class="datetime">07.02.2016 <span>11:03</span></div>
+                                </div>
+                                <div class="col-right">
+                                    <div class="task-author">Сергей Пономарев (аккаунт-менеджер) написал:</div>
+                                    <div class="task-mess">Необходимо добавить фотографии в номер «Фиолетовая бабочка», они сделали ремонт</div>
+                                    <a href="#" class="task-obj">Delight Inn Polyanka на Якиманке</a>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
