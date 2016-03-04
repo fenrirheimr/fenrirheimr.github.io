@@ -201,12 +201,22 @@
             $('.add-ticket').click(function(e) {
                 e.preventDefault();
                 var nt = $('.new-ticket');
+                var ntForm = nt.find('form');
+                var ntFormInput = ntForm.find('input');
+                var ntFormReset = ntForm.find('[type="reset"]');
                 var close = nt.find('.icn-close');
 
                 nt.show();
                 close.click(function(e){
                     nt.hide();
-                })
+                    ntForm.trigger('reset');
+                    ntFormInput.removeClass('used');
+                });
+                ntFormReset.click(function(e){
+                    nt.hide();
+                    ntForm.trigger('reset');
+                    ntFormInput.removeClass('used');
+                });
             });
 
             $('.material input').blur(function() {
