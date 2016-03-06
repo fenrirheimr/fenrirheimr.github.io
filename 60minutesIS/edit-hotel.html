@@ -79,15 +79,15 @@
 
                 <div class="row tab-wrapper">
 
-                    <form action="#" method="">
+                    <form action="#" method="" id="hotelSettings">
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
                             <li role="presentation"><a href="#contacts" aria-controls="contacts" role="tab" data-toggle="tab">Контактная информация</a></li>
-                            <li role="presentation"><a href="#requisites" aria-controls="requisites" role="tab" data-toggle="tab">Реквизиты</a></li>
+                            <li role="presentation" class="active"><a href="#requisites" aria-controls="requisites" role="tab" data-toggle="tab">Реквизиты</a></li>
                             <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Категории и цены</a></li>
-                            <li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки отеля</a></li>
+                            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки отеля</a></li>
                             <li role="presentation"><a href="#docs" aria-controls="docs" role="tab" data-toggle="tab">Документы</a></li>
                         </ul>
 
@@ -132,7 +132,151 @@
 
                             </fieldset>
                             <fieldset role="tabpanel" class="tab-pane fade" id="contacts">2</fieldset>
-                            <fieldset role="tabpanel" class="tab-pane fade" id="requisites">3</fieldset>
+                            <fieldset role="tabpanel" class="tab-pane fade in active" id="requisites">
+
+                                <div class="tab-title">Реквизиты</div>
+
+                                <div class="requisites-wrapper">
+                                    <div class="form-group custom-select">
+                                        <label for="selectLabel">Форма собственности</label>
+                                        <select id="selectLabel">
+                                            <option>ИП</option>
+                                            <option>ООО</option>
+                                            <option>ОАО</option>
+                                            <option>ЫЫЫ</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="form-group col-md-5">
+                                                <label for="hotelName">Название</label>
+                                                <input type="text" class="form-control" id="hotelName" placeholder="">
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-md-5">
+                                                <label for="legalAddr">Юридический адрес</label>
+                                                <input type="text" class="form-control" id="legalAddr" placeholder="">
+                                            </div>
+                                            <div class="col-md-5">
+                                                <p class="help-block">Например:<br>197227, г. Санкт-Петербург, проспект Сизова, д. 2, лит. А</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row twofield">
+                                            <div class="col-md-5">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="INN">ИНН</label>
+                                                            <input type="text" class="form-control" id="INN" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="KPP">КПП</label>
+                                                            <input type="text" class="form-control" id="KPP" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row twofield">
+                                            <div class="col-md-5">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="OGRN">ОГРН</label>
+                                                            <input type="text" class="form-control" id="OGRN" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row twofield">
+                                            <div class="col-md-5">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="rs">Расчетный счет</label>
+                                                            <input type="text" class="form-control" id="rs" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row twofield">
+                                            <div class="col-md-5">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="ks">Корреспондентский счет</label>
+                                                            <input name="kor" type="text" class="form-control" id="ks" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row twofield">
+                                            <div class="col-md-5">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="BIK">БИК</label>
+                                                            <input type="text" class="form-control" id="BIK" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-md-5">
+                                                <label for="bank">Банк</label>
+                                                <input name="bank" type="text" class="form-control" id="bank" placeholder="">
+                                            </div>
+                                        </div>
+
+                                        <div class="row twofield">
+                                            <div class="col-md-5">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="BankCity">Город банка</label>
+                                                            <input type="text" class="form-control" id="BankCity" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="f-footer">
+                                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                                </div>
+
+                            </fieldset>
                             <fieldset role="tabpanel" class="tab-pane fade" id="categories">
 
                                 <div class="clearfix">
@@ -168,7 +312,7 @@
                                     </li>
                                 </ul>
                             </fieldset>
-                            <fieldset role="tabpanel" class="tab-pane fade in active" id="settings">
+                            <fieldset role="tabpanel" class="tab-pane fade" id="settings">
 
                                 <div class="tab-title">Настройки отеля</div>
 
