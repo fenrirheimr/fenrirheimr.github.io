@@ -280,6 +280,18 @@ label {color: #80868e; font-weight: normal;}
 .docs-wrapper .choose-period .row {margin-bottom: 20px;}
 
 
+/* edit category */
+
+.equipment {}
+.equipment .column-wrapper {float: left; width: 375px;}
+
+.edit-category {}
+.edit-category .price-row {margin-bottom: 15px;}
+.edit-category .price-row > * {display: inline-block;}
+.edit-category .price-row .form-control {width: 80px; margin: 0 10px 0 50px;}
+.edit-category .price-row label {width: 70px;}
+.edit-category .price-row span {color: #474e5f;}
+
 /* slideout menu */
 
 .pushmenu {background: #fff; width: 450px; height: 100%; top: 0; z-index: 1000; position:fixed;}

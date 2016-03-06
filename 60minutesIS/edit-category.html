@@ -376,37 +376,145 @@
                             <fieldset role="tabpanel" class="tab-pane fade in active" id="categories">
 
                                 <div class="clearfix">
-                                    <a href="#" class="btn btn-small btn-primary pull-right add-category"><i class="icn icn20 icn-plus"></i> Добавить категорию</a>
+                                    <a href="#" class="btn btn-small btn-default pull-right add-category"><i class="icn icn20 icn-remove"></i> Удалить</a>
 
-                                    <div class="tab-title">Категории и цены</div>
+                                    <div class="tab-title">Стандарт</div>
                                 </div>
 
-                                <ul class="categories-list list-unstyled">
-                                    <li class="clearfix">
-                                        <a href="#" class="pull-left">Стандарт</a>
+                                <div class="edit-category">
 
-                                        <div class="btns pull-right">
-                                            <a href="edit-category.html" class="btn btn-small btn-default"><i class="icn icn20 icn-edit"></i> Редактировать</a>
-                                            <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-remove"></i> Удалить</a>
-                                        </div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <a href="#" class="pull-left">Полулюкс</a>
+                                    <div class="form-group">
+                                        <div class="row block">
+                                            <div class="col-md-3">
+                                                <div class="block-title">Цена</div>
+                                                <div class="price-row">
+                                                    <label for="price1">За 1 час</label>
+                                                    <input type="text" class="form-control" id="price1" placeholder="">
+                                                    <span>&#8381;</span>
+                                                </div>
 
-                                        <div class="btns pull-right">
-                                            <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-edit"></i> Редактировать</a>
-                                            <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-remove"></i> Удалить</a>
-                                        </div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <a href="#" class="pull-left">Люкс</a>
+                                                <div class="price-row">
+                                                    <label for="price2">За 3 часа</label>
+                                                    <input type="text" class="form-control" id="price2" placeholder="">
+                                                    <span>&#8381;</span>
+                                                </div>
 
-                                        <div class="btns pull-right">
-                                            <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-edit"></i> Редактировать</a>
-                                            <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-remove"></i> Удалить</a>
+                                                <div class="price-row">
+                                                    <label for="price3">За ночь</label>
+                                                    <input type="text" class="form-control" id="price3" placeholder="">
+                                                    <span>&#8381;</span>
+                                                </div>
+                                                <div class="price-row">
+                                                    <label for="price4">За сутки</label>
+                                                    <input type="text" class="form-control" id="price4" placeholder="">
+                                                    <span>&#8381;</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-md-offset-1">
+                                                <div class="block-title">Минимальное время бронирования</div>
+
+                                                <div class="min-reserv">
+                                                    <select>
+                                                        <option>2</option>
+                                                        <option>4</option>
+                                                        <option>6</option>
+                                                        <option>8</option>
+                                                    </select>
+                                                    <label>часа</label>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </li>
-                                </ul>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="block">
+                                            <div class="block-title">Оснащение</div>
+
+                                            <div class="checkbox-group equipment clearfix">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="equipment1" value="">
+                                                    <label for="equipment1">Двуспальная кровать</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="equipment2" value="">
+                                                    <label for="equipment2">Кондиционер</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="equipment3" value="">
+                                                    <label for="equipment3">Душевая кабина</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="equipment4" value="">
+                                                    <label for="equipment4">Сменные полотенца</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="equipment5" value="">
+                                                    <label for="equipment5">Туалетные принадлежности</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="equipment6" value="">
+                                                    <label for="equipment6">Тапочки</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="equipment7" value="">
+                                                    <label for="equipment7">Wi-Fi</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="equipment8" value="">
+                                                    <label for="equipment8">Телевизор</label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="block">
+                                            <div class="block-title">Правила проживания</div>
+
+                                            <div class="checkbox-group">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="residenceRules01" value="">
+                                                    <label for="residenceRules01">Нельзя курить</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="residenceRules02" value="">
+                                                    <label for="residenceRules02">Нельзя больше трех человек</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="residenceRules03" value="">
+                                                    <label for="residenceRules03">Нельзя с животными</label>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="residenceRules04" value="">
+                                                    <label for="residenceRules04">Другое</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="new-rules">
+                                                <input type="text" class="form-control" id="newRules2" placeholder="">
+                                                <button id="addNewRules2" type="button" class="btn btn-small btn-default">Добавить правило</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="f-footer">
+                                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                                    </div>
+
+                                </div>
                             </fieldset>
                             <fieldset role="tabpanel" class="tab-pane fade" id="settings">
 

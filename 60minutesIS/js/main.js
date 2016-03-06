@@ -353,22 +353,31 @@
 
             //////////////////////////////////////////////////////////////
 
-            var rulesWrapper = $('.new-rules').siblings('.checkbox-group');
-            var addNewRules = $('.new-rules #addNewRules');
+            if ($('.new-rules').parents('.active').length) {
+                var rulesWrapper = $('.new-rules').siblings('.checkbox-group');
+                var addNewRules = $('.new-rules .btn-default');
 
-            addNewRules.click(function(){
-                var rulesCheckbox = $('.checkbox-group .checkbox');
-                var input = $('.new-rules #newRules');
-                var inputVal = input.val();
+                addNewRules.click(function(){
+                    var rulesCheckbox = $('.checkbox-group .checkbox');
+                    var input = $('.new-rules .form-control');
+                    var inputVal = input.val();
 
-                for (var i = rulesCheckbox.length; i <= rulesCheckbox.length; i++) {
-                    rulesWrapper.append('<div class="checkbox"><input type="checkbox" id="residenceRules'+ (i+1) +'" value="">' +
-                        '<label for="residenceRules'+(i+1) +'">'+inputVal+'</label></div>');
-                }
+                    for (var i = rulesCheckbox.length; i <= rulesCheckbox.length; i++) {
+                        rulesWrapper.append('<div class="checkbox"><input type="checkbox" id="residenceRules'+ (i+1) +'" value="">' +
+                            '<label for="residenceRules'+(i+1) +'">'+inputVal+'</label></div>');
+                    }
 
-                input.val('');
+                    input.val('');
 
-            });
+                });
+            }
+
+            //////////////////////////////////////////////////////////////
+
+            var chb = $('.equipment .checkbox');
+            for(var i = 0; i < chb.length; i+=6) {
+                chb.slice(i, i+6).wrapAll('<div class="column-wrapper"></div>');
+            }
 
             //////////////////////////////////////////////////////////////
 
