@@ -383,17 +383,25 @@
                 }
             });
 
+            //////////////////////////////////////////////////////////////
 
+            /*$('.dropdown-menu a, .dropdown-menu label').click(function(e) {
+                e.stopPropagation();
+            });*/
+
+            $('.dropdown-menu').click(function(e) {
+                e.stopPropagation();
+            });
 
             //////////////////////////////////////////////////////////////
 
-            var firstRow = $('.sbOptions li:first-child');
+            //var firstRow = $('.sbOptions li:first-child');
             $('select').selectbox({
                 onOpen: function (inst) {
-                    firstRow.hide();
+                    //firstRow.hide();
                 },
                 onClose: function (inst) {
-                    firstRow.show();
+                    //firstRow.show();
                 },
                 effect: "slide"
             });

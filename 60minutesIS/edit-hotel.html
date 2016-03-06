@@ -85,10 +85,10 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
                             <li role="presentation"><a href="#contacts" aria-controls="contacts" role="tab" data-toggle="tab">Контактная информация</a></li>
-                            <li role="presentation" class="active"><a href="#requisites" aria-controls="requisites" role="tab" data-toggle="tab">Реквизиты</a></li>
+                            <li role="presentation"><a href="#requisites" aria-controls="requisites" role="tab" data-toggle="tab">Реквизиты</a></li>
                             <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Категории и цены</a></li>
                             <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки отеля</a></li>
-                            <li role="presentation"><a href="#docs" aria-controls="docs" role="tab" data-toggle="tab">Документы</a></li>
+                            <li role="presentation" class="active"><a href="#docs" aria-controls="docs" role="tab" data-toggle="tab">Документы</a></li>
                         </ul>
 
                         <!-- Tab panes -->
@@ -131,8 +131,104 @@
 
 
                             </fieldset>
-                            <fieldset role="tabpanel" class="tab-pane fade" id="contacts">2</fieldset>
-                            <fieldset role="tabpanel" class="tab-pane fade in active" id="requisites">
+                            <fieldset role="tabpanel" class="tab-pane fade" id="contacts">
+
+                                <div class="tab-title">Контактная информация</div>
+
+                                <div class="form-group">
+                                    <div class="block">
+                                        <div class="block-title">Адрес и расположение отеля</div>
+
+                                        <div class="row first-row">
+                                            <div class="col-md-3">
+                                                <label for="city">Город</label>
+                                                <select id="city">
+                                                    <option>Москва</option>
+                                                    <option>Санкт-Петербург</option>
+                                                    <option>Челябинск</option>
+                                                    <option>Ухта</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <label for="street">Улица</label>
+                                                <input type="text" class="form-control" id="street" placeholder="">
+                                            </div>
+                                            <div class="col-md-1">
+                                                <label for="house">Дом</label>
+                                                <input type="text" class="form-control" id="house" placeholder="">
+                                            </div>
+                                            <div class="col-md-1">
+                                                <label for="build">Корпус</label>
+                                                <input type="text" class="form-control" id="build" placeholder="">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label for="metro">Ближайшая станция метро</label>
+                                                <input type="text" class="form-control" id="metro" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-textarea">
+                                        <label for="exampleTextarea2">Ваш ответ:</label>
+                                        <textarea class="textarea-scrollbar scrollbar-outer" rows="3" id="exampleTextarea2"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group phone reserv">
+                                    <label for="reservPhone1">Телефоны для бронирования</label>
+                                    <input type="tel" class="form-control" id="reservPhone1" placeholder=""> ,
+                                    <input type="tel" class="form-control" id="reservPhone2" placeholder="">
+
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="block">
+                                        <div class="block-title">Контактное лицо по финансовым вопросам</div>
+
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <label for="FIO">Имя, отчество, фамилия</label>
+                                                <input type="text" class="form-control" id="FIO" placeholder="">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group phone reserv">
+                                            <label for="personhone1">Телефоны</label>
+                                            <input type="tel" class="form-control" id="personhone1" placeholder=""> ,
+                                            <input type="tel" class="form-control" id="personhone2" placeholder="">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="block">
+                                        <div class="row first-row">
+                                            <div class="col-md-5">
+                                                <label for="mail1">Электронная почта для уведомления о новых бронях</label>
+                                                <input type="email" class="form-control" id="mail1" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <label for="mail2">Электронная почта для отправки счета и отчетов</label>
+                                                <input type="email" class="form-control" id="mail2" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="f-footer">
+                                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                                </div>
+
+                            </fieldset>
+                            <fieldset role="tabpanel" class="tab-pane fade" id="requisites">
 
                                 <div class="tab-title">Реквизиты</div>
 
@@ -627,7 +723,233 @@
                                 </div>
 
                             </fieldset>
-                            <fieldset role="tabpanel" class="tab-pane fade" id="docs">6</fieldset>
+                            <fieldset role="tabpanel" class="tab-pane fade in active" id="docs">
+
+                                <div class="tab-title">Документы</div>
+
+                                <div class="docs-wrapper">
+                                    <div class="tab-wrapper">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation"><a href="#2015" aria-controls="2015" role="tab" data-toggle="tab">2015</a></li>
+                                            <li role="presentation" class="active"><a href="#2016" aria-controls="2016" role="tab" data-toggle="tab">2016</a></li>
+                                            <li class="period">
+                                                <a href="#" class="dropdown-toggle" id="dropdownPeriod" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Выбрать период <i class="icn icn20 icn-down"></i></a>
+
+                                                <div class="dropdown-menu choose-period" aria-labelledby="dropdownPeriod">
+                                                    <label>Начиная с даты</label>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+
+                                                            <select>
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                                <option>04</option>
+                                                                <option>05</option>
+                                                                <option>06</option>
+                                                                <option>07</option>
+                                                                <option>08</option>
+                                                                <option>09</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                                <option>15</option>
+                                                                <option>16</option>
+                                                                <option>17</option>
+                                                                <option>18</option>
+                                                                <option>19</option>
+                                                                <option>20</option>
+                                                                <option>21</option>
+                                                                <option>22</option>
+                                                                <option>23</option>
+                                                                <option>24</option>
+                                                                <option>25</option>
+                                                                <option>26</option>
+                                                                <option>27</option>
+                                                                <option>28</option>
+                                                                <option>29</option>
+                                                                <option>30</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <select>
+                                                                <option>Январь</option>
+                                                                <option>Февраль</option>
+                                                                <option>Март</option>
+                                                                <option>Апрель</option>
+                                                                <option>Май</option>
+                                                                <option>Июнь</option>
+                                                                <option>Июль</option>
+                                                                <option>Август</option>
+                                                                <option>Сентябрь</option>
+                                                                <option>Октябрь</option>
+                                                                <option>Ноябрь</option>
+                                                                <option>Декадрь</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <select>
+                                                                <option>2015</option>
+                                                                <option>2016</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <label>Заканчивая датой</label>
+
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+
+                                                            <select>
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                                <option>04</option>
+                                                                <option>05</option>
+                                                                <option>06</option>
+                                                                <option>07</option>
+                                                                <option>08</option>
+                                                                <option>09</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                                <option>15</option>
+                                                                <option>16</option>
+                                                                <option>17</option>
+                                                                <option>18</option>
+                                                                <option>19</option>
+                                                                <option>20</option>
+                                                                <option>21</option>
+                                                                <option>22</option>
+                                                                <option>23</option>
+                                                                <option>24</option>
+                                                                <option>25</option>
+                                                                <option>26</option>
+                                                                <option>27</option>
+                                                                <option>28</option>
+                                                                <option>29</option>
+                                                                <option>30</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <select>
+                                                                <option>Январь</option>
+                                                                <option>Февраль</option>
+                                                                <option>Март</option>
+                                                                <option>Апрель</option>
+                                                                <option>Май</option>
+                                                                <option>Июнь</option>
+                                                                <option>Июль</option>
+                                                                <option>Август</option>
+                                                                <option>Сентябрь</option>
+                                                                <option>Октябрь</option>
+                                                                <option>Ноябрь</option>
+                                                                <option>Декадрь</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <select>
+                                                                <option>2015</option>
+                                                                <option>2016</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <button type="submit" class="btn btn-primary">Скачать за указанный период</button>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane fade" id="2015">
+                                                <div class="checkbox-group">
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-01" value="">
+                                                        <label for="2015-01">Январь</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-02" value="">
+                                                        <label for="2015-02">Февраль</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-03" value="">
+                                                        <label for="2015-03">Март</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-04" value="">
+                                                        <label for="2015-04">Апрель</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-05" value="">
+                                                        <label for="2015-05">Май</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-06" value="">
+                                                        <label for="2015-06">Июнь</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-07" value="">
+                                                        <label for="2015-07">Июль</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-08" value="">
+                                                        <label for="2015-08">Август</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-09" value="">
+                                                        <label for="2015-09">Сентябрь</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-10" value="">
+                                                        <label for="2015-10">Октябрь</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-11" value="">
+                                                        <label for="2015-11">Ноябрь</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2015-12" value="">
+                                                        <label for="2015-12">Декабрь</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade in active" id="2016">
+                                                <div class="checkbox-group">
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2016-01" value="">
+                                                        <label for="2016-01">Январь</label>
+                                                    </div>
+
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="2016-02" value="">
+                                                        <label for="2016-02">Февраль</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary">Скачать выбранное</button>
+                                    </div>
+
+
+                                </div>
+
+                            </fieldset>
                         </div>
 
                     </form>

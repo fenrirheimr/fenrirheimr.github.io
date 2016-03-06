@@ -80,8 +80,8 @@
     overflow-y: auto;
 }
 .sbOptions li {border-top: solid 1px #d9dbe0;}
-.sbOptions li:first-child {display: none;}
-.sbOptions li:nth-child(2) {border-top: none;}
+.sbOptions li:first-child {/*display: none;*/border-top: none;}
+/*.sbOptions li:nth-child(2) {border-top: none;}*/
 .sbOptions a {
     display: block;
     outline: none;
