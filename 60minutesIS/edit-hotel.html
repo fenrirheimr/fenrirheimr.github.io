@@ -83,17 +83,17 @@
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
+                            <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
                             <li role="presentation"><a href="#contacts" aria-controls="contacts" role="tab" data-toggle="tab">Контактная информация</a></li>
                             <li role="presentation"><a href="#requisites" aria-controls="requisites" role="tab" data-toggle="tab">Реквизиты</a></li>
                             <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Категории и цены</a></li>
-                            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки отеля</a></li>
+                            <li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки отеля</a></li>
                             <li role="presentation"><a href="#docs" aria-controls="docs" role="tab" data-toggle="tab">Документы</a></li>
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <fieldset role="tabpanel" class="tab-pane fade in active" id="description">
+                            <fieldset role="tabpanel" class="tab-pane fade" id="description">
 
                                 <div class="tab-title">Описание</div>
 
@@ -168,7 +168,321 @@
                                     </li>
                                 </ul>
                             </fieldset>
-                            <fieldset role="tabpanel" class="tab-pane fade" id="settings">5</fieldset>
+                            <fieldset role="tabpanel" class="tab-pane fade in active" id="settings">
+
+                                <div class="tab-title">Настройки отеля</div>
+
+                                <div class="form-group">
+                                    <div class="block select-hour clearfix">
+                                        <div class="block-title">Расчетный час</div>
+                                        <div class="check-in">
+                                            <label>Время заезда</label>
+                                            <select>
+                                                <option>00</option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                                <option>04</option>
+                                                <option>05</option>
+                                                <option>06</option>
+                                                <option>07</option>
+                                                <option>08</option>
+                                                <option>09</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                                <option>18</option>
+                                                <option>19</option>
+                                                <option>20</option>
+                                                <option>21</option>
+                                                <option>22</option>
+                                                <option>23</option>
+                                                <option>24</option>
+                                            </select>
+
+                                            <select>
+                                                <option>00</option>
+                                                <option>15</option>
+                                                <option>30</option>
+                                                <option>45</option>
+                                            </select>
+                                        </div>
+                                        <div class="check-out">
+                                            <label>Время выезда</label>
+                                            <select>
+                                                <option>00</option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                                <option>04</option>
+                                                <option>05</option>
+                                                <option>06</option>
+                                                <option>07</option>
+                                                <option>08</option>
+                                                <option>09</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                                <option>18</option>
+                                                <option>19</option>
+                                                <option>20</option>
+                                                <option>21</option>
+                                                <option>22</option>
+                                                <option>23</option>
+                                                <option>24</option>
+                                            </select>
+
+                                            <select>
+                                                <option>00</option>
+                                                <option>15</option>
+                                                <option>30</option>
+                                                <option>45</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="block select-hour range clearfix">
+                                        <div class="block-title">Интервал действия ночного тарифа</div>
+                                        <div class="check-in">
+                                            <label>с</label>
+                                            <select>
+                                                <option>00</option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                                <option>04</option>
+                                                <option>05</option>
+                                                <option>06</option>
+                                                <option>07</option>
+                                                <option>08</option>
+                                                <option>09</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                                <option>18</option>
+                                                <option>19</option>
+                                                <option>20</option>
+                                                <option>21</option>
+                                                <option>22</option>
+                                                <option>23</option>
+                                                <option>24</option>
+                                            </select>
+
+                                            <select>
+                                                <option>00</option>
+                                                <option>15</option>
+                                                <option>30</option>
+                                                <option>45</option>
+                                            </select>
+                                        </div>
+                                        <div class="check-out">
+                                            <label>до</label>
+                                            <select>
+                                                <option>00</option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                                <option>04</option>
+                                                <option>05</option>
+                                                <option>06</option>
+                                                <option>07</option>
+                                                <option>08</option>
+                                                <option>09</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                                <option>18</option>
+                                                <option>19</option>
+                                                <option>20</option>
+                                                <option>21</option>
+                                                <option>22</option>
+                                                <option>23</option>
+                                                <option>24</option>
+                                            </select>
+
+                                            <select>
+                                                <option>00</option>
+                                                <option>15</option>
+                                                <option>30</option>
+                                                <option>45</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="block">
+                                        <div class="block-title">Правила заселения</div>
+
+                                        <div class="radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="rules" id="optionsRadios1" value="option1" checked>
+                                                <label for="optionsRadios1">Обязателен любой документ, подтверждающий личность для одного гостя</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="rules" id="optionsRadios2" value="option2">
+                                                <label for="optionsRadios2">Обязателен любой документ, подтверждающий личность для каждого гостя</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="rules" id="optionsRadios3" value="option3">
+                                                <label for="optionsRadios3">Документы не нужны</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="block">
+                                        <div class="block-title">Правила проживания <span class="text-muted">Будут применены ко всем категориям, также можно редактировать в каждой категории</span></div>
+
+                                        <div class="checkbox-group">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="residenceRules1" value="">
+                                                <label for="residenceRules1">Нельзя курить</label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="residenceRules2" value="">
+                                                <label for="residenceRules2">Нельзя больше трех человек</label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="residenceRules3" value="">
+                                                <label for="residenceRules3">Нельзя с животными</label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="residenceRules4" value="">
+                                                <label for="residenceRules4">Другое</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="new-rules">
+                                            <input type="text" class="form-control" id="newRules" placeholder="">
+                                            <button id="addNewRules" type="button" class="btn btn-small btn-default">Добавить правило</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="block">
+                                        <div class="block-title">Минимальное время бронирования <span class="text-muted">Будет применено ко всем категориям, также можно редактировать в каждой категории</span></div>
+
+                                        <div class="min-reserv">
+                                            <select>
+                                                <option>2</option>
+                                                <option>4</option>
+                                                <option>6</option>
+                                                <option>8</option>
+                                            </select>
+                                            <label>часа</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="block">
+                                        <div class="block-title">Способы оплаты</div>
+
+                                        <div class="checkbox-group">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="payment1" value="">
+                                                <label for="payment1">Наличные</label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="payment2" value="">
+                                                <label for="payment2">Карты Visa</label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="payment3" value="">
+                                                <label for="payment3">Карты Mastercard</label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="payment4" value="">
+                                                <label for="payment4">Qiwi</label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="payment5" value="">
+                                                <label for="payment5">Безналичный расчет</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="block">
+                                        <div class="block-title">Парковка и Wi-Fi</div>
+
+                                        <div class="checkbox-group">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="other1" value="">
+                                                <label for="other1">Парковка</label>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="other2" value="">
+                                                <label for="other2">Wi-Fi во всех номерах</label>
+
+                                                <span class="text-muted">Эту настройку можно изменить в каждой категории</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group status">
+                                    <div class="block">
+                                        <div class="block-title">Статус в системе «60 минут»</div>
+
+                                        <div class="radio-group">
+                                            <div class="radio-inline">
+                                                <input type="radio" name="status" id="commissionRadio" value="option10" checked>
+                                                <label for="commissionRadio">Комиссия</label>
+                                            </div>
+                                            <div class="radio-inline">
+                                                <input type="radio" name="status" id="status2" value="option2">
+                                                <label for="status2">Абонентская плата</label>
+                                            </div>
+
+                                            <div class="commission-wrapper">
+                                                <input type="text" class="form-control" id="commission" placeholder="" value="15">
+                                                <label for="commission">%</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="f-footer">
+                                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                                </div>
+
+                            </fieldset>
                             <fieldset role="tabpanel" class="tab-pane fade" id="docs">6</fieldset>
                         </div>
 

@@ -353,6 +353,40 @@
 
             //////////////////////////////////////////////////////////////
 
+            var rulesWrapper = $('.new-rules').siblings('.checkbox-group');
+            var addNewRules = $('.new-rules #addNewRules');
+
+            addNewRules.click(function(){
+                var rulesCheckbox = $('.checkbox-group .checkbox');
+                var input = $('.new-rules #newRules');
+                var inputVal = input.val();
+
+                for (var i = rulesCheckbox.length; i <= rulesCheckbox.length; i++) {
+                    rulesWrapper.append('<div class="checkbox"><input type="checkbox" id="residenceRules'+ (i+1) +'" value="">' +
+                        '<label for="residenceRules'+(i+1) +'">'+inputVal+'</label></div>');
+                }
+
+                input.val('');
+
+            });
+
+            //////////////////////////////////////////////////////////////
+
+            var statusRadio = $('.status [type="radio"]');
+            var commissionRadio = $('#commissionRadio');
+
+            statusRadio.click(function(){
+                if( commissionRadio.prop("checked")) {
+                    $('.commission-wrapper').show();
+                } else {
+                    $('.commission-wrapper').hide();
+                }
+            });
+
+
+
+            //////////////////////////////////////////////////////////////
+
             var firstRow = $('.sbOptions li:first-child');
             $('select').selectbox({
                 onOpen: function (inst) {

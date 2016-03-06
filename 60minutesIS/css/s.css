@@ -172,10 +172,13 @@ label {color: #80868e; font-weight: normal;}
 .tab-title {color: #474e5f; font-size: 24px; padding-bottom: 20px; border-bottom: 1px solid #e8eaef}
 .categories-list {}
 .categories-list li {height: 50px; line-height: 50px; border-bottom: 1px solid #e8eaef;}
+.tab-wrapper .form-group {padding: 40px 0; border-bottom: 1px solid #e8eaef; margin: 0;}
+.tab-wrapper .form-group:last-of-type {border-bottom: 0;}
+.tab-wrapper .f-footer {padding: 40px 30px 0; border-top: 1px solid #e8eaef; margin: -1px -30px 0;}
 
 .description-wrapper {}
 .description-wrapper label {margin-bottom: 6px;}
-.description-wrapper .form-group {padding: 40px 0; border-bottom: 1px solid #e8eaef; margin: 0;}
+
 .description-wrapper .form-group.title input {width: 345px;}
 .description-wrapper .form-group .checkbox {margin: 0;}
 .description-wrapper .form-group .phone {margin-left: 23px;}
@@ -186,6 +189,29 @@ label {color: #80868e; font-weight: normal;}
 .description-wrapper .textarea-scrollbar {width: 735px; height: 340px;}
 .description-wrapper .textarea-scrollbar textarea {border: 0; padding: 20px;}
 .description-wrapper .d-footer {padding: 40px 0;}
+
+.block {}
+.block .block-title {color: #474e5f; font-weight: bold; margin-bottom: 12px;}
+.block .text-muted {color: #acb5bf; font-weight: normal; font-size: 13px; margin-left: 20px;}
+
+.block.select-hour {width: 460px;}
+.block.select-hour:first-child {margin-bottom: 40px;}
+.block.select-hour .check-in,
+.block.select-hour .check-out {width: 166px; float: left;}
+.block.select-hour .check-out {float: right;}
+.block.select-hour .sbHolder {width: 77px; display: inline-block; vertical-align: middle;}
+.block.select-hour .sbHolder:first-of-type {margin-right: 6px;}
+.block.select-hour.range .check-in,
+.block.select-hour.range .check-out {width: 200px;}
+.block.select-hour.range .check-in label,
+.block.select-hour.range .check-out label {margin-right: 10px;}
+
+.block .new-rules {margin-left: 23px;}
+.block .new-rules .form-control {width: 325px; display: inline-block; vertical-align: middle;}
+.block .min-reserv .sbHolder {width: 77px; display: inline-block; vertical-align: middle; margin-right: 5px;}
+.block .radio-inline {padding-left: 0; width: 280px; cursor: default;}
+.block .commission-wrapper {margin-right: 23px; margin-top: 15px;}
+.block .commission-wrapper .form-control {width: 77px; display: inline-block; vertical-align: middle; margin-right: 5px;}
 
 /* slideout menu */
 
@@ -454,7 +480,10 @@ label {color: #80868e; font-weight: normal;}
 
 /* Base for label styling */
 
-.checkbox label {color: #474e5f;}
+.checkbox label,
+.radio label {color: #474e5f;}
+
+.checkbox, .radio {margin-bottom: 15px;}
 
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
@@ -533,7 +562,7 @@ label:hover:before {
 [type="radio"]:not(:checked) + label,
 [type="radio"]:checked + label {
     position: relative;
-    padding-left: 25px;
+    padding-left: 23px;
     cursor: pointer;
 }
 
@@ -543,7 +572,7 @@ label:hover:before {
     content: ' ';
     position: absolute;
     left:0; top: 2px;
-    width: 18px; height: 18px;
+    width: 16px; height: 16px;
     border: 1px solid #ccc;
     background: #f8f8f8;
     -webkit-border-radius: 9px;
@@ -555,13 +584,13 @@ label:hover:before {
 [type="radio"]:checked + label:after {
     content: ' ';
     position: absolute;
-    top: 8px; left: 6px; width: 6px; height: 6px;
+    top: 6px; left: 4px; width: 8px; height: 8px;
     transition: all .2s;
     display: block;
-    background: #000;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    background: #5dca76;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
 /* checked mark aspect changes */
 [type="radio"]:not(:checked) + label:after {
