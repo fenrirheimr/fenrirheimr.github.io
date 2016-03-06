@@ -76,12 +76,12 @@ h3 {font-size: 18px; font-weight: bold;}
 
 form {}
 label {color: #80868e; font-weight: normal;}
-.form-control {border-radius: 0;}
+.form-control {border-radius: 0; color: #474e5f;}
 
 /* page caption */
 
 .content .page-caption {padding: 5px 0 26px; border-bottom: 5px solid #e8eaef;}
-.content .page-caption .info {color: #acb5bf; font-size: 13px;}
+.content .page-caption .info {color: #acb5bf; font-size: 13px; margin-left: 15px;}
 .content .page-caption .title {margin: 20px 30px 8px 15px; font-size: 30px; color: #474e5f; line-height: 33px;}
 .content .page-caption .subtitle {margin: 0 0 8px 15px; font-size: 24px; color: #474e5f;}
 .content .page-caption .label {vertical-align: middle;}
@@ -103,8 +103,8 @@ label {color: #80868e; font-weight: normal;}
 .page-caption .evaluation.good .dot {background: #5dd963;}
 .page-caption .evaluation.good .text {color: #5dca76;}
 
-.page-caption .evaluation.normal .dot {background: #dacd3c;}
-.page-caption .evaluation.normal .text {color: #dacd3c;}
+.page-caption .evaluation.normal .dot {background: #f7b94a;}
+.page-caption .evaluation.normal .text {color: #f7b94a;}
 
 .page-caption .evaluation.bad .dot {background: #ff5277;}
 .page-caption .evaluation.bad .text {color: #ff5277;}
@@ -167,6 +167,57 @@ label {color: #80868e; font-weight: normal;}
 .new-mess .add-file {padding: 10px 0;}
 .new-mess .t-footer {background: #e8eaef; padding: 13px 30px; height: 60px; margin: 0 -30px 0}
 
+/* hotel page */
+
+.tab-title {color: #474e5f; font-size: 24px; margin-bottom: 20px;}
+.categories-list {border-top: 1px solid #e8eaef}
+.categories-list li {height: 50px; line-height: 50px; border-bottom: 1px solid #e8eaef;}
+.add-category {margin-bottom: 20px;}
+
+/* slideout menu */
+
+.pushmenu { /*this is the nav*/
+    background: #fff;
+    width: 450px;
+    height: 100%;
+    top: 0;
+
+    z-index: 1000;
+    position:fixed;
+}
+.pushmenu .panel-header {border-bottom: 1px solid #e8eaef; font-size: 24px; color: #474e5f;padding: 40px 30px 20px; position: relative;}
+.pushmenu .panel-header .close {position: absolute; top: 16px; right: 16px;}
+
+.pushmenu-right {
+    right: -450px;
+
+}
+
+.pushmenu-right.pushmenu-open {
+    right: 0;
+}
+
+.pushmenu-push {
+    overflow-x: hidden;
+    position: relative;
+    right: 0;
+}
+
+.pushmenu-push-toright {right: 450px;}
+.pushmenu-push-toright .header {right: 450px; left: -450px;}
+
+.pushmenu-push-toright .wrapper:before{
+    display: block; background: rgba(71, 78, 95, 0.3); z-index: 99;
+    position: fixed; top: 0; right: 0; bottom: 0; left: 0; content: ' ';
+}
+
+/*Transition*/
+.pushmenu, .pushmenu-push, .pushmenu-push .header {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
 /* label */
 
 .label {font-size: 13px; color: #fff; padding: 5px 7px;}
@@ -207,6 +258,7 @@ label {color: #80868e; font-weight: normal;}
 .icn-down {background-position: 0 -140px;}
 .icn-reply {background-position: 0 -180px;}
 .icn-toright {background-position: 0 -200px;}
+.icn-edit {background-position: 0 -40px;}
 
 *:hover > .icn-alert {background-position: -20px -80px;}
 *:hover > .icn-ok {background-position: -20px -60px;}
@@ -214,6 +266,7 @@ label {color: #80868e; font-weight: normal;}
 *:hover > .icn-remove {background-position: -20px -20px;}
 *:hover > .icn-reply {background-position: -20px -180px;}
 *:hover > .icn-toright {background-position: -20px -200px;}
+*:hover > .icn-edit {background-position: -20px -40px;}
 
 .btn-primary > .icn-ok,
 .btn-success > .icn-ok {background-position: -40px -60px;}
@@ -242,7 +295,10 @@ label {color: #80868e; font-weight: normal;}
 .btn-primary:hover {background: #5dbeff;}
 .btn-primary:focus,
 .btn-primary:active,
-.btn-primary:active:focus {background: #56a4d8;}
+.btn-primary:active:focus,
+.btn-primary.active,
+.btn-primary.active:hover,
+.btn-primary.active:hover:focus {background: #56a4d8;}
 
 .btn-success {background: #5dd963; color: #fff}
 .btn-success:hover {background: #83de76;}
@@ -318,8 +374,12 @@ label {color: #80868e; font-weight: normal;}
     line-height: 1.42857143;
     border-width: 0 0 3px 0;
     border-radius: 0;
+    padding: 10px 0;
 }
 
+.tab-wrapper .nav-tabs > li {padding: 0 15px;}
+.tab-wrapper .nav-tabs > li:first-child {padding-left: 0;}
+.tab-wrapper .nav-tabs > li:last-child {padding-right: 0;}
 .tab-wrapper .nav-tabs > li.active> a,
 .tab-wrapper .nav-tabs > li.active> a:focus,
 .tab-wrapper .nav-tabs > li.active> a:hover,

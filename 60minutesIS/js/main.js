@@ -149,30 +149,6 @@
         },
 
         customJS:function(){
-            var loginInput = $('.login-wrapper input[type="text"]');
-            var passInput = $('.login-wrapper input[type="password"]');
-
-            loginInput.focus(function () {
-                $(this).data('placeholder', $(this).attr('placeholder'))
-                    .attr('placeholder', '');
-            }).blur(function () {
-                $(this).attr('placeholder', $(this).data('placeholder'));
-            });
-
-            passInput.on("focus", function(){
-                $(this).parents('.fake-input').addClass('focus');
-            });
-
-            passInput.focusout(function(){
-                $(this).parents('.fake-input').removeClass('focus');
-                if( !this.value ) {
-                    $(this).parents('.fake-input').removeClass('notempty');
-                }
-            });
-
-            passInput.keyup(function(){
-                passInput.parents('.fake-input').addClass('notempty');
-            });
 
             //////////////////////////////////////////////////////////////
 
@@ -329,8 +305,43 @@
             newMessBtn.click(function(){
                $(this).parents('form').find('.new-mess').slideToggle();
             });
+
             //////////////////////////////////////////////////////////////
 
+            var menuRight = $('.pushmenu-right');
+            var nav_list = $('.add-category');
+            var menuClose = menuRight.find('.close');
+            var menuReset = menuRight.find('[type="reset"]');
+
+            nav_list.click(function() {
+                $(this).toggleClass('active');
+                $('.pushmenu-push').toggleClass('pushmenu-push-toright');
+                menuRight.toggleClass('pushmenu-open');
+            });
+
+            menuClose.click(function() {
+                $('.pushmenu-push').removeClass('pushmenu-push-toright');
+                menuRight.removeClass('pushmenu-open');
+            });
+            menuReset.click(function() {
+                $('.pushmenu-push').removeClass('pushmenu-push-toright');
+                menuRight.removeClass('pushmenu-open');
+            });
+
+
+
+            //////////////////////////////////////////////////////////////
+
+            var formElement = $('.form-control');
+
+            formElement.focus(function () {
+                $(this).data('placeholder', $(this).attr('placeholder'))
+                    .attr('placeholder', '');
+            }).blur(function () {
+                $(this).attr('placeholder', $(this).data('placeholder'));
+            });
+
+            //////////////////////////////////////////////////////////////
 
             var firstRow = $('.sbOptions li:first-child');
             $('select').selectbox({
