@@ -311,7 +311,7 @@
             var menuRight = $('.pushmenu-right');
             var nav_list = $('.add-category');
             var menuClose = menuRight.find('.close');
-            var menuReset = menuRight.find('[type="reset"]');
+            var menuReset = menuRight.find('[type="reset"], [type="submit"]');
 
             nav_list.click(function() {
                 $(this).toggleClass('active');
@@ -326,6 +326,16 @@
             menuReset.click(function() {
                 $('.pushmenu-push').removeClass('pushmenu-push-toright');
                 menuRight.removeClass('pushmenu-open');
+            });
+
+            // Для примера
+
+            $('.pushmenu .btn-primary').click(function(){
+                $('.message.success').fadeIn(800).delay(2000).fadeOut(800);
+            });
+
+            $('.pushmenu .btn-default').click(function(){
+                $('.message.error').fadeIn(800).delay(2000).fadeOut(800);
             });
 
 
