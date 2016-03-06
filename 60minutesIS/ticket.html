@@ -93,7 +93,19 @@
                         <fieldset class="new-mess">
                             <div class="form-group">
                                 <label for="exampleTextarea1">Ваш ответ:</label>
-                                <textarea class="form-control" rows="3" id="exampleTextarea1"></textarea>
+                                <textarea class="textarea-scrollbar scrollbar-outer" rows="3" id="exampleTextarea1"></textarea>
+                            </div>
+
+                            <div class="form-group material add-file clearfix">
+                                <input id="fileElem" multiple="multiple" class="custom-file" type="file" />
+                                <div id="filelist" class="result clearfix"></div>
+
+                                <a href="#" id="fileSelect" class="file-select"><i class="icn icn20 icn-plus-grey"></i> Добавить файл</a>
+
+                            </div>
+
+                            <div class="t-footer">
+                                <button type="submit" class="btn btn-primary">Отправить</button>
                             </div>
                         </fieldset>
 

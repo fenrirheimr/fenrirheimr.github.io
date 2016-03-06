@@ -281,6 +281,11 @@
                 });
             }
 
+            var newMessBtn = $('.button-bar .reply-btn');
+
+            newMessBtn.click(function(){
+               $(this).parents('form').find('.new-mess').slideToggle();
+            });
             //////////////////////////////////////////////////////////////
 
 
