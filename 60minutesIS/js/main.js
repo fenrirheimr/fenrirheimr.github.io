@@ -281,6 +281,49 @@
                 });
             }
 
+            if($('fieldset').is('.new-mess')){
+                var fileSelect2 = document.getElementById('fileSelect2'),
+                    fileElem2 = document.getElementById('fileElem2');
+
+                fileSelect2.addEventListener('click', function(e){
+                    if (fileElem2) {fileElem2.click();}
+                    e.preventDefault();
+                }, false);
+
+                $('#fileElem2').change(function(event) {
+                    var files = this.files;
+                    var i = 0,
+                        len = files.length;
+                    (function readFile(n) {
+                        var reader = new FileReader();
+                        var f = files[n];
+                        reader.onload = function(e) {
+                            //console.log(f.name);
+                            var item = $('<span class="file-item">' + f.name + '</span>');
+                            item.append('<a href="#remove" class="del-btn"><i class="icn icn20 icn-remove"></i></a>');
+                            item.appendTo("#filelist2");
+                            // if `n` is less than `len` ,
+                            // call `readFile` with incremented `n` as parameter
+                            if (n < len -1) readFile(++n)
+                        };
+                        reader.readAsDataURL(f); // `f` : current `File` object
+                    }(i)); // `i` : `n` within immediately invoked function expression
+                });
+
+                $.fn.live = function (types, data, fn) {
+                    $(this.context).on(types,this.selector,data,fn);
+                    return this;
+                };
+
+                $('.file-item .del-btn').live("click", function(event) {
+                    event.preventDefault();
+                    $(this).parent().remove();
+                    //reader.load();
+                });
+            }
+
+            //////////////////////////////////////////////////////////////
+
             var newMessBtn = $('.button-bar .reply-btn');
 
             newMessBtn.click(function(){
