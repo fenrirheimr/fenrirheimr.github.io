@@ -14,7 +14,7 @@
             utils.burgerBtn();
             utils.bootstrap();
             utils.equalHeight();
-            utils.timeMask();
+            utils.inputMask();
         }
     });
 
@@ -586,9 +586,12 @@
             };
         },
 
-        timeMask:function(){
-            var timeMask = $('.day .form-control');
-            timeMask.mask("99:99",{placeholder:"00:00"});
+        inputMask:function(){
+            //var timeMask = $('.day .form-control');
+            //timeMask.mask("99:99",{placeholder:"00:00"});
+
+            var phoneInput = $('.phone [type="tel"]');
+            phoneInput.mask("+7 (999) 999-99-99",{placeholder:"+7 (___) ___-__-__"});
         }
     });
 

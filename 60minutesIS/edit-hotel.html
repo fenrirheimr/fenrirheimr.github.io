@@ -67,11 +67,12 @@
                 <header class="row page-caption">
                     <div class="col-md-12">
                         <div class="pull-left">
-                            <div class="title">Задачи и тикеты</div>
+                            <div class="title">Delight Inn Polyanka на Якиманке <span class="label label-success">Заявка</span></div>
                             <div class="info">Последнее редактирование 16 февраля 2016 г. 16:13</div>
                         </div>
-                        <div class="btns pull-right">
-                            <a href="edit-hotel.html" class="btn btn-small btn-success"><i class="icn icn20 icn-plus"></i> Добавить отель</a>
+                        <div class="task-counter pull-right">
+                            <div class="text">Задачи</div>
+                            <div class="counter">2</div>
                         </div>
                     </div>
                 </header>
@@ -82,20 +83,57 @@
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
+                            <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
                             <li role="presentation"><a href="#contacts" aria-controls="contacts" role="tab" data-toggle="tab">Контактная информация</a></li>
                             <li role="presentation"><a href="#requisites" aria-controls="requisites" role="tab" data-toggle="tab">Реквизиты</a></li>
-                            <li role="presentation" class="active"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Категории и цены</a></li>
+                            <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Категории и цены</a></li>
                             <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки отеля</a></li>
                             <li role="presentation"><a href="#docs" aria-controls="docs" role="tab" data-toggle="tab">Документы</a></li>
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <fieldset role="tabpanel" class="tab-pane fade" id="description">1</fieldset>
+                            <fieldset role="tabpanel" class="tab-pane fade in active" id="description">
+
+                                <div class="tab-title">Описание</div>
+
+                                <div class="description-wrapper">
+
+                                    <div class="form-group title">
+                                        <label for="hotelTitle">Название отеля</label>
+                                        <input type="text" class="form-control" id="hotelTitle" placeholder="Название отеля">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="test1" value="">
+                                            <label for="test1">В отеле используется шахматка «60 минут»</label>
+                                        </div>
+
+                                        <div class="phone">
+                                            <label for="hotelPhone">Номер телефона администратора отеля</label>
+                                            <input type="tel" class="form-control" id="hotelPhone" placeholder="">
+                                            <button type="submit" class="btn btn-small btn-default">Сохранить</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleTextarea1">Описание:</label>
+                                        <textarea class="textarea-scrollbar scrollbar-outer" rows="3" id="exampleTextarea1"></textarea>
+                                    </div>
+
+                                    <div class="d-footer">
+                                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                                    </div>
+
+
+                                </div>
+
+
+                            </fieldset>
                             <fieldset role="tabpanel" class="tab-pane fade" id="contacts">2</fieldset>
                             <fieldset role="tabpanel" class="tab-pane fade" id="requisites">3</fieldset>
-                            <fieldset role="tabpanel" class="tab-pane fade in active" id="categories">
+                            <fieldset role="tabpanel" class="tab-pane fade" id="categories">
 
                                 <div class="clearfix">
                                     <a href="#" class="btn btn-small btn-primary pull-right add-category"><i class="icn icn20 icn-plus"></i> Добавить категорию</a>

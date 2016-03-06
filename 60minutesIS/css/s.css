@@ -84,7 +84,7 @@ label {color: #80868e; font-weight: normal;}
 .content .page-caption .info {color: #acb5bf; font-size: 13px; margin-left: 15px;}
 .content .page-caption .title {margin: 20px 30px 8px 15px; font-size: 30px; color: #474e5f; line-height: 33px;}
 .content .page-caption .subtitle {margin: 0 0 8px 15px; font-size: 24px; color: #474e5f;}
-.content .page-caption .label {vertical-align: middle;}
+.content .page-caption .label {vertical-align: middle; font-weight: normal;}
 .content .page-caption .btns {vertical-align: middle; line-height: 33px; margin: 20px 15px 8px 0;}
 
 .page-caption .evaluation {line-height: 33px; margin: 20px 0 8px;}
@@ -169,40 +169,32 @@ label {color: #80868e; font-weight: normal;}
 
 /* hotel page */
 
-.tab-title {color: #474e5f; font-size: 24px; margin-bottom: 20px;}
-.categories-list {border-top: 1px solid #e8eaef}
+.tab-title {color: #474e5f; font-size: 24px; padding-bottom: 20px; border-bottom: 1px solid #e8eaef}
+.categories-list {}
 .categories-list li {height: 50px; line-height: 50px; border-bottom: 1px solid #e8eaef;}
-.add-category {margin-bottom: 20px;}
+
+.description-wrapper {}
+.description-wrapper label {margin-bottom: 6px;}
+.description-wrapper .form-group {padding: 40px 0; border-bottom: 1px solid #e8eaef; margin: 0;}
+.description-wrapper .form-group.title input {width: 345px;}
+.description-wrapper .form-group .checkbox {margin: 0;}
+.description-wrapper .form-group .phone {margin-left: 23px;}
+.description-wrapper .form-group .phone label {display: block;}
+.description-wrapper .form-group .phone input {width: 160px; display: inline-block;}
+.description-wrapper .form-group .phone .btn {margin-bottom: 2px;}
+.description-wrapper .scroll-wrapper {border: 1px solid #d9dbe0;}
+.description-wrapper .textarea-scrollbar {width: 735px; height: 340px;}
+.description-wrapper .textarea-scrollbar textarea {border: 0; padding: 20px;}
+.description-wrapper .d-footer {padding: 40px 0;}
 
 /* slideout menu */
 
-.pushmenu { /*this is the nav*/
-    background: #fff;
-    width: 450px;
-    height: 100%;
-    top: 0;
-
-    z-index: 1000;
-    position:fixed;
-}
+.pushmenu {background: #fff; width: 450px; height: 100%; top: 0; z-index: 1000; position:fixed;}
 .pushmenu .panel-header {border-bottom: 1px solid #e8eaef; font-size: 24px; color: #474e5f;padding: 40px 30px 20px; position: relative;}
 .pushmenu .panel-header .close {position: absolute; top: 16px; right: 16px;}
-
-.pushmenu-right {
-    right: -450px;
-
-}
-
-.pushmenu-right.pushmenu-open {
-    right: 0;
-}
-
-.pushmenu-push {
-    overflow-x: hidden;
-    position: relative;
-    right: 0;
-}
-
+.pushmenu-right {right: -450px;}
+.pushmenu-right.pushmenu-open {right: 0;}
+.pushmenu-push {overflow-x: hidden; position: relative; right: 0;}
 .pushmenu-push-toright {right: 450px;}
 .pushmenu-push-toright .header {right: 450px; left: -450px;}
 
@@ -210,8 +202,6 @@ label {color: #80868e; font-weight: normal;}
     display: block; background: rgba(71, 78, 95, 0.3); z-index: 99;
     position: fixed; top: 0; right: 0; bottom: 0; left: 0; content: ' ';
 }
-
-/*Transition*/
 .pushmenu, .pushmenu-push, .pushmenu-push .header {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -441,12 +431,31 @@ label {color: #80868e; font-weight: normal;}
 .btn-close {width: 50px; height: 50px; text-align: center; line-height: 50px;}
 .btn-close .icn {vertical-align: middle;}
 
+
+.task-counter {
+    font-weight: bold; color: #474e5f; margin-top: 23px; margin-right: 15px; font-size: 13px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 3px;
+    border-radius: 2px;
+    border: 2px solid #d9dbe0; display: table;
+}
+.task-counter > div {display: table-cell; padding: 4px 9px;}
+.task-counter .text {position: relative; padding-left: 26px; border-right: 2px solid #d9dbe0;}
+.task-counter .text:before {
+    display: block; width: 12px; height: 12px; background: url("../img/icons20.png") no-repeat -4px -164px;
+    content: ' '; position: absolute; top: 8px; left: 9px;
+}
+
+
 /* circle animation */
 
 
 /* Custom checkbox */
 
 /* Base for label styling */
+
+.checkbox label {color: #474e5f;}
+
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
     position: absolute !important;
@@ -455,7 +464,7 @@ label {color: #80868e; font-weight: normal;}
 [type="checkbox"]:not(:checked) + label,
 [type="checkbox"]:checked + label {
     position: relative;
-    padding-left: 25px;
+    padding-left: 23px;
     cursor: pointer;
 }
 
@@ -465,9 +474,9 @@ label {color: #80868e; font-weight: normal;}
     content: ' ';
     position: absolute;
     left:0; top: 2px;
-    width: 18px; height: 18px;
-    border: 1px solid #ccc;
-    background: #f8f8f8;
+    width: 16px; height: 16px;
+    border: 1px solid #d9dbe0;
+    background: #fff;
     border-radius: 1px;
 }
 /* checked mark aspect */
@@ -476,7 +485,7 @@ label {color: #80868e; font-weight: normal;}
 [type="checkbox"]:checked + label:after {
     content: ' ';
     position: absolute;
-    top: 6px; left: 2px; width: 18px; height: 18px;
+    top: 4px; left: 4px; width: 16px; height: 16px;
     transition: all .2s;
     display: block; background: url("../img/check.png") no-repeat;
 }
@@ -502,16 +511,16 @@ label {color: #80868e; font-weight: normal;}
 [type="checkbox"]:disabled + label {
     color: #aaa;
 }
-/* accessibility */
+/* accessibility
 [type="checkbox"]:checked:focus + label:before,
 [type="checkbox"]:not(:checked):focus + label:before {
     border: 1px dotted blue;
 }
 
-/* hover style just for information */
 label:hover:before {
     border: 1px solid #4778d9!important;
 }
+*/
 /*///////////////////////////////////////////////////////////////////////*/
 
 /* Custom radio */
@@ -577,9 +586,9 @@ label:hover:before {
     color: #aaa;
 }
 
-label:hover:before {
+/*label:hover:before {
     border: 1px solid #4778d9!important;
-}
+}*/
 
 /* material input */
 .material {margin-bottom: 0;}
