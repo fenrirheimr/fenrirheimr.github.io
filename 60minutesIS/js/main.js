@@ -217,6 +217,16 @@
 
             //////////////////////////////////////////////////////////////
 
+            var headerSearch = [
+                "Руководитель колл-центра",
+                "Руководитель проекта",
+                "Автозаполнение"
+            ];
+
+            $('.header-form .form-control').autocomplete({source: headerSearch});
+
+            //////////////////////////////////////////////////////////////
+
             if($('fieldset').is('.add-file')){
                 var fileSelect = document.getElementById('fileSelect'),
                     fileElem = document.getElementById('fileElem');
