@@ -172,7 +172,7 @@ label {color: #80868e; font-weight: normal;}
 .categories-list {}
 .categories-list li {height: 50px; line-height: 50px; border-bottom: 1px solid #e8eaef;}
 .categories-list li:hover {background-color: #e6f5ff;}
-.tab-wrapper .form-group {padding: 60px 0; border-bottom: 1px solid #e8eaef; margin: 0; position: relative;}
+.tab-wrapper .form-group {padding: 60px 0 40px; border-bottom: 1px solid #e8eaef; margin: 0; position: relative;}
 .tab-wrapper .form-group:last-of-type {border-bottom: 0;}
 .tab-wrapper .f-footer {padding: 40px 30px 0; border-top: 1px solid #e8eaef; margin: -1px -30px 0;}
 
