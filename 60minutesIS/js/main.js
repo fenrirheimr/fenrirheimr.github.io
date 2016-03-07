@@ -361,8 +361,6 @@
                 $('.message.error').fadeIn(800).delay(2000).fadeOut(800);
             });
 
-
-
             //////////////////////////////////////////////////////////////
 
             var formElement = $('.form-control');
