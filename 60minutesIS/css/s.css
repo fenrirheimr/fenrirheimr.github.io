@@ -152,8 +152,6 @@ label {color: #80868e; font-weight: normal;}
 .task-description .description-item.new {border-left: 2px solid #58d760;}
 .task-description .description-item.new .task-author,
 .task-description .description-item.new .task-mess {font-weight: bold;}
-
-
 .new-mess {
     padding: 30px 30px 0; display: none;
     -moz-box-shadow: 0 20px 50px -10px rgba(0,0,0,0.3);
