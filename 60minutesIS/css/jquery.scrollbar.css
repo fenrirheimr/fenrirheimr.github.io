@@ -214,7 +214,7 @@
 
 /* scrollbar height/width & offset from container borders */
 
-.scrollbar-outer > .scroll-content.scroll-scrolly_visible { left: -12px; margin-left: 12px; }
+.scrollbar-outer > .scroll-content.scroll-scrolly_visible { /*left: -12px;*/ margin-left: 12px; }
 .scrollbar-outer > .scroll-content.scroll-scrollx_visible { top:  -12px; margin-top:  12px; }
 
 .scrollbar-outer > .scroll-element.scroll-x .scroll-bar { min-width: 10px; }
