@@ -292,6 +292,43 @@ label {color: #80868e; font-weight: normal;}
 .edit-category .price-row label {width: 70px;}
 .edit-category .price-row span {color: #474e5f;}
 
+/* add photo */
+
+.add-photo {min-height: 140px; position: relative;}
+.add-photo .custom-file {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    z-index: 1;
+    opacity: 0;
+    position: absolute; width: 100%; height: 100%;
+}
+.add-photo .title {font-size: 24px; color: #000; margin-bottom: 20px;}
+.add-photo .result {}
+.add-photo .result .items {margin: 0; padding: 0; display: inline-block;}
+.add-photo .result .item {
+    position: relative;
+    float: left; padding-left: 0;
+    margin: 0 9px 9px 0;
+    width: 212px; height: 140px; overflow: hidden;
+    /*border: 1px solid #e7e7e7;*/
+}
+.add-photo .result .item:nth-child(5n) {margin-right: 0;}
+.add-photo .result li:before {display: none;}
+.add-photo .result .item a {display: block; overflow: hidden; text-align: center;}
+.add-photo .result .item img {height: 100%; width: 100%;}
+.add-photo .result .item a.del {
+    z-index: 999; position: absolute; top: 9px; right: -9px; display: block; padding: 0;
+    width: 20px; height: 20px; background: url("../pic/icons.png") no-repeat 0 -560px;
+}
+.add-photo .file-select {
+    display: block; z-index: 0; width: 100%; height: 140px;
+    background: #edf1f6 url("../img/largeImg.png") no-repeat 50% 60px;
+    text-align: center; vertical-align: top;
+    padding: 30px; text-decoration: none; position: relative;
+}
+
 /* slideout menu */
 
 .pushmenu {background: #fff; width: 450px; height: 100%; top: 0; z-index: 1000; position:fixed;}

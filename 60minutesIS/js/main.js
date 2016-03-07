@@ -10,6 +10,7 @@
             utils.customJS();
             utils.selectDate();
             utils.scheduler();
+            utils.addPhoto();
             utils.validateForm();
             utils.burgerBtn();
             utils.bootstrap();
@@ -381,6 +382,10 @@
 
             //////////////////////////////////////////////////////////////
 
+
+
+            //////////////////////////////////////////////////////////////
+
             var statusRadio = $('.status [type="radio"]');
             var commissionRadio = $('#commissionRadio');
 
@@ -444,6 +449,51 @@
 
             //////////////////////////////////////////////////////////////
 
+        },
+        addPhoto:function(){
+            var photoSelect = document.getElementById("photoSelect"),
+                photoElem = document.getElementById("photoElem");
+
+            photoSelect.addEventListener("click", function(e){
+                if (photoElem) {photoElem.click();}
+                e.preventDefault();
+            }, false);
+
+            $('#photoElem').change(function(){handleFiles(this.files);});
+
+            function handleFiles(files) {
+
+
+                var res_wrapper = $('#photolist')
+
+                for (var i = 0, f; f = files[i]; i++) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = (function(f) {
+                        return function(e) {
+                            var li = $('<div class="item"></div>');
+                            $(res_wrapper).append(li);
+                            var a = $('<a href="#"></a>');
+                            $(li).append(a);
+                            $(a).append('<img src="'+e.target.result +'"/>');
+                            $(li).append('<a href="#remove" class="del btn"></a>');
+                        };
+                    })(f);
+                    reader.readAsDataURL(f);
+                }
+            }
+
+            jQuery.fn.live = function (types, data, fn) {
+                jQuery(this.context).on(types,this.selector,data,fn);
+                return this;
+            };
+
+            $('.item .del').live("click", function(event) {
+                event.preventDefault();
+                $(this).parent().remove();
+                reader.load();
+            });
         },
         scheduler:function(){
             var collapsedLink = $('.collapsed > .caption');
