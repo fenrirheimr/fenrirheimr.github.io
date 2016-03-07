@@ -467,60 +467,6 @@
                 control: '.visibility'
             });
         },
-        addPhoto:function(){
-            //if(($('div').is('.add-photo'))){
-            //
-            //}
-            var photoSelect = document.getElementById("photoSelect"),
-                photoElem = document.getElementById("photoElem");
-
-            photoSelect.addEventListener("click", function(e){
-                if (photoElem) {photoElem.click();}
-                e.preventDefault();
-            }, false);
-
-            $('#photoElem').change(function(){handleFiles(this.files);});
-
-            function handleFiles(files) {
-
-                var res_wrapper = $('#photolist')
-
-                for (var i = 0, f; f = files[i]; i++) {
-
-                    var reader = new FileReader();
-
-                    reader.onload = (function(f) {
-                        return function(e) {
-                            var li = $('<div class="item"></div>');
-                            $(res_wrapper).append(li);
-                            //var a = $('<a href="#"></a>');
-                            $(li).append('<img src="'+e.target.result +'"/>');
-                            $(li).append('<span class="first"><a href="#fav" class="add-fav"><i class="icn icn24 icn-fav"></i></a></span>');
-                            $(li).append('<span class="second"><a href="#remove" class="remove"><i class="icn icn24 icn-remove"></i></a></span>');
-
-                        };
-                    })(f);
-                    reader.readAsDataURL(f);
-                }
-            }
-
-            jQuery.fn.live = function (types, data, fn) {
-                jQuery(this.context).on(types,this.selector,data,fn);
-                return this;
-            };
-
-            $('.item .remove').live("click", function(event) {
-                event.preventDefault();
-                $(this).parents('.item').remove();
-                reader.load();
-            });
-
-            $('.item .add-fav').live("click", function(event) {
-                event.preventDefault();
-                $(this).parents('.item').addClass('fav');
-                reader.load();
-            });
-        },
         scheduler:function(){
             var collapsedLink = $('.collapsed > .caption');
 
@@ -665,6 +611,19 @@
 
             //////////////////////////////////////////////////////////////////
 
+            var monthCheck = $('.docs-wrapper .checkbox [type="checkbox"]');
+            var downloadBtn = $('.docs-wrapper .downloads');
+
+            monthCheck.click(function(){
+                if($(this).prop("checked")) {
+                    downloadBtn.show();
+                } else {
+                    downloadBtn.hide();
+                }
+            });
+
+            //////////////////////////////////////////////////////////////////
+
         },
         equalHeight:function(){
             var equalBlock = $('.modal label');
@@ -749,7 +708,61 @@
 
             var phoneInput = $('.phone [type="tel"]');
             phoneInput.mask("+7 (999) 999-99-99",{placeholder:"+7 (___) ___-__-__"});
-        }
+        },
+        addPhoto:function(){
+            if(($('div').is('.add-photo'))){
+                var photoSelect = document.getElementById("photoSelect"),
+                    photoElem = document.getElementById("photoElem");
+
+                photoSelect.addEventListener("click", function(e){
+                    if (photoElem) {photoElem.click();}
+                    e.preventDefault();
+                }, false);
+
+                $('#photoElem').change(function(){handleFiles(this.files);});
+            }
+
+
+            function handleFiles(files) {
+
+                var res_wrapper = $('#photolist')
+
+                for (var i = 0, f; f = files[i]; i++) {
+
+                    var reader = new FileReader();
+
+                    reader.onload = (function(f) {
+                        return function(e) {
+                            var li = $('<div class="item"></div>');
+                            $(res_wrapper).append(li);
+                            //var a = $('<a href="#"></a>');
+                            $(li).append('<img src="'+e.target.result +'"/>');
+                            $(li).append('<span class="first"><a href="#fav" class="add-fav"><i class="icn icn24 icn-fav"></i></a></span>');
+                            $(li).append('<span class="second"><a href="#remove" class="remove"><i class="icn icn24 icn-remove"></i></a></span>');
+
+                        };
+                    })(f);
+                    reader.readAsDataURL(f);
+                }
+            }
+
+            jQuery.fn.live = function (types, data, fn) {
+                jQuery(this.context).on(types,this.selector,data,fn);
+                return this;
+            };
+
+            $('.item .remove').live("click", function(event) {
+                event.preventDefault();
+                $(this).parents('.item').remove();
+                reader.load();
+            });
+
+            $('.item .add-fav').live("click", function(event) {
+                event.preventDefault();
+                $(this).parents('.item').addClass('fav');
+                reader.load();
+            });
+        },
     });
 
     $(document).ready(function() {
