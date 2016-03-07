@@ -463,7 +463,6 @@
 
             function handleFiles(files) {
 
-
                 var res_wrapper = $('#photolist')
 
                 for (var i = 0, f; f = files[i]; i++) {
@@ -474,10 +473,11 @@
                         return function(e) {
                             var li = $('<div class="item"></div>');
                             $(res_wrapper).append(li);
-                            var a = $('<a href="#"></a>');
-                            $(li).append(a);
-                            $(a).append('<img src="'+e.target.result +'"/>');
-                            $(li).append('<a href="#remove" class="del btn"></a>');
+                            //var a = $('<a href="#"></a>');
+                            $(li).append('<img src="'+e.target.result +'"/>');
+                            $(li).append('<span class="first"><a href="#fav" class="add-fav"><i class="icn icn24 icn-fav"></i></a></span>');
+                            $(li).append('<span class="second"><a href="#remove" class="remove"><i class="icn icn24 icn-remove"></i></a></span>');
+
                         };
                     })(f);
                     reader.readAsDataURL(f);
@@ -489,9 +489,15 @@
                 return this;
             };
 
-            $('.item .del').live("click", function(event) {
+            $('.item .remove').live("click", function(event) {
                 event.preventDefault();
-                $(this).parent().remove();
+                $(this).parents('.item').remove();
+                reader.load();
+            });
+
+            $('.item .add-fav').live("click", function(event) {
+                event.preventDefault();
+                $(this).parents('.item').addClass('fav');
                 reader.load();
             });
         },

@@ -310,24 +310,33 @@ label {color: #80868e; font-weight: normal;}
 .add-photo .result .item {
     position: relative;
     float: left; padding-left: 0;
-    margin: 0 9px 9px 0;
+    margin: 0 30px 30px 0;
     width: 212px; height: 140px; overflow: hidden;
     /*border: 1px solid #e7e7e7;*/
 }
 .add-photo .result .item:nth-child(5n) {margin-right: 0;}
 .add-photo .result li:before {display: none;}
-.add-photo .result .item a {display: block; overflow: hidden; text-align: center;}
+.add-photo .result .item span {position: absolute; left: 0; height: 50%; width: 100%;}
+.add-photo .result .item span:hover {background: rgba(71,78,95, 0.6)}
+.add-photo .result .item span.first {top: 0;}
+.add-photo .result .item span.second {bottom: 0;}
+.add-photo .result .item.fav span.first a {display: block;}
+
+
 .add-photo .result .item img {height: 100%; width: 100%;}
-.add-photo .result .item a.del {
-    z-index: 999; position: absolute; top: 9px; right: -9px; display: block; padding: 0;
-    width: 20px; height: 20px; background: url("../pic/icons.png") no-repeat 0 -560px;
+.add-photo .result .item span a {
+    display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
 }
+.add-photo .result .item span:hover a {display: block;}
+
 .add-photo .file-select {
-    display: block; z-index: 0; width: 100%; height: 140px;
+    display: block; z-index: 0; width: 938px; height: 140px;
     background: #edf1f6 url("../img/largeImg.png") no-repeat 50% 60px;
     text-align: center; vertical-align: top;
     padding: 30px; text-decoration: none; position: relative;
 }
+
+
 
 /* slideout menu */
 
@@ -380,28 +389,36 @@ label {color: #80868e; font-weight: normal;}
 
 .icn {display: inline-block; vertical-align: top;}
 .icn20 {width: 20px; height: 20px; background: url("../img/icons20.png") no-repeat;}
+.icn24 {width: 24px; height: 24px; background: url("../img/icons24.png") no-repeat;}
 
-.icn-plus {background-position: 0 0;}
-.icn-plus-grey {background-position: -20px 0;}
-.icn-alert {background-position: 0 -80px;}
-.icn-ok {background-position: 0 -60px;}
-.icn-close {background-position: 0 -100px;}
-.icn-remove {background-position: 0 -20px;}
-.icn-down {background-position: 0 -140px;}
-.icn-reply {background-position: 0 -180px;}
-.icn-toright {background-position: 0 -200px;}
-.icn-edit {background-position: 0 -40px;}
+.icn20.icn-plus {background-position: 0 0;}
+.icn20.icn-plus-grey {background-position: -20px 0;}
+.icn20.icn-alert {background-position: 0 -80px;}
+.icn20.icn-ok {background-position: 0 -60px;}
+.icn20.icn-close {background-position: 0 -100px;}
+.icn20.icn-remove {background-position: 0 -20px;}
+.icn20.icn-down {background-position: 0 -140px;}
+.icn20.icn-reply {background-position: 0 -180px;}
+.icn20.icn-toright {background-position: 0 -200px;}
+.icn20.icn-edit {background-position: 0 -40px;}
 
-*:hover > .icn-alert {background-position: -20px -80px;}
-*:hover > .icn-ok {background-position: -20px -60px;}
-*:hover > .icn-close {background-position: -20px -100px;}
-*:hover > .icn-remove {background-position: -20px -20px;}
-*:hover > .icn-reply {background-position: -20px -180px;}
-*:hover > .icn-toright {background-position: -20px -200px;}
-*:hover > .icn-edit {background-position: -20px -40px;}
+*:hover > .icn20.icn-alert {background-position: -20px -80px;}
+*:hover > .icn20.icn-ok {background-position: -20px -60px;}
+*:hover > .icn20.icn-close {background-position: -20px -100px;}
+*:hover > .icn20.icn-remove {background-position: -20px -20px;}
+*:hover > .icn20.icn-reply {background-position: -20px -180px;}
+*:hover > .icn20.icn-toright {background-position: -20px -200px;}
+*:hover > .icn20.icn-edit {background-position: -20px -40px;}
 
-.btn-primary > .icn-ok,
-.btn-success > .icn-ok {background-position: -40px -60px;}
+.btn-primary > .icn20.icn-ok,
+.btn-success > .icn20.icn-ok {background-position: -40px -60px;}
+
+
+.icn24.icn-fav {background-position: 0 0;}
+.icn24.icn-remove {background-position: 0 -24px;}
+
+*:hover > .icn24.icn-fav {background-position: -24px 0;}
+*:hover > .icn24.icn-remove {background-position: -24px -24px;}
 
 /* btn */
 
