@@ -329,6 +329,23 @@
                 menuRight.removeClass('pushmenu-open');
             });
 
+            //////////////////////////////////////////////////////////////
+
+            var tasksPanel = $('.tasks-panel');
+            var taskCounter = $('.task-counter');
+            //var tasksPanelClose = tasksPanel.find('.close');
+            //var tasksPanelReset = tasksPanel.find('[type="reset"], [type="submit"]');
+
+            taskCounter.click(function() {
+                $(this).toggleClass('active');
+                $('.pushmenu-push').toggleClass('pushmenu-push-toright');
+                tasksPanel.toggleClass('pushmenu-open');
+            });
+
+            $('.task-wrapper').scrollbar();
+
+            //////////////////////////////////////////////////////////////
+
             // Для примера
 
             $('.pushmenu .btn-primary').click(function(){

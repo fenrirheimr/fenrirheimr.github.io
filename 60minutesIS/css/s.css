@@ -336,8 +336,6 @@ label {color: #80868e; font-weight: normal;}
     padding: 30px; text-decoration: none; position: relative;
 }
 
-
-
 /* slideout menu */
 
 .pushmenu {background: #fff; width: 450px; height: 100%; top: 0; z-index: 1000; position:fixed;}
@@ -358,6 +356,27 @@ label {color: #80868e; font-weight: normal;}
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+
+.pushmenu .panel-body {position: relative; height: 100%;}
+.pushmenu .task-wrapper {
+    padding: 0 15px !important;
+    overflow: auto;
+    position: absolute;
+    bottom: 30px;
+    top: 0;
+    height: auto; margin-bottom: 60px;
+}
+.pushmenu .task-wrapper .task-item {padding: 20px 0; margin-bottom: 20px; border-bottom: 1px solid #e8eaef;}
+.pushmenu .task-wrapper .task-item .caption {margin-bottom: 16px;}
+
+.pushmenu .task-wrapper .task-item .caption .ticket-num {padding-left: 17px; position: relative; font-weight: bold; color: #474e5f;}
+.pushmenu .task-wrapper .task-item .caption .ticket-num:before {
+    display: block; width: 12px; height: 12px; background: url("../img/icons20.png") no-repeat -4px -164px;
+    content: ' '; position: absolute; top: 3px; left: 0;
+}
+.pushmenu .task-wrapper .task-item .caption .status {color: #acb5bf; font-size: 13px; margin-left: 10px;}
+
+.pushmenu .task-wrapper .task-item .text {color: #474e5f;margin-bottom: 16px;}
 
 /* label */
 
