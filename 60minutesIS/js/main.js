@@ -471,7 +471,6 @@
             //if(($('div').is('.add-photo'))){
             //
             //}
-
             var photoSelect = document.getElementById("photoSelect"),
                 photoElem = document.getElementById("photoElem");
 
