@@ -466,9 +466,6 @@
                 field: '#hiddenpass',
                 control: '.visibility'
             });
-
-            //////////////////////////////////////////////////////////////
-
         },
         addPhoto:function(){
             if(($('div').is('.add-photo'))){

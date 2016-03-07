@@ -42,7 +42,13 @@ a:focus {text-decoration: none;}
 .header .btn .badge {position: absolute; top: 0; left: 0;}
 .header .btn-link {color: #969cae;}
 .header .btn-link:hover {color: #ff6784;}
-.header form {display: inline-block;vertical-align: middle; margin-left: 30px; border: 0;}
+.header form {display: inline-block;vertical-align: middle; margin-left: 50px; border: 0; width: 300px;}
+.header form .form-control {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: none;
+}
 
 .logo {font-size: 24px; font-weight: bold; color: #fff; display: inline-block; line-height: 60px;}
 .logo:hover {color: #fff;}
