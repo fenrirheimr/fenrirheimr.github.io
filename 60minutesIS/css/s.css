@@ -90,6 +90,7 @@ a:focus {text-decoration: none;}
 .header .btn-link {color: #969cae;}
 .header .btn-link:hover {color: #ff6784;}
 .header form.header-form {display: inline-block; position: relative; vertical-align: middle; margin-left: 50px; border: 0; width: 300px;}
+.header form.header-form .form-group {margin-bottom: 8px;}
 .header form.header-form .form-control {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -131,7 +132,7 @@ h3 {font-size: 18px; font-weight: bold;}
 
 form {}
 label {color: #80868e; font-weight: normal;}
-.form-control {border-radius: 0; color: #474e5f;}
+.form-control {border-radius: 0; color: #474e5f; font-size: 15px;}
 
 /* page caption */
 
@@ -377,6 +378,7 @@ label {color: #80868e; font-weight: normal;}
 .add-photo .result .item span.first {top: 0;}
 .add-photo .result .item span.second {bottom: 0;}
 .add-photo .result .item.fav span.first a {display: block;}
+.add-photo .result .item.fav span.first a i {background-position: 0 -24px}
 
 
 .add-photo .result .item img {height: 100%; width: 100%;}
@@ -416,7 +418,7 @@ label {color: #80868e; font-weight: normal;}
 
 .pushmenu .panel-body {position: relative; height: 100%;}
 .pushmenu .task-wrapper {
-    padding: 0 15px !important;
+    padding: 0 15px;
     overflow: auto;
     position: absolute;
     bottom: 30px;
