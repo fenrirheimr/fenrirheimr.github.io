@@ -371,7 +371,6 @@ label {color: #80868e; font-weight: normal;}
     width: 212px; height: 140px; overflow: hidden;
     /*border: 1px solid #e7e7e7;*/
 }
-.add-photo .result .item:nth-child(5n) {margin-right: 0;}
 .add-photo .result li:before {display: none;}
 .add-photo .result .item span {position: absolute; left: 0; height: 50%; width: 100%;}
 .add-photo .result .item span:hover {background: rgba(71,78,95, 0.6)}
