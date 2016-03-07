@@ -459,7 +459,8 @@ label {color: #80868e; font-weight: normal;}
 .btn-small {font-size: 13px; height: 32px; line-height: 20px; padding: 4px 12px;}
 
 .btn-default {background: #fff; border-color: #d9dbe0 !important; color: #474e5f;}
-.btn-default:hover {border-color: #c4c6ca;}
+.btn-default:hover  {border-color: #c4c6ca;}
+.btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
 .btn-default:active:focus {background: #fff; color: #474e5f;}
