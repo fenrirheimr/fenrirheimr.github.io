@@ -83,17 +83,17 @@
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
+                            <li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Описание</a></li>
                             <li role="presentation"><a href="#contacts" aria-controls="contacts" role="tab" data-toggle="tab">Контактная информация</a></li>
                             <li role="presentation"><a href="#requisites" aria-controls="requisites" role="tab" data-toggle="tab">Реквизиты</a></li>
-                            <li role="presentation" class="active"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Категории и цены</a></li>
+                            <li role="presentation"><a href="#categories" aria-controls="categories" role="tab" data-toggle="tab">Категории и цены</a></li>
                             <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки отеля</a></li>
                             <li role="presentation"><a href="#docs" aria-controls="docs" role="tab" data-toggle="tab">Документы</a></li>
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <fieldset role="tabpanel" class="tab-pane fade" id="description">
+                            <fieldset role="tabpanel" class="tab-pane fade in active" id="description">
 
                                 <div class="tab-title">Описание</div>
 
@@ -373,7 +373,7 @@
                                 </div>
 
                             </fieldset>
-                            <fieldset role="tabpanel" class="tab-pane fade in active" id="categories">
+                            <fieldset role="tabpanel" class="tab-pane fade" id="categories">
 
                                 <div class="clearfix">
                                     <a href="#" class="btn btn-small btn-primary pull-right add-category"><i class="icn icn20 icn-plus"></i> Добавить категорию</a>
@@ -1010,7 +1010,7 @@
         </form>
     </div>
 
-    <div class="pushmenu pushmenu-right">
+    <div class="pushmenu cat-panel pushmenu-right">
         <div class="panel-header">Добавление категории <a href="#" class="close"><i class="icn icn20 icn-close"></i></a></div>
         <div class="panel-body">
             <form method="" action="#">

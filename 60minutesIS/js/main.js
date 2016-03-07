@@ -309,7 +309,7 @@
 
             //////////////////////////////////////////////////////////////
 
-            var menuRight = $('.pushmenu-right');
+            var menuRight = $('.cat-panel');
             var nav_list = $('.add-category');
             var menuClose = menuRight.find('.close');
             var menuReset = menuRight.find('[type="reset"], [type="submit"]');
@@ -333,13 +333,18 @@
 
             var tasksPanel = $('.tasks-panel');
             var taskCounter = $('.task-counter');
-            //var tasksPanelClose = tasksPanel.find('.close');
+            var tasksPanelClose = tasksPanel.find('.close');
             //var tasksPanelReset = tasksPanel.find('[type="reset"], [type="submit"]');
 
             taskCounter.click(function() {
                 $(this).toggleClass('active');
                 $('.pushmenu-push').toggleClass('pushmenu-push-toright');
                 tasksPanel.toggleClass('pushmenu-open');
+            });
+
+            tasksPanelClose.click(function() {
+                $('.pushmenu-push').removeClass('pushmenu-push-toright');
+                tasksPanel.removeClass('pushmenu-open');
             });
 
             $('.task-wrapper').scrollbar();
@@ -468,55 +473,57 @@
 
         },
         addPhoto:function(){
-            var photoSelect = document.getElementById("photoSelect"),
-                photoElem = document.getElementById("photoElem");
+            if(($('div').is('.add-photo'))){
+                var photoSelect = document.getElementById("photoSelect"),
+                    photoElem = document.getElementById("photoElem");
 
-            photoSelect.addEventListener("click", function(e){
-                if (photoElem) {photoElem.click();}
-                e.preventDefault();
-            }, false);
+                photoSelect.addEventListener("click", function(e){
+                    if (photoElem) {photoElem.click();}
+                    e.preventDefault();
+                }, false);
 
-            $('#photoElem').change(function(){handleFiles(this.files);});
+                $('#photoElem').change(function(){handleFiles(this.files);});
 
-            function handleFiles(files) {
+                function handleFiles(files) {
 
-                var res_wrapper = $('#photolist')
+                    var res_wrapper = $('#photolist')
 
-                for (var i = 0, f; f = files[i]; i++) {
+                    for (var i = 0, f; f = files[i]; i++) {
 
-                    var reader = new FileReader();
+                        var reader = new FileReader();
 
-                    reader.onload = (function(f) {
-                        return function(e) {
-                            var li = $('<div class="item"></div>');
-                            $(res_wrapper).append(li);
-                            //var a = $('<a href="#"></a>');
-                            $(li).append('<img src="'+e.target.result +'"/>');
-                            $(li).append('<span class="first"><a href="#fav" class="add-fav"><i class="icn icn24 icn-fav"></i></a></span>');
-                            $(li).append('<span class="second"><a href="#remove" class="remove"><i class="icn icn24 icn-remove"></i></a></span>');
+                        reader.onload = (function(f) {
+                            return function(e) {
+                                var li = $('<div class="item"></div>');
+                                $(res_wrapper).append(li);
+                                //var a = $('<a href="#"></a>');
+                                $(li).append('<img src="'+e.target.result +'"/>');
+                                $(li).append('<span class="first"><a href="#fav" class="add-fav"><i class="icn icn24 icn-fav"></i></a></span>');
+                                $(li).append('<span class="second"><a href="#remove" class="remove"><i class="icn icn24 icn-remove"></i></a></span>');
 
-                        };
-                    })(f);
-                    reader.readAsDataURL(f);
+                            };
+                        })(f);
+                        reader.readAsDataURL(f);
+                    }
                 }
+
+                jQuery.fn.live = function (types, data, fn) {
+                    jQuery(this.context).on(types,this.selector,data,fn);
+                    return this;
+                };
+
+                $('.item .remove').live("click", function(event) {
+                    event.preventDefault();
+                    $(this).parents('.item').remove();
+                    reader.load();
+                });
+
+                $('.item .add-fav').live("click", function(event) {
+                    event.preventDefault();
+                    $(this).parents('.item').addClass('fav');
+                    reader.load();
+                });
             }
-
-            jQuery.fn.live = function (types, data, fn) {
-                jQuery(this.context).on(types,this.selector,data,fn);
-                return this;
-            };
-
-            $('.item .remove').live("click", function(event) {
-                event.preventDefault();
-                $(this).parents('.item').remove();
-                reader.load();
-            });
-
-            $('.item .add-fav').live("click", function(event) {
-                event.preventDefault();
-                $(this).parents('.item').addClass('fav');
-                reader.load();
-            });
         },
         scheduler:function(){
             var collapsedLink = $('.collapsed > .caption');
