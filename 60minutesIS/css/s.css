@@ -378,7 +378,7 @@ label {color: #80868e; font-weight: normal;}
 .add-photo .result .item span.first {top: 0;}
 .add-photo .result .item span.second {bottom: 0;}
 .add-photo .result .item.fav span.first a {display: block;}
-.add-photo .result .item.fav span.first a i {background-position: 0 -24px}
+.add-photo .result .item.fav span.first a i {background-position: -24px 0;}
 
 
 .add-photo .result .item img {height: 100%; width: 100%;}
@@ -944,6 +944,27 @@ label:hover:before {
 .add-file .file-item {padding: 5px 30px 5px 5px; margin-right: 9px; position: relative;}
 .add-file .file-item .del-btn {position: absolute; top: 5px; right: 10px;}
 
+
+/* Modal */
+
+.modal {text-align: center; padding: 0!important;}
+.modal:before {content: ' '; display: inline-block; height: 100%; vertical-align: middle;/* margin-right: -4px;*/}
+.modal-dialog {display: inline-block; text-align: left; vertical-align: middle; width: 400px;}
+
+.modal-dialog .close {position: absolute; top: 16px; right: 16px; filter: alpha(opacity=100); opacity: 1;}
+
+.modal-content {-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;  padding: 60px 45px;}
+
+.modal-footer {background: #f9f9f9; border-top: 1px solid #e5e5e5;}
+
+.modal-title {font-size: 24px; color: #474e5f; line-height: normal; margin-bottom: 25px;}
+.modal-title small {font-size: 14px; color: #949494;display: inline-block; line-height: 40px; vertical-align: top;}
+.modal-title .label {font-size: 14px; font-weight: normal; padding: 6px 12px; vertical-align: middle; position: relative; top: -4px;}
+.modal-title .label-info {background: #d0edff; color: #59abdb; }
+.modal-title .label-success {background: #d7ffc5; color: #58af66;}
+
+.remove-category .modal-content {text-align: center;}
+.remove-category .modal-content .text {color: #474e5f; font-size: 15px; margin-bottom: 37px;}
 
 /* Footer */
 

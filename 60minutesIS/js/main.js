@@ -384,24 +384,24 @@
 
             //////////////////////////////////////////////////////////////
 
-            if ($('.new-rules').parents('.active').length) {
-                var rulesWrapper = $('.new-rules').siblings('.checkbox-group');
-                var addNewRules = $('.new-rules .btn-default');
+            //if ($('.new-rules').parentsUntil('.active')) {}
 
-                addNewRules.click(function(){
-                    var rulesCheckbox = $('.checkbox-group .checkbox');
-                    var input = $('.new-rules .form-control');
-                    var inputVal = input.val();
+            var rulesWrapper = $('.new-rules').siblings('.checkbox-group');
+            var addNewRules = $('.new-rules .btn-default');
 
-                    for (var i = rulesCheckbox.length; i <= rulesCheckbox.length; i++) {
-                        rulesWrapper.append('<div class="checkbox"><input type="checkbox" id="residenceRules'+ (i+1) +'" value="">' +
-                            '<label for="residenceRules'+(i+1) +'">'+inputVal+'</label></div>');
-                    }
+            addNewRules.click(function(){
+                var rulesCheckbox = $('.checkbox-group .checkbox');
+                var input = $('.new-rules .form-control');
+                var inputVal = input.val();
 
-                    input.val('');
+                for (var i = rulesCheckbox.length; i <= rulesCheckbox.length; i++) {
+                    rulesWrapper.append('<div class="checkbox"><input type="checkbox" id="residenceRules'+ (i+1) +'" value="">' +
+                        '<label for="residenceRules'+(i+1) +'">'+inputVal+'</label></div>');
+                }
 
-                });
-            }
+                input.val('');
+
+            });
 
             //////////////////////////////////////////////////////////////
 

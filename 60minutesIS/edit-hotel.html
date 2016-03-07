@@ -387,7 +387,7 @@
 
                                         <div class="btns pull-right">
                                             <a href="edit-category.html" class="btn btn-small btn-default"><i class="icn icn20 icn-edit"></i> Редактировать</a>
-                                            <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-remove"></i> Удалить</a>
+                                            <a href="#removeCategory" data-toggle="modal" class="btn btn-small btn-default"><i class="icn icn20 icn-remove"></i> Удалить</a>
                                         </div>
                                     </li>
                                     <li class="clearfix">
@@ -1108,7 +1108,6 @@
         </div>
     </div>
 
-
     <div class="message success">
 
         <div class="container">
@@ -1127,6 +1126,24 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="modal fade remove-category" id="removeCategory" tabindex="-1" role="dialog" aria-labelledby="removeCategory">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icn icn20 icn-close"></i></button>
+                <form method="" action="#">
+                    <div class="modal-title">Вы уверены?</div>
+
+                    <div class="text">
+                        Вы действительно хотите удалить категорию «Стандарт»?
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Удалить</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>
