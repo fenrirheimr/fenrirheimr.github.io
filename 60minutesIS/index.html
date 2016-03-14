@@ -49,22 +49,8 @@
                 <div class="row">
                     <div class="col-md-6 pull-left">
                         <a href="index.html" class="logo">60 минут <span>IS</span></a>
+                    </div>
 
-                        <form action="#" method="" class="header-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Название отеля">
-                            </div>
-                            <button type="submit" class="search"><i class="icn icn20 icn-search"></i></button>
-                        </form>
-                        <!-- Эта форма не видна контент-менеджеру но видна руководителю и аккаунт менеджеру -->
-                    </div>
-                    <div class="col-md-6 text-right">
-                        <div class="btns">
-                            <a href="#" class="btn btn-ghost"><i class="icn icn20 icn-alert"></i> Задачи и тикеты <span class="badge pulse">28</span></a> <!-- класс "pulse" надо добавлять только при поступлении новой задачи и потом, видимо, снимать его через какое-то время -->
-                            <a href="#" class="btn btn-primary add-ticket"><i class="icn icn20 icn-plus"></i> Создать тикет</a>
-                            <a href="#" class="btn btn-link">Выйти</a>
-                        </div>
-                    </div>
 
                 </div>
             </div>
@@ -72,106 +58,30 @@
 
         <section class="content">
             <div class="container">
-                <header class="row page-caption">
-                    <div class="col-md-12">
-                        <div class="pull-left">
-                            <div class="title pull-left">Задачи и тикеты</div>
-                            <div class="evaluation good pull-left"> <!-- good/normal/bad -->
-                                <span class="dot"></span>
-                                <span class="value">3.6 <sup>мин.</sup><sub>на заявку</sub></span>
-                                <span class="text">Отлично!</span>
-                                <!--<span class="text">Можно лучше</span>-->
-                                <!--<span class="text">Плохо!</span>-->
-                            </div>
-                        </div>
-                        <div class="btns pull-right">
-                            <a href="edit-hotel.html" class="btn btn-small btn-success"><i class="icn icn20 icn-plus"></i> Добавить отель</a>
-                        </div>
-                    </div>
-                </header>
-
-                <div class="row tab-wrapper">
-
-                    <form action="#" method="">
-
-                        <div class="export">
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <span>Экспорт</span>
-                                    <i class="icn icn20 icn-down"></i>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="#">PDF</a></li>
-                                    <li><a href="#">Excel</a></li>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail" style="margin-top: 20px;">
+                            <div class="caption">
+                                <h3 style="margin-top: 0;">Контент-менеджер</h3>
+                                <ul class="list-unstyled">
+                                    <li><a href="cm-index.html">Задачи и тикеты</a></li>
+                                    <li><a href="cm-ticket.html">Задача</a></li>
+                                    <li><a href="cm-edit-hotel.html">Редактирование отеля</a></li>
+                                    <li><a href="cm-edit-category.html">Редактирование категории</a></li>
                                 </ul>
                             </div>
                         </div>
-
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#new" aria-controls="new" role="tab" data-toggle="tab">Новые</a></li>
-                            <li role="presentation"><a href="#send" aria-controls="send" role="tab" data-toggle="tab">Отправленные</a></li>
-                            <li role="presentation"><a href="#closed" aria-controls="closed" role="tab" data-toggle="tab">Закрытые</a></li>
-                        </ul>
-
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane fade in active" id="new">
-
-                                <table class="table table-hover tickets">
-                                    <colgroup>
-                                        <col width="130">
-                                        <col width="150">
-                                        <col>
-                                        <col width="150">
-                                    </colgroup>
-                                    <tbody>
-                                        <tr class="new">
-                                            <td><span class="ticket-num">Задача 128</span></td>
-                                            <td><span class="status">Открыта 1 день</span></td>
-                                            <td><a href="ticket.html" class="ticket-link">Добавить отель «Пражский»</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                        <tr class="new">
-                                            <td><span class="ticket-num">Задача 127</span></td>
-                                            <td><span class="status">Открыта 1 день</span></td>
-                                            <td><a href="ticket.html" class="ticket-link">Изменить цены в отеле «Delight Inn Polyanka на Якиманке»</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                        <tr class="new">
-                                            <td><span class="ticket-num">Задача 126</span></td>
-                                            <td><span class="status">Открыта 1 день</span></td>
-                                            <td><a href="ticket.html" class="ticket-link">Добавить фотографии в отеле «Милана на Дубровке»</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="ticket-num">Задача 125</span></td>
-                                            <td><span class="status">Открыта 2 дня</span></td>
-                                            <td><a href="ticket.html" class="ticket-link">Добавить фотографии в отеле «Милана на Дубровке»</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="ticket-num">Тикет 450</span></td>
-                                            <td><span class="status">Открыта 2 дня</span></td>
-                                            <td><a href="ticket.html" class="ticket-link">Прислать отчеты отеля «Джаз Отель» за январь 2016</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="ticket-num">Тикет 442</span></td>
-                                            <td><span class="status">Открыта 2 дня</span></td>
-                                            <td><a href="ticket.html" class="ticket-link">Ответ на ваш тикет 442</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail" style="margin-top: 20px;">
+                            <div class="caption">
+                                <h3 style="margin-top: 0;">Операторы</h3>
+                                <ul class="list-unstyled">
+                                    <li><a href="op-index.html">Задачи и тикеты</a></li>
+                                </ul>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="send">2</div>
-                            <div role="tabpanel" class="tab-pane fade" id="closed">3</div>
                         </div>
-
-                    </form>
-
+                    </div>
                 </div>
             </div>
         </section>

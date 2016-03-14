@@ -116,8 +116,8 @@ h3 {font-size: 18px; font-weight: bold;}
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
-    padding: 8px 15px;
-    line-height: 1.42857143;
+    padding: 9px 15px;
+    line-height: 30px;
     vertical-align: top;
     border-top: 1px solid #e8eaef;
     font-size: 15px; color: #474e5f;
@@ -165,7 +165,9 @@ label {color: #80868e; font-weight: normal;}
 .page-caption .evaluation.bad .dot {background: #ff5277;}
 .page-caption .evaluation.bad .text {color: #ff5277;}
 
-
+.page-caption .evaluation.percent {}
+.page-caption .evaluation.percent .value sub {left: -12px;}
+.page-caption .evaluation.percent .text {left: -10px;}
 /* task page */
 
 .button-bar {background: #e8eaef; padding: 9px 30px 14px;}
@@ -481,6 +483,7 @@ label {color: #80868e; font-weight: normal;}
 .icn20.icn-toright {background-position: 0 -200px;}
 .icn20.icn-edit {background-position: 0 -40px;}
 .icn20.icn-search {background-position: 0 -220px;}
+.icn20.icn-problem {background-position: 0 -240px;}
 
 *:hover > .icn20.icn-alert {background-position: -20px -80px;}
 *:hover > .icn20.icn-ok {background-position: -20px -60px;}
@@ -490,6 +493,7 @@ label {color: #80868e; font-weight: normal;}
 *:hover > .icn20.icn-reply {background-position: -20px -180px;}
 *:hover > .icn20.icn-toright {background-position: -20px -200px;}
 *:hover > .icn20.icn-edit {background-position: -20px -40px;}
+*:hover > .icn20.icn-problem {background-position: -20px -240px;}
 
 .btn-primary > .icn20.icn-ok,
 .btn-success > .icn20.icn-ok {background-position: -40px -60px;}
@@ -520,7 +524,7 @@ label {color: #80868e; font-weight: normal;}
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
-.btn-default:active:focus {background: #fff; color: #474e5f;border-color: #c4c6ca !important}
+.btn-default:active:focus {background: #fff; color: #474e5f; border-color: #c4c6ca !important}
 
 .btn-primary {background: #45b1f9; color: #fff;}
 .btn-primary:hover {background: #5dbeff;}
@@ -542,6 +546,7 @@ label {color: #80868e; font-weight: normal;}
 .btn-danger {background: #e45d73;}
 .btn-ghost {background: transparent;}
 .btn-link {background: transparent;}
+.btn-ghost-bordered {border-color: #5a6070 !important;}
 
 /* messages */
 
@@ -650,6 +655,8 @@ label {color: #80868e; font-weight: normal;}
 
 .tickets {}
 .tickets > tbody > tr > td {vertical-align: middle;}
+.tickets > thead > tr > th {color: #acb5bf; font-size: 11px; text-transform: uppercase; font-weight: normal; border-bottom: 2px solid #e8eaef;}
+.tickets > tbody > tr.colored {background-color: #fff9c5;}
 .tickets .ticket-num {padding-left: 17px; position: relative;}
 .tickets .status {color: #acb5bf; font-size: 13px;}
 
