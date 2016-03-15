@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="favicon.ico">-->
+
+    <title>60 минут - Система управления</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <!--<link href="css/jquery-ui.css" rel="stylesheet">-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery.selectbox-0.2.css" rel="stylesheet">
+    <link href="css/jquery.scrollbar.css" rel="stylesheet">
+    <link href="css/s.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/inheritance.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.selectbox-0.2.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<!--
+Приветствую тебя, колега.
+Если будут какие-нибудь вопросы по верстке или что где лежит пиши в скайп fenrirheimr
+или на почту xhtmlblog@gmail.com -->
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6 pull-left">
+                        <a href="index.html" class="logo">60 минут <span>IS</span></a>
+
+                        <a href="op-index.html" class="btn btn-ghost-bordered btn-back">К заявкам</a>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="btns">
+                            <a href="#" class="btn btn-ghost-bordered add-ticket"><i class="icn icn20 icn-problem"></i> Есть проблема</a>
+                            <a href="#" class="btn btn-primary"><i class="icn icn20 icn-plus"></i> Создать заявку</a>
+                            <a href="#" class="btn btn-link">Выйти</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="container">
+                <form action="#" method="" class="ticket-form">
+
+                    <fieldset class="top-form">
+
+                        <div class="row first-row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="exampleInput01">Заезд</label>
+                                    <input type="text" class="form-control" id="exampleInput01" placeholder="">
+
+                                    <span class="month">
+                                        <select>
+                                            <option>Январь</option>
+                                            <option>Февраль</option>
+                                            <option>Март</option>
+                                            <option>Апрель</option>
+                                            <option>Май</option>
+                                            <option>Июнь</option>
+                                            <option>Июль</option>
+                                            <option>Август</option>
+                                            <option>Сентябрь</option>
+                                            <option>Октябрь</option>
+                                            <option>Ноябрь</option>
+                                            <option>Декабрь</option>
+                                        </select>
+                                    </span>
+
+                                    <span class="hour">
+                                        <select>
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>21</option>
+                                            <option>22</option>
+                                            <option>23</option>
+                                            <option>24</option>
+                                        </select>
+                                    </span>
+
+                                    <span class="min">
+                                        <select>
+                                            <option>00</option>
+                                            <option>15</option>
+                                            <option>30</option>
+                                            <option>45</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="exampleInput02">Выезд</label>
+                                    <input type="text" class="form-control" id="exampleInput02" placeholder="">
+
+                                <span class="month">
+                                    <select>
+                                        <option>Январь</option>
+                                        <option>Февраль</option>
+                                        <option>Март</option>
+                                        <option>Апрель</option>
+                                        <option>Май</option>
+                                        <option>Июнь</option>
+                                        <option>Июль</option>
+                                        <option>Август</option>
+                                        <option>Сентябрь</option>
+                                        <option>Октябрь</option>
+                                        <option>Ноябрь</option>
+                                        <option>Декабрь</option>
+                                    </select>
+                                </span>
+
+                                <span class="hour">
+                                    <select>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                        <option>05</option>
+                                        <option>06</option>
+                                        <option>07</option>
+                                        <option>08</option>
+                                        <option>09</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>21</option>
+                                        <option>22</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                    </select>
+                                </span>
+
+                                <span class="min">
+                                    <select>
+                                        <option>00</option>
+                                        <option>15</option>
+                                        <option>30</option>
+                                        <option>45</option>
+                                    </select>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row hotel-row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleInput03" placeholder="Отель, улица, метро, район">
+                                <span class="rooms">
+                                    <select>
+                                        <option>Двухместный комфорт с ванной комнатой</option>
+                                        <option>Фиолетовая бабочка</option>
+                                        <option>Красная комната</option>
+                                        <option>Синяя лагуна</option>
+                                    </select>
+                                </span>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Показать</button>
+
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="room-description-wrapper">
+
+                        <div class="description-caption">
+                            <div class="hotel-name">Гостевой дом Perlovka Guest House</div>
+                            <div class="room-name">Двухместный комфорт с ванной комнатой</div>
+                        </div>
+
+                        <div class="room-status">Необходимо уточнить &mdash; +7 892 768 89 89 <span>Минимум 2 часа</span></div>
+
+                        <div class="radio-group">
+                            <div class="radio">
+                                <input type="radio" name="status" id="optionsRadios3" value="option1" checked>
+                                <label for="optionsRadios3">Бронировать дороже, если номер занят</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="status" id="optionsRadios4" value="option2">
+                                <label for="optionsRadios4">Искать похожие номера в других отелях</label>
+                            </div>
+                        </div>
+
+                        <div class="room-price">3 500 <span>&#8381;</span></div>
+
+                        <div class="row info">
+
+                            <div class="col-md-5">
+                                <div>Бронь на 2 часа <span>2:30</span> <span>16.02.2016</span>  &mdash;  <span>11:30</span> <span>17.02.2016</span></div>
+                                <div>Не забудьте паспорт для каждого гостя</div>
+                            </div>
+                            <div class="col-md-5 options">
+                                <div>Двуспальная кровать, кондиционер, душевая кабина, джакузи, тапочки, холодильник</div>
+                                <div>Карты оплаты Visa,  Охраняемая парковка</div>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="client-info">
+
+                        <div class="caption">Данные клиента</div>
+
+                        <div class="form-group name">
+                            <label for="exampleInput10">Имя</label>
+                            <input type="text" class="form-control" id="exampleInput10" placeholder="">
+                        </div>
+                        <div class="form-group surname">
+                            <label for="exampleInput11">Фамилия</label>
+                            <input type="text" class="form-control" id="exampleInput11" placeholder="">
+                        </div>
+
+                        <div class="form-group phone">
+                            <label for="exampleInput12">Телефон</label>
+                            <input type="tel" class="form-control" id="exampleInput12" placeholder="">
+                        </div>
+
+                        <div class="radio-group">
+                            <div class="radio-inline">
+                                <input type="radio" name="rules" id="optionsRadios1" value="option1" checked>
+                                <label for="optionsRadios1">Оповещение по SMS</label>
+                            </div>
+                            <div class="radio-inline">
+                                <input type="radio" name="rules" id="optionsRadios2" value="option2">
+                                <label for="optionsRadios2">Оповещение звонком</label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn-primary">Забронировать</button>
+                        <button type="submit" class="btn btn-default occupied">Номер занят</button>
+                        <button type="submit" class="btn btn-default">В обработку</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; &#171;60 минут IS&#187;, 2016</p>
+        </div>
+    </footer>
+
+    <div class="new-ticket" id="nt">
+        <a href="#" class="btn-close pull-right"><i class="icn icn20 icn-close"></i></a>
+        <form action="#" method="">
+            <div class="t-header">Новый тикет 765</div>
+            <div class="t-content">
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" name="addressee" />
+                        <span class="bar"></span>
+                        <label>Кому</label>
+                    </div>
+                </div>
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" name="addressee" />
+                        <span class="bar"></span>
+                        <label>Отель</label>
+                    </div>
+                </div>
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" />
+                        <span class="bar"></span>
+                        <label>Суть проблемы</label>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <textarea class="textarea-scrollbar scrollbar-outer"></textarea>
+                    </div>
+                </div>
+
+                <!--div class="form-group material">
+                    <fieldset class="add-file">
+
+                        <input id="fileElem" multiple="multiple" class="custom-file" type="file" />
+                        <div id="filelist" class="result clearfix"></div>
+
+                        <a href="#" id="fileSelect" class="file-select"><i class="icn icn20 icn-plus-grey"></i> Добавить файл</a>
+
+                    </fieldset>
+                </div-->
+            </div>
+            <div class="t-footer">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="reset" class="btn btn-default">Отменить</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
