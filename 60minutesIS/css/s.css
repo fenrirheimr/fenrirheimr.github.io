@@ -786,6 +786,8 @@ label {color: #80868e; font-weight: normal;}
 .relevant-rooms-wrapper {padding: 60px 0 0; margin: 0 15px 30px; color: #474e5f; }
 .relevant-rooms-wrapper .result-caption {font-weight: bold; line-height: normal; font-size: 30px; margin-bottom: 40px;}
 
+.form-footer + .relevant-rooms-wrapper .result-caption {font-size: 18px;}
+
 .relevant-rooms-wrapper .result-item {border-bottom: 1px solid #e8eaef; padding-bottom: 50px; margin-bottom: 40px;}
 .relevant-rooms-wrapper .result-item:last-child {border-bottom: 1px solid #e8eaef; padding-bottom: 50px; margin-bottom: 0;}
 .relevant-rooms-wrapper .result-item .item-caption {font-weight: bold; font-size: 18px; margin-bottom: 5px;}
@@ -798,6 +800,7 @@ label {color: #80868e; font-weight: normal;}
 .relevant-rooms-wrapper .item-description .options {color: #80868e; margin-top: 20px;}
 .relevant-rooms-wrapper .item-description .btn {margin-left: 3px;}
 
+.relevant-rooms-wrapper:last-child .result-item:last-child {border-bottom: 0; padding-bottom: 20px;}
 
 /* Custom checkbox */
 
