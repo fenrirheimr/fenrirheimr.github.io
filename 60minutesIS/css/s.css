@@ -576,33 +576,34 @@ label {color: #80868e; font-weight: normal;}
 
 /* dropdown */
 
-.export .dropdown .btn {border-width: 1px; padding: 0 6px 0 20px; height: 34px; font-size: 13px;}
-.export .dropdown .btn > span {
+.cdd {display: inline-block;}
+.cdd .dropdown .btn {border-width: 1px; padding: 0 6px 0 20px; height: 34px; font-size: 13px;}
+.cdd .dropdown .btn > span {
     border-right: 1px solid #d9dbe0; padding: 8px 8px 8px 0; margin-right: 4px;
     height: 32px;
     line-height: 32px;
     vertical-align: middle;
 }
-.export .dropdown .btn > span + .icn {vertical-align: middle;}
-.export .open > .dropdown-toggle.btn-default:focus,
-.export .open > .dropdown-toggle.btn-default:hover {
+.cdd .dropdown .btn > span + .icn {vertical-align: middle;}
+.cdd .open > .dropdown-toggle.btn-default:focus,
+.cdd .open > .dropdown-toggle.btn-default:hover {
     color: #474e5f;
     background-color: #fff;
     border-color: #d9dbe0;
 }
-.export .open > .btn {
+.cdd .open > .btn {
     -webkit-border-radius: 3px 3px 0 0 ;
     -moz-border-radius: 3px 3px 0 0 ;
     border-radius: 3px 3px 0 0 ;
 }
-.export .dropdown-menu {
-    margin: -1px 0 0; border-radius: 0; border: 1px solid #d9dbe0; min-width: 115px; padding: 0; font-size: 13px;
+.cdd .dropdown-menu {
+    margin: -1px 0 0; border-radius: 0; border: 1px solid #d9dbe0; min-width: 115px; width: 100%; padding: 0; font-size: 13px;
 }
-.export .dropdown-menu>li {border-top: 1px solid #d9dbe0;}
-.export .dropdown-menu>li:first-child {border-top: 0;}
-.export .dropdown-menu>li>a {padding: 9px 20px;color: #474e5f;}
-.export .dropdown-menu>li>a:focus,
-.export .dropdown-menu>li>a:hover {
+.cdd .dropdown-menu>li {border-top: 1px solid #d9dbe0;}
+.cdd .dropdown-menu>li:first-child {border-top: 0;}
+.cdd .dropdown-menu>li>a {padding: 9px 20px;color: #474e5f;}
+.cdd .dropdown-menu>li>a:focus,
+.cdd .dropdown-menu>li>a:hover {
     color: #474e5f;
     text-decoration: none;
     background-color: #e6f5ff;
@@ -754,7 +755,7 @@ label {color: #80868e; font-weight: normal;}
 .room-description-wrapper .room-status.free {color: #5dca76;}
 .room-description-wrapper .room-status.error {color: #ff5277;}
 
-/*.room-description-wrapper .room-status.occupied {color: #5dca76;}*/
+.room-description-wrapper .room-status.occupied {color: #ff5277;}
 
 .room-description-wrapper .room-price {font-size: 24px; margin: 15px 0;}
 .room-description-wrapper .info {}
@@ -778,6 +779,11 @@ label {color: #80868e; font-weight: normal;}
 .form-footer .btn {margin-right: 16px;}
 .form-footer .btn.occupied {border-color: #fca3b4 !important;}
 .form-footer .btn.occupied:hover {border-color: #ff5277 !important;}
+
+.form-footer .dropdown-toggle {margin-right: 0;}
+.form-footer .cdd {}
+.form-footer .cdd .dropdown .btn {border-width: 2px;}
+.form-footer .cdd .dropdown .btn > span {border-right: 2px solid #d9dbe0;}
 
 /* relevant rooms */
 
