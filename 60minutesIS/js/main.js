@@ -7,6 +7,7 @@
             var utils = new window.Utils;
             utils.userNav();
             utils.supportPanel();
+            utils.autoComplete();
             utils.customJS();
             utils.selectDate();
             utils.scheduler();
@@ -149,6 +150,64 @@
 
         },
 
+        autoComplete:function(){
+            var availableTags = [
+                "Руководитель колл-центра",
+                "Руководитель проекта"
+
+            ];
+
+            $('.new-ticket input[name="addressee"]').autocomplete({source: availableTags});
+
+
+            //////////////////////////////////////////////////////////////
+
+            var headerSearch = [
+                "Руководитель колл-центра",
+                "Руководитель проекта",
+                "Автозаполнение"
+            ];
+
+            $('.header-form .form-control').autocomplete({source: headerSearch});
+
+
+
+
+            $(function () {
+                var projects = [{
+                    value: "jquery",
+                    label: "jQuery",
+                    desc: "the write less, do more, JavaScript library",
+                }, {
+                    value: "jquery-ui",
+                    label: "jQuery UI",
+                    desc: "the official user interface library for jQuery",
+                }, {
+                    value: "sizzlejs",
+                    label: "Sizzle JS",
+                    desc: "a pure-JavaScript CSS selector engine",
+                }];
+
+                $('.ticket-form .hotel-row .form-control').autocomplete({
+                        minLength: 0,
+                        source: projects,
+                        focus: function (event, ui) {
+                            $('.ticket-form .hotel-row .form-control').val(ui.item.label);
+                            return false;
+                        },
+                        select: function (event, ui) {
+                            $('.ticket-form .hotel-row .form-control').val(ui.item.label);
+                            return false;
+                        }
+                    })
+                    .data('autocomplete')._renderItem = function (ul, item) {
+                    return $('<li>')
+                        .data('item.autocomplete', item)
+                        .append('<a>' + item.label + '<br>' + item.desc + '</a>')
+                        .appendTo(ul);
+                };
+            });
+        },
         customJS:function(){
 
             //////////////////////////////////////////////////////////////
@@ -206,24 +265,7 @@
 
             $('.textarea-scrollbar').scrollbar();
 
-            var availableTags = [
-                "Руководитель колл-центра",
-                "Руководитель проекта"
 
-            ];
-
-            $('.new-ticket input[name="addressee"]').autocomplete({source: availableTags});
-
-
-            //////////////////////////////////////////////////////////////
-
-            var headerSearch = [
-                "Руководитель колл-центра",
-                "Руководитель проекта",
-                "Автозаполнение"
-            ];
-
-            $('.header-form .form-control').autocomplete({source: headerSearch});
 
             //////////////////////////////////////////////////////////////
 
