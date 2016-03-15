@@ -557,6 +557,10 @@ label {color: #80868e; font-weight: normal;}
     position: absolute; top: -2px; left: -15px; content: ' ';
 }
 
+.btn[disabled="disabled"] {background: #d8dadd;}
+.btn[disabled="disabled"]:hover {background: #d8dadd;}
+
+
 /* messages */
 
 .message {
@@ -738,12 +742,16 @@ label {color: #80868e; font-weight: normal;}
 /*  */
 
 .room-description-wrapper {padding: 30px 0 40px; margin: 0 15px 30px; color: #474e5f; border-bottom: 1px solid #e8eaef;}
+.room-description-wrapper.error {border-bottom: transparent; min-height: 420px;}
 .room-description-wrapper .description-caption {font-weight: bold; line-height: normal;}
 .room-description-wrapper .description-caption .hotel-name {font-size: 18px; margin-bottom: 10px;}
 .room-description-wrapper .description-caption .room-name {font-size: 30px;}
 
 .room-description-wrapper .room-status {margin-top: 20px;}
 .room-description-wrapper .room-status.free {color: #5dca76;}
+.room-description-wrapper .room-status.error {color: #ff5277;}
+.room-description-wrapper .room-status.error > span  {color: #474e5f;}
+/*.room-description-wrapper .room-status.occupied {color: #5dca76;}*/
 
 .room-description-wrapper .room-price {font-size: 24px; margin: 15px 0;}
 .room-description-wrapper .info {}
