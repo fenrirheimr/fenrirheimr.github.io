@@ -49,8 +49,21 @@
                 <div class="row">
                     <div class="col-md-6 pull-left">
                         <a href="index.html" class="logo">60 минут <span>IS</span></a>
-                    </div>
 
+                        <form action="#" method="" class="header-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Отель или телефон клиента">
+                            </div>
+                            <button type="submit" class="search"><i class="icn icn20 icn-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="btns">
+                            <a href="#" class="btn btn-ghost-bordered add-ticket"><i class="icn icn20 icn-problem"></i> Есть проблема</a>
+                            <a href="#" class="btn btn-primary"><i class="icn icn20 icn-plus"></i> Создать заявку</a>
+                            <a href="#" class="btn btn-link">Выйти</a>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -58,40 +71,20 @@
 
         <section class="content">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-4">
-                        <h3>Контент-менеджер</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="cm-index.html">Задачи и тикеты</a></li>
-                            <li class="list-group-item"><a href="cm-ticket.html">Задача</a></li>
-                            <li class="list-group-item"><a href="cm-edit-hotel.html">Редактирование отеля</a></li>
-                            <li class="list-group-item"><a href="cm-edit-category.html">Редактирование категории</a></li>
+
+                <div class="row helpdesk">
+
+                    <div class="col-md-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li role="presentation"><a href="hd-inside.html">Оператору</a></li>
+                            <li role="presentation"><a href="#">Руководителю колл-центра</a></li>
+                            <li role="presentation"><a href="#">Контент-менеджеру</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-6 col-md-4">
-                        <h3>Операторы</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="op-index.html">Задачи</a></li>
-                            <li class="list-group-item"><a href="op-room-available.html">Номер свободен</a></li>
-                            <li class="list-group-item"><a href="op-room-available-time.html">Номер свободен, но время меньше минимального</a></li>
-                            <li class="list-group-item"><a href="op-room-occupied.html">Номер занят</a></li>
-                            <li class="list-group-item"><a href="op-room-relevant.html">Подходящие номера</a></li>
-                            <li class="list-group-item"><a href="op-room-unknown.html">Неизвестно (нет шахматки)</a></li>
-                            <li class="list-group-item"><a href="op-room-unknown-relevant.html">Неизвестно (нет шахматки) ищем похожие</a></li>
-                            <li class="list-group-item"><a href="op-get-to-hotel.html">Как проехать в отелье</a></li>
-                            <li class="list-group-item"><a href="op-room-marked-as-occupied.html">Помечен как занят операторами (нет шахматки)</a></li>
-                            <li class="list-group-item"><a href="op-room-wait-join.html">Заявка «Ожидает заселения»</a></li>
-                            <li class="list-group-item"><a href="op-room-wait-confirm.html">Заявка «Ожидает подтверждения»</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <h3>Helpdesk</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="hd-index.html">Главная</a></li>
-                            <li class="list-group-item"><a href="op-inside.html">Внутренняя</a></li>
-                        </ul>
-                    </div>
+                    <div class="col-md-9"></div>
+
                 </div>
+
             </div>
         </section>
 
@@ -117,6 +110,13 @@
                 </div>
                 <div class="form-group material">
                     <div class="group custom-input">
+                        <input type="text" value="" name="addressee" />
+                        <span class="bar"></span>
+                        <label>Отель</label>
+                    </div>
+                </div>
+                <div class="form-group material">
+                    <div class="group custom-input">
                         <input type="text" value="" />
                         <span class="bar"></span>
                         <label>Суть проблемы</label>
@@ -129,7 +129,7 @@
                     </div>
                 </div>
 
-                <div class="form-group material">
+                <!--div class="form-group material">
                     <fieldset class="add-file">
 
                         <input id="fileElem" multiple="multiple" class="custom-file" type="file" />
@@ -138,7 +138,7 @@
                         <a href="#" id="fileSelect" class="file-select"><i class="icn icn20 icn-plus-grey"></i> Добавить файл</a>
 
                     </fieldset>
-                </div>
+                </div-->
             </div>
             <div class="t-footer">
                 <button type="submit" class="btn btn-primary">Отправить</button>

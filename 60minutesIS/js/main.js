@@ -14,6 +14,7 @@
             utils.addPhoto();
             utils.validateForm();
             utils.burgerBtn();
+            utils.timeSlider();
             utils.bootstrap();
             utils.equalHeight();
             utils.inputMask();
@@ -23,6 +24,59 @@
     window.Utils = Class.extend({
         init:function(){},
 
+        timeSlider:function(){
+            var view = $("#tslshow");
+            var move = "105px";
+
+            var totalBrickWidth = 0;
+
+            $('.day').each(function(index) {
+                totalBrickWidth += parseInt($(this).width(), 10);
+            });
+
+            var totalWidth = totalBrickWidth - $('#viewContainer').width() - 100;
+
+            var sliderLimit = -totalWidth;
+
+            $('.to-right').click(function(){
+
+                var currentPosition = parseInt(view.css("left"));
+                if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 400})
+
+            });
+
+            $('.to-left').click(function(){
+
+                var currentPosition = parseInt(view.css("left"));
+                if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 400})
+            });
+
+            // TODO: Нужно оборачивать свободные/занятые часы
+
+            var day = $('#tslshow .day');
+
+
+            day.each(function(){
+                var hour = $(this).find('.hour');
+                var wrapFree = $('<div class="marked-free" />');
+                var wrapOccupied = $('<div class="marked-occupied" />');
+
+                hour.each(function(){
+                    var free = $(this).find('.free');
+                    var occupied = $(this).find('.occupied');
+
+                    free.wrapAll(wrapFree);
+                    occupied.wrapAll(wrapOccupied);
+
+                    if ($(this).children().length > 0 ) {
+                        // do something
+                    }
+                });
+
+                console.log(hour.length)
+
+            });
+        },
         bootstrap:function(){
             function isTouchDevice(){
                 return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
