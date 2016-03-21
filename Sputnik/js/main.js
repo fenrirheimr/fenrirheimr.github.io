@@ -35,8 +35,6 @@
                 pageWrapper.css('marginBottom', footerHeight);
             }
 
-
-
         },
 
         equalHeight:function(){

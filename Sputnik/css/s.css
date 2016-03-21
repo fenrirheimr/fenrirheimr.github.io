@@ -50,15 +50,19 @@ body {
     height: 100%;
     background: #fff;
     position: relative;
-    padding: 15px 15px 0;
+
 }
-@media (min-width: 1200px) {
-    body {padding: 30px 30px 0;}
-}
+
 
 
 .num {font-family: 'sofia_prolight' !important;}
-.page-wrapper {height: 1000px; position: relative; z-index: 1; background: #fff;}
+
+.page-wrapper {height: 1000px; position: relative; z-index: 1; background: #fff; padding: 15px 15px 0;}
+
+@media (min-width: 1200px) {
+    .page-wrapper {padding: 30px 30px 0;}
+}
+
 .block-inner {max-width: 1380px; margin: 0 auto;}
 
 a {color: #519cc8;}
@@ -71,7 +75,109 @@ a:focus {text-decoration: none;}
 
 /* Header */
 
+.header {position: relative;}
+.header nav {}
+.header nav ul {list-style: none; margin: 0; padding: 0;}
 
+/* video on background */
+
+.video-wrapper {position: relative; max-height: 600px; overflow: hidden;}
+/*video {*/
+    /*position: absolute;*/
+    /*!*top: 50%;*!*/
+    /*!*left: 50%;*!*/
+    /*width: 100%;*/
+    /*max-height: 600px;*/
+    /*!*width: auto;*!*/
+    /*height: auto;*/
+    /*z-index: -100;*/
+    /*!*transform: translateX(-50%) translateY(-50%);*!*/
+    /*!*background: url('http://demosthenes.info/assets/images/polina.jpg') no-repeat;*!*/
+    /*background-size: cover;*/
+    /*transition: 1s opacity;*/
+/*}*/
+
+video {
+    position: relative;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    /*transform: translateX(-50%) translateY(-50%);*/
+    background: url('http://demosthenes.info/assets/images/polina.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+/* //////////// */
+
+.hamburger-btn {
+    width: 40px;
+    height: 50px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    right: 30px;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+    padding: 0;
+    background: 0 0;
+    overflow: hidden;
+    color: #333;
+}
+
+.hamburger {
+    margin: 10px 0;
+    -webkit-transition: all .2s ease .05s;
+    transition: all .2s ease .05s;
+}
+.hamburger,
+.hamburger:after,
+.hamburger:before {
+    left: 0;
+    height: 2px;
+    background: #999;
+    position: absolute;
+    right: 0;
+    display: block;
+}
+
+.hamburger-btn:hover .hamburger {
+    background: #ef7f7f;
+    left: 3px;
+    right: 3px;
+}
+
+.hamburger:after,
+.hamburger:before {
+    content: '';
+    z-index: -1;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.hamburger:before {
+    top: -8px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.hamburger:after {
+    top: 8px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.hamburger-btn:hover .hamburger:after,
+.hamburger-btn:hover .hamburger:before {
+    left: 5px;
+    right: 5px;
+    background: #ef7f7f;
+}
 
 /* Nav */
 
