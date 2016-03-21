@@ -487,6 +487,7 @@ label {color: #80868e; font-weight: normal;}
 .icn20.icn-edit {background-position: 0 -40px;}
 .icn20.icn-search {background-position: 0 -220px;}
 .icn20.icn-problem {background-position: 0 -240px;}
+.icn20.icn-green-top {background-position: 0 -260px;}
 
 *:hover > .icn20.icn-alert {background-position: -20px -80px;}
 *:hover > .icn20.icn-ok {background-position: -20px -60px;}
@@ -893,6 +894,40 @@ label {color: #80868e; font-weight: normal;}
 
 .hd-item {margin-bottom: 40px;}
 .hd-item p {margin: 0;}
+
+/* am */
+
+.paid {color: #545d6a; font-size: 0;margin-top: 15px;}
+.paid > div {display: inline-block; font-size: 15px; vertical-align: middle;}
+/*.paid > div * {line-height: normal;}*/
+
+.paid .first {color: #80868e;}
+.paid .first strong {display: block; color: #545d6a;}
+
+.paid .second {padding: 0 10px;}
+.paid .second a,
+.paid .second a span {font-size: 40px; display: inline-block; line-height: 28px;}
+.paid .second a span {font-size: 24px; vertical-align: top;}
+
+.paid .third {display: inline-block; line-height: 28px; vertical-align: top; color: #5dca76; font-weight: bold;}
+.paid .popover {
+    position: absolute; color: #545d6a; padding: 0; font-family: inherit; font-size: 15px; border: 1px solid #dee0e5;
+    border-radius: 0;
+    -webkit-box-shadow: 0 5px 20px -5px rgba(0,0,0,.2);
+    box-shadow: 0 5px 20px -5px rgba(0,0,0,.2);
+    line-break: auto;
+}
+
+.paid .popover.bottom {margin-top: 5px;}
+.paid .popover.bottom > .arrow {display: none;}
+.paid .popover .popover-content {padding: 15px 20px;}
+.paid .popover .popover-content td {padding: 0 5px;}
+.paid .popover .popover-content .good {color: #5dc876;}
+.paid .popover .popover-content .normal {color: #f7b94a;}
+.paid .popover .popover-content .bad {color: #ff5277;}
+
+.paid .percentContent {display: none;}
+
 
 /* Custom checkbox */
 

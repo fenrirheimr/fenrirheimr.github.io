@@ -106,7 +106,14 @@
                     return text;
                 }
             });
-            $('a[data-help="tooltip"]').css('color', 'red')
+            $('a[data-help="tooltip"]').css('color', 'red');
+
+            $('.paid .percent').popover({
+                html : true,
+                content: function() {
+                    return $('.percentContent').html();
+                }
+            });
         },
         userNav:function(){
             var userLink = $('.user-wrapper .user');
@@ -227,40 +234,40 @@
 
 
 
-            $(function () {
-                var projects = [{
-                    value: "jquery",
-                    label: "jQuery",
-                    desc: "the write less, do more, JavaScript library",
-                }, {
-                    value: "jquery-ui",
-                    label: "jQuery UI",
-                    desc: "the official user interface library for jQuery",
-                }, {
-                    value: "sizzlejs",
-                    label: "Sizzle JS",
-                    desc: "a pure-JavaScript CSS selector engine",
-                }];
-
-                $('.ticket-form .hotel-row .form-control').autocomplete({
-                        minLength: 0,
-                        source: projects,
-                        focus: function (event, ui) {
-                            $('.ticket-form .hotel-row .form-control').val(ui.item.label);
-                            return false;
-                        },
-                        select: function (event, ui) {
-                            $('.ticket-form .hotel-row .form-control').val(ui.item.label);
-                            return false;
-                        }
-                    })
-                    .data('autocomplete')._renderItem = function (ul, item) {
-                    return $('<li>')
-                        .data('item.autocomplete', item)
-                        .append('<a>' + item.label + '<br>' + item.desc + '</a>')
-                        .appendTo(ul);
-                };
-            });
+            //$(function () {
+            //    var projects = [{
+            //        value: "jquery",
+            //        label: "jQuery",
+            //        desc: "the write less, do more, JavaScript library",
+            //    }, {
+            //        value: "jquery-ui",
+            //        label: "jQuery UI",
+            //        desc: "the official user interface library for jQuery",
+            //    }, {
+            //        value: "sizzlejs",
+            //        label: "Sizzle JS",
+            //        desc: "a pure-JavaScript CSS selector engine",
+            //    }];
+            //
+            //    $('.ticket-form .hotel-row .form-control').autocomplete({
+            //            minLength: 0,
+            //            source: projects,
+            //            focus: function (event, ui) {
+            //                $('.ticket-form .hotel-row .form-control').val(ui.item.label);
+            //                return false;
+            //            },
+            //            select: function (event, ui) {
+            //                $('.ticket-form .hotel-row .form-control').val(ui.item.label);
+            //                return false;
+            //            }
+            //        })
+            //        .data('autocomplete')._renderItem = function (ul, item) {
+            //        return $('<li>')
+            //            .data('item.autocomplete', item)
+            //            .append('<a>' + item.label + '<br>' + item.desc + '</a>')
+            //            .appendTo(ul);
+            //    };
+            //});
         },
         customJS:function(){
 

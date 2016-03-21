@@ -49,18 +49,10 @@
                 <div class="row">
                     <div class="col-md-6 pull-left">
                         <a href="index.html" class="logo">60 минут <span>IS</span></a>
-
-                        <form action="#" method="" class="header-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Название отеля">
-                            </div>
-                            <button type="submit" class="search"><i class="icn icn20 icn-search"></i></button>
-                        </form>
-                        <!-- Эта форма не видна контент-менеджеру но видна руководителю и аккаунт менеджеру -->
                     </div>
                     <div class="col-md-6 text-right">
                         <div class="btns">
-                            <a href="#" class="btn btn-ghost"><i class="icn icn20 icn-alert"></i> Задачи и тикеты <span class="badge pulse">28</span></a> <!-- класс "pulse" надо добавлять только при поступлении новой задачи и потом, видимо, снимать его через какое-то время -->
+                            <a href="#" class="btn btn-ghost"><i class="icn icn20 icn-alert"></i> Тикеты <span class="badge pulse">28</span></a> <!-- класс "pulse" надо добавлять только при поступлении новой задачи и потом, видимо, снимать его через какое-то время -->
                             <a href="#" class="btn btn-primary add-ticket"><i class="icn icn20 icn-plus"></i> Создать тикет</a>
                             <a href="#" class="btn btn-link">Выйти</a>
                         </div>
@@ -75,17 +67,41 @@
                 <header class="row page-caption">
                     <div class="col-md-12">
                         <div class="pull-left">
-                            <div class="title pull-left">Задачи и тикеты</div>
-                            <div class="evaluation good pull-left"> <!-- good/normal/bad -->
-                                <span class="dot"></span>
-                                <span class="value">3.6 <sup>мин.</sup><sub>на заявку</sub></span>
-                                <span class="text">Отлично!</span>
-                                <!--<span class="text">Можно лучше</span>-->
-                                <!--<span class="text">Плохо!</span>-->
+                            <div class="title pull-left">Счета за февраль 2016</div>
+
+                            <div class="paid pull-left">
+                                <div class="first">
+                                    <strong>Оплачено</strong>
+                                    1 288 900 <span>&#8381;</span>
+                                </div>
+                                <div class="second">
+                                    <a href="#" class="percent" rel="popover" data-placement="bottom" data-trigger="hover">92<span>%</span></a>
+
+                                    <div class="percentContent">
+                                        <table>
+                                            <tr>
+                                                <td>Получено</td>
+                                                <td><strong>94%</strong></td>
+                                                <td class="good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-green-top"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Согласовано</td>
+                                                <td><strong>90%</strong></td>
+                                                <td class="good">
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-green-top"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="third">
+                                    +2%
+                                </div>
                             </div>
-                        </div>
-                        <div class="btns pull-right">
-                            <a href="cm-edit-hotel.html" class="btn btn-small btn-success"><i class="icn icn20 icn-plus"></i> Добавить отель</a>
                         </div>
                     </div>
                 </header>
@@ -109,65 +125,53 @@
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#new" aria-controls="new" role="tab" data-toggle="tab">Новые</a></li>
-                            <li role="presentation"><a href="#send" aria-controls="send" role="tab" data-toggle="tab">Отправленные</a></li>
-                            <li role="presentation"><a href="#closed" aria-controls="closed" role="tab" data-toggle="tab">Закрытые</a></li>
+                            <li role="presentation" class="active"><a href="#all" aria-controls="new" role="tab" data-toggle="tab">Все</a></li>
+                            <li role="presentation"><a href="#reconciliation" aria-controls="reconciliation" role="tab" data-toggle="tab">Отправлен на сверку</a></li>
+                            <li role="presentation"><a href="#received" aria-controls="received" role="tab" data-toggle="tab">Получен</a></li>
+                            <li role="presentation"><a href="#agreed" aria-controls="agreed" role="tab" data-toggle="tab">Согласован</a></li>
+                            <li role="presentation"><a href="#paid" aria-controls="paid" role="tab" data-toggle="tab">Оплачен</a></li>
+                            <li role="presentation"><a href="#debts" aria-controls="debts" role="tab" data-toggle="tab">Задолженность</a></li>
+                            <li role="presentation"><a href="#harddebts" aria-controls="harddebts" role="tab" data-toggle="tab">Тяж.задолженность</a></li>
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane fade in active" id="new">
+                            <div role="tabpanel" class="tab-pane fade in active" id="all">
 
                                 <table class="table table-hover tickets">
                                     <colgroup>
-                                        <col width="130">
-                                        <col width="150">
+                                        <col width="310">
+                                        <col width="86">
+                                        <col width="96">
+                                        <col width="120">
+                                        <col width="140">
+                                        <col width="140">
                                         <col>
-                                        <col width="150">
                                     </colgroup>
+
+                                    <thead>
+                                        <tr>
+                                            <th>Отель</th>
+                                            <th>Общая сумма</th>
+                                            <th>Комиссия</th>
+                                            <th>Способ оплаты</th>
+                                            <th>Форма сотрудничества</th>
+                                            <th>Статус</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
                                     <tbody>
-                                        <tr class="new">
-                                            <td><span class="ticket-num">Задача 128</span></td>
-                                            <td><span class="status">Открыта 1 день</span></td>
-                                            <td><a href="cm-ticket.html" class="ticket-link">Добавить отель «Пражский»</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                        <tr class="new">
-                                            <td><span class="ticket-num">Задача 127</span></td>
-                                            <td><span class="status">Открыта 1 день</span></td>
-                                            <td><a href="cm-ticket.html" class="ticket-link">Изменить цены в отеле «Delight Inn Polyanka на Якиманке»</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                        <tr class="new">
-                                            <td><span class="ticket-num">Задача 126</span></td>
-                                            <td><span class="status">Открыта 1 день</span></td>
-                                            <td><a href="cm-ticket.html" class="ticket-link">Добавить фотографии в отеле «Милана на Дубровке»</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="ticket-num">Задача 125</span></td>
-                                            <td><span class="status">Открыта 2 дня</span></td>
-                                            <td><a href="cm-ticket.html" class="ticket-link">Добавить фотографии в отеле «Милана на Дубровке»</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="ticket-num">Тикет 450</span></td>
-                                            <td><span class="status">Открыта 2 дня</span></td>
-                                            <td><a href="cm-ticket.html" class="ticket-link">Прислать отчеты отеля «Джаз Отель» за январь 2016</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="ticket-num">Тикет 442</span></td>
-                                            <td><span class="status">Открыта 2 дня</span></td>
-                                            <td><a href="cm-ticket.html" class="ticket-link">Ответ на ваш тикет 442</a></td>
-                                            <td><a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-ok"></i> Завершить</a></td>
-                                        </tr>
+
                                     </tbody>
                                 </table>
 
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="send">2</div>
-                            <div role="tabpanel" class="tab-pane fade" id="closed">3</div>
+                            <div role="tabpanel" class="tab-pane fade" id="reconciliation">2</div>
+                            <div role="tabpanel" class="tab-pane fade" id="received">3</div>
+                            <div role="tabpanel" class="tab-pane fade" id="agreed">4</div>
+                            <div role="tabpanel" class="tab-pane fade" id="paid">5</div>
+                            <div role="tabpanel" class="tab-pane fade" id="debts">6</div>
+                            <div role="tabpanel" class="tab-pane fade" id="harddebts">7</div>
                         </div>
 
                     </form>
