@@ -53,10 +53,10 @@ body {
 
 }
 
-.cf:before,
-.cf:after {content: ' '; display: table;}
-.cf:after {clear: both;}
-.cf {*zoom: 1;}
+/*.cf:before,*/
+/*.cf:after {content: ' '; display: table;}*/
+/*.cf:after {clear: both;}*/
+/*.cf {*zoom: 1;}*/
 
 
 .num {font-family: 'sofia_prolight' !important;}
@@ -254,11 +254,28 @@ h3 {}
     padding: 100px 15px; background-attachment: fixed !important;
 }
 .whom .whom-item {padding-left: 80px;}
-.whom .caption {position: relative;}
+.whom .caption {position: relative; margin-bottom: 50px;}
 .whom .caption .num {color: #ceb094; font-size: 45px; position: absolute; left: -80px; top: -53px;}
-.whom .caption .text {
-    font-family: 'Futura New Demi'; color: #fff; font-size: 63px; line-height: 52px;
+.whom .caption .num:before {
+    display: block; width: 3px; height: 100px; background: #ceb094; transform: rotate(25deg); content: ' ';
+    position: absolute; right: -15px; bottom: -54px;
 }
+.whom .caption .text {
+    font-family: 'Futura New Demi'; color: #fff; font-size: 58px; line-height: 52px;
+}
+
+.whom ul {padding-left: 25px;}
+.whom ul li {font-family: 'Futura New Book'; font-size: 24px; color: #fff; position: relative;}
+.whom ul li:before {
+    display: block; width: 17px; height: 0; position: absolute; left: -25px; margin-top: 19px;
+    border-bottom: 1px solid #bfbfc0; border-top: 1px solid #fff; content: ' ';
+}
+
+.whom .more {
+    font-family: 'Futura New Book';font-size: 20px; line-height: 30px; color: #fff; display: inline-block;
+    border-bottom: 4px solid #ceb094; margin-left: 80px; margin-top: 50px;
+}
+
 /* Footer */
 
 .footer {

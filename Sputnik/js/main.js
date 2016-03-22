@@ -48,7 +48,7 @@
         },
 
         equalHeight:function(){
-            var equalBlock = $('.modal label');
+            var equalBlock = $('.whom .whom-item');
             equalBlock.matchHeight();
         }
     });
