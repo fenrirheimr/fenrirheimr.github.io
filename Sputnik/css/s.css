@@ -85,30 +85,6 @@ a:focus {text-decoration: none;}
 .header {position: absolute; z-index: 99; width: 100%; padding: 0 15px;}
 .header .logo {float: left; font-size: 34px; color: #fff; font-weight: bold; margin-top: 20px;}
 .header .block-inner {}
-.header nav {float: right; margin-top: 31px;}
-.header nav ul {list-style: none; margin: 0; padding: 0; font-size: 0;}
-.header nav ul li {margin-left: 35px; padding: 0;}
-.header nav ul li:first-child {margin-left: 0;}
-.header nav ul li a {font-size: 22px; position: relative; color: #fff; font-family: 'Futura New Book';}
-
-.header nav ul li a:after{
-    content: ' '; position:absolute; bottom:-4px; left:0; right:0; height:2px; background:#fff; opacity:1;
-
-    -webkit-transition: -webkit-transform 0.15s;
-    -o-transition:      -o-transform 0.15s;
-    transition:         transform 0.15s;
-
-    -webkit-transform:  scaleX(0) translateZ(0);
-    transform:          scaleX(0) translateZ(0);
-
-    -webkit-transform-origin:   0 0;
-    -ms-transform-origin:       0 0;
-    -o-transform-origin:        0 0;
-    transform-origin:           0 0;
-
-}
-.header nav ul li a:hover:after{-webkit-transform:scaleX(1) translateZ(0);transform:scaleX(1) translateZ(0)}
-.header nav ul li.current a:after{-webkit-transform:scaleX(1) translateZ(0);transform:scaleX(1) translateZ(0)}
 
 /* video on background */
 
@@ -159,76 +135,133 @@ a:focus {text-decoration: none;}
     border-bottom: 4px solid #ceb094; margin-top: 58px;
 }
 
-/* //////////// */
-
-.hamburger-btn {
-    width: 40px;
-    height: 50px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    right: 30px;
-    border: none;
-    z-index: 1;
-    cursor: pointer;
-    padding: 0;
-    background: 0 0;
-    overflow: hidden;
-    color: #333;
-    display: none;
-}
-
-.hamburger {
-    margin: 10px 0;
-    -webkit-transition: all .2s ease .05s;
-    transition: all .2s ease .05s;
-}
-.hamburger,
-.hamburger:after,
-.hamburger:before {
-    left: 0;
-    height: 2px;
-    background: #999;
-    position: absolute;
-    right: 0;
-    display: block;
-}
-
-.hamburger-btn:hover .hamburger {
-    background: #ef7f7f;
-    left: 3px;
-    right: 3px;
-}
-
-.hamburger:after,
-.hamburger:before {
-    content: '';
-    z-index: -1;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.hamburger:before {
-    top: -8px;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-}
-
-.hamburger:after {
-    top: 8px;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-}
-
-.hamburger-btn:hover .hamburger:after,
-.hamburger-btn:hover .hamburger:before {
-    left: 5px;
-    right: 5px;
-    background: #ef7f7f;
-}
 
 /* Nav */
 
+.header nav {float: right; margin-top: 31px;}
+.header nav ul {list-style: none; margin: 0; padding: 0; font-size: 0;}
+.header nav ul li {margin-left: 35px; padding: 0;}
+.header nav ul li:first-child {margin-left: 0;}
+.header nav ul li a {font-size: 22px; position: relative; color: #fff; font-family: 'Futura New Book';}
+
+.header nav ul li a:after{
+    content: ' '; position:absolute; bottom:-4px; left:0; right:0; height:2px; background:#fff; opacity:1;
+
+    -webkit-transition: -webkit-transform 0.15s;
+    -o-transition:      -o-transform 0.15s;
+    transition:         transform 0.15s;
+
+    -webkit-transform:  scaleX(0) translateZ(0);
+    transform:          scaleX(0) translateZ(0);
+
+    -webkit-transform-origin:   0 0;
+    -ms-transform-origin:       0 0;
+    -o-transform-origin:        0 0;
+    transform-origin:           0 0;
+
+}
+.header nav ul li a:hover:after{-webkit-transform:scaleX(1) translateZ(0);transform:scaleX(1) translateZ(0)}
+.header nav ul li.current a:after{-webkit-transform:scaleX(1) translateZ(0);transform:scaleX(1) translateZ(0)}
+
+@-webkit-keyframes showNav {
+    0%   {
+        -webkit-transform: rotate(145deg) scale(2) translate(100%);
+        transform: rotate(145deg) scale(2) translate(100%);
+    }
+    100% {
+        -webkit-transform: rotate(145deg) scale(2) translate(0);
+        transform: rotate(145deg) scale(2) translate(0);
+    }
+}
+
+@-moz-keyframes showNav {
+    0%   {
+        -webkit-transform: rotate(145deg) scale(2) translate(100%);
+        transform: rotate(145deg) scale(2) translate(100%);
+    }
+    100% {
+        -webkit-transform: rotate(145deg) scale(2) translate(0);
+        transform: rotate(145deg) scale(2) translate(0);
+    }
+}
+@-o-keyframes showNav {
+    0%   {
+        -webkit-transform: rotate(145deg) scale(2) translate(100%);
+        transform: rotate(145deg) scale(2) translate(100%);
+    }
+    100% {
+        -webkit-transform: rotate(145deg) scale(2) translate(0);
+        transform: rotate(145deg) scale(2) translate(0);
+    }
+}
+@keyframes showNav {
+    0%   {
+        -webkit-transform: rotate(145deg) scale(2) translate(100%);
+        transform: rotate(145deg) scale(2) translate(100%);
+    }
+    100% {
+        -webkit-transform: rotate(145deg) scale(2) translate(0);
+        transform: rotate(145deg) scale(2) translate(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header nav {
+        display: none; float: none; margin: 0; z-index: 99;
+        position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+
+
+    }
+    .hamburger-btn.open + .nav-slanted {
+        background: rgba(57,57,57, 0.98); position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+        -webkit-animation: showNav 500ms ease;
+        -moz-animation:    showNav 500ms ease;
+        -o-animation:      showNav 500ms ease;
+        animation:         showNav 500ms ease;
+    }
+    .header nav ul {display: block; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);}
+    .header nav ul li {display: block; margin: 0; text-align: center;}
+    .header nav ul li a {font-size: 50px; position: relative; color: #fff; font-family: 'Futura New Demi';}
+}
+
+/* hamburger */
+
+.hamburger-btn {
+    width: 40px; height: 50px; -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; position: absolute; right: 30px; color: #333;
+    border: none; z-index: 100; cursor: pointer; padding: 0; background: 0 0; overflow: hidden;
+
+}
+
+.hamburger {margin: 10px 0; -webkit-transition: all .2s ease .05s; transition: all .2s ease .05s;}
+.hamburger,
+.hamburger:after,
+.hamburger:before {left: 0; height: 2px; background: #999; position: absolute; right: 0; display: block;}
+
+.hamburger-btn:hover .hamburger {background: #ef7f7f; left: 3px; right: 3px;}
+
+.hamburger:after,
+.hamburger:before {content: ''; z-index: -1; -webkit-transition: all .3s; transition: all .3s;}
+
+.hamburger:before {top: -8px; -webkit-transition-delay: 0s; transition-delay: 0s;}
+
+.hamburger:after {top: 8px; -webkit-transition-delay: 0s; transition-delay: 0s;}
+
+.hamburger-btn:hover .hamburger:after,
+.hamburger-btn:hover .hamburger:before {left: 5px; right: 5px; background: #ef7f7f;}
+
+
+.hamburger-btn.open .hamburger{background:0 0}
+.hamburger-btn.open .hamburger:after,
+.hamburger-btn.open .hamburger:before{background:#fff;top:0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+.hamburger-btn.open .hamburger:after{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}
+.hamburger-btn.open:hover .hamburger,
+.hamburger-btn.open:hover .hamburger:after,
+.hamburger-btn.open:hover .hamburger:before{left:3px;right:3px}.menu,.nav-slanted{top:0;left:0;position:fixed}
+
+@media (min-width: 992px) {
+    .hamburger-btn {display: none; width: 50px; height: 60px;}
+}
 
 /* Main */
 
@@ -282,7 +315,7 @@ h3 {}
 .blocks .row > div {padding: 0;}
 .blocks .row .half {background: #fff; padding: 80px 80px 0; font-family: 'Futura New Book';}
 .blocks .row .half .caption {color: #ceb094; font-size: 36px; line-height: 36px; margin-bottom: 40px;}
-.blocks .row .half .text {color: #474747; font-size: 22px; line-height: 32px; margin-bottom: 40px;}
+.blocks .row .half .text {color: #474747; font-size: 22px; line-height: 28px; margin-bottom: 40px;}
 .blocks .row .half .author {color: #aaa; font-size: 20px; line-height: 30px;}
 .blocks .img-wrapper {}
 .blocks .img-wrapper img {width: 100%;}

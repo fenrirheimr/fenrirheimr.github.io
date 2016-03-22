@@ -8,6 +8,7 @@
             utils.bootstrap();
             utils.customJS();
             utils.equalHeight();
+            utils.hamburgerBtn();
 
         }
     });
@@ -57,6 +58,17 @@
 
             var equalBlock = $('.blocks .row > div');
             equalBlock.matchHeight();
+        },
+        hamburgerBtn:function(){
+
+            var hamburgerBtn = $('.header .hamburger-btn');
+            var nav = $('.header .navigation');
+
+            hamburgerBtn.click(function(){
+                $(this).toggleClass('open');
+                nav.toggle();
+            })
+
         }
     });
 
