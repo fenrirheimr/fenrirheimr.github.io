@@ -35,6 +35,10 @@
                 pageWrapper.css('marginBottom', footerHeight);
             }
 
+            var headerSection = $('.header-wrapper');
+            var videoBlockHeight = headerSection.find('video').height();
+            headerSection.height(videoBlockHeight)
+
         },
 
         equalHeight:function(){

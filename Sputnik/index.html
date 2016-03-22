@@ -33,37 +33,75 @@
 
 <div class="page-wrapper">
 
-    <header class="header">
+    <div class="header-wrapper">
+
+        <header class="header">
+
+            <div class="block-inner">
+
+                <a href="#" class="logo">Спутник</a>
+
+                <nav class="navigation">
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="#">Предпринимателям</a></li>
+                        <li><a href="#">Менторам и экспертам</a></li>
+                        <li><a href="#">Совет организации</a></li>
+                        <li><a href="#">Блог&СМИ</a></li>
+                    </ul>
+                </nav>
+
+                <button class="hamburger-btn">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+
+        </header>
+
+        <div class="video-wrapper">
+
+            <video autoplay  poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
+                <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+                <source src="http://demosthenes.info/assets/videos/polina.webm" type="video/webm">
+                <source src="http://demosthenes.info/assets/videos/polina.mp4" type="video/mp4">
+            </video>
+
+            <div class="video-caption">
+
+                <div class="block-inner">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-8">Передача лучшего бизнес-опыта<br>через наставничество</div>
+                        <div class="col-md-12 col-lg-8">
+                            <a class="more" href="#">Возможности</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="mission">
 
         <div class="block-inner">
 
-            <a href="#" class="logo">Спутник</a>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="caption">Цели «Cпутника»</div>
+                </div>
+                <div class="col-md-8">
+                    <div class="block-text">
+                        Передача опыта от самых успешных самым перспективным предпринимателям.
+                        Прошедшие отбор получают поддержку наставников из числа выдающихся бизнесменов, на весь
+                        жизненный цикл бизнеса, что позволяет им стать эффективнее и обеспечить кратный рост.
+                    </div>
+                </div>
+            </div>
 
-            <nav class="navigation">
-                <ul class="list-unstyled list-inline">
-                    <li><a href="#">Предпринимателям</a></li>
-                    <li><a href="#">Менторам и экспертам</a></li>
-                    <li><a href="#">Совет организации</a></li>
-                    <li><a href="#">Блог&СМИ</a></li>
-                </ul>
-            </nav>
-
-            <button class="hamburger-btn">
-                <span class="hamburger"></span>
-            </button>
         </div>
 
-    </header>
-
-    <div class="video-wrapper">
-
-        <video autoplay  poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
-            <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-            <source src="http://demosthenes.info/assets/videos/polina.webm" type="video/webm">
-            <source src="http://demosthenes.info/assets/videos/polina.mp4" type="video/mp4">
-        </video>
-
-    </div>
+    </section>
 
 </div>
 
