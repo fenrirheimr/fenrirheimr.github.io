@@ -29,11 +29,15 @@
 
             var windowsWidth = $(window).width();
 
-            //if(windowsWidth >= 1200) { // то нужно потом ввернуть
-            //    var pageWrapper = $('.page-wrapper');
-            //    var footerHeight = $('.footer').outerHeight();
-            //    pageWrapper.css('marginBottom', footerHeight);
-            //}
+            if(windowsWidth >= 1200) { // то нужно потом ввернуть
+                var pageWrapper = $('.page-wrapper');
+                var footerHeight = $('.footer').outerHeight()-56;
+                // TODO: хз откуда вылазят эти 56 пикселей надо будет найти
+
+                console.log(footerHeight)
+
+                pageWrapper.css('marginBottom', footerHeight);
+            }
 
             var headerSection = $('.header-wrapper');
             var videoBlockHeight = headerSection.find('video').height();
@@ -48,7 +52,10 @@
         },
 
         equalHeight:function(){
-            var equalBlock = $('.whom .whom-item');
+            var equalWhomItem = $('.whom .whom-item');
+            equalWhomItem.matchHeight();
+
+            var equalBlock = $('.blocks .row > div');
             equalBlock.matchHeight();
         }
     });
