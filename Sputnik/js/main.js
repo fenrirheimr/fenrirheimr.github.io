@@ -29,15 +29,21 @@
 
             var windowsWidth = $(window).width();
 
-            if(windowsWidth >= 1200) {
-                var pageWrapper = $('.page-wrapper');
-                var footerHeight = $('.footer').outerHeight();
-                pageWrapper.css('marginBottom', footerHeight);
-            }
+            //if(windowsWidth >= 1200) { // то нужно потом ввернуть
+            //    var pageWrapper = $('.page-wrapper');
+            //    var footerHeight = $('.footer').outerHeight();
+            //    pageWrapper.css('marginBottom', footerHeight);
+            //}
 
             var headerSection = $('.header-wrapper');
             var videoBlockHeight = headerSection.find('video').height();
-            headerSection.height(videoBlockHeight)
+            headerSection.css('height', videoBlockHeight);
+
+            $('section').addClass('hidden-block').viewportChecker({
+                classToAdd: 'visible animated fadeIn',
+                classToRemove:'hidden-block',
+                offset: 100
+            });
 
         },
 
