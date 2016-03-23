@@ -58,6 +58,12 @@
 
             var equalBlock = $('.blocks .row > div');
             equalBlock.matchHeight();
+
+            var equalThumbs = $('.thumbnail .caption');
+            equalThumbs.matchHeight();
+
+            var equalTeamThumbs = $('.team .thumbnail > div');
+            equalTeamThumbs.matchHeight();
         },
         hamburgerBtn:function(){
 
