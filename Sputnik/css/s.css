@@ -280,7 +280,7 @@ h3 {}
 /* whom */
 
 .whom {
-    background: #57585a url("../img/bg/bg02.jpg") no-repeat bottom left;
+    background: #57585a url("../img/bg/bg01-compressor.jpg") no-repeat bottom left;
     padding: 100px 15px; background-attachment: fixed !important;
 }
 .whom .whom-item {padding-left: 80px;}
@@ -373,6 +373,25 @@ h3 {}
 }
 
 .result .info a:hover:after{-webkit-transform:scaleX(1) translateZ(0);transform:scaleX(1) translateZ(0)}
+
+/* match */
+
+.match {
+    background: #57585a url("../img/bg/bg02.jpg") no-repeat bottom left; background-attachment: fixed !important;
+    padding: 80px 15px 190px; font-family: 'Futura New Book';
+}
+.match .caption {font-size: 40px; color: #a0a0a0; margin-bottom: 100px;}
+.match .num {font-size: 45px; color: #ceb094;}
+.match .text {font-size: 30px; line-height: 34px; color: #fff;}
+
+.refresh {
+    font-size: 20px; color: #474747; font-family: 'Futura New Book'; border-bottom: 1px solid #ceb094;
+    position: relative; margin-left: 460px; margin-top: 10px; display: inline-block;
+}
+.refresh:before {
+    display: block; width: 24px; height: 27px; content: ' '; background: url("../img/refresh.png") no-repeat 0 0;
+    position: absolute; top: 0; left: -34px;
+}
 
 /* bxSlider */
 
