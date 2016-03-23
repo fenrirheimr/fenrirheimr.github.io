@@ -85,7 +85,8 @@ a:focus {text-decoration: none;}
 .header-wrapper {position: relative; min-height: 600px}
 
 .header {position: absolute; z-index: 99; width: 100%; padding: 0 15px; height: 100px;}
-.entrepreneur .header {border-bottom: 1px solid #a1a4a9;}
+.entrepreneur .header,
+.blog .header {border-bottom: 1px solid #a1a4a9;}
 
 .header .logo {float: left; font-size: 34px; color: #fff; font-weight: bold; margin-top: 20px;}
 .header .block-inner {}
@@ -95,6 +96,27 @@ a:focus {text-decoration: none;}
 .direction .header .logo {color: #000;}
 .direction .header nav ul li a {color: #000;}
 .direction .header nav ul li a:after {background:#000;}
+
+.tag .header {background: #fff; padding: 0 30px;}
+.tag .header .logo {color: #000;}
+.tag .header nav ul li a {color: #000;}
+.tag .header nav ul li a:after {background:#000;}
+.tag .tag-meta {height: 600px; background: #f5f5f5; padding: 210px 15px 30px; position: relative;}
+.tag .tag-meta .caption {color: #ceb094; font-size: 55px; font-family: 'Futura New Demi';}
+.tag .tag-meta .tag-info {position: absolute; bottom: 30px;}
+.tag .tag-meta .tag-info .posts {font-size: 12px; color: #474747; font-family: 'Futura New Demi'; text-transform: uppercase;}
+.tag .tag-meta .tag-info .update {font-size: 16px; color: #aaa; font-family: 'Futura New Book';}
+
+.entry-wrapper {padding: 90px 15px 70px;}
+.entry-wrapper .entry {padding: 0 0 55px; border-bottom: 1px solid #e6e6e6; margin-bottom: 70px; font-family: 'Futura New Book';}
+.entry-wrapper .entry .caption {font-size: 50px; line-height: 55px; color: #ceb094; margin-bottom: 20px;}
+.entry-wrapper .entry .text {font-size: 26px; line-height: 32px; color: #474747; margin-bottom: 20px;}
+
+.entry-wrapper .entry .meta a {color: #ceb094; font-size: 12px; text-transform: uppercase; font-family: 'Futura New Demi';}
+.entry-wrapper .entry .meta .tags {}
+.entry-wrapper .entry .meta .tags li {}
+.entry-wrapper .entry .meta .tags li:after {content: ','; color: #474747;}
+.entry-wrapper .entry .meta .entry-date {font-size: 16px; color: #aaa}
 
 /* Nav */
 
@@ -256,6 +278,7 @@ a:focus {text-decoration: none;}
     font-family: 'Futura New Book';font-size: 55px;line-height: 60px; bottom: auto; top: 320px;
 }
 
+.blog .promo-wrapper {height: 700px;}
 .blog .promo-wrapper .promo-img {position: relative; height: 700px;}
 .blog .promo-wrapper .promo-img > img {position: absolute; width: 100%; bottom: 0;}
 
