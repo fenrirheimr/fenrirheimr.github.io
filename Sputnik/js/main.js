@@ -9,7 +9,7 @@
             utils.customJS();
             utils.equalHeight();
             utils.hamburgerBtn();
-
+            utils.bxSlider();
         }
     });
 
@@ -69,6 +69,14 @@
                 nav.toggle();
             })
 
+        },
+        bxSlider:function(){
+            $('.slider .slider-wrapper').bxSlider({
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                slideMargin: 0
+            });
         }
     });
 

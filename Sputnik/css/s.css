@@ -271,7 +271,7 @@ h3 {}
 
 /* text block */
 
-.text-block {font-family: 'Futura New Book'; padding: 90px 0; /*margin-bottom: 80px;*/}
+.text-block {font-family: 'Futura New Book'; padding: 90px 0; margin-bottom: 80px;}
 .text-block .caption {font-size: 45px; line-height: 55px; color: #ceb094;}
 .text-block .text {font-size: 24px; line-height: 34px; color: #474747;}
 .text-block .singIn-btn {margin: 10px 0 20px}
@@ -313,23 +313,26 @@ h3 {}
 .blocks {background: #f5f5f5; padding: 100px 30px;}
 .blocks .row > div {padding: 0;}
 .blocks .row .half {background: #fff; padding: 80px 80px 0; font-family: 'Futura New Book';}
-.blocks .row .half .caption {color: #ceb094; font-size: 36px; line-height: 36px; margin-bottom: 40px; position: relative;}
+.blocks .row .half .caption {color: #ceb094; font-size: 50px; line-height: 45px; margin-bottom: 40px; position: relative;}
 .blocks .row .half .caption .num {color: #ceb094; font-size: 45px; position: absolute; left: -20px; top: -20px;}
 .blocks .row .half .caption .num:before {
     display: block; width: 3px; height: 100px; background: #ceb094; transform: rotate(25deg); content: ' ';
     position: absolute; right: -15px; bottom: -54px;
 }
 
-.blocks .row .half .text {color: #474747; font-size: 22px; line-height: 28px; margin-bottom: 40px;}
+.blocks .row .half .text {color: #474747; font-size: 26px; line-height: 32px; margin-bottom: 40px;}
 .blocks .row .half .author {color: #aaa; font-size: 20px; line-height: 30px;}
-.blocks .img-wrapper {}
-.blocks .img-wrapper img {width: 100%;}
-
 .blocks .section-caption {color: #a0a0a0; font-size: 40px; line-height: 50px; font-family: 'Futura New Book'; margin-bottom: 60px;}
 
-.slider .half .caption {padding-left: 80px;}
+.img-wrapper {position: relative;}
+.img-wrapper img {width: 100%;}
+.img-wrapper:before {
+    display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; content: ' ';
+    background: rgba(0,0,0,0.3);
+}
+.img-wrapper:hover:before {display: none;}
 
-/* maintenance */
+    /* maintenance */
 
 .maintenance {background: #fff; padding: 140px 0; font-family: 'Futura New Book';}
 .maintenance .caption {color: #ceb094; font-size: 45px; line-height: 99px;}
@@ -343,6 +346,40 @@ h3 {}
     font-family: 'Futura New Book';font-size: 20px; line-height: 30px; color: #474747; display: inline-block;
     border-bottom: 4px solid #ceb094;
 }
+/* bxSlider */
+
+.slider .half .caption {padding-left: 80px;}
+
+.slider-wrapper .row > div {padding: 0;}
+.slider-wrapper .row .half {padding: 80px 80px 0;}
+
+.slider-wrapper .slider-item {width: 100%; background: #fff; font-family: 'Futura New Book';}
+.slider-wrapper .slider-item .half {width: 50%; float: left; padding: 80px 80px 0;}
+.slider-wrapper .slider-item .img-wrapper {width: 50%; float: left;}
+
+.slider-wrapper .slider-item .half .caption {color: #ceb094; font-size: 50px; line-height: 45px; margin-bottom: 40px; position: relative;}
+.slider-wrapper .slider-item .half .caption .num {color: #ceb094; font-size: 45px; position: absolute; left: -20px; top: -20px;}
+.slider-wrapper .slider-item .half .caption .num:before {
+    display: block; width: 3px; height: 100px; background: #ceb094; transform: rotate(25deg); content: ' ';
+    position: absolute; right: -15px; bottom: -54px;
+}
+.slider-wrapper .slider-item .half .text {color: #474747; font-size: 26px; line-height: 32px;}
+
+.bx-wrapper {position: relative;}
+.bx-wrapper .bx-viewport {height: auto !important;}
+.bx-controls .bx-controls-direction {position: absolute; top: 50%; margin-top: -30px; width: 100%;}
+.bx-controls .bx-controls-direction .bx-prev {display: none;}
+.bx-controls .bx-controls-direction .bx-next {
+    float: right; width: 60px; height: 60px; border-radius: 30px; background: url("../img/arr-next.png") no-repeat 21px 50%;
+    text-indent: 9999px; overflow: hidden; border: 1px solid transparent; margin-right: 26px;
+}
+.bx-controls .bx-controls-direction .bx-next:hover {border: 1px solid #fff;}
+
+.bx-controls .bx-pager {position: absolute; bottom: 35px; width: 100%; display: flex;  justify-content: space-between;}
+.bx-controls .bx-pager .bx-pager-item {display: inline-block;}
+.bx-controls .bx-pager .bx-pager-item a {color: #ceb094; font-size: 45px; font-family: 'sofia_prolight' !important;}
+.bx-controls .bx-pager .bx-pager-item a.active {text-decoration: underline;}
+
 /* Footer */
 
 .footer {
