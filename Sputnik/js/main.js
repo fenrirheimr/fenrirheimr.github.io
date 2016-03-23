@@ -41,7 +41,7 @@
             }
 
             var headerSection = $('.header-wrapper');
-            var videoBlockHeight = headerSection.find('video').height();
+            var videoBlockHeight = headerSection.find('.promo-wrapper').height();
             headerSection.css('height', videoBlockHeight);
 
             $('section').addClass('hidden-block').viewportChecker({

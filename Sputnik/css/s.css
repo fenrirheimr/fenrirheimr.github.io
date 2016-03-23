@@ -81,60 +81,13 @@ a:focus {text-decoration: none;}
 
 
 /* Header */
-.header-wrapper {position: relative; max-height: 600px}
-.header {position: absolute; z-index: 99; width: 100%; padding: 0 15px;}
+.header-wrapper {position: relative; min-height: 600px}
+.header {position: absolute; z-index: 99; width: 100%; padding: 0 15px; height: 100px;}
+
+.entrepreneur .header {border-bottom: 1px solid #a1a4a9;}
+
 .header .logo {float: left; font-size: 34px; color: #fff; font-weight: bold; margin-top: 20px;}
 .header .block-inner {}
-
-/* video on background */
-
-.video-wrapper {position: absolute; width: 100%; max-height: 600px; overflow: hidden; z-index: 0;}
-.video-wrapper:before {
-    display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; content: ' ';
-    background: rgba(0,0,0,0.5);
-}
-
-
-.video-wrapper video {
-    position: relative;
-    /*top: 50%;*/
-    /*left: 50%;*/
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    /*transform: translateX(-50%) translateY(-50%);*/
-    background: url('http://demosthenes.info/assets/images/polina.jpg') no-repeat;
-    background-size: cover;
-    transition: 1s opacity;
-}
-
-.video-caption {
-    font-family: 'Futura New Demi'; font-size: 45px; line-height: 45px; color: #fff;
-    position: absolute; bottom: 60px; width: 100%; padding: 0 15px;
-}
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    .video-caption {font-size: 64px; line-height: 70px;}
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    .video-caption {font-size: 63px; line-height: 60px;}
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .video-caption {font-size: 76px; line-height: 70px;}
-}
-
-.video-caption .more {
-    font-family: 'Futura New Book';font-size: 34px; line-height: 44px; color: #fff; display: inline-block;
-    border-bottom: 4px solid #ceb094; margin-top: 58px;
-}
-
 
 /* Nav */
 
@@ -263,6 +216,43 @@ a:focus {text-decoration: none;}
     .hamburger-btn {display: none; width: 50px; height: 60px;}
 }
 
+/* promo img & video on background */
+
+.promo-wrapper {position: absolute; width: 100%; height: 600px; overflow: hidden; z-index: 0;}
+.promo-wrapper:before {
+    display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; content: ' ';
+    background: rgba(0,0,0,0.5);
+}
+
+
+.promo-wrapper video {
+    position: relative; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -100;
+
+    transition: 1s opacity;
+}
+
+.promo-caption {
+    font-family: 'Futura New Demi'; font-size: 45px; line-height: 45px; color: #fff;
+    position: absolute; bottom: 60px; width: 100%; padding: 0 15px;
+}
+
+.promo-caption .author {font-size: 25px; line-height: 30px; margin-top: 30px;}
+.promo-caption .more {
+    font-family: 'Futura New Book';font-size: 34px; line-height: 44px; color: #fff; display: inline-block;
+    border-bottom: 4px solid #ceb094; margin-top: 58px;
+}
+
+.entrepreneur .promo-wrapper {height: 700px;}
+.entrepreneur .promo-caption {
+    font-family: 'Futura New Book';font-size: 55px;line-height: 60px; bottom: auto; top: 320px;
+}
+
+@media (min-width: 768px) {.promo-caption {font-size: 64px; line-height: 70px;}}
+
+@media (min-width: 992px) {.promo-caption {font-size: 63px; line-height: 60px;}}
+
+@media (min-width: 1200px) {.promo-caption {font-size: 76px; line-height: 70px;}}
+
 /* Main */
 
 h1 {}
@@ -274,11 +264,18 @@ h3 {}
 .hidden-block {opacity:0;}
 .visible-block {opacity:1;}
 
-/* mission */
+.singIn-btn {
+    border: 3px solid #ceb094; color: #ceb094 !important; font-size: 22px; font-family: 'Futura New Demi';
+    text-transform: uppercase; padding: 12px 60px; background: #fff; display: inline-block;
+}
 
-.mission {font-family: 'Futura New Book'; padding: 90px 0; margin-bottom: 80px;}
-.mission .caption {font-size: 45px; line-height: 55px; color: #ceb094;}
-.mission .block-text {font-size: 24px; line-height: 34px; color: #474747;}
+/* text block */
+
+.text-block {font-family: 'Futura New Book'; padding: 90px 0; /*margin-bottom: 80px;*/}
+.text-block .caption {font-size: 45px; line-height: 55px; color: #ceb094;}
+.text-block .text {font-size: 24px; line-height: 34px; color: #474747;}
+.text-block .singIn-btn {margin: 10px 0 20px}
+
 
 /* whom */
 
@@ -287,6 +284,9 @@ h3 {}
     padding: 100px 15px; background-attachment: fixed !important;
 }
 .whom .whom-item {padding-left: 80px;}
+@media (min-width: 768px) {
+    .whom .row > div:first-of-type {margin-bottom: 130px;}
+}
 .whom .caption {position: relative; margin-bottom: 50px;}
 .whom .caption .num {color: #ceb094; font-size: 45px; position: absolute; left: -80px; top: -53px;}
 .whom .caption .num:before {
@@ -303,7 +303,6 @@ h3 {}
     display: block; width: 17px; height: 0; position: absolute; left: -25px; margin-top: 19px;
     border-bottom: 1px solid #bfbfc0; border-top: 1px solid #fff; content: ' ';
 }
-
 .whom .more {
     font-family: 'Futura New Book';font-size: 20px; line-height: 30px; color: #fff; display: inline-block;
     border-bottom: 4px solid #ceb094; margin-left: 80px; margin-top: 50px;
@@ -314,12 +313,21 @@ h3 {}
 .blocks {background: #f5f5f5; padding: 100px 30px;}
 .blocks .row > div {padding: 0;}
 .blocks .row .half {background: #fff; padding: 80px 80px 0; font-family: 'Futura New Book';}
-.blocks .row .half .caption {color: #ceb094; font-size: 36px; line-height: 36px; margin-bottom: 40px;}
+.blocks .row .half .caption {color: #ceb094; font-size: 36px; line-height: 36px; margin-bottom: 40px; position: relative;}
+.blocks .row .half .caption .num {color: #ceb094; font-size: 45px; position: absolute; left: -20px; top: -20px;}
+.blocks .row .half .caption .num:before {
+    display: block; width: 3px; height: 100px; background: #ceb094; transform: rotate(25deg); content: ' ';
+    position: absolute; right: -15px; bottom: -54px;
+}
+
 .blocks .row .half .text {color: #474747; font-size: 22px; line-height: 28px; margin-bottom: 40px;}
 .blocks .row .half .author {color: #aaa; font-size: 20px; line-height: 30px;}
 .blocks .img-wrapper {}
 .blocks .img-wrapper img {width: 100%;}
 
+.blocks .section-caption {color: #a0a0a0; font-size: 40px; line-height: 50px; font-family: 'Futura New Book'; margin-bottom: 60px;}
+
+.slider .half .caption {padding-left: 80px;}
 
 /* maintenance */
 
