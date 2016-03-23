@@ -10,6 +10,7 @@
             utils.equalHeight();
             utils.hamburgerBtn();
             utils.bxSlider();
+            utils.tagCloud();
         }
     });
 
@@ -49,7 +50,6 @@
                 classToRemove:'hidden-block',
                 offset: 100
             });
-
         },
 
         equalHeight:function(){
@@ -64,6 +64,9 @@
 
             var equalTeamThumbs = $('.team .thumbnail > div');
             equalTeamThumbs.matchHeight();
+
+            var equalBlogCaption = $('.blog-entry .caption');
+            equalBlogCaption.matchHeight();
         },
         hamburgerBtn:function(){
 
@@ -82,6 +85,42 @@
                 maxSlides: 1,
                 moveSlides: 1,
                 slideMargin: 0
+            });
+        },
+        tagCloud:function(){
+            var words = [
+                {text: "Управление", weight: 13, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Lorem", weight: 13, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Маркетинг", weight: 9.5, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Ipsum", weight: 10.5, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Инструменты", weight: 7.4, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Dolor", weight: 9.4, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Менеджмент", weight: 8, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "PR-стратегии", weight: 10, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Sit", weight: 8, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Amet", weight: 6.2, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Consectetur", weight: 5, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Adipiscing", weight: 5, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Менеджмент", weight: 5, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Управление", weight: 13, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Управление", weight: 13, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Lorem", weight: 13, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Маркетинг", weight: 9.5, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Ipsum", weight: 10.5, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Инструменты", weight: 7.4, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Dolor", weight: 9.4, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Менеджмент", weight: 8, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "PR-стратегии", weight: 10, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Sit", weight: 8, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Amet", weight: 6.2, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Consectetur", weight: 5, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Adipiscing", weight: 5, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Менеджмент", weight: 5, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'},
+                {text: "Управление", weight: 13, link: 'http://fenrirheimr.github.io/Sputnik/blog.html'}
+            ];
+
+            $('.tag-wrapper').jQCloud(words, {
+                height: 400
             });
         }
     });
