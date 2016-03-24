@@ -87,6 +87,12 @@
 
             var equalBlogCaption = $('.blog-entry .caption');
             equalBlogCaption.matchHeight();
+
+            var equalBlogText = $('.blog-entry .text');
+            equalBlogText.matchHeight();
+
+            var equalMassMedia = $('.mass-media .row > div');
+            equalMassMedia.matchHeight();
         },
         hamburgerBtn:function(){
 
@@ -104,7 +110,8 @@
                 minSlides: 1,
                 maxSlides: 1,
                 moveSlides: 1,
-                slideMargin: 0
+                slideMargin: 0,
+                adaptiveHeight: true
             });
         },
         tagCloud:function(){
