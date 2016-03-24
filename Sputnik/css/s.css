@@ -107,16 +107,34 @@ a:focus {text-decoration: none;}
 .tag .tag-meta .tag-info .posts {font-size: 12px; color: #474747; font-family: 'Futura New Demi'; text-transform: uppercase;}
 .tag .tag-meta .tag-info .update {font-size: 16px; color: #aaa; font-family: 'Futura New Book';}
 
+.tag.post .tag-meta .caption {color: #474747; font-size: 55px; line-height: 60px; font-family: 'Futura New Demi';}
+.tag.post .tag-meta .meta {position: absolute; bottom: 30px;}
+.tag.post .tag-meta .meta a {color: #ceb094; font-size: 12px; text-transform: uppercase; font-family: 'Futura New Demi';}
+.tag.post .tag-meta .meta .tags {}
+.tag.post .tag-meta .meta .tags li {}
+.tag.post .tag-meta .meta .tags li:after {content: ','; color: #474747;}
+.tag.post .tag-meta .meta .tags li:last-child:after {content: '';}
+.tag.post .tag-meta .meta .entry-date {font-size: 16px; color: #aaa}
+
 .entry-wrapper {padding: 90px 15px 70px;}
 .entry-wrapper .entry {padding: 0 0 55px; border-bottom: 1px solid #e6e6e6; margin-bottom: 70px; font-family: 'Futura New Book';}
-.entry-wrapper .entry .caption {font-size: 50px; line-height: 55px; color: #ceb094; margin-bottom: 20px;}
+.entry-wrapper .entry .caption {font-size: 50px; line-height: 55px; color: #ceb094; margin-bottom: 20px; display: inline-block;}
 .entry-wrapper .entry .text {font-size: 26px; line-height: 32px; color: #474747; margin-bottom: 20px;}
 
 .entry-wrapper .entry .meta a {color: #ceb094; font-size: 12px; text-transform: uppercase; font-family: 'Futura New Demi';}
 .entry-wrapper .entry .meta .tags {}
 .entry-wrapper .entry .meta .tags li {}
 .entry-wrapper .entry .meta .tags li:after {content: ','; color: #474747;}
+.entry-wrapper .entry .meta .tags li:last-child:after {content: '';}
 .entry-wrapper .entry .meta .entry-date {font-size: 16px; color: #aaa}
+
+.entry-wrapper .entry-text p {font-size: 24px; line-height: 34px; color: #474747; font-family: 'Futura New Book'; margin-bottom: 50px;}
+.entry-wrapper .entry-author {font-family: 'Futura New Book';}
+.entry-wrapper .entry-author h3 {color: #474747; font-size: 30px;}
+.entry-wrapper .entry-author p {color: #aaa; font-size: 20px;}
+.entry-wrapper .entry-author img {max-width: 100%;}
+.entry-wrapper .mess {color: #ceb094; font-size: 24px; line-height: 30px; font-family: 'Futura New Demi';}
+
 
 /* Nav */
 
@@ -299,6 +317,7 @@ a:focus {text-decoration: none;}
 .last-entry .blog-entry .meta .tags {}
 .last-entry .blog-entry .meta .tags li {}
 .last-entry .blog-entry .meta .tags li:after {content: ','; color: #fff;}
+.last-entry .blog-entry .meta .tags li:last-child:after {content: '';}
 .last-entry .blog-entry .meta .entry-date {font-size: 16px; color: #aaa}
 
 /* all tags */
