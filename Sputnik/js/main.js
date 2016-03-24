@@ -50,6 +50,26 @@
                 classToRemove:'hidden-block',
                 offset: 100
             });
+
+            $('.material input, .material textarea').blur(function() {
+                var $this = $(this);
+                if ($this.val())
+                    $this.addClass('used');
+                else
+                    $this.removeClass('used');
+            });
+
+            $('textarea').autosize();
+
+            $('select').selectbox({
+                onOpen: function (inst) {
+                    //firstRow.hide();
+                },
+                onClose: function (inst) {
+                    //firstRow.show();
+                },
+                effect: "slide"
+            });
         },
 
         equalHeight:function(){

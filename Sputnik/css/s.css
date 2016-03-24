@@ -135,6 +135,76 @@ a:focus {text-decoration: none;}
 .entry-wrapper .entry-author img {max-width: 100%;}
 .entry-wrapper .mess {color: #ceb094; font-size: 24px; line-height: 30px; font-family: 'Futura New Demi';}
 
+/* request */
+
+.request .header-wrapper {position: relative; min-height: 400px}
+.request .header {background: #fff; padding: 0 30px;}
+.request .header .logo {color: #000;}
+.request .header nav ul li a {color: #000;}
+.request .header nav ul li a:after {background:#000;}
+.request .request-header {height: 400px; background: #f5f5f5; padding: 200px 15px 30px; position: relative;}
+.request .request-header .caption {font-size: 55px; font-family: 'Futura New Demi';}
+
+.request-wrapper {padding: 100px 15px 200px ;}
+
+.request-wrapper .material .row {margin-bottom: 30px;}
+
+/* Material forms */
+
+.material {margin-bottom: 0;}
+.material .custom-input {position: relative;}
+.material .custom-input label {
+    color: #474747; font-weight:normal; position:absolute; pointer-events:none;font-size: 30px;
+    left: 0; top: 0; transition:0.2s ease all; font-family: 'Futura New Book';
+}
+
+.material .custom-input input,
+.material .custom-input textarea {
+    padding: 20px 20px 5px 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ceb094;
+    background: transparent; color: #474747;
+    font-size: 20px; font-family: 'Futura New Book';
+}
+
+.material .custom-input textarea {
+    overflow: auto; box-shadow: none;
+    resize: none;
+    height: 60px; padding: 20px 30px 5px 0;
+}
+.material .custom-input input:focus,
+.material .custom-input textarea:focus { outline:none; }
+
+.material .custom-input .bar {position:relative; display:block; width: 100%; }
+.material .custom-input .bar:before,
+.material .custom-input .bar:after 	{
+    content:' '; height:3px; width:0; bottom:1px; position: absolute;
+    background: #ceb094; transition:0.2s ease all;
+}
+.material .custom-input .bar:before {left:50%;}
+.material .custom-input .bar:after {right:50%;}
+
+.material .custom-input input:focus ~ label,
+.material .custom-input input.used ~ label,
+.material .custom-input textarea:focus ~ label,
+.material .custom-input textarea.used ~ label  {
+    top: -5px;
+    font-size: 16px;
+    color: #757575;
+    z-index: 9;
+}
+
+.material .custom-input input:focus ~ .bar:before,
+.material .custom-input input:focus ~ .bar:after,
+.material .custom-input textarea:focus ~ .bar:before,
+.material .custom-input textarea:focus ~ .bar:after {width:50%;}
+.material legend {
+    font-size: 12px; text-transform: uppercase; position: relative; color: #aaa; font-family: 'Futura New Book';
+    margin-bottom: 50px;
+}
+.material legend span {background: #fff; padding: 0 10px 0 0; bottom: -10px; position: relative;}
 
 /* Nav */
 
@@ -310,7 +380,7 @@ a:focus {text-decoration: none;}
 .last-entry {position: absolute; top: 90px; left: 0; right: 0; bottom: 0; padding: 100px 15px 0;}
 .last-entry .block-title {font-family: 'Futura New Demi';font-size: 14px; text-transform: uppercase; color: #fff; margin-bottom: 50px;}
 .last-entry .blog-entry {font-family: 'Futura New Book'; color: #fff;}
-.last-entry .blog-entry .caption {font-size: 40px; line-height: 45px; margin-bottom: 30px;}
+.last-entry .blog-entry .caption {font-size: 40px; line-height: 45px; margin-bottom: 30px; color: #fff; display: inline-block;}
 .last-entry .blog-entry .text {font-size: 22px; line-height: 28px; margin-bottom: 35px;}
 .last-entry .blog-entry .meta {border-top: 1px solid #535254; padding-top: 20px;}
 .last-entry .blog-entry .meta a {color: #ceb094; font-size: 12px; text-transform: uppercase; font-family: 'Futura New Demi';}
