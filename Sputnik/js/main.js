@@ -91,7 +91,7 @@
             $('.promo-caption .more').click(function() {
                 var href = $.attr(this, 'href');
                 $root.animate({
-                    scrollTop: $(href).offset().top
+                    scrollTop: $(href).offset().top-70
                 }, 500, function () {
                     window.location.hash = href;
                 });

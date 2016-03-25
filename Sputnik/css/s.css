@@ -519,7 +519,7 @@ strong {font-family: 'Futura New Demi';}
 }
 .mass-media .img-wrapper:before {display: none;}
 
-.mass-media .caption .more {margin-left: 40px; vertical-align: middle;}
+.mass-media .caption .more {margin-left: 40px; vertical-align: middle; margin-bottom: 0 !important;}
 
 
 /* result */
