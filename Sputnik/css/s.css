@@ -660,8 +660,9 @@ strong {font-family: 'Futura New Demi';}
 .footer .social li a:hover:after{-webkit-transform:scaleX(1) translateZ(0);transform:scaleX(1) translateZ(0)}
 
 /*  */
+@media (min-width: 320px) and (max-width: 480px) {}
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
 
     .hamburger-btn.open + .nav-slanted {
         background: rgba(57,57,57, 0.98); position: fixed; top: 0; bottom: 0; left: 0; right: 0;
@@ -719,7 +720,7 @@ strong {font-family: 'Futura New Demi';}
 
     .whom .whom-item {padding-left: 0;}
     .whom .caption {padding-top: 50px;}
-    .whom .caption .text {font-size: 45px; line-height: 50px;}
+    .whom .caption .text {font-size: 30px; line-height: 35px;}
     .whom .more {margin-left: 0; margin-top: 10px;}
     .whom .caption .num {left: 0;}
     .whom .row > div:first-child {margin-bottom: 120px;}
