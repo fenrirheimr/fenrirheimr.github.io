@@ -398,7 +398,13 @@ strong {font-family: 'Futura New Demi';}
 
 .team {font-family: 'Futura New Book';}
 .team .thumbnail {margin-bottom: 80px; padding-right: 30px;}
-.team .thumbnail .img-wrapper {float: left; width: 50%; height: 280px;}
+.team .thumbnail .img-wrapper {float: left; width: 50%; height: 280px; overflow: hidden;}
+.team .thumbnail .img-wrapper img {
+    height: 100%; width: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
 .team .thumbnail .caption {float: left; width: 50%; position: relative;}
 .team .thumbnail .caption h3 {font-size: 30px; margin: 0 0 10px 0;}
 .team .thumbnail .caption .links {position: absolute; bottom: 30px;}
