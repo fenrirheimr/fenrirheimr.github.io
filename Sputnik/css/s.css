@@ -903,6 +903,9 @@ strong {font-family: 'Futura New Demi';}
     .tag .header nav ul li a {color: #fff;}
     .tag .header nav ul li a:after {background:#fff;}
 
+    .request .header nav ul li a {color: #fff;}
+    .request .header nav ul li a:after {background:#fff;}
+
     .promo-wrapper video {display: none;}
 
 
