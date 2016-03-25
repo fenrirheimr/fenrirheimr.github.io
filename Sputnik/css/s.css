@@ -954,7 +954,7 @@ strong {font-family: 'Futura New Demi';}
     .material .custom-input label {font-size: 20px; top: 20px;}
     .sbHolder {font-size: 20px;}
 
-
+    .mass-media .caption .more {margin-left: 0;}
 }
 
 
@@ -1118,6 +1118,14 @@ strong {font-family: 'Futura New Demi';}
     .team .thumbnail .caption {float: none; width: 100%; height: auto;}
     .team .thumbnail .caption .links {position: relative; bottom: auto;}
     .team .thumbnail .caption .links a {font-size: 30px;}
+
+    .team .thumbnail .img-wrapper img {
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
 
     .direction .header nav ul li a {color: #fff;}
     .direction .header nav ul li a:after {background:#fff;}
@@ -1344,6 +1352,14 @@ strong {font-family: 'Futura New Demi';}
     .team .thumbnail .caption {float: none; width: 100%; height: auto;}
     .team .thumbnail .caption .links {position: relative; bottom: auto;}
     .team .thumbnail .caption .links a {font-size: 45px;}
+
+    .team .thumbnail .img-wrapper img {
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
 
     .tag .header-wrapper {min-height: 480px;}
     .tag .tag-meta {height: 480px; padding: 130px 15px 30px;}
