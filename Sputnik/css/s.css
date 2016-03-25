@@ -667,7 +667,7 @@ strong {font-family: 'Futura New Demi';}
     }
     .header .logo {margin-top: 20px;}
 
-    .header-wrapper {min-height: 0;}
+    .header-wrapper {min-height: 0; height: auto!important;}
     .promo-wrapper {
         height: auto;
         position: relative;
@@ -699,21 +699,21 @@ strong {font-family: 'Futura New Demi';}
 
     }
     .header nav ul {display: block; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);}
-    .header nav ul li {display: block; margin: 0; text-align: center;}
-    .header nav ul li a {font-size: 30px; position: relative; color: #fff; font-family: 'Futura New Demi';}
+    .header nav ul li {display: block; margin: 15px 0 ; text-align: center;}
+    .header nav ul li a {font-size: 24px; line-height: 30px; position: relative; color: #fff; font-family: 'Futura New Demi';}
 
     .footer .fr {padding: 80px 30px 60px;}
     .footer .caption {height: 50px;}
-    .footer .footer-text {font-size: 25px; line-height: 30px; padding-bottom: 50px;}
-    .footer .f-phone {font-size: 30px;padding-bottom: 35px;}
-    .f-mail {font-size: 35px;}
+    .footer .footer-text {font-size: 20px; line-height: 26px; padding-bottom: 50px;}
+    .footer .f-phone {font-size: 26px;padding-bottom: 20px; white-space: nowrap;}
+    .f-mail {font-size: 20px;}
 
     .footer .social {}
-    .footer .social li {width: 100%; line-height: 50px;}
-    .footer .social li a {font-size: 45px;}
+    .footer .social li {width: 100%; line-height: 30px;}
+    .footer .social li a {font-size: 22px;}
 
-    .maintenance  {padding: 60px 30px;}
-    .maintenance .caption {margin-bottom: 40px; font-size: 45px; line-height: 50px;}
+    .maintenance  {padding: 40px 30px;}
+    .maintenance .caption {margin-bottom: 40px; font-size: 30px; line-height: 35px;}
     .maintenance img {width: 100%; display: block; margin: 50px auto;}
 
     .entrepreneur .promo-wrapper,
@@ -721,9 +721,9 @@ strong {font-family: 'Futura New Demi';}
     .promo-wrapper .promo-img img {height: 100%; margin-left: -200px;}
     .entrepreneur .promo-caption {top: 200px ;font-size: 45px; line-height: 50px;}
 
-    .text-block {padding: 70px 0;}
-    .text-block .caption {font-size: 45px; line-height: 50px;}
-    .text-block .text {font-size: 35px; line-height: 40px;}
+    .text-block {padding: 40px 0; margin-bottom: 40px;}
+    .text-block .caption {font-size: 30px; line-height: 35px;}
+    .text-block .text {font-size: 20px; line-height: 26px;}
     .text-block .singIn-btn {display: block; width: 70%; height: 80px; margin: 40px auto; font-size: 22px;
         line-height: 55px; text-align: center;}
     .text-block iframe {width: 100%; margin: 60px 0; min-height: 400px;}
@@ -739,22 +739,27 @@ strong {font-family: 'Futura New Demi';}
         left: -45px;
     }
 
+    .whom {padding: 60px 15px;}
     .whom .whom-item {padding-left: 0;}
-    .whom .caption {padding-top: 50px;}
+    .whom .caption {padding-top: 50px; margin-bottom: 20px}
     .whom .caption .text {font-size: 30px; line-height: 35px;}
     .whom .more {margin-left: 0; margin-top: 10px;}
     .whom .caption .num {left: 0;}
+    .whom .caption .num:before {height: 70px; bottom: -24px;}
     .whom .row > div:first-child {margin-bottom: 120px;}
+    .whom ul li {font-size: 20px; line-height: 26px;}
+    .whom ul li:before {margin-top: 15px;}
 
+    .blocks {padding: 40px 30px;}
     .blocks .row .half {padding: 40px 20px;}
-    .blocks .row .half .caption {font-size: 45px; line-height: 45px;}
-    .blocks .row .half .text {font-size: 30px; line-height: 35px;}
-    .blocks .row .half .author {font-size: 20px; line-height: 25px;}
+    .blocks .row .half .caption {font-size: 30px; line-height: 35px;}
+    .blocks .row .half .text {font-size: 22px; line-height: 28px;}
+    .blocks .row .half .author {font-size: 20px; line-height: 26px;}
 
-    .mass-media .caption {margin-bottom: 40px; font-size: 45px; line-height: 50px;}
-    .mass-media .text {font-size: 30px; line-height: 35px; margin-top: 30px;}
-    .mass-media .more {font-size: 30px; line-height: 35px; margin-bottom: 60px;}
-    .mass-media .img-wrapper img {display: block; width: 90%; margin: 0 auto;}
+    .mass-media .caption {margin-bottom: 30px; font-size: 30px; line-height: 35px;}
+    .mass-media .text {font-size: 20px; line-height: 26px; margin-top: 30px;}
+    .mass-media .more {font-size: 18px; line-height: 24px; margin-bottom: 60px;}
+    .mass-media .img-wrapper img {display: block; width: 90%; margin: 0;}
 
     .result .singIn-btn {display: block; width: 80%; height: 80px;line-height: 55px; margin: 40px auto; font-size: 22px;}
     .result .info {font-size: 30px; line-height: 35px;}
