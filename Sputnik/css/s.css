@@ -661,7 +661,8 @@ strong {font-family: 'Futura New Demi';}
 
 /*  */
 @media (min-width: 320px) and (max-width: 480px) {
-
+    body {background: red}
+    body * {display: none;}
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -867,7 +868,7 @@ strong {font-family: 'Futura New Demi';}
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-    body {display: none;}
+
 
     .tag.post .tag-meta {height: auto;}
     .tag.post .tag-meta .meta {position: relative; bottom: auto; margin-top: 30px;}
