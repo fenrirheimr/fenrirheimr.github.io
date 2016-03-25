@@ -116,10 +116,10 @@
     color: #474e5f;
     text-decoration: none;
 }
-.sbOptions li:hover {background: #e6f5ff;}
+.sbOptions li:hover {background: #e4e4e4;}
 .sbOptions a:hover,
 .sbOptions a:focus,
-.sbOptions a.sbFocus{background: #e6f5ff;
+.sbOptions a.sbFocus{background: #e4e4e4;
 }
 .sbOptions li.last a{
     border-bottom: none;
