@@ -26,7 +26,7 @@
             }
 
             $('.header').affix({
-                offset: 15
+                offset: 30
             });
 
             var windowsWidth = $(window).width();

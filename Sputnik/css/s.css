@@ -866,6 +866,9 @@ strong {font-family: 'Futura New Demi';}
     .direction .header nav ul li a {color: #fff;}
     .direction .header nav ul li a:after {background:#fff;}
 
+    .direction .header-wrapper {margin: -15px -15px 0 -15px;}
+    .direction .header {padding: 0 15px;}
+
     .blog .header-wrapper { background: url("../img/bg/bg_b-c.jpg") left bottom no-repeat;}
     .blog .promo-wrapper {position: relative;}
     .blog .promo-wrapper,
@@ -1371,9 +1374,11 @@ strong {font-family: 'Futura New Demi';}
 .affix {
     position: fixed !important;
     padding: 0 45px; width: auto;
-    left: 0; right: 0;
+    left: 0; right: 0; top: 0;
+    background: #fff; border-bottom: 1px solid #848f96;
 }
-
+.affix .logo {background-image: url("../img/logo_grey.svg")}
+.affix nav ul li a {color: #000;}
 
 
 
