@@ -700,7 +700,7 @@ strong {font-family: 'Futura New Demi';}
     }
     .header nav ul {display: block; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);}
     .header nav ul li {display: block; margin: 15px 0 ; text-align: center;}
-    .header nav ul li a {font-size: 24px; line-height: 30px; position: relative; color: #fff; font-family: 'Futura New Demi';}
+    .header nav ul li a {font-size: 24px; white-space: nowrap; line-height: 30px; position: relative; color: #fff; font-family: 'Futura New Demi';}
 
     .footer .fr {padding: 80px 30px 60px;}
     .footer .caption {height: 50px;}
@@ -782,7 +782,7 @@ strong {font-family: 'Futura New Demi';}
 
     .slider-wrapper .slider-item .half {width: 100%; padding: 140px 10px 20px;}
     .slider-wrapper .slider-item .half .caption {
-        padding-left: 0; font-size: 30px; line-height: 35px; text-align: center; margin-bottom: 30px;
+        padding-left: 0; font-size: 30px; line-height: 35px; text-align: left; margin-bottom: 30px;
     }
 
     .slider-wrapper .slider-item .half .text {font-size: 20px; line-height: 26px;}
@@ -844,59 +844,68 @@ strong {font-family: 'Futura New Demi';}
     .bx-controls .bx-pager .bx-pager-item a.active {text-decoration: none; display: block;}
 
 
-    .direction h1 {font-size: 45px;}
-    .strategy .text {font-size: 30px; line-height: 35px;}
-    .direction .thumbnail .caption h3 {font-size: 45px;}
-    .direction .thumbnail .caption p {font-size: 30px; line-height: 35px;}
+    .strategy {padding: 0;}
+    .direction h1 {font-size: 35px; margin-bottom: 30px;}
+    .strategy .text {font-size: 20px; line-height: 26px;}
+    .direction .thumbnail .caption {padding: 20px;}
+    .direction .thumbnail .caption h3 {font-size: 30px;}
+    .direction .thumbnail .caption p {font-size: 20px; line-height: 26px;}
+    .team .thumbnail {margin-bottom: 30px;}
     .team .thumbnail .img-wrapper,
     .team .thumbnail .caption {float: none; width: 100%; height: auto;}
     .team .thumbnail .caption .links {position: relative; bottom: auto;}
-    .team .thumbnail .caption .links a {font-size: 30px;}
+    .team .thumbnail .caption .links a {font-size: 20px;}
 
     .direction .header nav ul li a {color: #fff;}
     .direction .header nav ul li a:after {background:#fff;}
 
+    .blog .header-wrapper { background: url("../img/bg/bg_b-c.jpg") left bottom no-repeat;}
     .blog .promo-wrapper {position: relative;}
     .blog .promo-wrapper,
     .blog .promo-wrapper .promo-img {height: 100%;}
-    .blog .promo-wrapper .promo-img {position: absolute;}
-    .last-entry {padding: 40px 15px 0; position: relative;}
+    .blog .promo-wrapper .promo-img {position: absolute;  display: none;}
+    .blog .promo-wrapper .promo-img > img {width: auto;margin: 0;}
+
+    .last-entry {padding: 30px 15px 0; position: relative; margin-top: 70px; top: 10px;}
     .last-entry .block-title {margin-bottom: 30px;}
-    .last-entry .blog-entry:first-child {margin-bottom: 100px;}
-    .last-entry .blog-entry .caption {font-size: 45px; line-height: 50px; margin-bottom: 20px;}
-    .last-entry .blog-entry .text {font-size: 30px; line-height: 35px; margin-bottom: 20px;}
-    .blog .promo-wrapper .promo-img > img {width: auto;}
-    .last-entry .blog-entry .meta a {font-size: 18px;}
+    .last-entry .blog-entry:first-child {margin-bottom: 50px;}
+    .last-entry .blog-entry .caption {font-size: 30px; line-height: 35px; margin-bottom: 20px;}
+    .last-entry .blog-entry .text {font-size: 20px; line-height: 26px; margin-bottom: 20px;}
+    .last-entry .blog-entry .meta a {font-size: 14px;}
 
-    .tag .header-wrapper {min-height: 480px;}
-    .tag .tag-meta {height: 480px; padding: 130px 15px 30px;}
-    .entry-wrapper {padding: 60px 15px 70px;}
+    .tag .header-wrapper {min-height: 0;}
+    .tag .tag-meta {height: auto; padding: 130px 15px 30px;}
+    .entry-wrapper {padding: 30px 15px 40px;}
 
-    .tag .tag-meta .caption {font-size: 45px;}
-    .tag .tag-meta .tag-info .posts {font-size: 24px;}
-    .tag .tag-meta .tag-info .update {font-size: 30px;}
-    .entry-wrapper .entry .caption {font-size: 45px; line-height: 50px;}
-    .entry-wrapper .entry .text {font-size: 30px; line-height: 35px;}
-    .entry-wrapper .entry .meta a {font-size: 16px;}
-    .entry-wrapper .entry .meta .entry-date {font-size: 20px;}
+    .tag .tag-meta .caption {font-size: 45px; line-height: 50px;}
+    .tag .tag-meta .tag-info {position: relative; bottom: 0; margin-top: 30px;}
+    .tag .tag-meta .tag-info .posts {font-size: 16px;}
+    .tag .tag-meta .tag-info .update {font-size: 20px;}
+    .entry-wrapper .entry {padding: 0 0 40px; margin-bottom: 30px;}
+    .entry-wrapper .entry .caption {font-size: 30px; line-height: 35px;}
+    .entry-wrapper .entry .text {font-size: 20px; line-height: 26px;}
+    .entry-wrapper .entry .meta a {font-size: 14px;}
+    .entry-wrapper .entry .meta .entry-date {font-size: 16px;}
 
     .tag.post .tag-meta {height: auto;}
-    .tag.post .tag-meta .caption {font-size: 45px;}
+    .tag.post .tag-meta .caption {font-size: 30px; line-height: 35px;}
     .tag.post .tag-meta .meta {position: relative; bottom: auto; margin-top: 30px;}
     .tag.post .tag-meta .meta a,
-    .tag.post .tag-meta .meta .entry-date {font-size: 24px;}
-    .entry-wrapper .entry-author {margin-bottom: 60px;}
+    .tag.post .tag-meta .meta .entry-date {font-size: 14px;}
+    .entry-wrapper .entry-author {margin-bottom: 30px;}
     .entry-wrapper .entry-author img {display: block; margin: 0 auto 30px;}
-    .entry-wrapper .entry-author h3 {font-size: 45px; text-align: center;}
-    .entry-wrapper .entry-author p {font-size: 30px; text-align: center;}
+    .entry-wrapper .entry-author h3 {font-size: 30px; text-align: center;}
+    .entry-wrapper .entry-author p {font-size: 20px; text-align: center;}
 
-    .entry-wrapper .entry-text p {font-size: 30px; line-height: 35px;}
-    .entry-wrapper .mess {font-size: 30px; line-height: 35px;}
+    .entry-wrapper .entry-text p {font-size: 20px; line-height: 26px;}
+    .entry-wrapper .mess {font-size: 20px; line-height: 26px;}
 
     .tag .header nav ul li a {color: #fff;}
     .tag .header nav ul li a:after {background:#fff;}
 
     .promo-wrapper video {display: none;}
+
+
 
 }
 

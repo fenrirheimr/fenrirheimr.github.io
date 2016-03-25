@@ -45,10 +45,14 @@
             var videoBlockHeight = headerSection.find('.promo-wrapper').height();
             headerSection.css('height', videoBlockHeight);
 
+            //if(windowsWidth <= 480) { // то нужно потом ввернуть
+            //    headerSection.css('height', videoBlockHeight+);
+            //}
+
             $('section').addClass('hidden-block').viewportChecker({
                 classToAdd: 'visible animated fadeIn',
                 classToRemove:'hidden-block',
-                offset: 100
+                offset: 90
             });
 
             $('.material input, .material textarea').blur(function() {
