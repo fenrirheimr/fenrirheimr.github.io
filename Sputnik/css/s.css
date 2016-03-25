@@ -856,9 +856,10 @@ strong {font-family: 'Futura New Demi';}
     .direction .thumbnail .caption {padding: 20px;}
     .direction .thumbnail .caption h3 {font-size: 30px;}
     .direction .thumbnail .caption p {font-size: 20px; line-height: 26px;}
-    .team .thumbnail {margin-bottom: 30px;}
-    .team .thumbnail .img-wrapper,
+    .team .thumbnail {margin-bottom: 30px; padding-right: 0;}
+    .team .thumbnail .img-wrapper{float: none; width: 100%;}
     .team .thumbnail .caption {float: none; width: 100%; height: auto;}
+
     .team .thumbnail .caption .links {position: relative; bottom: auto;}
     .team .thumbnail .caption .links a {font-size: 20px;}
 
