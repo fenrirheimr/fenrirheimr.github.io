@@ -906,6 +906,16 @@ strong {font-family: 'Futura New Demi';}
     .promo-wrapper video {display: none;}
 
 
+    .request .singIn-btn {padding: 12px 20px;}
+    .request .request-header {height: auto;padding: 100px 15px 30px;}
+    .request .header-wrapper {min-height: 0;}
+    .request .request-header .caption {font-size: 30px; line-height: 35px;}
+    .request-wrapper {padding: 40px 15px 600px;}
+    .request-wrapper .material .row {margin-bottom: 20px;}
+    .material legend {padding: 0; margin-bottom: 30px;}
+    .material .custom-input label {font-size: 20px; top: 20px;}
+    .sbHolder {font-size: 20px;}
+
 
 }
 
