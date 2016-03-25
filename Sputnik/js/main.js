@@ -25,6 +25,22 @@
                 $('[data-toggle="tooltip"]').tooltip();
             }
 
+            $('.header').affix({
+                offset: 15
+            });
+
+            var windowsWidth = $(window).width();
+
+            if(windowsWidth >= 1200) { // то нужно потом ввернуть
+                var pageWrapper = $('.page-wrapper');
+                var footerHeight = $('.footer').outerHeight()-56;
+                // TODO: хз откуда вылазят эти 56 пикселей надо будет найти
+
+                console.log(footerHeight)
+
+                pageWrapper.css('marginBottom', footerHeight);
+            }
+
         },
 
         customJS:function(){
@@ -44,10 +60,6 @@
             var headerSection = $('.header-wrapper');
             var videoBlockHeight = headerSection.find('.promo-wrapper').height();
             headerSection.css('height', videoBlockHeight);
-
-            //if(windowsWidth <= 480) { // то нужно потом ввернуть
-            //    headerSection.css('height', videoBlockHeight+);
-            //}
 
             $('section').addClass('hidden-block').viewportChecker({
                 classToAdd: 'visible animated fadeIn',
@@ -73,6 +85,17 @@
                     //firstRow.show();
                 },
                 effect: "slide"
+            });
+
+            var $root = $('html, body');
+            $('.promo-caption .more').click(function() {
+                var href = $.attr(this, 'href');
+                $root.animate({
+                    scrollTop: $(href).offset().top
+                }, 500, function () {
+                    window.location.hash = href;
+                });
+                return false;
             });
         },
 

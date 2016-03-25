@@ -677,7 +677,7 @@ strong {font-family: 'Futura New Demi';}
         line-height: 35px;
         position: relative;
         bottom: auto;
-        margin-top: 80px; margin-bottom: 30px;
+        margin-top: 180px; margin-bottom: 30px;
     }
     .promo-caption .more {
         margin-top: 18px;
@@ -1361,7 +1361,11 @@ strong {font-family: 'Futura New Demi';}
 }
 
 
-
+.affix {
+    position: fixed !important;
+    padding: 0 45px; width: auto;
+    left: 0; right: 0;
+}
 
 
 
