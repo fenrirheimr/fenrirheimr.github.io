@@ -61,11 +61,11 @@
             var videoBlockHeight = headerSection.find('.promo-wrapper').height();
             headerSection.css('height', videoBlockHeight);
 
-            $('section').addClass('hidden-block').viewportChecker({
-                classToAdd: 'visible animated fadeIn',
-                classToRemove:'hidden-block',
-                offset: 90
-            });
+            //$('section').addClass('hidden-block').viewportChecker({
+            //    classToAdd: 'visible animated fadeIn',
+            //    classToRemove:'hidden-block',
+            //    offset: 90
+            //});
 
             $('.material input, .material textarea').blur(function() {
                 var $this = $(this);
