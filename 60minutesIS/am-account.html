@@ -84,7 +84,7 @@
                                                 <td><strong>94%</strong></td>
                                                 <td class="good"> <!-- good/normal/bad -->
                                                     <strong>+2%</strong>
-                                                    <i class="icn icn20 icn-green-top"></i>
+                                                    <i class="icn icn20 icn-up"></i>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -92,7 +92,7 @@
                                                 <td><strong>90%</strong></td>
                                                 <td class="good">
                                                     <strong>+2%</strong>
-                                                    <i class="icn icn20 icn-green-top"></i>
+                                                    <i class="icn icn20 icn-up-green"></i>
                                                 </td>
                                             </tr>
                                         </table>
@@ -110,17 +110,8 @@
 
                     <form action="#" method="">
 
-                        <div class="cdd export">
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <span>Экспорт</span>
-                                    <i class="icn icn20 icn-down"></i>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="#">PDF</a></li>
-                                    <li><a href="#">Excel</a></li>
-                                </ul>
-                            </div>
+                        <div class="pull-right filer-field">
+                            <input type="text" class="form-control" placeholder="Фильтр по отелю">
                         </div>
 
                         <!-- Nav tabs -->
@@ -142,28 +133,129 @@
                                     <colgroup>
                                         <col width="310">
                                         <col width="86">
-                                        <col width="96">
-                                        <col width="120">
-                                        <col width="140">
+                                        <col width="90">
+                                        <col width="115">
+                                        <col width="130">
                                         <col width="140">
                                         <col>
                                     </colgroup>
 
                                     <thead>
                                         <tr>
-                                            <th>Отель</th>
-                                            <th>Общая сумма</th>
-                                            <th>Комиссия</th>
-                                            <th>Способ оплаты</th>
-                                            <th>Форма сотрудничества</th>
-                                            <th>Статус</th>
+                                            <th><span>Отель</span></th>
+                                            <th><span>Общая сумма</span></th>
+                                            <th><span>Комиссия</span></th>
+                                            <th><span>Способ оплаты</span></th>
+                                            <th><span>Форма сотрудничества</span></th>
+                                            <th><span>Статус</span></th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-
+                                        <tr>
+                                            <td>
+                                                <a href="am-revise.html">Апартаменты в «Доме на Беговой»</a>
+                                                <div class="info">
+                                                    <span class="phone">+7 716 867 34 37</span>
+                                                    <span class="name">Анастасия Радищева</span>
+                                                </div>
+                                            </td>
+                                            <td>156 678</td>
+                                            <td>69 940</td>
+                                            <td>Безналичный</td>
+                                            <td>Абонплата</td>
+                                            <td class="debts">
+                                                <div>Задолженность</div>
+                                                <div class="day">15 дней</div>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option>Отправлен на сверку</option>
+                                                    <option>Получен отельером</option>
+                                                    <option>Согласован</option>
+                                                    <option>Оплачен</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="am-revise.html">Калифорния на малой Бронной</a>
+                                                <div class="info">
+                                                    <span class="phone">+7 716 867 34 37</span>
+                                                    <span class="name">Марина Николаева</span>
+                                                </div>
+                                            </td>
+                                            <td>156 678</td>
+                                            <td>69 940</td>
+                                            <td>Безналичный</td>
+                                            <td>Бронирование</td>
+                                            <td>
+                                                <div>Получен</div>
+                                                <div>4 дня</div>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option>Отправлен на сверку</option>
+                                                    <option>Получен отельером</option>
+                                                    <option>Согласован</option>
+                                                    <option>Оплачен</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="am-revise.html">Мастер-Отель Домодедово</a>
+                                                <div class="info">
+                                                    <span class="phone">+7 716 867 34 37</span>
+                                                    <span class="name">Ольга Петрова</span>
+                                                </div>
+                                            </td>
+                                            <td>156 678</td>
+                                            <td>69 940</td>
+                                            <td>Qiwi</td>
+                                            <td>Абонплата</td>
+                                            <td>
+                                                <div>Получен</div>
+                                                <div>4 дня</div>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option>Отправлен на сверку</option>
+                                                    <option>Получен отельером</option>
+                                                    <option>Согласован</option>
+                                                    <option>Оплачен</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="am-revise.html">Апартаменты в «Доме на Беговой»</a>
+                                                <div class="info">
+                                                    <span class="phone">+7 716 867 34 37</span>
+                                                    <span class="name">Анастасия Радищева</span>
+                                                </div>
+                                            </td>
+                                            <td>156 678</td>
+                                            <td>69 940</td>
+                                            <td>Безналичный</td>
+                                            <td>Абонплата</td>
+                                            <td>
+                                                <div>Получен</div>
+                                                <div>4 дня</div>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option>Отправлен на сверку</option>
+                                                    <option>Получен отельером</option>
+                                                    <option>Согласован</option>
+                                                    <option>Оплачен</option>
+                                                </select>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
+
+                                <a href="#" class="load-more">Следующие 50</a>
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="reconciliation">2</div>

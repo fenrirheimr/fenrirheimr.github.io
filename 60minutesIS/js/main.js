@@ -18,12 +18,233 @@
             utils.bootstrap();
             utils.equalHeight();
             utils.inputMask();
+            utils.collapsedBlocks();
+            utils.revenueChart();
+            utils.collaboratorChart();
         }
     });
 
     window.Utils = Class.extend({
         init:function(){},
 
+        collaboratorChart:function(){
+
+            if ($('#call-center, #accmen, #contmen').length > 0) {
+                var collaboratorOptions = {
+                    scaleGridLineColor : "rgba(0,0,0,.05)",
+                    responsive: true
+                };
+
+                var lineDataCallCenter = {
+                    labels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь"],
+                    datasets: [
+                        {
+                            label: "My Second dataset",
+                            fillColor: "rgba(151,187,205,0.2)",
+                            strokeColor: "rgba(151,187,205,1)",
+                            pointColor: "rgba(151,187,205,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(151,187,205,1)",
+                            data: [28, 48, 40, 19, 86, 27, 90]
+                        }
+                    ]
+                };
+
+                var lineDataAccMen = {
+                    labels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь"],
+                    datasets: [
+                        {
+                            label: "My Second dataset",
+                            fillColor: "rgba(151,187,205,0.2)",
+                            strokeColor: "rgba(151,187,205,1)",
+                            pointColor: "rgba(151,187,205,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(151,187,205,1)",
+                            data: [38, 18, 40, 10, 76, 37, 81]
+                        }
+                    ]
+                };
+
+                var lineDataContMen = {
+                    labels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь"],
+                    datasets: [
+                        {
+                            label: "My Second dataset",
+                            fillColor: "rgba(151,187,205,0.2)",
+                            strokeColor: "rgba(151,187,205,1)",
+                            pointColor: "rgba(151,187,205,1)",
+                            pointStrokeColor: "#fff",
+                            pointHighlightFill: "#fff",
+                            pointHighlightStroke: "rgba(151,187,205,1)",
+                            data: [58, 48, 40, 60, 86, 47, 94]
+                        }
+                    ]
+                };
+
+                var ctx1 = $("#call-center").get(0).getContext("2d");
+                var ctx2 = $("#accmen").get(0).getContext("2d");
+                var ctx3 = $("#contmen").get(0).getContext("2d");
+                var CallCenter;
+                var AccMen;
+                var ContMen;
+
+                $('[aria-controls="thisMonth01"]').on('shown.bs.tab', function (e) {
+                    CallCenter.destroy();
+                });
+
+                $('[aria-controls="halfYear01"]').on('shown.bs.tab', function (e) {
+                    CallCenter = new Chart(ctx1).Line(lineDataCallCenter, collaboratorOptions);
+                });
+
+                $('[aria-controls="thisMonth02"]').on('shown.bs.tab', function (e) {
+                    AccMen.destroy();
+                });
+
+                $('[aria-controls="halfYear02"]').on('shown.bs.tab', function (e) {
+                    AccMen = new Chart(ctx2).Line(lineDataAccMen, collaboratorOptions);
+                });
+
+                $('[aria-controls="thisMonth03"]').on('shown.bs.tab', function (e) {
+                    ContMen.destroy();
+                });
+
+                $('[aria-controls="halfYear03"]').on('shown.bs.tab', function (e) {
+                    ContMen = new Chart(ctx3).Line(lineDataContMen, collaboratorOptions);
+                });
+            }
+        },
+        revenueChart:function(){
+
+            if ($('#call-center, #accmen, #contmen').length > 0) {
+
+                var doughnutData = [
+                    {
+                        value: 800200,
+                        color:"#F7464A",
+                        highlight: "#FF5A5E",
+                        label: "Расчетный счет"
+                    },
+                    {
+                        value: 102600,
+                        color: "#46BFBD",
+                        highlight: "#5AD3D1",
+                        label: "Qiwi"
+                    },
+                    {
+                        value: 87720,
+                        color: "#FDB45C",
+                        highlight: "#FFC870",
+                        label: "Сберкарта"
+                    },
+                    {
+                        value: 36762,
+                        color: "#82a4fd",
+                        highlight: "#90adf9",
+                        label: "Яндекс.Деньги"
+                    }
+                ]
+
+                var ctx = $("#revenue").get(0).getContext("2d");
+                var myNewChart;
+                myNewChart = new Chart(ctx).Doughnut(doughnutData, {
+                    //responsive: true,
+                    //animateScale: true,
+                    customTooltips: function (tooltip) {
+                        var tooltipEl = $('#chartjs-tooltip');
+
+                        if (!tooltip) {
+                            tooltipEl.css({
+                                opacity: 0
+                            });
+                            return;
+                        }
+
+                        tooltipEl.removeClass('above below');
+                        tooltipEl.addClass(tooltip.yAlign);
+
+                        // split out the label and value and make your own tooltip here
+                        var parts = tooltip.text.split(":");
+                        var innerHtml = '<span class="chartjs-label">' + parts[0].trim() + '</span>: <span class="chartjs-val"><b>' + parts[1].trim().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + '</b> &#8381;</span>';
+                        tooltipEl.html(innerHtml);
+
+                        tooltipEl.css({
+                            opacity: 1,
+                            left: tooltip.chart.canvas.offsetLeft + tooltip.x + 'px',
+                            top: tooltip.chart.canvas.offsetTop + tooltip.y + 'px',
+                            //fontFamily: tooltip.fontFamily,
+                            fontSize: tooltip.fontSize,
+                            fontStyle: tooltip.fontStyle,
+                        });
+                    },
+                    legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend list-unstyled\"><% for (var i=0; i<segments.length; i++){%><li class=\"clearfix\"><span class=\"dot pull-left\" style=\"background-color:<%=segments[i].fillColor%>\"></span><span class=\"legend-item-name pull-left\"><%if(segments[i].label){%><%=segments[i].label%><%}%></span><span class=\"legend-item-val pull-right\"><%if(segments[i].value){%><%=segments[i].value%><%}%>  &#8381;</span></li><%}%></ul>"
+                });
+
+                document.getElementById('js-legend').innerHTML = myNewChart.generateLegend();
+
+                var cartLegend = $('.legend-item-val');
+                cartLegend.each(function(i){
+                    var cartLegendVal = cartLegend.eq(i).html().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+                    cartLegend.eq(i).html(cartLegendVal);
+                });
+
+                $('.chart-block').hide();
+            }
+        },
+        collapsedBlocks:function(){
+
+            var blocks = $('.content-wrapper .blocks');
+            var blockItem = blocks.find('.block-item');
+            var detailLink = blockItem.find('.detail');
+            var hiddenBlock = blockItem.find('.hidden-block');
+
+            blockItem.each(function(i){
+                detailLink.eq(i).click(function(e){
+                    e.preventDefault();
+                    hiddenBlock.eq(i).slideToggle();
+                    blockItem.eq(i).height('auto');
+                    var contrBlock = blockItem.eq(i).find('.contr-wrapper');
+                    var chartBlock = blockItem.eq(i).find('.chart-block');
+
+                    if(contrBlock.length > 0) {
+                        var curHeight = contrBlock.height(),
+                            autoHeight = contrBlock.css('height', 'auto').height();
+                        contrBlock.height(curHeight).animate({
+                            height: autoHeight == curHeight ? "93px" : autoHeight
+                        }, 500);
+                    }
+                    if(chartBlock.length > 0) {
+                        chartBlock.slideToggle();
+                    }
+
+                });
+            });
+
+            var blockTabs = blocks.find('.tab-wrapper');
+            var detailTabLink = blockTabs.find('.detail');
+            var hiddenTabBlock = blockTabs.find('.hidden-block');
+
+            blockTabs.each(function(i){
+                detailTabLink.eq(i).click(function(e){
+                    e.preventDefault();
+                    hiddenTabBlock.eq(i).slideToggle();
+                    blockTabs.eq(i).height('auto');
+                    var contrBlock = blockTabs.eq(i).find('.contr-wrapper');
+
+                    if(contrBlock.length > 0) {
+                        var curHeight = contrBlock.height(),
+                            autoHeight = contrBlock.css('height', 'auto').height();
+                        contrBlock.height(curHeight).animate({
+                            height: autoHeight == curHeight ? "93px" : autoHeight
+                        }, 500);
+                    }
+
+                });
+            });
+
+
+        },
         timeSlider:function(){
             var view = $("#tslshow");
             var move = "105px";
@@ -108,7 +329,7 @@
             });
             $('a[data-help="tooltip"]').css('color', 'red');
 
-            $('.paid .percent').popover({
+            $('.paid a.percent').popover({
                 html : true,
                 content: function() {
                     return $('.percentContent').html();
@@ -447,6 +668,7 @@
             var tasksPanel = $('.tasks-panel');
             var taskCounter = $('.task-counter');
             var tasksPanelClose = tasksPanel.find('.close');
+
             //var tasksPanelReset = tasksPanel.find('[type="reset"], [type="submit"]');
 
             taskCounter.click(function() {
@@ -460,7 +682,86 @@
                 tasksPanel.removeClass('pushmenu-open');
             });
 
+            var addUserPanel = $('.add-user-panel');
+            var addUser = $('.add-user');
+            var addUserPanelClose = addUserPanel.find('.close');
+            var addUserPanelReset = addUserPanel.find('[type="reset"]');
+
+            addUser.click(function(e) {
+                e.preventDefault();
+                console.log('fds')
+                $(this).toggleClass('active');
+                $('.pushmenu-push').toggleClass('pushmenu-push-toright');
+                addUserPanel.toggleClass('pushmenu-open');
+            });
+
+            addUserPanelClose.click(function() {
+                $('.pushmenu-push').removeClass('pushmenu-push-toright');
+                addUserPanel.removeClass('pushmenu-open');
+            });
+            addUserPanelReset.click(function() {
+                $('.pushmenu-push').removeClass('pushmenu-push-toright');
+                addUserPanel.removeClass('pushmenu-open');
+            });
+
             $('.task-wrapper').scrollbar();
+
+            //////////////////////////////////////////////////////////////
+
+            var editUserPanel = $('.edit-user-panel');
+            var editUser = $('.edit-user');
+            var editUserPanelClose = editUserPanel.find('.close');
+            var editUserPanelReset = editUserPanel.find('[type="reset"]');
+
+            editUser.click(function(e) {
+                e.preventDefault();
+                console.log('fds')
+                $(this).toggleClass('active');
+                $('.pushmenu-push').toggleClass('pushmenu-push-toright');
+                editUserPanel.toggleClass('pushmenu-open');
+            });
+
+            editUserPanelClose.click(function() {
+                $('.pushmenu-push').removeClass('pushmenu-push-toright');
+                editUserPanel.removeClass('pushmenu-open');
+            });
+            editUserPanelReset.click(function() {
+                $('.pushmenu-push').removeClass('pushmenu-push-toright');
+                editUserPanel.removeClass('pushmenu-open');
+            });
+
+            //////////////////////////////////////////////////////////////
+
+            (function ($) {
+                $.toggleShowPassword = function (options) {
+                    var settings = $.extend({
+                        field: "#password",
+                        control: "#toggle_show_password",
+                    }, options);
+
+                    var control = $(settings.control);
+                    var field = $(settings.field)
+
+                    control.bind('click', function () {
+                        if (control.is(':checked')) {
+                            field.attr('type', 'text');
+                        } else {
+                            field.attr('type', 'password');
+                        }
+                    })
+                };
+            }(jQuery));
+
+            $.toggleShowPassword({
+                field: '#hiddenpass',
+                control: '#vis1'
+            });
+            $.toggleShowPassword({
+                field: '#hiddenpass2',
+                control: '#vis2'
+            });
+
+
 
             //////////////////////////////////////////////////////////////
 
@@ -739,8 +1040,8 @@
 
         },
         equalHeight:function(){
-            var equalBlock = $('.modal label');
-            equalBlock.matchHeight();
+            var equalHCC = $('.hcc-wrapper .hcc-block .hcc-block-header');
+            equalHCC.matchHeight();
         },
 
 

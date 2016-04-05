@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="favicon.ico">-->
+
+    <title>60 минут - Система управления</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery.selectbox-0.2.css" rel="stylesheet">
+    <link href="css/jquery.scrollbar.css" rel="stylesheet">
+    <link href="css/s.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/inheritance.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.selectbox-0.2.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<!--
+Приветствую тебя, колега.
+Если будут какие-нибудь вопросы по верстке или что где лежит пиши в скайп fenrirheimr
+или на почту xhtmlblog@gmail.com -->
+
+<body class="chief">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6 pull-left">
+                        <a href="index.html" class="logo">60 минут <span>IS</span></a>
+
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="btns">
+                            <a href="pm-collaborator.html" class="btn btn-ghost"><i class="icn icn20 icn-users"></i> Сотрудники</a>
+                            <a href="#" class="btn btn-ghost"><i class="icn icn20 icn-alert"></i> Задачи и тикеты <span class="badge pulse">28</span></a> <!-- класс "pulse" надо добавлять только при поступлении новой задачи и потом, видимо, снимать его через какое-то время -->
+                            <a href="#" class="btn btn-primary add-ticket"><i class="icn icn20 icn-plus"></i> Создать тикет</a>
+                            <a href="#" class="btn btn-link">Выйти</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="container">
+                <header class="row page-caption">
+                    <div class="col-md-12">
+                        <div class="pull-left">
+                            <div class="title pull-left">Отчеты за февраль 2016</div>
+                        </div>
+
+                    </div>
+                </header>
+
+                <div class="row content-wrapper">
+
+                    <div class="col-md-12">
+                        <h2>Финансы</h2>
+
+                        <div class="row blocks">
+                            <div class="col-md-4">
+                                <div class="block-item">
+                                    <a href="#" class="detail pull-right"><i class="icn icn20 icn-detail"></i></a>
+                                    <div class="block-title">Оплаченные заявки</div>
+                                    <div class="paid">
+                                        <span class="percent">92<span>%</span></span>
+                                        <span class="diff good"> <!-- good/normal/bad -->
+                                            <strong>+2%</strong>
+                                            <i class="icn icn20 icn-up-green"></i>
+                                        </span>
+
+                                    </div>
+
+                                    <div class="hidden-block">
+                                        <div class="block-item-row">
+                                            <div class="col-1">Обработано</div>
+                                            <div class="col-2">78%</div>
+                                            <div class="col-3">
+                                                <span class="diff good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-up-green"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="block-item-row">
+                                            <div class="col-1">Подтверждено</div>
+                                            <div class="col-2">60%</div>
+                                            <div class="col-3">
+                                                <span class="diff good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-up-green"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="block-item-row">
+                                            <div class="col-1">Согласовано</div>
+                                            <div class="col-2">50%</div>
+                                            <div class="col-3">
+                                                <span class="diff good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-up-green"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="block-item-row">
+                                            <div class="col-1">Оплачено</div>
+                                            <div class="col-2">30%</div>
+                                            <div class="col-3">
+                                                <span class="diff good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-up-green"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="block-item">
+                                    <a href="#" class="detail pull-right"><i class="icn icn20 icn-detail"></i></a>
+                                    <div class="block-title">Средний чек</div>
+                                    <div class="paid">
+                                        <span class="percent">1 862 <span>&#8381;</span></span>
+                                        <span class="diff good"> <!-- good/normal/bad -->
+                                            <strong>+2%</strong>
+                                            <i class="icn icn20 icn-up-green"></i>
+                                        </span>
+                                    </div>
+
+                                    <div class="hidden-block">
+                                        <div class="block-item-row">
+                                            <div class="col-1">Обработано</div>
+                                            <div class="col-2">78%</div>
+                                            <div class="col-3">
+                                                <span class="diff good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-up-green"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="block-item-row">
+                                            <div class="col-1">Подтверждено</div>
+                                            <div class="col-2">60%</div>
+                                            <div class="col-3">
+                                                <span class="diff good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-up-green"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="block-item-row">
+                                            <div class="col-1">Согласовано</div>
+                                            <div class="col-2">50%</div>
+                                            <div class="col-3">
+                                                <span class="diff good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-up-green"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="block-item-row">
+                                            <div class="col-1">Оплачено</div>
+                                            <div class="col-2">30%</div>
+                                            <div class="col-3">
+                                                <span class="diff good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-up-green"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="block-item">
+                                    <a href="#" class="detail pull-right"><i class="icn icn20 icn-detail"></i></a>
+                                    <div class="block-title">Дебит. задолженность</div>
+                                    <div class="paid">
+                                        <span class="percent">1 782 862 <span>&#8381;</span></span>
+                                        <span class="diff good"> <!-- good/normal/bad -->
+                                            <strong>+2%</strong>
+                                            <i class="icn icn20 icn-down-green"></i>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="block-item">
+                                    <a href="#" class="detail pull-right"><i class="icn icn20 icn-detail"></i></a>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="block-title">Выручка</div>
+                                            <div class="paid">
+                                                <span class="percent">1 087 320 <span>&#8381;</span></span>
+                                                <span class="diff good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-down-green"></i>
+                                                </span>
+
+                                            </div>
+
+                                            <div class="chart-block">
+                                                <canvas id="revenue" width="266" height="266"></canvas>
+                                                <div id="chartjs-tooltip"></div>
+                                                <div id="js-legend" class="chart-legend"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 contr-wrapper">
+                                            <div class="block-subtitle">Контрагенты</div>
+
+                                            <div class="contr clearfix">
+                                                <div class="pull-left">Минима на Белорусской</div>
+                                                <div class="pull-right">25 809 &#8381;</div>
+                                            </div>
+                                            <div class="contr clearfix">
+                                                <div class="pull-left">Погости.ру на Войковской</div>
+                                                <div class="pull-right">25 809 &#8381;</div>
+                                            </div>
+                                            <div class="contr clearfix">
+                                                <div class="pull-left">Подушкин на Маяковской</div>
+                                                <div class="pull-right">25 809 &#8381;</div>
+                                            </div>
+                                            <div class="contr clearfix">
+                                                <div class="pull-left">Джаз Отель-2</div>
+                                                <div class="pull-right">25 809 &#8381;</div>
+                                            </div>
+                                            <div class="contr clearfix">
+                                                <div class="pull-left">Амстердам</div>
+                                                <div class="pull-right">25 809 &#8381;</div>
+                                            </div>
+                                            <div class="contr clearfix">
+                                                <div class="pull-left">Ландыш на Белорусской</div>
+                                                <div class="pull-right">25 809 &#8381;</div>
+                                            </div>
+                                            <div class="contr clearfix">
+                                                <div class="pull-left">Калифорния на Покровке</div>
+                                                <div class="pull-right">25 809 &#8381;</div>
+                                            </div>
+                                            <div class="contr clearfix">
+                                                <div class="pull-left">Верона</div>
+                                                <div class="pull-right">25 809 &#8381;</div>
+                                            </div>
+                                            <div class="contr clearfix">
+                                                <div class="pull-left">Apart Hotel Dolgoprudniy</div>
+                                                <div class="pull-right">25 809 &#8381;</div>
+                                            </div>
+                                            <div class="contr clearfix">
+                                                <div class="pull-left">Perlovka Guest House</div>
+                                                <div class="pull-right">25 809 &#8381;</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Сотрудники</h2>
+
+                        <div class="row blocks">
+
+                            <div class="col-md-12">
+                                <div class="tab-wrapper">
+                                    <a href="#" class="detail pull-right"><i class="icn icn20 icn-detail"></i></a>
+
+                                    <div class="block-title">Колл-центр</div>
+
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active"><a href="#thisMonth01" aria-controls="thisMonth01" role="tab" data-toggle="tab">Текущий месяц</a></li>
+                                        <li role="presentation"><a href="#halfYear01" aria-controls="halfYear01" role="tab" data-toggle="tab">Последние полгода</a></li>
+                                    </ul>
+
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="thisMonth01">
+
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <p>Среднее время обработки заявки</p>
+                                                    <div class="paid">
+                                                        <span class="percent">6.2</span>
+                                                        <span class="diff good"> <!-- good/normal/bad -->
+                                                            <strong>-1.2 мин</strong>
+                                                            <i class="icn icn20 icn-up-green"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p>Обработано заявок</p>
+                                                    <div class="paid">
+                                                        <span class="percent">76<span>%</span></span>
+                                                        <span class="diff good"> <!-- good/normal/bad -->
+                                                            <strong>+2%</strong>
+                                                            <i class="icn icn20 icn-up-green"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p>Обработано заявок</p>
+                                                    <div class="paid">
+                                                        <span class="percent">11 678</span>
+                                                        <span class="diff good"> <!-- good/normal/bad -->
+                                                            <strong>+2%</strong>
+                                                            <i class="icn icn20 icn-up-green"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="halfYear01">
+                                            <canvas id="call-center"></canvas>
+                                        </div>
+
+                                        <div class="hidden-block">
+                                            <div class="block-subtitle">Аналитика</div>
+                                            <p>Среднее время обработки уменьшилось на 2% до 4 минут 06 секунд.
+                                                Руководитель call-центра внес корректировки в <a href="#">инструкции операторов</a></p>
+                                            <p>Процент обработанных заявок уменьшился на 3%. Рекомендуется
+                                                запросить объяснение у руководителя call-центра.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="tab-wrapper">
+                                    <a href="#" class="detail pull-right"><i class="icn icn20 icn-detail"></i></a>
+
+                                    <div class="block-title">Аккаунт-менеджер</div>
+
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active"><a href="#thisMonth02" aria-controls="thisMonth02" role="tab" data-toggle="tab">Текущий месяц</a></li>
+                                        <li role="presentation"><a href="#halfYear02" aria-controls="halfYear02" role="tab" data-toggle="tab">Последние полгода</a></li>
+                                    </ul>
+
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="thisMonth02">
+
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <p>Оплачено</p>
+                                                    <div class="paid">
+                                                        <span class="percent">86<span>%</span></span>
+                                                        <span class="diff good"> <!-- good/normal/bad -->
+                                                            <strong>+2%</strong>
+                                                            <i class="icn icn20 icn-up-green"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <p>Получено</p>
+                                                    <div class="paid">
+                                                        <span class="percent">76<span>%</span></span>
+                                                        <span class="diff good"> <!-- good/normal/bad -->
+                                                            <strong>+2%</strong>
+                                                            <i class="icn icn20 icn-up-green"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <p>Согласовано</p>
+                                                    <div class="paid">
+                                                        <span class="percent">98<span>%</span></span>
+                                                        <span class="diff good"> <!-- good/normal/bad -->
+                                                            <strong>+2%</strong>
+                                                            <i class="icn icn20 icn-up-green"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="halfYear02">
+                                            <canvas id="accmen"></canvas>
+                                        </div>
+
+                                        <div class="hidden-block">
+                                            <div class="block-subtitle">Аналитика</div>
+                                            <p>Среднее время обработки уменьшилось на 2% до 4 минут 06 секунд.
+                                                Руководитель call-центра внес корректировки в <a href="#">инструкции операторов</a></p>
+                                            <p>Процент обработанных заявок уменьшился на 3%. Рекомендуется
+                                                запросить объяснение у руководителя call-центра.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="tab-wrapper">
+                                    <a href="#" class="detail pull-right"><i class="icn icn20 icn-detail"></i></a>
+
+                                    <div class="block-title">Контент-менеджер</div>
+
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active"><a href="#thisMonth03" aria-controls="thisMonth03" role="tab" data-toggle="tab">Текущий месяц</a></li>
+                                        <li role="presentation"><a href="#halfYear03" aria-controls="halfYear03" role="tab" data-toggle="tab">Последние полгода</a></li>
+                                    </ul>
+
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="thisMonth03">
+
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <p>Обработано задач за текущий месяц</p>
+                                                    <div class="paid">
+                                                        <span class="percent">278</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p>Среднее время обработки задачи</p>
+                                                    <div class="paid">
+                                                        <span class="percent">128<span>мин</span></span>
+                                                        <span class="diff bad"> <!-- good/normal/bad -->
+                                                            <strong>+2 мин</strong>
+                                                            <i class="icn icn20 icn-down-red"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p>Согласовано</p>
+                                                    <div class="paid">
+                                                        <span class="percent">98<span>%</span></span>
+                                                        <span class="diff good"> <!-- good/normal/bad -->
+                                                            <strong>+2%</strong>
+                                                            <i class="icn icn20 icn-up-green"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="halfYear03">
+                                            <canvas id="contmen"></canvas>
+                                        </div>
+
+                                        <div class="hidden-block">
+                                            <div class="block-subtitle">Аналитика</div>
+                                            <p>Среднее время обработки уменьшилось на 2% до 4 минут 06 секунд.
+                                                Руководитель call-центра внес корректировки в <a href="#">инструкции операторов</a></p>
+                                            <p>Процент обработанных заявок уменьшился на 3%. Рекомендуется
+                                                запросить объяснение у руководителя call-центра.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; &#171;60 минут IS&#187;, 2016</p>
+        </div>
+    </footer>
+
+    <div class="new-ticket" id="nt">
+        <a href="#" class="btn-close pull-right"><i class="icn icn20 icn-close"></i></a>
+        <form action="#" method="">
+            <div class="t-header">Новый тикет 765</div>
+            <div class="t-content">
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" name="addressee" />
+                        <span class="bar"></span>
+                        <label>Кому</label>
+                    </div>
+                </div>
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" />
+                        <span class="bar"></span>
+                        <label>Суть проблемы</label>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <textarea class="textarea-scrollbar scrollbar-outer"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <fieldset class="add-file">
+
+                        <input id="fileElem" multiple="multiple" class="custom-file" type="file" />
+                        <div id="filelist" class="result clearfix"></div>
+
+                        <a href="#" id="fileSelect" class="file-select"><i class="icn icn20 icn-plus-grey"></i> Добавить файл</a>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="t-footer">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="reset" class="btn btn-default">Отменить</button>
+            </div>
+        </form>
+    </div>
+
+<div class="view">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="title">Смотреть как</span>
+                <select>
+                    <option>Руководитель проекта</option>
+                    <option>Руководитель call-центра</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

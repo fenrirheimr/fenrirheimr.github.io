@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="favicon.ico">-->
+
+    <title>60 минут - Система управления</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery.selectbox-0.2.css" rel="stylesheet">
+    <link href="css/jquery.scrollbar.css" rel="stylesheet">
+    <link href="css/s.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/inheritance.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.selectbox-0.2.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<!--
+Приветствую тебя, колега.
+Если будут какие-нибудь вопросы по верстке или что где лежит пиши в скайп fenrirheimr
+или на почту xhtmlblog@gmail.com -->
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6 pull-left">
+                        <a href="index.html" class="logo">60 минут <span>IS</span></a>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="btns">
+                            <a href="#" class="btn btn-ghost"><i class="icn icn20 icn-alert"></i> Задачи и тикеты <span class="badge">28</span></a>
+                            <a href="#" class="btn btn-primary add-ticket"><i class="icn icn20 icn-plus"></i> Создать тикет</a>
+                            <a href="#" class="btn btn-link">Выйти</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="container">
+                <header class="row page-caption">
+                    <div class="col-md-12">
+                        <div class="title">Тикет 767</div>
+                        <div class="subtitle">Отель Ривас, бронь 2757</div>
+
+                    </div>
+                </header>
+
+                <div class="row">
+                    <form action="#" method="">
+                        <div class="button-bar">
+                            <button type="button" class="btn btn-small btn-default reply-btn"><i class="icn icn20 icn-reply"></i> Ответить</button>
+                            <span class="dropdown">
+                                <button class="btn btn-small btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <i class="icn icn20 icn-toright"></i>
+                                    <span>Переадресовать</span>
+                                    <i class="icn icn20 icn-down"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Аккаунт-менеджер Сергей Иванов</a></li>
+                                    <li><a href="#">Руководитель проекта Игорь Кириллов</a></li>
+                                </ul>
+                            </span>
+                            <button type="button" class="btn btn-small btn-default">Закрыть</button>
+                        </div>
+
+                        <fieldset class="new-mess">
+                            <div class="form-group">
+                                <label for="exampleTextarea1">Ваш ответ:</label>
+                                <textarea class="textarea-scrollbar scrollbar-outer" rows="3" id="exampleTextarea1"></textarea>
+                            </div>
+
+                            <div class="form-group material add-file clearfix">
+                                <input id="fileElem2" multiple="multiple" class="custom-file" type="file" />
+                                <div id="filelist2" class="result clearfix"></div>
+
+                                <a href="#" id="fileSelect2" class="file-select"><i class="icn icn20 icn-plus-grey"></i> Добавить файл</a>
+
+                            </div>
+
+                            <div class="t-footer">
+                                <button type="submit" class="btn btn-primary">Отправить</button>
+                            </div>
+                        </fieldset>
+
+                        <div class="task-description">
+
+                            <div class="description-item new">
+                                <div class="col-left">
+                                    <div class="datetime">07.02.2016 <span>11:03</span></div>
+                                </div>
+                                <div class="col-right">
+                                    <div class="task-author">Сергей Пономарев (аккаунт-менеджер) ответил:</div>
+                                    <div class="task-mess">Аудиозапись в приложении</div>
+
+                                    <div class="audio-wrapper">
+                                        <audio controls>
+                                            <source src="audio/Metallica_-_The_Unforgiven.ogg" type="audio/ogg; codecs=vorbis">
+                                            <source src="audio/Metallica_-_The_Unforgiven.mp3" type="audio/mpeg">
+                                            Тег audio не поддерживается вашим браузером.
+                                            <a href="audio/Metallica_-_The_Unforgiven.mp3">Скачайте музыку</a>.
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="description-item your-reply">
+                                <div class="col-left">
+                                    <div class="datetime">07.02.2016 <span>11:03</span></div>
+                                </div>
+                                <div class="col-right">
+                                    <div class="task-author">Вы написали:</div>
+                                    <div class="task-mess">Требуется аудозапись звонка отеля «Ривас», бронь №7850 10.12.2015 17:56 на имя Кирилл</div>
+                                    <div class="notice">Сергей Пономарев прочитал ваше сообщение 07.02. 2016 11:05</div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; &#171;60 минут IS&#187;, 2016</p>
+        </div>
+    </footer>
+
+    <div class="new-ticket" id="nt">
+        <a href="#" class="btn-close pull-right"><i class="icn icn20 icn-close"></i></a>
+        <form action="#" method="">
+            <div class="t-header">Новый тикет 765</div>
+            <div class="t-content">
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" name="addressee" />
+                        <span class="bar"></span>
+                        <label>Кому</label>
+                    </div>
+                </div>
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" />
+                        <span class="bar"></span>
+                        <label>Суть проблемы</label>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <textarea class="textarea-scrollbar scrollbar-outer"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <fieldset class="add-file">
+
+                        <input id="fileElem" multiple="multiple" class="custom-file" type="file" />
+                        <div id="filelist" class="result clearfix"></div>
+
+                        <a href="#" id="fileSelect" class="file-select"><i class="icn icn20 icn-plus-grey"></i> Добавить файл</a>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="t-footer">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="reset" class="btn btn-default">Отменить</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
