@@ -458,7 +458,7 @@ label {color: #80868e; font-weight: normal;}
 .docs-wrapper .tab-wrapper .nav-tabs > li.period > a,
 .docs-wrapper .tab-wrapper .nav-tabs > li.period > a:focus,
 .docs-wrapper .tab-wrapper .nav-tabs > li.period:hover > a {background: #fff; color: #45b1f9;}
-.docs-wrapper .tab-wrapper .tab-content {padding: 30px 0;}
+.docs-wrapper .tab-wrapper .tab-content {padding: 30px 0 !important;}
 .docs-wrapper .choose-period {
     width: 344px; border: 1px solid #dee0e5; margin-top: 0; padding: 30px 20px 40px;
     -webkit-border-radius: 0;
