@@ -428,7 +428,7 @@ label {color: #80868e; font-weight: normal;}
 .docs-wrapper {}
 .docs-wrapper .tab-wrapper {}
 .docs-wrapper .tab-wrapper .nav-tabs {padding: 0; border-bottom: 0; margin-left: 1px}
-.docs-wrapper .tab-wrapper .nav-tabs > li {padding: 0; border: 1px solid #d9dbe0;     margin-left: -1px;}
+.docs-wrapper .tab-wrapper .nav-tabs > li {padding: 0; border: 1px solid #d9dbe0; margin-left: -1px;}
 .docs-wrapper .tab-wrapper .nav-tabs > li > a {
     margin-right: 0;
     color: #545d6a;
@@ -1392,6 +1392,19 @@ label:hover:before {
 .footer .container p {color: #acb5bf; font-size: 15px; margin-bottom: 0; padding-left: 15px;}
 
 
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .tab-wrapper .nav-tabs,
+    .tab-wrapper .nav-tabs > li {padding: 0 5px;}
+    .tab-wrapper .nav-tabs + .tab-content {padding: 30px 0;}
+
+    .table>tbody>tr>td,
+    .table>tbody>tr>th,
+    .table>tfoot>tr>td,
+    .table>tfoot>tr>th,
+    .table>thead>tr>td,
+    .table>thead>tr>th {padding: 9px 5px;}
+}
 
 
 
