@@ -160,7 +160,7 @@ h3 {font-size: 18px; font-weight: bold;}
 .table>thead>tr>td,
 .table>thead>tr>th {
     padding: 9px 15px;
-    line-height: 30px;
+    /*line-height: 30px;*/
     vertical-align: top;
     border-top: 1px solid #e8eaef;
     font-size: 15px; color: #474e5f;
@@ -712,9 +712,9 @@ label {color: #80868e; font-weight: normal;}
 /* dropdown */
 
 .cdd {display: inline-block;}
-.cdd .dropdown .btn {border-width: 1px; padding: 0 6px 0 20px; height: 34px; font-size: 13px;}
+.cdd .dropdown .btn {border-width: 1px; padding: 0 6px 0 0; height: 34px; font-size: 13px;}
 .cdd .dropdown .btn > span {
-    border-right: 1px solid #d9dbe0; padding: 8px 8px 8px 0; margin-right: 4px;
+    border-right: 1px solid #d9dbe0; padding: 8px 8px 8px 20px; margin-right: 4px;
     height: 32px;
     line-height: 32px;
     vertical-align: middle;
@@ -810,7 +810,7 @@ label {color: #80868e; font-weight: normal;}
 .tickets {margin-bottom: 60px;}
 .tickets:first-child {margin-top: 40px;}
 .tab-content .tickets:first-child {margin-top: 0;}
-.tickets > tbody > tr > td {vertical-align: top; font-size: 14px; line-height: 30px;}
+.tickets > tbody > tr > td {vertical-align: top; /*font-size: 15px; line-height: 30px;*/}
 .tickets > thead > tr > th {color: #acb5bf; font-size: 11px; text-transform: uppercase; font-weight: normal; border-bottom: 2px solid #e8eaef;}
 .tickets > thead > tr > th span {display: inline-block; vertical-align: top; line-height: initial;}
 .tickets > tbody > tr.colored {background-color: #fff9c5;}

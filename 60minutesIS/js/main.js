@@ -841,6 +841,23 @@
                 e.stopPropagation();
             });
 
+            var dds = $('.tickets > tbody > tr > td.cdd .dropdown .btn > span');
+
+            dds.click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+
+
+                var ddp = $(this).parents('.dropdown .dropdown-menu');
+                $('#myModal').modal('show');
+
+                ddp.toggle();
+                //$(this).parents().dropdown('toggle');
+                //ddp.dropdown('toggle');
+                //ddp.css('background', 'red').dropdown('toggle');
+
+            });
+
             //////////////////////////////////////////////////////////////
 
             //var firstRow = $('.sbOptions li:first-child');
