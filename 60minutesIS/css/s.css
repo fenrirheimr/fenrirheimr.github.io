@@ -159,7 +159,7 @@ h3 {font-size: 18px; font-weight: bold;}
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
-    padding: 9px 15px;
+    padding: 14px 15px;
     /*line-height: 30px;*/
     vertical-align: top;
     border-top: 1px solid #e8eaef;
@@ -173,9 +173,10 @@ h3 {font-size: 18px; font-weight: bold;}
     margin: 0 auto;
 }
 
+
 form {}
 label {color: #80868e; font-weight: normal;}
-.form-control {border-radius: 0; color: #474e5f; font-size: 15px; font-weight: bold;}
+.form-control {border-radius: 0; color: #474e5f; font-size: 15px;}
 
 /* page caption */
 
@@ -264,6 +265,8 @@ label {color: #80868e; font-weight: normal;}
 .task-description .description-item.new.ticket {}
 .task-description .description-item.new.ticket * {font-weight: normal;}
 .task-description .description-item.new.ticket strong,
+.task-description .description-item.new.ticket .datetime,
+.task-description .description-item.new.ticket .datetime span,
 .task-description .description-item.new.ticket .task-title {font-weight: bold;}
 .task-description .description-item.new.ticket .task-title {display: block; margin-bottom: 10px;}
 .task-description .description-item.new.ticket .task-detail {margin-bottom: 30px;}
@@ -813,10 +816,11 @@ label {color: #80868e; font-weight: normal;}
 .tickets > tbody > tr > td {vertical-align: top; /*font-size: 15px; line-height: 30px;*/}
 .tickets > thead > tr > th {color: #acb5bf; font-size: 11px; text-transform: uppercase; font-weight: normal; border-bottom: 2px solid #e8eaef;}
 .tickets > thead > tr > th span {display: inline-block; vertical-align: top; line-height: initial;}
-.tickets > tbody > tr.colored {background-color: #fff9c5;}
+.tickets > tbody > tr.colored {background-color: #fff9c5 !important;}
 .tickets > tbody > tr:nth-child(even) {background: #fff}
 .tickets > tbody > tr:nth-child(odd) {background: #f8f8f8}
 .tickets > tbody > tr > td div {line-height: 20px;}
+.tickets > tbody > tr > td .ticket-time {margin-right: 20px;}
 .tickets > tbody > tr > td .sbHolder {font-size: 13px;}
 .tickets > tbody > tr > td .info {color: #80868e;}
 .tickets > tbody > tr > td div + div {color: #80868e;}
@@ -877,16 +881,16 @@ label {color: #80868e; font-weight: normal;}
 
 /* ticket form */
 
-.ticket-form {}
+.ticket-form {overflow: hidden;}
 .ticket-form .top-form {
     padding: 30px; margin-left: -15px; margin-right: -15px;
-    -moz-box-shadow: 0 30px 140px -50px #000;
-    -webkit-box-shadow: 0 30px 140px -50px #000;
-    box-shadow: 0 30px 140px -50px #000;
+    -moz-box-shadow: 0 30px 110px -60px #000;
+    -webkit-box-shadow: 0 30px 110px -60px #000;
+    box-shadow: 0 30px 110px -60px #000;
 }
 .ticket-form .datetime-row {}
 .ticket-form .datetime-row * {vertical-align: top;}
-.ticket-form .datetime-row .form-group {margin-right: 30px;}
+.ticket-form .datetime-row .form-group {margin-right: 30px; white-space: nowrap;}
 .ticket-form .datetime-row .form-group label {display: block;}
 .ticket-form .datetime-row .form-group .form-control {width: 50px; display: inline-block;}
 .ticket-form .datetime-row .form-group > span {display: inline-block; margin-left: 6px;}
@@ -937,10 +941,11 @@ label {color: #80868e; font-weight: normal;}
 .client-info {color: #474e5f; padding: 30px; margin-left: -15px; margin-right: -15px;}
 .client-info .caption {font-weight: bold; font-size: 18px; margin-bottom: 20px;}
 .client-info .form-group {display: inline-block; margin-right: 16px;}
-.client-info .form-group.name {width: 136px;}
-.client-info .form-group.surname {width: 206px;}
+.client-info .form-group.name {width: 130px;}
+.client-info .form-group.surname {width: 200px;}
 .client-info .form-group.phone {width: 160px;}
 .client-info .radio-group {display: inline-block;}
+.client-info .radio-group .radio-inline {padding-left: 0;}
 
 /*  */
 
@@ -1362,11 +1367,11 @@ label:hover:before {
 /* hcc */
 
 .hcc-wrapper {}
-.hcc-wrapper .hcc-block {margin-right: 30px;}
-.hcc-wrapper .hcc-block .hcc-block-header {border-bottom: 1px solid #e8eaef; margin-bottom: 20px;}
+.hcc-wrapper .hcc-block {margin-right: 30px; margin-top: 10px;}
+.hcc-wrapper .hcc-block .hcc-block-header {border-bottom: 1px solid #e8eaef; margin-bottom: 20px; padding-bottom: 6px;}
 .hcc-wrapper .hcc-block .hcc-block-header .hcc-title {color: #474e5f; font-size: 24px; margin-bottom: 10px;}
 .hcc-wrapper .hcc-block .hcc-block-header .desc {color: #80868e; font-size: 15px;}
-.hcc-wrapper .hcc-block .hcc-block-header .paid {margin-top: 7px;}
+.hcc-wrapper .hcc-block .hcc-block-header .paid {margin-top: 8px;}
 .hcc-wrapper .hcc-block .hcc-block-header .paid .percent {font-size: 24px; color: #474e5f; font-weight: bold;}
 .hcc-wrapper .hcc-block .hcc-block-header .paid .percent span {font-weight: normal; margin-left: 5px;}
 .hcc-wrapper .hcc-block .hcc-block-header .diff {
@@ -1403,10 +1408,18 @@ label:hover:before {
     .table>tfoot>tr>td,
     .table>tfoot>tr>th,
     .table>thead>tr>td,
-    .table>thead>tr>th {padding: 9px 5px;}
+    .table>thead>tr>th {padding: 14px 5px;}
+    .tab-wrapper .tab-content {padding: 30px 0;}
+    .tab-wrapper .f-footer {margin: -1px 0 0;}
+
+    .header form.header-form {margin-left: 18px;}
 }
 
+@media (max-width: 768px) {
 
+    .tab-content {padding: 30px 0;}
+
+}
 
 
 

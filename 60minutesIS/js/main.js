@@ -777,9 +777,18 @@
 
             //////////////////////////////////////////////////////////////
 
-            var formElement = $('.form-control');
+            var formInput = $('.form-control');
 
-            formElement.focus(function () {
+            formInput.focus(function () {
+                $(this).data('placeholder', $(this).attr('placeholder'))
+                    .attr('placeholder', '');
+            }).blur(function () {
+                $(this).attr('placeholder', $(this).data('placeholder'));
+            });
+
+            var formTextarea = $('textarea');
+
+            formTextarea.focus(function () {
                 $(this).data('placeholder', $(this).attr('placeholder'))
                     .attr('placeholder', '');
             }).blur(function () {
@@ -816,7 +825,15 @@
 
             //////////////////////////////////////////////////////////////
 
+            var windowHeiht = $('body').outerHeight();
+            var headerHeight = $('.wrapper > header').outerHeight();
+            var footerHeight = $('.footer').outerHeight();
+            var actualHeight = windowHeiht - (headerHeight+footerHeight);
+            var pageContent = $('.content');
 
+            pageContent.css('min-height', actualHeight);
+
+            console.log(windowHeiht, headerHeight, footerHeight, actualHeight)
 
             //////////////////////////////////////////////////////////////
 
@@ -832,10 +849,6 @@
             });
 
             //////////////////////////////////////////////////////////////
-
-            /*$('.dropdown-menu a, .dropdown-menu label').click(function(e) {
-                e.stopPropagation();
-            });*/
 
             $('.dropdown-menu').click(function(e) {
                 e.stopPropagation();

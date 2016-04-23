@@ -53,16 +53,16 @@
 .scroll-textarea > .scroll-content > textarea {
     /*border: none !important;*/
     box-sizing: border-box;
-    height: 100% !important;
+    /*height: 100% !important;*/
     margin: 0;
     max-height: none !important;
     max-width: none !important;
-    overflow: scroll !important;
+    overflow: hidden !important;
     outline: none;
-    padding: 2px;
+    padding: 12px;
     position: relative !important;
     top: 0;
-    width: 100% !important;
+    /*width: 100% !important;*/
 }
 .scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
     height: 0;
@@ -214,8 +214,8 @@
 
 /* scrollbar height/width & offset from container borders */
 
-.scrollbar-outer > .scroll-content.scroll-scrolly_visible { /*left: -12px;*/ margin-left: 12px; }
-.scrollbar-outer > .scroll-content.scroll-scrollx_visible { top:  -12px; margin-top:  12px; }
+.scrollbar-outer > .scroll-content.scroll-scrolly_visible { /*left: -12px; margin-left: 12px; */}
+.scrollbar-outer > .scroll-content.scroll-scrollx_visible { top: -12px; margin-top: 12px; }
 
 .scrollbar-outer > .scroll-element.scroll-x .scroll-bar { min-width: 10px; }
 .scrollbar-outer > .scroll-element.scroll-y .scroll-bar { min-height: 10px; }
