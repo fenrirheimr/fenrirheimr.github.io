@@ -914,6 +914,37 @@
 
             //////////////////////////////////////////////////////////////
 
+            // пример работы фильтра
+
+            var filterInput = $('.filer-field .form-control:text');
+            var filterClear = $('.filer-field .close');
+
+
+            var tableRow = $('.tickets tbody tr');
+            var tableRowS1 = $('.tickets tbody tr:nth-child(1)');
+            var tableRowS2 = $('.tickets tbody tr:nth-child(4)');
+
+            filterInput.keypress(function(){
+                var filterInputVal = filterInput.val();
+                filterInput.addClass('nofocus');
+                if(filterInputVal == 'Апартаменты') {
+                    tableRow.hide();
+                    tableRowS1.show();
+                    tableRowS2.show();
+                }
+
+            });
+
+            filterClear.click(function(){
+                tableRow.show();
+            })
+
+
+
+
+
+            //////////////////////////////////////////////////////////////
+
             $.toggleShowPassword = function (options) {
                 var settings = $.extend({
                     field: "#password",
