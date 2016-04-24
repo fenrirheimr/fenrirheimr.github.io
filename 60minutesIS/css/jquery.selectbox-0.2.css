@@ -24,7 +24,7 @@
     text-indent: 20px;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; z-index: 9;
 }
 .sbSelector:link, .sbSelector:visited, .sbSelector:hover{
     color: #474e5f;
@@ -85,7 +85,7 @@
 .sbOptions a {
     display: block;
     outline: none;
-    padding: 0 0 0 20px; height: 38px; line-height: 38px
+    padding: 0 0 0 20px; height: 32px; line-height: 32px
 }
 .sbOptions a:link, .sbOptions a:visited{
     color: #474e5f;

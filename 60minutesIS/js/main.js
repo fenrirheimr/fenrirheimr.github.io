@@ -199,13 +199,18 @@
             var detailLink = blockItem.find('.detail');
             var hiddenBlock = blockItem.find('.hidden-block');
 
+            if(hiddenBlock.length <= 0) {
+
+            }
+
             blockItem.each(function(i){
                 detailLink.eq(i).click(function(e){
                     e.preventDefault();
                     hiddenBlock.eq(i).slideToggle();
-                    blockItem.eq(i).height('auto');
-                    var contrBlock = blockItem.eq(i).find('.contr-wrapper');
-                    var chartBlock = blockItem.eq(i).find('.chart-block');
+                    $(this).parent().height('auto');
+                    //blockItem.eq(i).height('auto');
+                    var contrBlock = $(this).parent().find('.contr-wrapper');
+                    var chartBlock = $(this).parent().find('.chart-block');
 
                     if(contrBlock.length > 0) {
                         var curHeight = contrBlock.height(),
@@ -293,8 +298,6 @@
                         // do something
                     }
                 });
-
-                console.log(hour.length)
 
             });
         },
@@ -568,7 +571,6 @@
                         var reader = new FileReader();
                         var f = files[n];
                         reader.onload = function(e) {
-                            //console.log(f.name);
                             var item = $('<span class="file-item">' + f.name + '</span>');
                             item.append('<a href="#remove" class="del-btn"><i class="icn icn20 icn-remove"></i></a>');
                             item.appendTo("#filelist");
@@ -609,7 +611,7 @@
                         var reader = new FileReader();
                         var f = files[n];
                         reader.onload = function(e) {
-                            //console.log(f.name);
+
                             var item = $('<span class="file-item">' + f.name + '</span>');
                             item.append('<a href="#remove" class="del-btn"><i class="icn icn20 icn-remove"></i></a>');
                             item.appendTo("#filelist2");
@@ -689,7 +691,7 @@
 
             addUser.click(function(e) {
                 e.preventDefault();
-                console.log('fds')
+
                 $(this).toggleClass('active');
                 $('.pushmenu-push').toggleClass('pushmenu-push-toright');
                 addUserPanel.toggleClass('pushmenu-open');
@@ -715,7 +717,7 @@
 
             editUser.click(function(e) {
                 e.preventDefault();
-                console.log('fds')
+
                 $(this).toggleClass('active');
                 $('.pushmenu-push').toggleClass('pushmenu-push-toright');
                 editUserPanel.toggleClass('pushmenu-open');
@@ -825,6 +827,34 @@
 
             //////////////////////////////////////////////////////////////
 
+            var idBtn = $('.relevant-rooms-wrapper .item-description .btn[href*="#"]:not([href="#"])');
+
+            idBtn.click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if(!$(target).is(':visible')) {
+                        target.show();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+
+                    if (target.length) {
+                        console.log(target);
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+
+
+                }
+            });
+
+            //////////////////////////////////////////////////////////////
+
             var windowHeiht = $('body').outerHeight();
             var headerHeight = $('.wrapper > header').outerHeight();
             var footerHeight = $('.footer').outerHeight();
@@ -832,8 +862,6 @@
             var pageContent = $('.content');
 
             pageContent.css('min-height', actualHeight);
-
-            console.log(windowHeiht, headerHeight, footerHeight, actualHeight)
 
             //////////////////////////////////////////////////////////////
 
@@ -1002,7 +1030,7 @@
 
                     var recordPosition = parseInt(recordsHolder.css("left"));
                     if (recordPosition >= sliderLimit) recordsHolder.stop(false,true).animate({left:"-="+move},{ duration: 100})
-                    //console.log(recordPosition)
+
                 });
 
                 $(".scheduler-arrow.left").click(function(){
