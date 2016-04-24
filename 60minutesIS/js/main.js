@@ -937,7 +937,8 @@
 
             filterClear.click(function(){
                 tableRow.show();
-            })
+                filterInput.removeClass('nofocus');
+            });
 
 
 
