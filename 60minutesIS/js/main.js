@@ -927,7 +927,7 @@
             filterInput.keypress(function(){
                 var filterInputVal = filterInput.val();
                 filterInput.addClass('nofocus');
-                if(filterInputVal == 'Апартаменты') {
+                if(filterInputVal == 'Апартаменты' || filterInputVal == 'Ап') {
                     tableRow.hide();
                     tableRowS1.show();
                     tableRowS2.show();
@@ -940,9 +940,121 @@
                 filterInput.removeClass('nofocus');
             });
 
+            //////////////////////////////////////////////////////////////
 
 
+            $(function () {
 
+                var findRoomInput = $('.find-room .hotel-row .form-group .form-control');
+
+                if ( findRoomInput.length ) {
+
+                    var projects = [{
+                        label: " Строгино Экспо",
+                        desc: "Отель",
+                    }, {
+                        label: " Строгино",
+                        desc: "Район",
+                    }, {
+                        label: " Строгино",
+                        desc: "Метро",
+                    }, {
+                        label: " Строительная",
+                        desc: "Улица",
+                    }];
+
+                    findRoomInput.autocomplete({
+                            minLength: 0,
+                            source: projects,
+                            focus: function (event, ui) {
+                                findRoomInput.val(ui.item.desc + ui.item.label);
+                                return false;
+                            },
+                            select: function (event, ui) {
+                                findRoomInput.val(ui.item.desc + ui.item.label);
+                                return false;
+                            },
+                            open: function () {
+                                $(this).data("uiAutocomplete").menu.element.addClass("find-room");
+                            }
+                        })
+                        .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                        return $( "<li>" )
+                            .data( "ui-autocomplete-item", item )
+                            .append( "<a><span>" + item.desc + "</span> <span>" + item.label + "</span></a>" )
+                            .appendTo( ul );
+                    };
+
+                }
+
+
+            });
+
+
+            //////////////////////////////////////////////////////////////
+
+            $(function () {
+
+                var findRoomInputHeader = $('.header form.header-form .form-control');
+
+                if ( findRoomInputHeader.length ) {
+
+                    var projects = [{
+                        label: "Подушкин",
+                        desc: " Паспорт для каждого гостя",
+                        desc2: " Охраняемая стоянка",
+                        desc3: " Оплата Visa, Mastercard",
+                        desc4: " С животными нельзя, больше 2-х нельзя",
+                        desc5: " Как проехать",
+
+                    }, {
+                        label: "Погости",
+                        desc: " Паспорт для каждого гостя",
+                        desc2: " Охраняемая стоянка",
+                        desc3: " Оплата Visa, Mastercard",
+                        desc4: " С животными нельзя, больше 2-х нельзя",
+                        desc5: " Как проехать",
+                    }, {
+                        label: "Полярис",
+                        desc: " Паспорт для каждого гостя",
+                        desc2: " Охраняемая стоянка",
+                        desc3: " Оплата Visa, Mastercard",
+                        desc4: " С животными нельзя, больше 2-х нельзя",
+                        desc5: " Как проехать",
+                    }];
+
+                    findRoomInputHeader.autocomplete({
+                            minLength: 0,
+                            source: projects,
+                            focus: function (event, ui) {
+                                findRoomInputHeader.val(ui.item.label);
+                                return false;
+                            },
+                            select: function (event, ui) {
+                                findRoomInputHeader.val(ui.item.label);
+                                return false;
+                            },
+                            open: function () {
+                                $(this).data("uiAutocomplete").menu.element.addClass("find-room-header");
+                            }
+                        })
+                        .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                        return $( "<li>" )
+                            .data( "ui-autocomplete-item", item )
+                            .append( "<a><span>" + item.label + "</span> " +
+                                "<span class='hidden-info'>" +
+                                "<p>" + item.desc + "</p>"+
+                                "<p>" + item.desc2 + "</p>" +
+                                "<p>" + item.desc3 + "</p>" +
+                                "<p>" + item.desc4 + "</p>" +
+                                "<p class='link'>" + item.desc5 + "</p>" + "</span></a>" )
+                            .appendTo( ul );
+                    };
+
+                }
+
+
+            });
 
             //////////////////////////////////////////////////////////////
 
@@ -1123,6 +1235,19 @@
                     downloadBtn.show();
                 } else {
                     downloadBtn.hide();
+                }
+            });
+
+            //////////////////////////////////////////////////////////////////
+
+            var phoneCheck = $('.description-wrapper .check-phone [type="checkbox"]');
+            var phoneField = $('.description-wrapper .check-phone .phone');
+
+            phoneCheck.click(function(){
+                if($(this).prop("checked")) {
+                    phoneField.slideDown();
+                } else {
+                    phoneField.slideUp();
                 }
             });
 

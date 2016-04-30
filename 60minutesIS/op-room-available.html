@@ -67,12 +67,12 @@
 
         <section class="content">
             <div class="container">
-                <form action="#" method="" class="ticket-form">
+                <form action="#" method="" class="ticket-form find-room">
 
                     <fieldset class="top-form">
 
                         <div class="row datetime-row">
-                            <div class="col-md-6 col-lg-5">
+                            <div class="col-md-5">
                                 <div class="form-group">
                                     <label for="exampleInput01">Заезд</label>
                                     <input type="text" class="form-control" id="exampleInput01" placeholder="">
@@ -133,7 +133,7 @@
                                 </span>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-5">
+                            <div class="col-md-5">
                                 <div class="form-group">
                                     <label for="exampleInput02">Выезд</label>
                                     <input type="text" class="form-control" id="exampleInput02" placeholder="">
@@ -199,15 +199,16 @@
                         <div class="row hotel-row">
                             <div class="col-md-12">
                                 <div class="form-group">
+                                    <input type="hidden" id="room-id" />
                                     <input type="text" class="form-control" id="exampleInput03" placeholder="Отель, улица, метро, район">
-                                <span class="rooms">
-                                    <select>
-                                        <option>Двухместный комфорт с ванной комнатой</option>
-                                        <option>Фиолетовая бабочка</option>
-                                        <option>Красная комната</option>
-                                        <option>Синяя лагуна</option>
-                                    </select>
-                                </span>
+                                    <span class="rooms">
+                                        <select>
+                                            <option>Двухместный комфорт с ванной комнатой</option>
+                                            <option>Фиолетовая бабочка</option>
+                                            <option>Красная комната</option>
+                                            <option>Синяя лагуна</option>
+                                        </select>
+                                    </span>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Показать</button>
@@ -319,7 +320,7 @@
 
                 <div class="form-group material">
                     <div class="group custom-input">
-                        <textarea class="textarea-scrollbar scrollbar-outer"></textarea>
+                        <textarea class="textarea-scrollbar scrollbar-outer" placeholder="Описание проблемы"></textarea>
                     </div>
                 </div>
 
