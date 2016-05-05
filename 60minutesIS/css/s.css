@@ -122,14 +122,15 @@ body.chief .view {background: #383b4b; position: fixed; top: 0; left: 0; right: 
 .view {}
 .view .title {display: inline-block; line-height: 40px; font-size: 15px; color: #80868e; vertical-align: middle;}
 .view .sbHolder {
-    display: inline-block; font-size: 15px;
+    display: inline-block; font-size: 15px; background-color: #383b4b; border: 0;
     width: 250px; vertical-align: middle; margin-left: 10px;
 }
 /*
-.view .sbHolder .sbSelector {line-height: 40px; height: 40px;}
+.view .sbHolder .sbSelector {line-height: 40px; height: 40px;}*/
 .view .sbHolder .sbSelector:link,
 .view .sbHolder .sbSelector:visited,
 .view .sbHolder .sbSelector:hover {color: #fff;  outline: none; text-decoration: none;}
+/*
 .view .sbHolder .sbOptions {background-color: #383b4b; border: 0;}
 .view .sbOptions li {border-top: solid 1px #474e5f;}
 .view .sbOptions a:link, .sbOptions a:visited {color: #fff;}
@@ -972,6 +973,8 @@ label {color: #80868e; font-weight: normal;}
 .client-info .radio-group {display: inline-block; float: left; margin-top: 30px;}
 .client-info .radio-group .radio-inline {padding-left: 0;}
 
+.client-info > .btn-primary {margin-top: 25px;}
+
 /*  */
 
 .ticket-form .form-footer {border-top: 1px solid #e5e5e5; padding: 30px; margin-left: -15px; margin-right: -15px;}
@@ -1339,6 +1342,8 @@ label:hover:before {
 
 /* autocomplete */
 
+.ui-widget {font-family: 'Roboto', sans-serif;}
+
 .ui-autocomplete {
     border-radius: 0 !important; border: 1px solid #dee0e5;
     -moz-box-shadow: 0 0 40px 6px rgba(0,0,0,0.16), 0 0 53px 2px rgba(0,0,0,0.24);
@@ -1356,17 +1361,19 @@ label:hover:before {
 .ui-autocomplete.find-room .ui-menu-item span + span {color: #474e5f; width: auto;}
 
 
-.ui-autocomplete.find-room-header {width: 430px !important; display: block !important;}
-.ui-autocomplete.find-room-header .hidden-info {display: none; margin-left: 10px; /*position: absolute; left: 120px;*/}
-.ui-autocomplete.find-room-header .hidden-info p {font-size: 13px; margin-bottom: 5px; line-height: 15px;}
+.ui-autocomplete.find-room-header {width: 430px !important;}
+.ui-autocomplete.find-room-header .hidden-info {display: none; margin-left: 10px; background: #fff; overflow: auto;}
+.ui-autocomplete.find-room-header .hidden-info p {font-size: 13px; margin-bottom: 5px; line-height: 14px;}
 .ui-autocomplete.find-room-header .hidden-info p.link {color: #45b1f9; cursor: pointer;}
 .ui-autocomplete.find-room-header .hidden-info p.link:hover {color: #ff6784; text-decoration: none;}
 .ui-autocomplete.find-room-header .ui-state-focus .hidden-info {display: block;}
 
-.ui-autocomplete.find-room-header .ui-menu-item {display: inherit;}
+.ui-autocomplete.find-room-header .ui-menu-item {display: inherit; position: static;}
 .ui-autocomplete.find-room-header .ui-menu-item a {}
 .ui-autocomplete.find-room-header .ui-menu-item a span {float: left; width: 100px;}
-.ui-autocomplete.find-room-header .ui-menu-item a span + span {width: auto;}
+.ui-autocomplete.find-room-header .ui-menu-item .hidden-info {
+    width: auto; position: absolute; top: 0; left: 120px; bottom: 0; right: 0; padding: 12px 16px;
+}
 .ui-autocomplete.find-room-header .ui-menu-item a:before,
 .ui-autocomplete.find-room-header .ui-menu-item a:after {content: ""; display: table;}
 .ui-autocomplete.find-room-header .ui-menu-item a:after {clear: both;}
@@ -1474,10 +1481,10 @@ label:hover:before {
     .tab-wrapper .nav-tabs > li {padding: 0 10px;}*/
     /*.tab-wrapper .nav-tabs + .tab-content {padding: 30px 0;}*/
 
-    .filer-field {margin-right: 10px;}
+    .filer-field {/*margin-right: 10px;*/ width: 100px; min-width: 100px;}
 
     .nav-tabs.account,
-    .nav-tabs.account > li {padding: 0 8px;}
+    .nav-tabs.account > li {padding: 0 14px;}
 
     .table>tbody>tr>td,
     .table>tbody>tr>th,
