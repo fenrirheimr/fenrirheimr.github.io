@@ -1,3 +1,7 @@
+/*
+ html, css & js - Vladimir Glushkov
+ http://fenrirheimr.ru/
+*/
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1363,7 +1367,7 @@ label:hover:before {
 
 .ui-autocomplete.find-room-header {width: 430px !important;}
 .ui-autocomplete.find-room-header .hidden-info {display: none; margin-left: 10px; background: #fff; overflow: auto;}
-.ui-autocomplete.find-room-header .hidden-info p {font-size: 13px; margin-bottom: 5px; line-height: 14px;}
+.ui-autocomplete.find-room-header .hidden-info p {font-size: 13px; margin-bottom: 7px; line-height: 14px;}
 .ui-autocomplete.find-room-header .hidden-info p.link {color: #45b1f9; cursor: pointer;}
 .ui-autocomplete.find-room-header .hidden-info p.link:hover {color: #ff6784; text-decoration: none;}
 .ui-autocomplete.find-room-header .ui-state-focus .hidden-info {display: block;}
@@ -1371,6 +1375,7 @@ label:hover:before {
 .ui-autocomplete.find-room-header .ui-menu-item {display: inherit; position: static;}
 .ui-autocomplete.find-room-header .ui-menu-item a {}
 .ui-autocomplete.find-room-header .ui-menu-item a span {float: left; width: 100px;}
+.ui-autocomplete.find-room-header .ui-menu-item a span:first-child {font-size: 14px; font-weight: bold; color: #474e5f;}
 .ui-autocomplete.find-room-header .ui-menu-item .hidden-info {
     width: auto; position: absolute; top: 0; left: 120px; bottom: 0; right: 0; padding: 12px 16px;
 }
