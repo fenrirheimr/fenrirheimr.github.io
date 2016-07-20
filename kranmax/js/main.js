@@ -59,6 +59,15 @@
                 slideMargin: 10,
                 pager: false
             });
+
+            $('.tower-crane-slider').bxSlider({
+                slideWidth: 282,
+                minSlides: 1,
+                maxSlides: 2,
+                moveSlides: 1,
+                controls: false,
+                pagerCustom: '#tower-crane-pager'
+            });
         }
     });
 
