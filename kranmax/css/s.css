@@ -232,7 +232,7 @@ nav ul li .subnav .subnav-block .title {
 /* selection tower crane ----------------------------------------------------*/
 
 .selection-tower-crane {
-	min-height: 649px; background: url("../img/selection-tower-crane.jpg") no-repeat 50% 0; padding-top: 160px;
+	/*min-height: 649px; */background: url("../img/selection-tower-crane.jpg") no-repeat 50% 0; padding-top: 160px;
 }
 
 .selection-tower-crane {padding: 20px 0;}
@@ -289,13 +289,13 @@ nav ul li .subnav .subnav-block .title {
 .crane-item .crane-slider-wrapper .bx-wrapper + div > a:first-child {margin-left: 0;}
 
 .crane-item .crane-item-description {}
-.crane-item .crane-item-description .features {border-bottom: 1px solid #e1e1e1; margin-bottom: 10px;}
+.crane-item .crane-item-description .features {margin-bottom: 10px;}
 .crane-item .crane-item-description .features ul {font-size: 17px; font-weight: bold;}
 .crane-item .crane-item-description .features ul li {line-height: 26px;}
 .crane-item .crane-item-description .features ul li .title {color: #2576aa;}
 .crane-item .crane-item-description .features ul li .data {color: #25232b;}
 
-.crane-item .crane-item-description .owner-block {}
+.crane-item .crane-item-description .owner-block {border-top: 1px solid #e1e1e1; padding-top: 3px;}
 .crane-item .crane-item-description .owner-block .owner {
 	color: #25232b; font-size: 18px; font-weight: bold; font-style: italic; margin-bottom: 7px;
 }
@@ -311,6 +311,7 @@ nav ul li .subnav .subnav-block .title {
 	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 }
 
+.main-characteristics .col-item-0 {width: 100%;}
 .main-characteristics .col-item-1 {width: 620px;}
 .main-characteristics .col-item-2 {width: 320px; margin-left: 25px}
 .main-characteristics .ch-block-caption {
@@ -320,6 +321,7 @@ nav ul li .subnav .subnav-block .title {
 .main-characteristics .ch-block-subcaption {
 	font-size: 16px; font-family: 'Russo One', sans-serif; color: #949496; margin-bottom: 10px;
 }
+.main-characteristics .ch-block-content {color: #25232b; font-size: 16px;}
 .main-characteristics .col-item-1 .ch-block-content ul {
 	font-size: 16px; font-family: 'Russo One', sans-serif; color: #25232b; margin-bottom: 0;
 }
@@ -452,6 +454,7 @@ nav ul li .subnav .subnav-block .title {
 .help h2 + p {font-size: 16px;}
 .help form {background: #f3f3f5;}
 .help form label {display: block;}
+.help form i {font-size: 18px; display: block; margin-bottom: 10px;}
 .help form .btn {vertical-align: bottom;}
 .help form .form-group {margin-right: 20px; width: 250px;}
 .help form .form-group .form-control {width: 100%;}
@@ -462,10 +465,14 @@ nav ul li .subnav .subnav-block .title {
 }
 
 .help.block_on_page {}
-.help.block_on_page form .textarea-block {width: 525px; display: block; margin-bottom: 25px;}
+.help.block_on_page form .fullsize-block {width: 525px; display: block; margin-bottom: 25px;}
 .help.block_on_page form:after {
 	display: block; width: 386px; height: 313px; position: absolute; right: 15px; bottom: -33px; content: ' ';
 	background: url("../img/help-man2.png") no-repeat 0 0;
+}
+.help.page2 form:after {
+	display: block; width: 210px; height: 320px; position: absolute; right: 120px; bottom: 0; content: ' ';
+	background: url("../img/help-man3.png") no-repeat 0 0;
 }
 
 /* popular ------------------------------------------------------------------*/
@@ -542,7 +549,8 @@ nav ul li .subnav .subnav-block .title {
 	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 }
 
-.breadcrumbs a {display: inline-block; margin-right: 20px;}
+.breadcrumbs a {display: inline-block; margin-right: 20px; position: relative;}
+.breadcrumbs a:after {content:'\2192'; position: absolute; right: -18px; color: #2c2a33; z-index: 0;}
 
 /* specifications -----------------------------------------------------------*/
 
