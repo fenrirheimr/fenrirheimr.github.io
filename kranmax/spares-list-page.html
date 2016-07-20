@@ -188,56 +188,54 @@
 							<h1>Запчасти для крана</h1>
 						</header>
 
-						<div class="crane-item r5">
-							<div class="row">
-
-								<div class="col-md-4">
-									<div class="crane-slider-wrapper">
-										<ul class="tower-crane-slider">
-											<li><img src="uploads/02.jpg" alt="Картинка 1" title="Картинка 1"></li>
-											<li><img src="uploads/02.jpg" alt="Картинка 2" title="Картинка 2"></li>
-											<li><img src="uploads/02.jpg" alt="Картинка 3" title="Картинка 3"></li>
-											<li><img src="uploads/02.jpg" alt="Картинка 4" title="Картинка 4"></li>
-											<li><img src="uploads/02.jpg" alt="Картинка 5" title="Картинка 5"></li>
-										</ul>
-										<div id="tower-crane-pager" class="clearfix">
-											<a data-slide-index="0" href=""><img src="uploads/02-min.jpg" /></a>
-											<a data-slide-index="1" href=""><img src="uploads/02-min.jpg" /></a>
-											<a data-slide-index="2" href=""><img src="uploads/02-min.jpg" /></a>
-											<a data-slide-index="3" href=""><img src="uploads/02-min.jpg" /></a>
-											<a data-slide-index="4" href=""><img src="uploads/02-min.jpg" /></a>
-										</div>
-									</div>
+						<form class="form-inline">
+							<div class="form-group">
+								<div class="radio">
+									<input type="radio" id="test1" name="spares-type" checked="checked" />
+									<label for="test1">Новые</label>
 								</div>
-								<div class="col-md-8">
-
-									<div class="crane-item-description">
-										<div class="features">
-											<ul class="row list-unstyled">
-												<li class="col-md-12">
-													<span class="title">Номенклатурный номер:</span>
-													<span class="data">12345</span>
-												</li>
-												<li class="col-md-12">
-													<span class="title">Цена:</span>
-													<span class="data">500 000 руб.</span>
-												</li>
-												<li class="col-md-12">
-													<span class="title">Состояние:</span>
-													<span class="data">б/у</span>
-												</li>
-												<li class="col-md-12">
-													<span class="title">Срок поставки:</span>
-													<span class="data">14 дней</span>
-												</li>
-											</ul>
-										</div>
-									</div>
-
+								<div class="radio">
+									<input type="radio" id="test2" name="spares-type" />
+									<label for="test2">Б/у</label>
 								</div>
-
 							</div>
-						</div>
+
+							<div class="form-group">
+								<label for="exampleselect1">Год выпуска</label>
+								<select class="form-control" id="exampleselect1">
+									<option>2011</option>
+									<option>2012</option>
+									<option>2013</option>
+									<option>2014</option>
+									<option>2015</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="exampleselect2">Маркировка крана</label>
+								<select class="form-control" id="exampleselect2">
+									<option>КБ-408</option>
+									<option>КБ-00</option>
+									<option>КБ-408.21</option>
+									<option>КБ-586</option>
+									<option>КБ-515</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="exampleselect3">Узел/категория</label>
+								<select class="form-control" id="exampleselect3">
+									<option disabled="disabled" selected="selected">Выберите категорию</option>
+									<option>КБ-408</option>
+									<option>КБ-00</option>
+									<option>КБ-408.21</option>
+									<option>КБ-586</option>
+									<option>КБ-515</option>
+								</select>
+							</div>
+
+							<button type="submit" class="btn btn-red">Подобрать</button>
+						</form>
+
 					</div>
 				</div>
 			</div>
