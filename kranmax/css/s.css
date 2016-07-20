@@ -475,6 +475,21 @@ nav ul li .subnav .subnav-block .title {
 	background: url("../img/help-man3.png") no-repeat 0 0;
 }
 
+/* 404 ----------------------------------------------------------------------*/
+
+.selection-404 {padding: 40px 0;}
+.selection-404 .mess {font-size: 24px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;}
+.selection-404 .site-map {
+	font-size: 14px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;
+	display: inline-block; margin: 0;
+	position: relative;
+	top: 0; left: 50%;
+	transform: translate(-50%, 0);
+}
+.selection-404 .site-map li {line-height: 30px;}
+.selection-404 .site-map li ul {font-size: 12px;}
+.selection-404 .site-map li ul li {line-height: 24px;}
+
 /* popular ------------------------------------------------------------------*/
 
 .popular {}
