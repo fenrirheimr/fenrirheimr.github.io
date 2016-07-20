@@ -456,7 +456,7 @@ nav ul li .subnav .subnav-block .title {
 .help form label {display: block;}
 .help form i {font-size: 18px; display: block; margin-bottom: 10px;}
 .help form .btn {vertical-align: bottom;}
-.help form .form-group {margin-right: 20px; width: 250px;}
+.help form .form-group {margin-right: 20px; width: 250px; margin-bottom: 20px;}
 .help form .form-group .form-control {width: 100%;}
 .help form .form-footer {margin-top: 40px;}
 .help form:after {
@@ -473,6 +473,11 @@ nav ul li .subnav .subnav-block .title {
 .help.page2 form:after {
 	display: block; width: 210px; height: 320px; position: absolute; right: 120px; bottom: 0; content: ' ';
 	background: url("../img/help-man3.png") no-repeat 0 0;
+}
+
+.help.page3 form:after {
+	display: block; width: 277px; height: 324px; position: absolute; right: 80px; bottom: 0; content: ' ';
+	background: url("../img/help-man4.png") no-repeat 0 0;
 }
 
 /* 404 ----------------------------------------------------------------------*/
