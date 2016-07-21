@@ -8,6 +8,7 @@
             utils.customJS();
             utils.matchHeight();
             utils.bxSlider();
+            utils.customSelect();
         }
     });
 
@@ -30,6 +31,10 @@
         matchHeight:function(){
             $('.promo-slider .p-item').matchHeight();
             $('.selection-tower-crane .spare-parts-crane .s-item').matchHeight();
+        },
+
+        customSelect:function(){
+            $('.form-group select').selectbox();
         },
 
         bxSlider:function(){

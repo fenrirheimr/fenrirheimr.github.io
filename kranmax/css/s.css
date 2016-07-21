@@ -247,10 +247,13 @@ nav ul li .subnav .subnav-block .title {
 .selection-tower-crane form p {color: #25232b; font-size: 18px;}
 .selection-tower-crane form label {display: block;}
 .selection-tower-crane form .btn {vertical-align: bottom;}
-.selection-tower-crane form .form-group {margin-right: 20px; }
+.selection-tower-crane form .form-group {margin-right: 16px; }
 .selection-tower-crane form .form-group .form-control {width: 240px; font-size: 16px; padding: 6px 20px;}
 .selection-tower-crane form .form-group select.form-control {width: auto;}
 .selection-tower-crane form .form-group .radio {margin-top: 25px;}
+.selection-tower-crane form .form-group.s-year {width: 105px;}
+.selection-tower-crane form .form-group.s-mark {width: 165px;}
+.selection-tower-crane form .form-group.s-cat {width: 285px;}
 
 .selection-tower-crane .spare-parts-crane {color: #25232b; padding: 0 0 40px;}
 .selection-tower-crane .spare-parts-crane header {margin-bottom: 20px;}
@@ -277,6 +280,7 @@ nav ul li .subnav .subnav-block .title {
 }
 
 .selection-tower-crane .crane-item-wrapper {width: 980px; padding-right: 0;}
+.selection-tower-crane .crane-item-wrapper form {margin: 10px 0 20px;}
 .selection-tower-crane .crane-item {
 	background: #fff; padding: 30px;
 	-moz-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
@@ -344,6 +348,49 @@ nav ul li .subnav .subnav-block .title {
 .blue-icn.icn02 {background-position: 0 -25px;}
 .blue-icn.icn03 {background-position: 0 -50px;}
 .blue-icn.icn04 {background-position: 0 -75px;}
+
+/* custom selectbox ---------------------------------------------------------*/
+
+.sbHolder {background: #fff; width: auto !important; position: relative;}
+.sbHolder.sbSelectOpen {
+	-moz-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+	-webkit-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+}
+
+.sbSelector {
+	font-size: 18px; padding: 8px 45px 8px 20px; display: block;
+	position: relative;
+	z-index: 11;
+	background: #fff;
+}
+.sbSelector,
+.sbSelector:focus {color: #8c8b90; text-decoration: none;}
+.sbHolder:hover .sbSelector {color: #25232b;}
+.sbHolder.sbSelectOpen .sbSelector {color: #25232b;}
+.sbToggle {
+	width: 0; height: 0; border-style: solid; border-width: 9px 8px 0 8px;
+	border-color: #25232b transparent transparent transparent;
+	position: absolute; top: 16px; right: 20px; z-index: 12;
+}
+.sbOptions {
+	position: absolute; background: #fff; width: 100%; z-index: 10;
+	-moz-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+	-webkit-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+}
+.sbOptions .sbOptionsList {list-style: none; margin: 0; padding: 0;}
+.sbOptions .sbOptionsList .sbOptionsItem {padding: 4px 20px;}
+
+.sbOptions .sbOptionsList .sbOptionsItem:nth-of-type(odd) {background: #fff;}
+.sbOptions .sbOptionsList .sbOptionsItem:nth-of-type(even) {background: #f3f3f5;}
+
+.sbOptions .sbOptionsList .sbOptionsItem .sbDisabled {color: #8c8b90;}
+.sbOptions .sbOptionsList .sbOptionsItem,
+.sbOptions .sbOptionsList .sbOptionsItem a {
+	font-size: 16px; color: #25232b; text-decoration: none;	display: block;
+}
+.sbOptions .sbOptionsList .sbOptionsItem.sbOptionSelected a {color: #aa2320; font-weight: bold;}
 
 /* custom checkbox ----------------------------------------------------------*/
 
