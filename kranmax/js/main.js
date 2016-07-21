@@ -27,6 +27,26 @@
 
         customJS:function(){
 
+            var catalogItem = $('.catalog .catalog-item');
+
+
+            //catalogItem.hover(function(){
+            //    console.log('hover!')
+            //
+            //    catalogItemBtn.toggleClass('btn-blue btn-yellow');
+            //})
+
+            catalogItem.hover(
+                function () {
+                    var catalogItemBtn = $(this).find('.btn-blue');
+                    catalogItemBtn.toggleClass('btn-blue btn-yellow');
+                },//при наведении курсора на элемент
+                function () {
+                    var catalogItemBtn = $(this).find('.btn-yellow');
+                    catalogItemBtn.toggleClass('btn-yellow btn-blue');
+                } //при уводе курсора с элемента
+            );
+
         },
         matchHeight:function(){
             $('.promo-slider .p-item').matchHeight();

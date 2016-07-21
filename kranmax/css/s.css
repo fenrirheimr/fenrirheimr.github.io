@@ -128,38 +128,38 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
-nav {
+.header nav {
 	background: #25232b; height: 51px;
 	-moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
 	-webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
 	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
 }
-nav ul {margin-bottom: 0; position: relative;}
-nav ul.list-inline > li {padding-right: 15px; padding-left: 15px; position: static;}
-nav ul.list-inline > li > a {font-size: 16px; font-weight: bold; color: #fff; display: inline-block; padding: 7px 26px 8px; line-height: 18px;}
-nav ul.list-inline > li:hover {}
-nav ul.list-inline > li:hover > a {color: #25232b; text-decoration: none; background: #f3f3f5;}
-/*nav ul li:first-child a {padding-left: 0; padding-right: 40px;}*/
-/*nav ul li:last-child a {padding-right: 30px; padding-left: 20px;}*/
-nav ul.list-inline > li .subnav {
+.header nav ul {margin-bottom: 0; position: relative;}
+.header nav ul.list-inline > li {padding-right: 15px; padding-left: 15px; position: static;}
+.header nav ul.list-inline > li > a {font-size: 16px; font-weight: bold; color: #fff; display: inline-block; padding: 7px 26px 8px; line-height: 18px;}
+.header nav ul.list-inline > li:hover {}
+.header nav ul.list-inline > li:hover > a {color: #25232b; text-decoration: none; background: #f3f3f5;}
+/*.header nav ul li:first-child a {padding-left: 0; padding-right: 40px;}*/
+/*.header nav ul li:last-child a {padding-right: 30px; padding-left: 20px;}*/
+.header nav ul.list-inline > li .subnav {
 	display: none; position: absolute; left: -75px; right: -75px; background: #f3f3f5; z-index: 99;
 	-moz-box-shadow: 0 8px 10px -3px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 0 8px 10px -3px rgba(0,0,0,0.3);
 	box-shadow: 0 8px 10px -3px rgba(0,0,0,0.3);
 	padding: 30px 98px;
 }
-nav ul li:hover .subnav {display: block;}
-nav ul li .subnav .subnav-col {width: 26%; float: left; padding-right: 2%;}
-nav ul li .subnav .subnav-col:last-child {width: 20%; float: right; padding-right: 0;}
-nav ul li .subnav .subnav-col .col-title {color: #25232b; font-weight: bold;}
-nav ul li .subnav .subnav-col ul {margin-top: 20px;}
-nav ul li .subnav .subnav-col ul li {line-height: 25px;}
-nav ul li .subnav .subnav-col ul li a {color: #6c6a74; text-decoration: underline;}
-nav ul li .subnav .subnav-col a:hover {text-decoration: none;}
-nav ul li .subnav .subnav-block {width: 195px; }
-nav ul li .subnav .subnav-block .btn {display: block; font-weight: bold;}
-nav ul li .subnav .subnav-block .btn-link {text-transform: none;}
-nav ul li .subnav .subnav-block .title {
+.header nav ul li:hover .subnav {display: block;}
+.header nav ul .subnav .subnav-col {width: 26%; float: left; padding-right: 2%;}
+.header nav ul .subnav .subnav-col:last-child {width: 20%; float: right; padding-right: 0;}
+.header nav ul .subnav .subnav-col .col-title {color: #25232b; font-weight: bold;}
+.header nav ul .subnav .subnav-col ul {margin-top: 20px;}
+.header nav ul .subnav .subnav-col ul li {line-height: 25px;}
+.header nav ul .subnav .subnav-col ul li a {color: #6c6a74; text-decoration: underline;}
+.header nav ul .subnav .subnav-col a:hover {text-decoration: none;}
+.header nav ul .subnav .subnav-block {width: 195px; }
+.header nav ul .subnav .subnav-block .btn {display: block; font-weight: bold;}
+.header nav ul .subnav .subnav-block .btn-link {text-transform: none;}
+.header nav ul .subnav .subnav-block .title {
 	color: #2c2a33; font-size: 14px; font-family: 'Russo One', sans-serif; line-height: normal;
 	font-weight: bold; margin: 15px 0;
 }
@@ -308,8 +308,8 @@ nav ul li .subnav .subnav-block .title {
 	-webkit-box-shadow: inset 0 0 17px 0 rgba(0,0,0,0.3);
 	box-shadow: inset 0 0 17px 0 rgba(0,0,0,0.3);
 }
-
 .selection-tower-crane .crane-item-wrapper {width: 980px; padding-right: 0;}
+
 .crane-item-wrapper form {margin: 10px 0 25px;}
 .crane-item-wrapper .search-category,
 .crane-item-wrapper .scheme {
@@ -646,6 +646,56 @@ nav ul li .subnav .subnav-block .title {
 	background: url("../img/help-man4.png") no-repeat 0 0;
 }
 
+/* catalog ------------------------------------------------------------------*/
+
+.catalog {padding: 20px 0 40px;}
+.catalog .col-md-10 {padding-right: 0;}
+.catalog header {margin-bottom: 20px;}
+
+.catalog h1 {font-size: 30px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;}
+.catalog h1 + p {font-size: 18px;}
+.catalog h2 {font-size: 20px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;}
+.catalog h2 + p {font-size: 16px;}
+
+.catalog-item-wrapper {
+	background: #f3f3f5; margin-bottom: 35px;
+
+	-moz-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+	-webkit-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+}
+
+.catalog-item-wrapper .catalog-item > div {
+	padding: 23px 20px; border-top: 1px solid #fff;
+	font-size: 14px; font-family: 'Russo One', sans-serif; line-height: 41px; text-transform: uppercase;
+}
+.catalog-item-wrapper .catalog-item:first-child > div {border-top: transparent;}
+
+
+/* pagination ---------------------------------------------------------------*/
+
+.pagination {padding-left: 0; margin: 0;	border-radius: 0;}
+
+.pagination >li > a,
+.pagination >li > span {
+	color: #25232b; background-color: transparent; border: none;
+	font-size: 18px; font-family: 'Russo One', sans-serif; line-height: 1; text-transform: uppercase;
+}
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li.current > a {
+	color: #f8c100;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.pagination > li > a[aria-label="Previous"] span,
+.pagination > li > a[aria-label="Next"] span {
+	overflow: hidden; text-indent: -9999px;
+	display: block; width: 31px; height: 18px; background: url("../img/page-arrow.png") no-repeat;
+}
+.pagination > li > a[aria-label="Previous"] span {background-position: 0 0;}
+.pagination > li > a[aria-label="Next"] span {background-position: 0 -18px;}
 /* 404 ----------------------------------------------------------------------*/
 
 .selection-404 {padding: 40px 0;}
