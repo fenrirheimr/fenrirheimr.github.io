@@ -164,7 +164,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .header nav ul .subnav .subnav-col ul li a {color: #6c6a74; text-decoration: underline;}
 .header nav ul .subnav .subnav-col a:hover {text-decoration: none;}
 .header nav ul .subnav .subnav-block {width: 195px; }
-.header nav ul .subnav .subnav-block .btn {display: block; font-weight: bold;}
+.header nav ul .subnav .subnav-block .btn {display: block;}
 .header nav ul .subnav .subnav-block .btn-link {text-transform: none;}
 .header nav ul .subnav .subnav-block .title {
 	color: #2c2a33; font-size: 14px; font-family: 'Russo One', sans-serif; line-height: normal;
@@ -254,9 +254,8 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	width: 100%;
 }
 
-/* promo mounting-cranes ----------------------------------------------------*/
+/* promo mounting cranes ----------------------------------------------------*/
 
-/*.content-wrapper {padding: 0 15px;}*/
 .mounting-cranes {height: 383px; background: url("../img/promo-bg-01.jpg") no-repeat 50% 0; padding-top: 10px;}
 
 .promo h1 {color: #25232b; font-size: 30px; font-family: 'Russo One', sans-serif; margin-bottom: 10px}
@@ -264,6 +263,10 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .promo .btn {font-size: 14px; padding: 8px 63px;}
 .promo ul {color: #25232b; font-size: 18px; padding-left: 20px;}
 .promo ul li {line-height: 30px;}
+
+/* promo repair cranes ------------------------------------------------------*/
+
+.repair-cranes {height: 383px; background: url("../img/promo-bg-02.jpg") no-repeat 50% 0; padding-top: 10px;}
 
 /* counters -----------------------------------------------------------------*/
 
@@ -277,9 +280,9 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .summary header {margin-bottom: 20px;}
 .summary h2 {font-size: 20px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;}
 .summary .summary-wrapper {}
-.summary .summary-wrapper img {display: block; margin: 0 30% 10px;}
+.summary .summary-wrapper img {display: block; margin: 0 auto 10px;}
 .summary .summary-wrapper .title {
-	font-size: 18px;
+	font-size: 18px; display: inline-block;
 	font-family: 'Russo One', sans-serif; line-height: normal; 
 	text-transform: uppercase;
 	color: #2586a7; margin-bottom: 20px;
@@ -312,6 +315,12 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 /* content blocks -----------------------------------------------------------*/
 
 .content-blocks {padding: 30px 0;}
+
+.content-blocks header {margin-bottom: 20px;}
+.content-blocks h2 {font-size: 20px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;}
+.content-blocks h2 +p {font-size: 16px;}
+
+
 .content-blocks .content-blocks-wrapper {}
 .content-blocks .content-blocks-item {
 	background: #f3f3f5; padding: 20px; color: #25232b; font-size: 16px;
