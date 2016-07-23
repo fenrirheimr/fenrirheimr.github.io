@@ -268,6 +268,10 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 
 .repair-cranes {height: 383px; background: url("../img/promo-bg-02.jpg") no-repeat 50% 0; padding-top: 10px;}
 
+/* promo transportation cranes ----------------------------------------------*/
+
+.transportation-cranes {height: 383px; background: url("../img/promo-bg-03.jpg") no-repeat 50% 0; padding-top: 10px;}
+
 /* counters -----------------------------------------------------------------*/
 
 .counters {background: #f3f3f5;}
@@ -278,9 +282,13 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 
 .summary {padding: 30px 0;}
 .summary header {margin-bottom: 20px;}
-.summary h2 {font-size: 20px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;}
+.summary h2 {
+	font-size: 20px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;
+	max-width: 700px;
+	margin: 20px auto 10px;
+}
 .summary .summary-wrapper {}
-.summary .summary-wrapper img {display: block; margin: 0 auto 10px;}
+.summary .summary-wrapper img {display: block; margin: 0 auto 15px;}
 .summary .summary-wrapper .title {
 	font-size: 18px; display: inline-block;
 	font-family: 'Russo One', sans-serif; line-height: normal; 
@@ -714,6 +722,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .help form {background: #f3f3f5;}
 .help form label {display: block;}
 .help form i {font-size: 18px; display: block; margin-bottom: 10px;}
+.help form p {font-size: 16px;}
 .help form .btn {vertical-align: bottom;}
 .help form .form-group {margin-right: 20px; width: 250px; margin-bottom: 20px;}
 .help form .form-group .form-control {width: 100%;}
@@ -743,7 +752,13 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	display: block; width: 255px; height: 294px; position: absolute; right: 70px; bottom: 0; content: ' ';
 	background: url("../img/help-man5.png") no-repeat 0 0;
 }
-
+.help.page5 form:after {
+	display: block; width: 273px; height: 349px; position: absolute; right: 60px; bottom: 0; content: ' ';
+	background: url("../img/help-man6.png") no-repeat 0 0;
+}
+.help.page5 form .form-group {width: 190px;}
+.help.page5 form .form-group.phone {width: 300px;}
+.help.page5 .form-footer {margin-top: 20px;}
 /* catalog ------------------------------------------------------------------*/
 
 .catalog {padding: 30px 0 40px;}
