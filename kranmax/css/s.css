@@ -1,6 +1,9 @@
 /*
  html, css & js - Vladimir Glushkov
  http://fenrirheimr.ru/
+
+ Ну и наговнокодил я тут...
+ TODO: Надо будет потом во время работы над адаптивом почистить как следует
 */
 
 html {
@@ -24,8 +27,9 @@ body {
 /* костыль */
 section > .container > .row > div {padding: 0}
 
-a {text-decoration: underline;}
-a:hover {text-decoration: none;}
+a {text-decoration: underline; outline: 0 !important;}
+a:hover,
+a:focus {text-decoration: none;}
 
 .m-link {border-bottom: 1px dashed; text-decoration: none;}
 .m-link:hover {border-bottom-color: transparent;}
@@ -737,7 +741,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .help form label {display: block;}
 .help form i {font-size: 18px; display: block; margin-bottom: 10px;}
 .help form p {font-size: 16px;}
-.help form .btn {vertical-align: bottom;}
+.help form .btn {vertical-align: bottom; margin-bottom: 20px;}
 .help form .form-group {margin-right: 20px; width: 250px; margin-bottom: 20px;}
 .help form .form-group .form-control {width: 100%;}
 .help form .form-footer {margin-top: 40px;}
@@ -747,6 +751,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 }
 
 .help.block_on_page {}
+.help.block_on_page .btn {margin-bottom: 0;}
 .help.block_on_page form .fullsize-block {width: 525px; display: block; margin-bottom: 25px;}
 .help.block_on_page form:after {
 	display: block; width: 386px; height: 313px; position: absolute; right: 15px; bottom: -33px; content: ' ';
@@ -773,6 +778,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .help.page5 form .form-group {width: 190px;}
 .help.page5 form .form-group.phone {width: 300px;}
 .help.page5 .form-footer {margin-top: 20px;}
+
 /* catalog ------------------------------------------------------------------*/
 
 .catalog {padding: 30px 0 40px;}
@@ -1086,3 +1092,65 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .footer .m-link {border-bottom-color: #ec2327; margin-right: 13px;}
 .footer .m-link:hover {border-bottom-color: transparent;}
 .footer .copy {color: #25232b; font-size: 12px; margin: 10px 12px 0 0;}
+
+/* Modal
+-----------------------------------------------------------------------------*/
+
+.modal-open {padding-right: 0 !important;}
+.modal-backdrop.in {
+	filter: alpha(opacity=60);
+	opacity: .6;
+}
+
+.modal-content {border: 3px solid #f8c206; background: #f3f3f5;}
+
+.modal-content .close {position: absolute; top: 15px; right: 14px;}
+.modal-content .close,
+.modal-content .close:focus,
+.modal-content .close:hover {filter: alpha(opacity=100); opacity: 1; outline: 0;}
+.modal-content .close span {
+	display: block; width: 18px; height: 18px;
+	background: url("../img/cross.png") no-repeat;
+}
+.modal-header {
+	padding: 29px 15px 0;
+	border-bottom: none;
+}
+.modal-title {
+	/*margin-left: 16.66666667%;*/
+	color: #25232b; font-family: 'Russo One', sans-serif; font-size: 16px; text-transform: uppercase;
+}
+.modal-body {position: relative; padding: 24px 16px; font-size: 16px; color: #25232b;}
+.modal-body form {position: relative; padding: 0 44px 0 0;}
+.modal-body form .form-group {margin-bottom: 24px;}
+.modal-body form .form-group:last-child {margin-bottom: 0;}
+.modal-body .add-field {font-size: 16px; color: #25232b; text-decoration: none; border-bottom: 1px dashed #25232b;}
+
+.modal-footer {
+	padding: 15px;
+	text-align: right;
+	border-top: none;
+}
+
+.modal-callback .modal-dialog {width: 525px;}
+.modal-thanks .modal-title {margin-left:0;}
+
+.modal-order .modal-dialog {width: 615px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

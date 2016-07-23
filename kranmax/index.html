@@ -31,6 +31,7 @@
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
 	<script src="js/jquery.matchHeight.js"></script>
+	<script src="js/jquery.selectbox.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 
@@ -61,7 +62,7 @@
 				<div class="col-md-2">
 					<div class="h-block">
 						<div class="top-phone">8 800 123-45-54</div>
-						<a href="#" class="m-link">Заказать звонок</a> <a href="#">Контакты</a>
+						<a href="#" class="m-link" data-toggle="modal" data-target="#callback">Заказать звонок</a> <a href="#">Контакты</a>
 					</div>
 				</div>
 				<div class="col-md-2">
@@ -375,7 +376,7 @@
 										</ul>
 									</div>
 								</div>
-								<a href="#" class="btn btn-yellow">Заказать</a>
+								<a href="#" class="btn btn-yellow" data-toggle="modal" data-target="#order">Заказать</a>
 							</div>
 
 							<div class="slide-item">
@@ -390,7 +391,7 @@
 										</ul>
 									</div>
 								</div>
-								<a href="#" class="btn btn-yellow">Заказать</a>
+								<a href="#" class="btn btn-yellow" data-toggle="modal" data-target="#order">Заказать</a>
 							</div>
 
 							<div class="slide-item">
@@ -405,7 +406,7 @@
 										</ul>
 									</div>
 								</div>
-								<a href="#" class="btn btn-yellow">Заказать</a>
+								<a href="#" class="btn btn-yellow" data-toggle="modal" data-target="#order">Заказать</a>
 							</div>
 							<div class="slide-item">
 								<div class="thumbnail">
@@ -419,7 +420,7 @@
 										</ul>
 									</div>
 								</div>
-								<a href="#" class="btn btn-yellow">Заказать</a>
+								<a href="#" class="btn btn-yellow" data-toggle="modal" data-target="#order">Заказать</a>
 							</div>
 
 						</div>
@@ -685,7 +686,7 @@
 			</div>
 			<div class="col-md-3">
 				<div class="f-phone">+7 (351) 123-45-54</div>
-				<div class="text-right"><a href="#" class="m-link">Заказать звонок</a></div>
+				<div class="text-right"><a href="#" class="m-link" data-toggle="modal" data-target="#callback">Заказать звонок</a></div>
 				<div class="text-right copy">&copy; ООО «Кранзап» Челябинск - 2014 г.</div>
 			</div>
 
@@ -693,5 +694,130 @@
 	</div>
 </footer><!-- .footer -->
 
+<!-- Modal -->
+<div class="modal fade modal-callback" id="callback" tabindex="-1" role="dialog" aria-labelledby="callbackLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+				<div class="col-sm-offset-2">
+					<div class="modal-title" id="callbackLabel">Заказ звонка</div>
+				</div>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputText3" class="col-sm-2 control-label">Имя</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="inputText3" placeholder="">
+						</div>
+					</div>
+					<div class="form-group phone">
+						<label for="inputText4" class="col-sm-2 control-label">Телефон</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="inputText4" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<!--<button type="submit" class="btn btn-yellow">Отправить</button>-->
+							<!-- кнопка ниже только для демонстрации 2го окна -->
+							<button type="button" class="btn btn-yellow" data-dismiss="modal" data-toggle="modal" data-target="#thanks">Отправить</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade modal-thanks" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanksLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content text-center">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+				<div class="modal-title" id="thanksLabel">Заказ звонка</div>
+			</div>
+			<div class="modal-body">
+				<p>Спасибо!</p>
+				<p>Наши менеджеры свяжутся с вами в ближайшее время.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade modal-order" id="order" tabindex="-1" role="dialog" aria-labelledby="orderLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+				<div class="col-sm-offset-4">
+					<div class="modal-title" id="orderLabel">Сделать заказ</div>
+				</div>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputText10" class="col-sm-4 control-label">Имя</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="inputText10" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputText11" class="col-sm-4 control-label">Электронная почта</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="inputText11" placeholder="">
+						</div>
+					</div>
+					<div class="form-group phone">
+						<label for="inputText12" class="col-sm-4 control-label">Телефон</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="inputText12" placeholder="">
+						</div>
+					</div>
+					<div class="form-group phone">
+						<label for="inputText13" class="col-sm-4 control-label">Наименование товара</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="inputText13" placeholder="">
+						</div>
+					</div>
+					<div class="form-group phone">
+						<label for="inputText14" class="col-sm-4 control-label">Количество</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="inputText14" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-4 col-sm-8">
+							<a href="#" class="add-field">Добавить</a>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-4 col-sm-8">
+							<!--<button type="submit" class="btn btn-yellow">Отправить</button>-->
+							<!-- кнопка ниже только для демонстрации 2го окна -->
+							<button type="button" class="btn btn-yellow" data-dismiss="modal" data-toggle="modal" data-target="#orderCompleted">Заказать</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade modal-thanks" id="orderCompleted" tabindex="-1" role="dialog" aria-labelledby="orderCompletedLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content text-center">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+				<div class="modal-title" id="orderCompletedLabel">Заказ оформлен</div>
+			</div>
+			<div class="modal-body">
+				<p>Спасибо!</p>
+				<p>Наши менеджеры свяжутся с вами в ближайшее время.</p>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>
