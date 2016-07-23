@@ -86,7 +86,7 @@
             });
 
             $('.tower-crane-slider').bxSlider({
-                slideWidth: 282,
+                slideWidth: 290,
                 minSlides: 1,
                 maxSlides: 2,
                 moveSlides: 1,
