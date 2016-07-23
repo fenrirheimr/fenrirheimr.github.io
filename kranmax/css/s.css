@@ -259,7 +259,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .mounting-cranes {height: 383px; background: url("../img/promo-bg-01.jpg") no-repeat 50% 0; padding-top: 10px;}
 
 .promo h1 {color: #25232b; font-size: 30px; font-family: 'Russo One', sans-serif; margin-bottom: 10px}
-.promo h2 {font-size: 24px; font-weight: bold; color: #25232b; margin: 20px 0 30px;}
+.promo h2 {font-size: 24px; font-weight: bold; color: #25232b; margin: 20px 0 30px;max-width: 600px;}
 .promo .btn {font-size: 14px; padding: 8px 63px;}
 .promo ul {color: #25232b; font-size: 18px; padding-left: 20px;}
 .promo ul li {line-height: 30px;}
@@ -271,6 +271,10 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 /* promo transportation cranes ----------------------------------------------*/
 
 .transportation-cranes {height: 383px; background: url("../img/promo-bg-03.jpg") no-repeat 50% 0; padding-top: 10px;}
+
+/* crane rental -------------------------------------------------------------*/
+
+.crane-rental {height: 383px; background: url("../img/promo-bg-04.jpg") no-repeat 50% 0; padding-top: 10px;}
 
 /* counters -----------------------------------------------------------------*/
 
@@ -362,13 +366,12 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 
 /* selection tower crane ----------------------------------------------------*/
 
-.selection-tower-crane {
-	background: url("../img/selection-tower-crane.jpg") no-repeat 50% 0; padding-top: 160px;
-}
+/*.selection-tower-crane {padding-top: 160px;}*/
 
-.selection-tower-crane {padding: 20px 0;}
+.selection-tower-crane {padding: 20px 0; background: url("../img/selection-tower-crane.jpg") no-repeat 50% 0;}
 .selection-tower-crane header {margin-bottom: 20px;}
 .selection-tower-crane h1 {font-size: 30px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;}
+.selection-tower-crane h2 {font-size: 20px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;}
 .selection-tower-crane form {
 	background: #f8c100 url("../img/lines.png") no-repeat 0 0; font-size: 14px; margin: 40px 0 15px; padding: 20px;
 	-moz-box-shadow: 3px 3px 20px -4px #c3573a;
@@ -385,6 +388,8 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .selection-tower-crane form .form-group.s-year {width: 105px;}
 .selection-tower-crane form .form-group.s-mark {width: 165px;}
 .selection-tower-crane form .form-group.s-cat {width: 285px;}
+.selection-tower-crane form .form-group.s-height {width: 120px;}
+.selection-tower-crane form .form-group.s-carrying-capacity {width: 120px;}
 
 .selection-tower-crane .spare-parts-crane {color: #25232b; padding: 0 0 40px;}
 .selection-tower-crane .spare-parts-crane header {margin-bottom: 20px;}
@@ -419,7 +424,10 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	-webkit-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 }
-.crane-item-wrapper .search-category .caption {font-size: 18px; color: #aa2320; margin-bottom: 20px; font-weight: bold;}
+.crane-item-wrapper .search-category .caption {
+	font-size: 18px; color: #aa2320; margin-bottom: 20px;
+	font-weight: bold;
+}
 .crane-item-wrapper .search-category ul {
 	font-size: 0;
 	-moz-column-count: 5;
@@ -497,6 +505,12 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .blue-icn.icn02 {background-position: 0 -25px;}
 .blue-icn.icn03 {background-position: 0 -50px;}
 .blue-icn.icn04 {background-position: 0 -75px;}
+
+/* selection tower crane rental ---------------------------------------------*/
+
+.selection-tower-crane.rental {background: none;}
+.selection-tower-crane.rental form .form-group.s-mark {width: 185px;}
+.selection-tower-crane.rental form .form-group .radio {margin: 25px 9px 0 9px;}
 
 /* custom selectbox ---------------------------------------------------------*/
 
@@ -781,7 +795,11 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .catalog-item-wrapper .catalog-item {position: relative; z-index: 1;}
 .catalog-item-wrapper .catalog-item > div {
 	padding: 23px 20px; border-top: 1px solid #fff;
-	font-size: 14px; font-family: 'Russo One', sans-serif; line-height: 41px; text-transform: uppercase;
+	font-size: 14px; font-family: 'Russo One', sans-serif; line-height: 41px; /*text-transform: uppercase;*/
+}
+.catalog-item-wrapper .catalog-item .price {color: #2576aa;}
+.catalog-item-wrapper .catalog-item .price > span {
+	font-family: 'PT Sans', sans-serif; font-size: 14px; font-weight: bold;
 }
 .catalog-item-wrapper .catalog-item:first-child > div {border-top: transparent;}
 
@@ -796,6 +814,18 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	z-index: 10; margin: -3px;
 
 }
+
+.catalog-item-wrapper .list-caption {
+	background: #f8ba00; border-radius: 5px 5px 0 0;
+}
+.catalog-item-wrapper .list-caption > div {
+	padding: 20px; font-size: 14px; color: #2c2a33;
+	font-family: 'Russo One', sans-serif;
+
+}
+
+.catalog.rental .catalog-item-wrapper .btn {float: right;}
+
 
 /* pagination ---------------------------------------------------------------*/
 
