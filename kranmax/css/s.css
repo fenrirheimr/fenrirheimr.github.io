@@ -123,10 +123,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .header .h-block .m-link {border-bottom-color: #f7a7a9;}
 .header .h-block .m-link:hover {border-bottom-color: transparent;}
 .header .h-block .top-phone {font-size: 20px;}
-.header nav .last a {
-	background: url("../img/nav-last-bg.png") no-repeat 0 0; color: #25232b;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
-}
+
 
 .header nav {
 	background: #25232b; height: 51px;
@@ -139,8 +136,12 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .header nav ul.list-inline > li > a {font-size: 16px; font-weight: bold; color: #fff; display: inline-block; padding: 7px 26px 8px; line-height: 18px;}
 .header nav ul.list-inline > li:hover {}
 .header nav ul.list-inline > li:hover > a {color: #25232b; text-decoration: none; background: #f3f3f5;}
-/*.header nav ul li:first-child a {padding-left: 0; padding-right: 40px;}*/
-/*.header nav ul li:last-child a {padding-right: 30px; padding-left: 20px;}*/
+
+.header nav ul.list-inline > li.last > a {
+	background: url("../img/nav-last-bg.png") no-repeat 0 0; color: #25232b;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
 .header nav ul.list-inline > li .subnav {
 	display: none; position: absolute; left: -75px; right: -75px; background: #f3f3f5; z-index: 99;
 	-moz-box-shadow: 0 8px 10px -3px rgba(0,0,0,0.3);
@@ -326,7 +327,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	column-count: 5;
 }
 .crane-item-wrapper .search-category ul li a {font-size: 14px; color: #25232b; line-height: 26px;}
-.crane-item-wrapper .scheme {color: #25232b; font-size: 18px; font-weight: bold; margin-bottom: 0;}
+.crane-item-wrapper .scheme {color: #25232b; font-size: 18px; font-weight: bold;}
 .crane-item-wrapper .scheme img {margin-right: 20px;}
 
 .selection-tower-crane .crane-item {
@@ -648,7 +649,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 
 /* catalog ------------------------------------------------------------------*/
 
-.catalog {padding: 20px 0 40px;}
+.catalog {padding: 30px 0 40px;}
 .catalog .col-md-10 {padding-right: 0;}
 .catalog header {margin-bottom: 20px;}
 
@@ -665,12 +666,24 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 }
 
+.catalog-item-wrapper .catalog-item {position: relative; z-index: 1;}
 .catalog-item-wrapper .catalog-item > div {
 	padding: 23px 20px; border-top: 1px solid #fff;
 	font-size: 14px; font-family: 'Russo One', sans-serif; line-height: 41px; text-transform: uppercase;
 }
 .catalog-item-wrapper .catalog-item:first-child > div {border-top: transparent;}
 
+.catalog-item-wrapper .catalog-item:hover {
+	background: #fff;
+	border: 3px solid #f8c100;
+	border-radius: 5px;
+
+	-moz-box-shadow: 0 0 10px 2px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,0.4);
+	box-shadow: 0 0 10px 2px rgba(0,0,0,0.4);
+	z-index: 10; margin: -3px;
+
+}
 
 /* pagination ---------------------------------------------------------------*/
 
@@ -866,6 +879,25 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .specifications .collapse-table-wrapper .panel-heading+.panel-collapse>.panel-body .table>tbody>tr>td:first-child {padding-left: 15px;}
 .specifications .collapse-table-wrapper .panel-heading+.panel-collapse>.panel-body .table>tbody>tr>td:last-child {padding-right: 40px;}
 
+/* popular detail -----------------------------------------------------------*/
+
+.popular-detail {margin-bottom: 30px;}
+.popular-detail header {margin-bottom: 20px;}
+.popular-detail h2 {font-size: 20px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;}
+
+.popular-detail .list-wrapper {
+	background: #f3f3f5; padding: 20px; margin: 10px 0 0;
+	-moz-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+	-webkit-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+
+	/*-moz-column-count: 2;*/
+	/*-webkit-column-count: 2;*/
+	/*column-count: 2;*/
+}
+.popular-detail .list-wrapper li {line-height: 26px;}
+.popular-detail .list-wrapper li a {font-size: 14px; color: #25232b;}
+
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
@@ -875,11 +907,14 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	position: relative;
 	border-top: 3px solid #f8b800; font-size: 14px; color: #25232b;
 }
-.footer nav {
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
+
+.footer nav {background: #25232b; height: 51px;}
+.footer nav ul {margin-bottom: 0; position: relative;}
+.footer nav ul.list-inline > li {padding-right: 15px; padding-left: 15px; position: static;}
+.footer nav ul.list-inline > li > a {font-size: 16px; font-weight: bold; color: #fff; display: inline-block; padding: 7px 26px 8px; line-height: 18px;}
+.footer nav ul.list-inline > li:hover {}
+.footer nav ul.list-inline > li:hover > a {color: #25232b; text-decoration: none; background: #f3f3f5;}
+
 
 .footer .f-header {text-transform: uppercase; font-weight: bold; margin: 10px 0;}
 .footer .list-inline {margin-right: -40px; margin-left: -40px;}
