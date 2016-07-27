@@ -78,7 +78,7 @@
 
             $('.popular-slider').bxSlider({
                 slideWidth: 226,
-                minSlides: 2,
+                minSlides: 4,
                 maxSlides: 4,
                 moveSlides: 1,
                 slideMargin: 10,

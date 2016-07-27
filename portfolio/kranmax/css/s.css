@@ -18,15 +18,19 @@ body {
 	height: 100%;
 	padding: 0 !important;
 }
-.wrapper {
-	margin: 0 auto;
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-}
+/*.wrapper {*/
+	/*margin: 0 auto;*/
+	/*min-height: 100%;*/
+	/*height: auto !important;*/
+	/*height: 100%;*/
+/*}*/
 
 /* костыль */
-section > .container > .row > div {padding: 0}
+/*section > .container > .row > div {padding: 0}*/
+
+/*body {background: black;}
+section {background: red;}
+.container {background: green;}*/
 
 a {text-decoration: underline; outline: 0 !important;}
 a:hover,
@@ -119,16 +123,19 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 /* Header
 -----------------------------------------------------------------------------*/
 
-.header > .container > .row > div {padding: 0}
-.header > nav > .container > .row > div {padding: 0 15px 0 0;}
+/*.header > .container > .row > div {padding: 0}*/
+/*.header > nav > .container > .row > div {padding: 0 15px 0 0;}*/
 
 .header {height: 142px; background: #fff; border-top: 3px solid #f8b800; padding: 25px 0 0; z-index: 99; position: relative;}
-.header .list-inline {margin-right: -40px; margin-left: -40px;}
-.header .tagline {font-family: 'Russo One', sans-serif; color: #25232b; font-size: 13px; margin-bottom: 20px;}
+/*.header .list-inline {margin-right: -40px; margin-left: -40px;}*/
+.header .tagline {
+	font-family: 'Russo One', sans-serif; color: #25232b; font-size: 13px; margin-bottom: 20px;
+	white-space: nowrap;
+}
 .header .h-block {font-family: 'Russo One', sans-serif; color: #25232b; font-size: 14px; white-space: nowrap;}
 .header .h-block a {color: #2576aa; font-family: 'PT Sans', sans-serif; margin-right: 8px;}
 .header .h-block a.mail {font-family: 'Russo One', sans-serif;}
-.header .h-block .region {margin-top: 5px;}
+.header .h-block .region {margin-top: 8px;}
 .header .h-block .region a {text-decoration: none; border-bottom: 1px dashed;}
 .header .h-block .region a:hover {border-bottom-color: transparent;}
 .header .h-block .m-link {border-bottom-color: #f7a7a9;}
@@ -143,8 +150,12 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
 }
 .header nav ul {margin-bottom: 0; position: relative;}
-.header nav ul.list-inline > li {padding-right: 15px; padding-left: 15px; position: static;}
-.header nav ul.list-inline > li > a {font-size: 16px; font-weight: bold; color: #fff; display: inline-block; padding: 7px 26px 8px; line-height: 18px;}
+.header nav ul.list-inline > li {/*padding-right: 15px; padding-left: 15px;*/ position: static;}
+.header nav ul.list-inline > li > a {
+	font-size: 16px; font-weight: bold; color: #fff; display: inline-block;
+	padding: 7px 26px 8px; line-height: 18px; height: 51px;
+}
+.header nav ul.list-inline > li:first-child > a {padding: 7px 26px 8px;}
 .header nav ul.list-inline > li:hover {}
 .header nav ul.list-inline > li:hover > a {color: #25232b; text-decoration: none; background: #f3f3f5;}
 
@@ -248,7 +259,6 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .bx-wrapper .bx-pager {
 	text-align: center;
 	font-size: .85em;
-	font-family: Arial;
 	font-weight: bold;
 	color: #666;
 	padding-top: 20px;
@@ -386,8 +396,11 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .selection-tower-crane form p {color: #25232b; font-size: 18px;}
 .selection-tower-crane form label {display: block;}
 .selection-tower-crane form .btn {vertical-align: bottom;}
-.selection-tower-crane form .form-group {margin-right: 16px; }
-.selection-tower-crane form .form-group .form-control {width: 240px; font-size: 16px; padding: 6px 20px;}
+/*.selection-tower-crane form .form-group {margin-right: 16px; }*/
+/*.selection-tower-crane form .form-group {float: left;}*/
+/*.selection-tower-crane form .form-group:first-of-type {padding-left: 15px;margin-top: 10px;}*/
+.selection-tower-crane form .form-group .form-control {width: 100%; font-size: 16px; padding: 6px 20px;}
+.selection-tower-crane form .form-group.col-md-2 {padding-right:0;}
 .selection-tower-crane form .form-group select.form-control {width: auto;}
 .selection-tower-crane form .form-group .radio {margin-top: 25px;}
 .selection-tower-crane form .form-group.s-year {width: 105px;}
@@ -915,6 +928,9 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .news .nav-pills > li > .all-news,
 .news .nav-pills > li > .all-news {color: #2576aa; text-decoration: none;}
 
+.news .nav-pills > li > a:focus,
+.news .nav-pills > li > a:hover {color: #fff;}
+
 .news .nav-pills > li > span {
 	 border-radius: 0; text-transform: uppercase; color: #25232b;
 	font-family: 'Russo One', sans-serif; font-size: 20px; display: block; padding: 22px 22px 40px; cursor: pointer;
@@ -928,8 +944,8 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	border-color: transparent transparent transparent #c2c2c4;
 }
 
-.news .bx-viewport {min-height: 180px;}
-.news .bx-controls {position: absolute; top: 50%; margin-top: -18px; left: 10px; right: 10px;}
+.news .bx-viewport {min-height: 180px; z-index: 1;}
+.news .bx-controls {position: absolute; top: 50%; margin-top: -18px; left: 10px; right: 10px; z-index: 0;}
 .news .bx-controls a {
 	display: block; width: 20px; height: 36px; background: url("../img/slider-arows.png") no-repeat;
 	overflow: hidden; text-indent: -9999px;
@@ -1059,15 +1075,14 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 -----------------------------------------------------------------------------*/
 .footer {
 	margin: -207px auto 0;
-	height: 207px;
+	min-height: 207px;
 	background: #f3f3f5;
 	position: relative;
 	border-top: 3px solid #f8b800; font-size: 14px; color: #25232b;
 }
-.footer > nav > .container > .row > div {padding: 0 15px 0 0;}
-
-.footer .container > .row > div:first-child {padding-left: 0;}
-.footer .container > .row > div:last-child {padding-right: 0;}
+/*.footer > nav > .container > .row > div {padding: 0 15px 0 0;}*/
+/*.footer .container > .row > div:first-child {padding-left: 0;}*/
+/*.footer .container > .row > div:last-child {padding-right: 0;}*/
 
 .footer nav {background: #25232b; height: 51px;}
 .footer nav ul {margin-bottom: 0; position: relative;}
@@ -1078,9 +1093,9 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 
 
 .footer .f-header {text-transform: uppercase; font-weight: bold; margin: 10px 0;}
-.footer .list-inline {margin-right: -40px; margin-left: -40px;}
+/*.footer .list-inline {margin-right: -40px; margin-left: -40px;}*/
 .footer .manufacturers {}
-.footer .manufacturers .m-item {float: left; width: 228px; margin-right: 40px; margin-bottom: 10px;}
+.footer .manufacturers .m-item {float: left; width: 50%; margin-bottom: 10px;}
 .footer .manufacturers .m-item a {color: #25232b; text-decoration: none;}
 .footer .manufacturers .m-item a img,
 .footer .manufacturers .m-item a span {display: inline-block; vertical-align: top; line-height: 16px;}
@@ -1089,10 +1104,13 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .footer .manufacturers .m-item a img {margin-right: 10px;}
 .footer .f-nav {margin: 40px 0 10px;}
 .footer .f-nav a {white-space: nowrap;}
-.footer .f-phone {font-family: 'Russo One', sans-serif; color: #25232b; white-space: nowrap; font-size: 20px; margin: 40px 0 0 70px;}
-.footer .m-link {border-bottom-color: #ec2327; margin-right: 13px;}
+.footer .f-phone {
+	font-family: 'Russo One', sans-serif; color: #25232b; white-space: nowrap;
+	font-size: 20px; margin: 40px 0 0 70px; text-align: right;
+}
+.footer .m-link {border-bottom-color: #ec2327;}
 .footer .m-link:hover {border-bottom-color: transparent;}
-.footer .copy {color: #25232b; font-size: 12px; margin: 10px 12px 0 0;}
+.footer .copy {color: #25232b; font-size: 12px; margin: 10px 0 0 0;}
 
 /* Modal
 -----------------------------------------------------------------------------*/
