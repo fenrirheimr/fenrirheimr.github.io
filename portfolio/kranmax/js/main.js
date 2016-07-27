@@ -29,13 +29,6 @@
 
             var catalogItem = $('.catalog .catalog-item');
 
-
-            //catalogItem.hover(function(){
-            //    console.log('hover!')
-            //
-            //    catalogItemBtn.toggleClass('btn-blue btn-yellow');
-            //})
-
             catalogItem.hover(
                 function () {
                     var catalogItemBtn = $(this).find('.btn-blue');
@@ -47,10 +40,13 @@
                 } //при уводе курсора с элемента
             );
 
+            $(".fancybox").fancybox();
+
         },
         matchHeight:function(){
             $('.promo-slider .p-item').matchHeight();
             $('.selection-tower-crane .spare-parts-crane .s-item').matchHeight();
+            $('.main-characteristics > div > div').matchHeight();
         },
 
         customSelect:function(){

@@ -166,7 +166,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 
 .header nav ul.list-inline > li.last > a {
 	background: url("../img/nav-last-bg.png") 0 0; color: #25232b;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75); padding: 7px 35px 8px;
 }
 
 .header nav ul.list-inline > li .subnav {
@@ -311,13 +311,15 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	max-width: 700px;
 	margin: 20px auto 10px;
 }
-.summary .summary-wrapper {}
+.summary .summary-wrapper {overflow: hidden;}
 .summary .summary-wrapper img {display: block; margin: 0 auto 15px;}
 .summary .summary-wrapper .title {
 	font-size: 18px; display: inline-block;
 	font-family: 'Russo One', sans-serif; line-height: normal; 
-	text-transform: uppercase;
+	text-transform: uppercase; white-space: nowrap;
 	color: #2586a7; margin-bottom: 20px;
+	margin-left: 50%;
+	transform: translate(-50%, 0%);
 }
 .summary .summary-wrapper p {
 	font-size: 16px; color: #25232b; line-height: normal;
@@ -341,7 +343,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .last-work .last-work-wrapper .last-work-item ul {margin: 10px 0; font-size: 14px;}
 .last-work .last-work-wrapper .last-work-item strong {font-style: italic; display: block; margin: 10px 0;}
 .last-work .last-work-wrapper .last-work-item .img-wrapper {}
-.last-work .last-work-wrapper .last-work-item .img-wrapper img {margin-left: 1px;}
+.last-work .last-work-wrapper .last-work-item .img-wrapper img {margin-left: 1px; max-width: 32%;}
 .last-work .last-work-wrapper .last-work-item .img-wrapper img:first-child {margin-left: 0;}
 
 /* content blocks -----------------------------------------------------------*/
@@ -370,7 +372,10 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .content-blocks-item ul li a {color: #25232b;}
 .content-blocks-item p {line-height: 26px;}
 .content-blocks-item p:last-child {margin-bottom: 0;}
-.content-blocks-item .phone {display: block; font-size: 20px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;}
+.content-blocks-item .phone {
+	display: block; margin: 18px 0;
+	font-size: 20px; font-family: 'Russo One', sans-serif; line-height: normal; text-transform: uppercase;
+}
 
 /* about --------------------------------------------------------------------*/
 
@@ -400,7 +405,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 }
 .selection-tower-crane form p {color: #25232b; font-size: 18px;}
 .selection-tower-crane form label {display: block;}
-.selection-tower-crane form .btn {vertical-align: bottom;}
+.selection-tower-crane form .btn {vertical-align: bottom; margin-top: 25px;}
 /*.selection-tower-crane form .form-group {margin-right: 16px; }*/
 /*.selection-tower-crane form .form-group {float: left;}*/
 /*.selection-tower-crane form .form-group:first-of-type {padding-left: 15px;margin-top: 10px;}*/
@@ -408,11 +413,11 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .selection-tower-crane form .form-group.col-md-2 {padding-right:0;}
 .selection-tower-crane form .form-group select.form-control {width: auto;}
 .selection-tower-crane form .form-group .radio {margin-top: 25px;}
-.selection-tower-crane form .form-group.s-year {width: 105px;}
-.selection-tower-crane form .form-group.s-mark {width: 165px;}
-.selection-tower-crane form .form-group.s-cat {width: 285px;}
-.selection-tower-crane form .form-group.s-height {width: 120px;}
-.selection-tower-crane form .form-group.s-carrying-capacity {width: 120px;}
+/*.selection-tower-crane form .form-group.s-year {width: 105px;}*/
+/*.selection-tower-crane form .form-group.s-mark {width: 165px;}*/
+/*.selection-tower-crane form .form-group.s-cat {width: 285px;}*/
+/*.selection-tower-crane form .form-group.s-height {width: 120px;}*/
+/*.selection-tower-crane form .form-group.s-carrying-capacity {width: 120px;}*/
 
 .selection-tower-crane .spare-parts-crane {color: #25232b; padding: 0 0 40px;}
 .selection-tower-crane .spare-parts-crane header {margin-bottom: 20px;}
@@ -468,10 +473,18 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 }
 
+.crane-item .col-left,
+.crane-item .col-right {float: left;}
+.crane-item .col-left {width: 280px;}
+.crane-item .col-right {
+	width: 65%;
+	margin-left: 20px;
+}
+
 .crane-item .crane-slider-wrapper {}
 .crane-item .crane-slider-wrapper .bx-wrapper {margin-bottom: 5px;}
 .crane-item .crane-slider-wrapper .bx-wrapper + div {margin-left: -1px;}
-.crane-item .crane-slider-wrapper .bx-wrapper + div > a {float: left; margin-left: 8px;}
+.crane-item .crane-slider-wrapper .bx-wrapper + div > a {float: left; margin-left: 7px;}
 .crane-item .crane-slider-wrapper .bx-wrapper + div > a:first-child {margin-left: 0;}
 
 .crane-item .crane-item-description {}
@@ -489,17 +502,17 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	border: 0; padding: 0; color: #25232b; margin-bottom: 15px; line-height: 24px;
 }
 
-.main-characteristics { padding: 0; margin: 30px 0;}
-.main-characteristics [class*=col-] {
-	background: #fff; padding: 30px; float: left;
+.main-characteristics { padding: 0; margin: 30px -15px;}
+.main-characteristics [class*=col-item] {
+	background: #fff; padding: 30px;
 	-moz-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 	-webkit-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 }
 
-.main-characteristics .col-item-0 {width: 100%;}
-.main-characteristics .col-item-1 {width: 620px;}
-.main-characteristics .col-item-2 {width: 320px; margin-left: 25px}
+/*.main-characteristics .col-item-0 {width: 100%;}*/
+/*.main-characteristics .col-item-1 {width: 620px;}*/
+/*.main-characteristics .col-item-2 {width: 320px; margin-left: 25px}*/
 .main-characteristics .ch-block-caption {
 	font-size: 20px; font-family: 'Russo One', sans-serif; margin-bottom: 15px;
 	line-height: normal; text-transform: uppercase; color: #aa221d;
@@ -532,8 +545,10 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 /* selection tower crane rental ---------------------------------------------*/
 
 .selection-tower-crane.rental {background: none;}
-.selection-tower-crane.rental form .form-group.s-mark {width: 185px;}
+/*.selection-tower-crane.rental form .form-group.s-mark {width: 185px;}*/
 .selection-tower-crane.rental form .form-group .radio {margin: 25px 9px 0 9px;}
+.selection-tower-crane.rental form .form-group.btnr {padding-left: 0;}
+.selection-tower-crane.rental form .form-group .btn {margin-top: 25px;}
 
 /* custom selectbox ---------------------------------------------------------*/
 
@@ -658,7 +673,9 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 [type="radio"]:checked + label {
 	position: relative;
 	padding-left: 25px;
-	cursor: pointer; font-weight: bold; margin-right: 10px;
+	cursor: pointer; font-weight: bold;
+	margin-right: 10px;
+	font-size: 15px;
 }
 
 /* checkbox aspect */
@@ -966,18 +983,22 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	-moz-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 	-webkit-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
 	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 .breadcrumbs a {display: inline-block; margin-right: 20px; position: relative;}
 .breadcrumbs a:after {content:'\2192'; position: absolute; right: -18px; color: #2c2a33; z-index: 0;}
 
-.promo .breadcrumbs {
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
+/*.promo .breadcrumbs {*/
+	/*-moz-box-shadow: none;*/
+	/*-webkit-box-shadow: none;*/
+	/*box-shadow: none;*/
 
-	background: rgba(255,255,255, 0.75);
-}
+	/*background: rgba(255,255,255, 0.75);*/
+/*}*/
 
 /* specifications -----------------------------------------------------------*/
 
@@ -1016,14 +1037,16 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	background-color: #e1e1e1;
 	border-color: #e1e1e1;
 }
+.specifications .panel-group .panel .panel-title {}
 .specifications .panel-group .panel .panel-title a {
 	color: #2c2a33; font-size: 16px; text-decoration: none; position: relative;
 	font-weight: bold; display: block; text-align: center;
+	margin: -10px -15px; padding: 10px 15px;
 }
 .specifications .panel-group .panel .panel-title a:before {
 	display: block; width: 14px; height: 18px; content: ' ';
 	background: url("../img/collapse-arr.png") no-repeat 0 -18px;
-	position: absolute; right: 0;
+	position: absolute; right: 15px;
 }
 .specifications .panel-group .panel .panel-title a.collapsed:before {background-position: 0 0;}
 

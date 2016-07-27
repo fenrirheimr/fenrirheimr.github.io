@@ -16,6 +16,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="js/fancybox/jquery.fancybox.css" rel="stylesheet">
 	<link href="css/s.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
@@ -32,6 +33,7 @@
 	<script src="js/jquery.matchHeight.js"></script>
 	<script src="js/jquery.selectbox.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/fancybox/jquery.fancybox.js"></script>
 	<script src="js/main.js"></script>
 
 </head>
@@ -178,7 +180,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10 crane-item-wrapper">
+					<div class="col-md-12 crane-item-wrapper">
 
 						<div class="breadcrumbs r4">
 							<a href="#">Главная</a>
@@ -192,16 +194,26 @@
 						</header>
 
 						<div class="crane-item r5">
-							<div class="row">
+							<div class="clearfix">
 
-								<div class="col-md-4">
+								<div class="col-left">
 									<div class="crane-slider-wrapper">
 										<ul class="tower-crane-slider">
-											<li><img src="uploads/02.jpg" alt="Картинка 1" title="Картинка 1"></li>
-											<li><img src="uploads/02.jpg" alt="Картинка 2" title="Картинка 2"></li>
-											<li><img src="uploads/02.jpg" alt="Картинка 3" title="Картинка 3"></li>
-											<li><img src="uploads/02.jpg" alt="Картинка 4" title="Картинка 4"></li>
-											<li><img src="uploads/02.jpg" alt="Картинка 5" title="Картинка 5"></li>
+											<li>
+												<a class="fancybox" rel="gallery1" href="uploads/02.jpg"><img src="uploads/02.jpg" alt="Картинка 1" title="Картинка 1"></a>
+											</li>
+											<li>
+												<a class="fancybox" rel="gallery1" href="uploads/02.jpg"><img src="uploads/02.jpg" alt="Картинка 2" title="Картинка 2"></a>
+											</li>
+											<li>
+												<a class="fancybox" rel="gallery1" href="uploads/02.jpg"><img src="uploads/02.jpg" alt="Картинка 3" title="Картинка 3"></a>
+											</li>
+											<li>
+												<a class="fancybox" rel="gallery1" href="uploads/02.jpg"><img src="uploads/02.jpg" alt="Картинка 4" title="Картинка 4"></a>
+											</li>
+											<li>
+												<a class="fancybox" rel="gallery1" href="uploads/02.jpg"><img src="uploads/02.jpg" alt="Картинка 5" title="Картинка 5"></a>
+											</li>
 										</ul>
 										<div id="tower-crane-pager" class="clearfix">
 											<a data-slide-index="0" href=""><img src="uploads/02-min.jpg" /></a>
@@ -212,9 +224,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-md-8">
+								<div class="col-right">
 
 									<div class="crane-item-description">
+
 										<div class="features">
 											<ul class="row list-unstyled">
 												<li class="col-md-12">
@@ -235,12 +248,15 @@
 												</li>
 											</ul>
 										</div>
+
 									</div>
 
 								</div>
 
 							</div>
 						</div>
+
+
 					</div>
 				</div>
 			</div>
@@ -250,7 +266,7 @@
 		<section class="specifications">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10">
+					<div class="col-md-12">
 
 						<div class="main-characteristics clearfix">
 							<div class="col-item-0 r5">
@@ -273,7 +289,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10">
+					<div class="col-md-12">
 
 						<header class="text-center">
 							<h2>Заказ запчастей</h2>
@@ -299,7 +315,6 @@
 							</div>
 						</form>
 
-
 					</div>
 				</div>
 			</div>
@@ -310,7 +325,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10">
+					<div class="col-md-12">
 
 						<header class="text-center">
 							<h2>Это может вас заинтересовать</h2>

@@ -16,13 +16,13 @@
 	<link href='https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="js/fancybox/jquery.fancybox.css" rel="stylesheet">
 	<link href="css/s.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-
 
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
@@ -33,6 +33,7 @@
 	<script src="js/jquery.matchHeight.js"></script>
 	<script src="js/jquery.selectbox.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/fancybox/jquery.fancybox.js"></script>
 	<script src="js/main.js"></script>
 
 </head>
@@ -180,7 +181,7 @@
 			<div class="container">
 				<div class="row">
 
-					<div class="col-md-10 col-md-offset-1">
+					<div class="col-md-12">
 
 						<div class="content-wrapper">
 							<div class="breadcrumbs r0">
@@ -210,7 +211,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10 crane-item-wrapper">
+					<div class="col-md-12 crane-item-wrapper">
 
 						<header class="text-center">
 							<h2>Поиск башенных кранов</h2>
@@ -218,54 +219,57 @@
 
 						<form class="form-inline r5">
 
-							<div class="form-group s-mark">
-								<label for="exampleselect2">Маркировка крана</label>
-								<select class="form-control" id="exampleselect2">
-									<option>КБ-408</option>
-									<option>КБ-00</option>
-									<option>КБ-408.21</option>
-									<option>КБ-586</option>
-									<option>КБ-515</option>
-								</select>
-							</div>
+							<div class="row">
 
-
-
-							<div class="form-group s-height">
-								<label for="exampleselect1">Высота подъёма</label>
-								<select class="form-control" id="exampleselect1">
-									<option>20 м</option>
-									<option>30 м</option>
-									<option>40 м</option>
-									<option>50 м</option>
-									<option>60 м</option>
-								</select>
-							</div>
-
-
-							<div class="form-group s-carrying-capacity">
-								<label for="exampleselect3">Грузоподъёмность</label>
-								<select class="form-control" id="exampleselect3">
-									<option>50т</option>
-									<option>100т</option>
-									<option>150т</option>
-									<option>200т</option>
-									<option>250т</option>
-								</select>
-							</div>
-
-							<div class="form-group">
-								<div class="radio">
-									<input type="radio" id="test1" name="spares-type" checked="checked" />
-									<label for="test1">Рельсовый</label>
+								<div class="form-group col-md-2 s-mark">
+									<label for="exampleselect2">Маркировка крана</label>
+									<select class="form-control" id="exampleselect2">
+										<option>КБ-408</option>
+										<option>КБ-00</option>
+										<option>КБ-408.21</option>
+										<option>КБ-586</option>
+										<option>КБ-515</option>
+									</select>
 								</div>
-								<div class="radio">
-									<input type="radio" id="test2" name="spares-type" />
-									<label for="test2">Стационарный</label>
+
+								<div class="form-group col-md-2 s-height">
+									<label for="exampleselect1">Высота подъёма</label>
+									<select class="form-control" id="exampleselect1">
+										<option>20 м</option>
+										<option>30 м</option>
+										<option>40 м</option>
+										<option>50 м</option>
+										<option>60 м</option>
+									</select>
+								</div>
+
+								<div class="form-group col-md-2 s-carrying-capacity">
+									<label for="exampleselect3">Грузоподъёмность</label>
+									<select class="form-control" id="exampleselect3">
+										<option>50т</option>
+										<option>100т</option>
+										<option>150т</option>
+										<option>200т</option>
+										<option>250т</option>
+									</select>
+								</div>
+
+								<div class="form-group col-md-4">
+									<div class="radio">
+										<input type="radio" id="test1" name="spares-type" checked="checked" />
+										<label for="test1">Рельсовый</label>
+									</div>
+									<div class="radio">
+										<input type="radio" id="test2" name="spares-type" />
+										<label for="test2">Стационарный</label>
+									</div>
+								</div>
+
+								<div class="form-group col-md-2 btnr">
+									<button type="submit" class="btn btn-red">Подобрать</button>
 								</div>
 							</div>
 
-							<button type="submit" class="btn btn-red">Подобрать</button>
 						</form>
 
 					</div>
@@ -278,7 +282,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10">
+					<div class="col-md-12">
 
 						<header class="text-center">
 							<h2>Башенные краны КБ 408.21</h2>
@@ -499,7 +503,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10">
+					<div class="col-md-12">
 
 						<header class="text-center">
 							<h2>Помощь КранМакс в выборе крана</h2>

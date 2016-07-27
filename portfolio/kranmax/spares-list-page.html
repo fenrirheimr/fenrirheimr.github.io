@@ -178,7 +178,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10 crane-item-wrapper">
+					<div class="col-md-12 crane-item-wrapper">
 
 						<div class="breadcrumbs r4">
 							<a href="#">Главная</a>
@@ -190,51 +190,57 @@
 						</header>
 
 						<form class="form-inline r5">
-							<div class="form-group">
-								<div class="radio">
-									<input type="radio" id="test1" name="spares-type" checked="checked" />
-									<label for="test1">Новые</label>
+							<div class="row">
+
+								<div class="form-group col-md-2">
+									<div class="radio">
+										<input type="radio" id="test1" name="spares-type" checked="checked" />
+										<label for="test1">Новые</label>
+									</div>
+									<div class="radio">
+										<input type="radio" id="test2" name="spares-type" />
+										<label for="test2">Б/у</label>
+									</div>
 								</div>
-								<div class="radio">
-									<input type="radio" id="test2" name="spares-type" />
-									<label for="test2">Б/у</label>
+
+								<div class="form-group col-md-2">
+									<label for="exampleselect1">Год выпуска</label>
+									<select class="form-control" id="exampleselect1">
+										<option>2011</option>
+										<option>2012</option>
+										<option>2013</option>
+										<option>2014</option>
+										<option>2015</option>
+									</select>
 								</div>
-							</div>
+								<div class="form-group col-md-3">
+									<label for="exampleselect2">Маркировка крана</label>
+									<select class="form-control" id="exampleselect2">
+										<option>КБ-408</option>
+										<option>КБ-00</option>
+										<option>КБ-408.21</option>
+										<option>КБ-586</option>
+										<option>КБ-515</option>
+									</select>
+								</div>
 
-							<div class="form-group s-year">
-								<label for="exampleselect1">Год выпуска</label>
-								<select class="form-control" id="exampleselect1">
-									<option>2011</option>
-									<option>2012</option>
-									<option>2013</option>
-									<option>2014</option>
-									<option>2015</option>
-								</select>
-							</div>
-							<div class="form-group s-mark">
-								<label for="exampleselect2">Маркировка крана</label>
-								<select class="form-control" id="exampleselect2">
-									<option>КБ-408</option>
-									<option>КБ-00</option>
-									<option>КБ-408.21</option>
-									<option>КБ-586</option>
-									<option>КБ-515</option>
-								</select>
-							</div>
+								<div class="form-group col-md-3">
+									<label for="exampleselect3">Узел/категория</label>
+									<select class="form-control" id="exampleselect3">
+										<option disabled="disabled" selected="selected">Выберите категорию</option>
+										<option>КБ-408</option>
+										<option>КБ-00</option>
+										<option>КБ-408.21</option>
+										<option>КБ-586</option>
+										<option>КБ-515</option>
+									</select>
+								</div>
 
-							<div class="form-group s-cat">
-								<label for="exampleselect3">Узел/категория</label>
-								<select class="form-control" id="exampleselect3">
-									<option disabled="disabled" selected="selected">Выберите категорию</option>
-									<option>КБ-408</option>
-									<option>КБ-00</option>
-									<option>КБ-408.21</option>
-									<option>КБ-586</option>
-									<option>КБ-515</option>
-								</select>
-							</div>
+								<div class="form-group col-md-2 btnr">
+									<button type="submit" class="btn btn-red">Подобрать</button>
+								</div>
 
-							<button type="submit" class="btn btn-red">Подобрать</button>
+							</div>
 						</form>
 
 						<div class="search-category r5">
@@ -275,7 +281,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10">
+					<div class="col-md-12">
 
 						<header class="text-center">
 							<h2>Кб 408.21, 2011, приборы безопасности</h2>
@@ -415,7 +421,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10">
+					<div class="col-md-12">
 
 						<header class="text-center">
 							<h2>Не нашли нужную деталь?</h2>
@@ -450,7 +456,7 @@
 		<section class="popular-detail">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-10">
+					<div class="col-md-12">
 
 						<header class="text-center">
 							<h2>популярные детали для КБ-408</h2>
