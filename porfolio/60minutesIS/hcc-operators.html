@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="favicon.ico">-->
+
+    <title>60 минут - Система управления</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery.selectbox-0.2.css" rel="stylesheet">
+    <link href="css/jquery.scrollbar.css" rel="stylesheet">
+    <link href="css/s.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/inheritance.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.selectbox-0.2.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<!--
+Приветствую тебя, колега.
+Если будут какие-нибудь вопросы по верстке или что где лежит пиши в скайп fenrirheimr
+или на почту xhtmlblog@gmail.com -->
+
+<body class="pushmenu-push">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 pull-left">
+                        <a href="index.html" class="logo">60 минут <span>IS</span></a>
+                        <a href="pm-index.html" class="btn btn-ghost-bordered btn-back">К данным</a>
+                    </div>
+                    <div class="col-md-8 text-right">
+                        <div class="btns">
+                            <a href="#" class="btn btn-ghost"><i class="icn icn20 icn-users"></i> Операторы</a>
+                            <a href="#" class="btn btn-ghost"><i class="icn icn20 icn-alert"></i> Задачи и тикеты <span class="badge pulse">28</span></a> <!-- класс "pulse" надо добавлять только при поступлении новой задачи и потом, видимо, снимать его через какое-то время -->
+                            <a href="#" class="btn btn-primary add-ticket"><i class="icn icn20 icn-plus"></i> Создать тикет</a>
+                            <a href="#" class="btn btn-link">Выйти</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="container">
+                <header class="row page-caption">
+                    <div class="col-md-12">
+                        <div class="pull-left">
+                            <div class="title pull-left">Операторы</div>
+                        </div>
+                        <div class="btns pull-right">
+                            <a href="#" class="btn btn-small btn-success add-user"><i class="icn icn20 icn-plus"></i> Добавить оператора</a>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="row content-wrapper">
+
+                    <div class="col-md-12">
+
+                        <table class="table table-hover tickets">
+                            <colgroup>
+                                <col width="360">
+                                <col>
+                                <col width="290">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td><a href="hcc-operator.html">Алина Борисенко</a></td>
+                                    <td></td>
+                                    <td>
+                                        <a href="#" class="btn btn-small btn-default edit-user"><i class="icn icn20 icn-edit"></i> Редактировать</a>
+                                        <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-remove"></i> Удалить</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="hcc-operator.html">Юлия Гладилова</a></td>
+                                    <td></td>
+                                    <td>
+                                        <a href="#" class="btn btn-small btn-default edit-user"><i class="icn icn20 icn-edit"></i> Редактировать</a>
+                                        <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-remove"></i> Удалить</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="hcc-operator.html">Владлена Кабачкова</a></td>
+                                    <td></td>
+                                    <td>
+                                        <a href="#" class="btn btn-small btn-default edit-user"><i class="icn icn20 icn-edit"></i> Редактировать</a>
+                                        <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-remove"></i> Удалить</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="hcc-operator.html">Екатерина Калинина</a></td>
+                                    <td></td>
+                                    <td>
+                                        <a href="#" class="btn btn-small btn-default edit-user"><i class="icn icn20 icn-edit"></i> Редактировать</a>
+                                        <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-remove"></i> Удалить</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="hcc-operator.html">Пантеллеймон Христорождественский</a></td>
+                                    <td></td>
+                                    <td>
+                                        <a href="#" class="btn btn-small btn-default edit-user"><i class="icn icn20 icn-edit"></i> Редактировать</a>
+                                        <a href="#" class="btn btn-small btn-default"><i class="icn icn20 icn-remove"></i> Удалить</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; &#171;60 минут IS&#187;, 2016</p>
+        </div>
+    </footer>
+
+    <div class="new-ticket" id="nt">
+        <a href="#" class="btn-close pull-right"><i class="icn icn20 icn-close"></i></a>
+        <form action="#" method="">
+            <div class="t-header">Новый тикет 765</div>
+            <div class="t-content">
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" name="addressee" />
+                        <span class="bar"></span>
+                        <label>Кому</label>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" />
+                        <span class="bar"></span>
+                        <label>Суть проблемы</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group material">
+                            <div class="group custom-input">
+                                <input type="text" value="" />
+                                <span class="bar"></span>
+                                <label>Отель</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group material">
+                            <div class="group custom-input">
+                                <input type="text" value="" />
+                                <span class="bar"></span>
+                                <label>Номер брони</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <textarea class="textarea-scrollbar scrollbar-outer" placeholder="Описание проблемы"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <fieldset class="add-file">
+
+                        <input id="fileElem" multiple="multiple" class="custom-file" type="file" />
+                        <div id="filelist" class="result clearfix"></div>
+
+                        <a href="#" id="fileSelect" class="file-select"><i class="icn icn20 icn-plus-grey"></i> Добавить файл</a>
+
+                    </fieldset>
+                </div
+            </div>
+            <div class="t-footer">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="reset" class="btn btn-default">Отменить</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="pushmenu add-user-panel pushmenu-right">
+        <div class="panel-header">Добавление оператора<a href="#" class="close"><i class="icn icn20 icn-close"></i></a></div>
+        <div class="panel-body">
+            <form action="" method="">
+                <div class="form-group">
+                    <label for="addusername">Имя</label>
+                    <input type="text" class="form-control" id="addusername" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="addusersurname">Фамилия</label>
+                    <input type="text" class="form-control" id="addusersurname" placeholder="">
+                </div>
+
+                <div class="toggleShowPassword clearfix">
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="hiddenpass" value="asdfasfad"><!-- value="asdfasfad" - для примера -->
+                        <div class="input-group-addon">
+                            <a href="#" class="visibility" id="vis1">
+                                <i class="glyphicon glyphicon-eye-open on" title="Показать пароль"></i>
+                                <i class="glyphicon glyphicon-eye-close off" title="Скрыть пароль"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="new-pass">Сгенерировать пароль</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Добавить сотрудника</button>
+                <button type="reset" class="btn btn-default">Отмена</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="pushmenu edit-user-panel pushmenu-right">
+        <div class="panel-header">Редактирование оператора<a href="#" class="close"><i class="icn icn20 icn-close"></i></a></div>
+        <div class="panel-body">
+            <form action="" method="">
+                <div class="form-group">
+                    <label for="addusername2">Имя</label>
+                    <input type="text" class="form-control" id="addusername2" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="addusersurname2">Фамилия</label>
+                    <input type="text" class="form-control" id="addusersurname2" placeholder="">
+                </div>
+
+                <div class="toggleShowPassword clearfix">
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="hiddenpass2" value="asdfasfad"><!-- value="asdfasfad" - для примера -->
+                        <div class="input-group-addon">
+                            <a href="#" class="visibility" id="vis2">
+                                <i class="glyphicon glyphicon-eye-open on" title="Показать пароль"></i>
+                                <i class="glyphicon glyphicon-eye-close off" title="Скрыть пароль"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="edit-pass">Сгенерировать пароль</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Сохранить</button>
+                <button type="reset" class="btn btn-default">Отмена</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="favicon.ico">-->
+
+    <title>60 минут - Система управления</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery.selectbox-0.2.css" rel="stylesheet">
+    <link href="css/jquery.scrollbar.css" rel="stylesheet">
+    <link href="css/s.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/inheritance.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.selectbox-0.2.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<!--
+Приветствую тебя, колега.
+Если будут какие-нибудь вопросы по верстке или что где лежит пиши в скайп fenrirheimr
+или на почту xhtmlblog@gmail.com -->
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6 pull-left">
+                        <a href="index.html" class="logo">60 минут <span>IS</span></a>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="btns">
+                            <a href="#" class="btn btn-ghost"><i class="icn icn20 icn-alert"></i> Тикеты <span class="badge pulse">28</span></a> <!-- класс "pulse" надо добавлять только при поступлении новой задачи и потом, видимо, снимать его через какое-то время -->
+                            <a href="#" class="btn btn-primary add-ticket"><i class="icn icn20 icn-plus"></i> Создать тикет</a>
+                            <a href="#" class="btn btn-link">Выйти</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="container">
+                <header class="row page-caption">
+                    <div class="col-md-12">
+                        <div class="pull-left">
+                            <div class="title pull-left">Счета за февраль 2016</div>
+
+                            <div class="paid pull-left">
+                                <div class="first">
+                                    <strong>Оплачено</strong>
+                                    1 288 900 <span>&#8381;</span>
+                                </div>
+                                <div class="second">
+                                    <a href="#" class="percent" rel="popover" data-placement="bottom" data-trigger="hover">92<span>%</span></a>
+
+                                    <div class="percentContent">
+                                        <table>
+                                            <tr>
+                                                <td>Получено</td>
+                                                <td><strong>94%</strong></td>
+                                                <td class="good"> <!-- good/normal/bad -->
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-up"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Согласовано</td>
+                                                <td><strong>90%</strong></td>
+                                                <td class="good">
+                                                    <strong>+2%</strong>
+                                                    <i class="icn icn20 icn-up-green"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="third">
+                                    +2%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="row tab-wrapper">
+
+                    <form action="#" method="">
+
+                        <div class="pull-right filer-field">
+                            <input type="text" class="form-control" placeholder="Фильтр по отелю">
+                            <button type="reset" class="close" data-dismiss="modal" aria-label="Close"><i class="icn icn20 icn-close"></i></button>
+                        </div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs account" role="tablist">
+                            <li role="presentation" class="active"><a href="#all" aria-controls="new" role="tab" data-toggle="tab">Все</a></li>
+                            <li role="presentation"><a href="#reconciliation" aria-controls="reconciliation" role="tab" data-toggle="tab">Отправлен на сверку</a></li>
+                            <li role="presentation"><a href="#received" aria-controls="received" role="tab" data-toggle="tab">Получен</a></li>
+                            <li role="presentation"><a href="#agreed" aria-controls="agreed" role="tab" data-toggle="tab">Согласован</a></li>
+                            <li role="presentation"><a href="#paid" aria-controls="paid" role="tab" data-toggle="tab">Оплачен</a></li>
+                            <li role="presentation"><a href="#debts" aria-controls="debts" role="tab" data-toggle="tab">Задолженность</a></li>
+                            <li role="presentation"><a href="#harddebts" aria-controls="harddebts" role="tab" data-toggle="tab">Тяж.задолженность</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="all">
+
+                                <table class="table table-hover tickets">
+                                    <colgroup>
+                                        <col class="col-md-4">
+                                        <col class="col-md-1">
+                                        <col class="col-md-1">
+                                        <col class="col-md-1">
+                                        <col class="col-md-1">
+                                        <col class="col-md-1">
+                                        <col class="col-md-3">
+                                    </colgroup>
+
+                                    <thead>
+                                        <tr>
+                                            <th><span>Отель</span></th>
+                                            <th><span>Общая сумма</span></th>
+                                            <th><span>Комиссия</span></th>
+                                            <th><span>Способ оплаты</span></th>
+                                            <th><span>Форма сотрудничества</span></th>
+                                            <th><span>Статус</span></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="am-revise.html">Апартаменты в «Доме на Беговой»</a>
+                                                <div class="info">
+                                                    <span class="phone">+7 716 867 34 37</span>
+                                                    <span class="name">Анастасия Радищева</span>
+                                                </div>
+                                            </td>
+                                            <td>156 678</td>
+                                            <td>69 940</td>
+                                            <td>Безналичный</td>
+                                            <td>Абонплата</td>
+                                            <td class="debts">
+                                                <div>Задолженность</div>
+                                                <div class="day">15 дней</div>
+                                            </td>
+                                            <td class="acc-lcol">
+                                                <select>
+                                                    <option>Отправлен на сверку</option>
+                                                    <option>Получен отельером</option>
+                                                    <option>Согласован</option>
+                                                    <option>Оплачен</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="am-revise.html">Калифорния на малой Бронной</a>
+                                                <div class="info">
+                                                    <span class="phone">+7 716 867 34 37</span>
+                                                    <span class="name">Марина Николаева</span>
+                                                </div>
+                                            </td>
+                                            <td>156 678</td>
+                                            <td>69 940</td>
+                                            <td>Безналичный</td>
+                                            <td>Бронирование</td>
+                                            <td>
+                                                <div>Получен</div>
+                                                <div>4 дня</div>
+                                            </td>
+                                            <td class="acc-lcol">
+                                                <select>
+                                                    <option>Отправлен на сверку</option>
+                                                    <option>Получен отельером</option>
+                                                    <option>Согласован</option>
+                                                    <option>Оплачен</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="am-revise.html">Мастер-Отель Домодедово</a>
+                                                <div class="info">
+                                                    <span class="phone">+7 716 867 34 37</span>
+                                                    <span class="name">Ольга Петрова</span>
+                                                </div>
+                                            </td>
+                                            <td>156 678</td>
+                                            <td>69 940</td>
+                                            <td>Qiwi</td>
+                                            <td>Абонплата</td>
+                                            <td>
+                                                <div>Получен</div>
+                                                <div>4 дня</div>
+                                            </td>
+                                            <td class="acc-lcol">
+                                                <select>
+                                                    <option>Отправлен на сверку</option>
+                                                    <option>Получен отельером</option>
+                                                    <option>Согласован</option>
+                                                    <option>Оплачен</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="am-revise.html">Апартаменты в «Доме на Беговой»</a>
+                                                <div class="info">
+                                                    <span class="phone">+7 716 867 34 37</span>
+                                                    <span class="name">Анастасия Радищева</span>
+                                                </div>
+                                            </td>
+                                            <td>156 678</td>
+                                            <td>69 940</td>
+                                            <td>Безналичный</td>
+                                            <td>Абонплата</td>
+                                            <td>
+                                                <div>Получен</div>
+                                                <div>4 дня</div>
+                                            </td>
+                                            <td class="acc-lcol">
+                                                <select>
+                                                    <option>Отправлен на сверку</option>
+                                                    <option>Получен отельером</option>
+                                                    <option>Согласован</option>
+                                                    <option>Оплачен</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <a href="#" class="load-more">Следующие 50</a>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="reconciliation">2</div>
+                            <div role="tabpanel" class="tab-pane fade" id="received">3</div>
+                            <div role="tabpanel" class="tab-pane fade" id="agreed">4</div>
+                            <div role="tabpanel" class="tab-pane fade" id="paid">5</div>
+                            <div role="tabpanel" class="tab-pane fade" id="debts">6</div>
+                            <div role="tabpanel" class="tab-pane fade" id="harddebts">7</div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; &#171;60 минут IS&#187;, 2016</p>
+        </div>
+    </footer>
+
+    <div class="new-ticket" id="nt">
+        <a href="#" class="btn-close pull-right"><i class="icn icn20 icn-close"></i></a>
+        <form action="#" method="">
+            <div class="t-header">Новый тикет 765</div>
+            <div class="t-content">
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" name="addressee" />
+                        <span class="bar"></span>
+                        <label>Кому</label>
+                    </div>
+                </div>
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <input type="text" value="" />
+                        <span class="bar"></span>
+                        <label>Суть проблемы</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group material">
+                            <div class="group custom-input">
+                                <input type="text" value="" />
+                                <span class="bar"></span>
+                                <label>Отель</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group material">
+                            <div class="group custom-input">
+                                <input type="text" value="" />
+                                <span class="bar"></span>
+                                <label>Номер брони</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <div class="group custom-input">
+                        <textarea class="textarea-scrollbar scrollbar-outer"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group material">
+                    <fieldset class="add-file">
+
+                        <input id="fileElem" multiple="multiple" class="custom-file" type="file" />
+                        <div id="filelist" class="result clearfix"></div>
+
+                        <a href="#" id="fileSelect" class="file-select"><i class="icn icn20 icn-plus-grey"></i> Добавить файл</a>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="t-footer">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="reset" class="btn btn-default">Отменить</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
