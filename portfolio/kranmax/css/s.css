@@ -150,7 +150,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
 }
 .header nav ul {margin-bottom: 0; position: relative;}
-.header nav ul.list-inline > li {/*padding-right: 15px; padding-left: 15px;*/ position: static;}
+.header nav ul.list-inline > li {position: static;}
 .header nav ul.list-inline > li > a {
 	font-size: 16px; font-weight: bold; color: #fff; display: inline-block;
 	padding: 7px 26px 8px; line-height: 18px; height: 51px;
