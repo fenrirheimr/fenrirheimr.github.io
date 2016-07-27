@@ -16,13 +16,14 @@
 	<link href='https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="js/fancybox/jquery.fancybox.css" rel="stylesheet">
+	<link href="css/flexslider.css" rel="stylesheet">
 	<link href="css/s.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-
 
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
@@ -33,6 +34,8 @@
 	<script src="js/jquery.matchHeight.js"></script>
 	<script src="js/jquery.selectbox.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/fancybox/jquery.fancybox.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
 	<script src="js/main.js"></script>
 
 </head>
@@ -176,16 +179,67 @@
 	<main class="content">
 
 		<section class="promo">
+			<div id="slider" class="flexslider fl-bg">
+				<ul class="slides">
+					<li>
+						<img src="img/top-slider-bg.jpg" />
+					</li>
+					<li>
+						<img src="img/top-slider-bg.jpg" />
+					</li>
+					<li>
+						<img src="img/top-slider-bg.jpg" />
+					</li>
+					<li>
+						<img src="img/top-slider-bg.jpg" />
+					</li>
+				</ul>
+			</div>
 			<div class="container">
 				<div class="row">
 
-					<div class="col-md-10 col-md-offset-1">
+					<div class="col-md-12">
 
-						<div class="block-title">Топкран поможет вам</div>
+						<div class="slider-wrapper">
+							<div class="block-title">Топкран поможет вам</div>
 
-						<div class="promo-slider">
 
-							<div class="p-item r4">
+							<div id="carousel" class="flexslider fl-content">
+								<ul class="slides">
+									<li>
+										<div class="fl-c-block r5">
+											<div class="caption">Быстро купить или продать башенный кран</div>
+											<div class="text">Топкран используют ведущие специалисты отрасли</div>
+											<a href="#">Узнать больше</a>
+										</div>
+									</li>
+									<li>
+										<div class="fl-c-block r5">
+											<div class="caption">Арендовать кран или сдать в аренду</div>
+											<div class="text">Полный каталог башенных кранов со всей России</div>
+											<a href="#">Узнать больше</a>
+										</div>
+									</li>
+									<li>
+										<div class="fl-c-block r5">
+											<div class="caption">Перевезти башенный кран и произвести монтаж</div>
+											<div class="text">Гарантия качества и надежности, работаем с 2006</div>
+											<a href="#">Узнать больше</a>
+										</div>
+									</li>
+									<li>
+										<div class="fl-c-block r5">
+											<div class="caption">Подобрать любые запчасти в короткие сроки</div>
+											<div class="text">Быстрый поиск новых и б/у деталей в любом регионе</div>
+											<a href="#">Узнать больше</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--<div class="promo-slider">
+
+							<div class="p-item r4 active">
 								<div class="caption">Быстро купить или продать башенный кран</div>
 								<div class="text">Топкран используют ведущие специалисты отрасли</div>
 								<a href="#">Узнать больше</a>
@@ -209,7 +263,7 @@
 								<a href="#">Узнать больше</a>
 							</div>
 
-						</div>
+						</div>-->
 
 					</div>
 

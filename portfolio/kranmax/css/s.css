@@ -201,10 +201,14 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 
 /* promo --------------------------------------------------------------------*/
 
-.promo {height: 447px; background: url("../img/top-slider-bg.jpg") no-repeat 50% 0; padding-top: 160px;}
+.promo {
+	height: 447px; background: url("../img/top-slider-bg.jpg") no-repeat 50% 0;
+	padding-top: 160px; position: relative;
+}
+.promo .slider-wrapper {width: 100%; max-width: 1000px; margin: 0 auto;}
 
 .promo .block-title {color: #25232b; font-size: 30px; font-family: 'Russo One', sans-serif; margin-bottom: 30px}
-.promo .promo-slider {position: relative;}
+.promo .promo-slider {position: relative; /*transform: none !important;*/}
 .promo .promo-slider .p-item {
 	color: #25232b; font-size: 15px; background: #ffedd3; padding: 20px 14px; border: 2px solid #ffedd3;
 }

@@ -42,6 +42,27 @@
 
             $(".fancybox").fancybox();
 
+            $(window).load(function() {
+                // The slider being synced must be initialized first
+                $('#carousel').flexslider({
+                    animation: "slide",
+                    controlNav: false,
+                    animationLoop: false,
+                    slideshow: false,
+                    //itemWidth: 229,
+                    itemWidth: 240,
+                    itemMargin: 10,
+                    asNavFor: '#slider'
+                });
+
+                $('#slider').flexslider({
+                    animation: "slide",
+                    controlNav: false,
+                    animationLoop: false,
+                    slideshow: false,
+                    sync: "#carousel"
+                });
+            });
         },
         matchHeight:function(){
             $('.promo-slider .p-item').matchHeight();
@@ -54,14 +75,16 @@
         },
 
         bxSlider:function(){
-            var slider = $('.promo-slider').bxSlider({
-                slideWidth: 230,
-                minSlides: 4,
-                maxSlides: 4,
-                moveSlides: 1,
-                slideMargin: 10,
-                pager: 'true'
-            });
+
+            //var slider=$('.promo-slider').bxSlider({
+            //    slideWidth: 230,
+            //    minSlides: 4,
+            //    maxSlides: 4,
+            //    moveSlides: 1,
+            //    slideMargin: 10,
+            //    pager: false,
+            //    //infiniteLoop: false
+            //});
 
             $('.news .news-slider').bxSlider({
                 slideWidth: 240,
