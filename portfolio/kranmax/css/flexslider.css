@@ -99,6 +99,9 @@ html[xmlns] .flexslider .slides {
 .fl-bg.flexslider .slides img {
   height: 447px;
   -moz-user-select: none;
+  position: relative;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
 }
 .flex-viewport {
   max-height: 2000px;
@@ -146,10 +149,10 @@ html[xmlns] .flexslider .slides {
   content: ' ';
 }*/
 .flex-direction-nav .flex-prev {
-  left: 50px; background-position: 0 0;
+  left: 18px; background-position: 0 0;
 }
 .flex-direction-nav .flex-next {
-  right: 50px;
+  right: 18px;
   background-position: -20px 0;
 }
 /*.flexslider:hover .flex-direction-nav .flex-prev {

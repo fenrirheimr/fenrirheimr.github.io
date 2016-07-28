@@ -50,7 +50,7 @@
                     animationLoop: false,
                     slideshow: false,
                     //itemWidth: 229,
-                    itemWidth: 240,
+                    itemWidth: 277,
                     itemMargin: 10,
                     asNavFor: '#slider'
                 });
@@ -76,16 +76,6 @@
 
         bxSlider:function(){
 
-            //var slider=$('.promo-slider').bxSlider({
-            //    slideWidth: 230,
-            //    minSlides: 4,
-            //    maxSlides: 4,
-            //    moveSlides: 1,
-            //    slideMargin: 10,
-            //    pager: false,
-            //    //infiniteLoop: false
-            //});
-
             $('.news .news-slider').bxSlider({
                 slideWidth: 240,
                 minSlides: 2,
@@ -96,8 +86,8 @@
             });
 
             $('.popular-slider').bxSlider({
-                slideWidth: 226,
-                minSlides: 4,
+                slideWidth: 277,
+                minSlides: 1,
                 maxSlides: 4,
                 moveSlides: 1,
                 slideMargin: 10,
