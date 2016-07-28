@@ -18,12 +18,12 @@ body {
 	height: 100%;
 	padding: 0 !important;
 }
-/*.wrapper {*/
-	/*margin: 0 auto;*/
-	/*min-height: 100%;*/
-	/*height: auto !important;*/
-	/*height: 100%;*/
-/*}*/
+/*.wrapper {
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}*/
 
 /* костыль */
 /*section > .container > .row > div {padding: 0}*/
@@ -1131,10 +1131,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 	font-size: 16px; font-weight: bold; color: #fff; display: inline-block;
 	padding: 7px 45px 8px; line-height: 18px; height: 51px;
 }
-/*.header nav ul.list-inline > li > a {*/
-	/*font-size: 16px; font-weight: bold; color: #fff; display: inline-block;*/
-	/*padding: 7px 45px 8px; line-height: 18px; height: 51px;*/
-/*}*/
+
 .footer nav ul.list-inline > li:hover {}
 .footer nav ul.list-inline > li:hover > a {color: #25232b; text-decoration: none; background: #f3f3f5;}
 
@@ -1204,6 +1201,12 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .modal-order .modal-dialog {width: 615px;}
 
 
+@media (max-width: 1000px) {
+	.header .logo {margin-left: 0;}
+	.header nav ul.list-inline > li > a {padding: 7px 20px 8px;}
+	.footer nav ul {position: relative; margin: 0 -12px;}
+	.footer nav ul.list-inline > li > a {padding: 7px 20px 8px;}
+}
 
 
 
