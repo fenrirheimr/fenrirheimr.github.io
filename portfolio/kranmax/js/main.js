@@ -43,14 +43,26 @@
             $(".fancybox").fancybox();
 
             $(window).load(function() {
-                // The slider being synced must be initialized first
+                var contentSlideWidth = []
+
+                var windowWidth = $(window).width();
+                if (windowWidth>992) {
+                    contentSlideWidth = 227.5;
+                    console.log('> 1000')
+                } else if (windowWidth>1010) {
+                    contentSlideWidth = 277;
+                    console.log('> 1000')
+                } else {
+                    contentSlideWidth = 227.5;
+                    console.log('< 1000')
+                }
+
                 $('#carousel').flexslider({
                     animation: "slide",
                     controlNav: false,
                     animationLoop: false,
                     slideshow: false,
-                    //itemWidth: 229,
-                    itemWidth: 277,
+                    itemWidth: contentSlideWidth,
                     itemMargin: 10,
                     asNavFor: '#slider'
                 });
@@ -85,14 +97,34 @@
                 pager: false
             });
 
+            var windowWidth = $(window).width();
+            var slideWidth = [];
+
+            if (windowWidth>992) {
+                slideWidth = 220;
+                console.log('> 1000')
+            } else if (windowWidth>1010) {
+                slideWidth = 277;
+                console.log('> 1000')
+            } else {
+                slideWidth = 227.5;
+                console.log('< 1000')
+            }
+
             $('.popular-slider').bxSlider({
-                slideWidth: 277,
+                slideWidth: slideWidth,
                 minSlides: 1,
                 maxSlides: 4,
                 moveSlides: 1,
                 slideMargin: 10,
                 pager: false
+                //infiniteLoop: false
             });
+
+            ////////////////////////////////////////////
+
+
+            ////////////////////////////////////////////
 
             $('.tower-crane-slider').bxSlider({
                 slideWidth: 290,

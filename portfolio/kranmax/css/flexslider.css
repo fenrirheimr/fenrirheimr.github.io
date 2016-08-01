@@ -88,7 +88,7 @@ html[xmlns] .flexslider .slides {
 }
 .fl-content .flex-direction-nav {display: none !important;}
 .fl-content {}
-.fl-content li .fl-c-block {background: #ffedd4; padding: 20px 16px; border: 2px solid #ffedd4;}
+.fl-content li .fl-c-block {background: #ffedd4; padding: 20px 16px; border: 2px solid #ffedd4; min-height: 178px;}
 .fl-content li .fl-c-block .caption {font-weight: bold; margin-bottom: 10px; line-height: normal;}
 .fl-content li .fl-c-block .text {margin-bottom: 10px;}
 .fl-content li.flex-active-slide .fl-c-block {border: 2px solid #5b4735;}
