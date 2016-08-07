@@ -17,6 +17,7 @@ body {
 	width: 100%;
 	height: 100%;
 	padding: 0 !important;
+	min-width: 970px !important;
 
 }
 /*html,
@@ -423,16 +424,24 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .selection-tower-crane form .btn {vertical-align: bottom; margin-top: 25px;}
 .promo + .selection-tower-crane form .btn {vertical-align: bottom; margin-top: 0;}
 .promo + .selection-tower-crane .checkbox {margin-top: 10px;}
-/*.selection-tower-crane form .form-group {margin-right: 16px; }*/
+.selection-tower-crane form .form-group {margin-bottom: 0;}
 /*.selection-tower-crane form .form-group {float: left;}*/
 /*.selection-tower-crane form .form-group:first-of-type {padding-left: 15px;margin-top: 10px;}*/
 .selection-tower-crane form .form-group .form-control {width: 100%; font-size: 16px; padding: 6px 20px;}
 .selection-tower-crane form .form-group.col-xs-2 {padding-right:0; padding-left:0;}
+.selection-tower-crane form .form-group.col-xs-2:first-child {padding-left: 15px;}
 .selection-tower-crane form .form-group.col-xs-2.btnr .btn {padding: 6px 20px;}
 .selection-tower-crane form .form-group select.form-control {width: auto;}
-.selection-tower-crane form .form-group .radio {margin-top: 25px;}
+.selection-tower-crane form .form-group .radio {
+	margin-top: 25px;
+	display: inline-block;
+	vertical-align: middle;
+}
 /*.selection-tower-crane form .form-group.s-year {width: 105px;}*/
-.selection-tower-crane form .form-group.s-mark {margin-right: 15px; margin-left: 15px; width: 140px;}
+.selection-tower-crane form .form-group.s-mark {
+	margin-right: 15px; margin-left: 15px; width: 140px;
+	padding-left: 0 !important;
+}
 /*.selection-tower-crane form .form-group.s-cat {width: 285px;}*/
 .selection-tower-crane form .form-group.s-height {margin-right: 15px; width: 120px;}
 /*.selection-tower-crane form .form-group.s-carrying-capacity {width: 120px;}*/
@@ -796,7 +805,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .help form i {font-size: 18px; display: block; margin-bottom: 10px;}
 .help form p {font-size: 16px;}
 .help form .btn {vertical-align: bottom; margin-bottom: 20px;}
-.help form .form-group {margin-right: 20px; width: 250px; margin-bottom: 20px;}
+.help form .form-group {margin-right: 20px; width: 250px; margin-bottom: 20px; display: inline-block; vertical-align: middle;}
 .help form .form-group .form-control {width: 100%;}
 .help form .form-footer {margin-top: 40px;}
 .help form:after {
@@ -939,7 +948,7 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 .popular-slider .thumbnail .caption {font-size: 16px; color: #25232b;}
 .popular-slider .thumbnail .caption a {font-weight: bold; margin-bottom: 10px; display: inline-block;}
 .popular-slider .btn-yellow {display: block; margin-top: 10px;}
-.popular .bx-controls {position: absolute; top: 50%; margin-top: -18px; left: -25px; right: -25px;}
+.popular .bx-controls {position: absolute; top: 50%; margin-top: -18px; left: -20px; right: -20px;}
 .popular .bx-controls a {
 	display: block; width: 20px; height: 36px; background: url("../img/slider-arows.png") no-repeat;
 	overflow: hidden; text-indent: -9999px;
@@ -1125,6 +1134,10 @@ textarea.form-control {line-height: 18px; min-height: 70px;}
 }
 .popular-detail .list-wrapper li {line-height: 26px;}
 .popular-detail .list-wrapper li a {font-size: 14px; color: #25232b;}
+
+/* text ---------------------------------------------------------------------*/
+
+.text-page {padding: 40px 0;}
 
 /* Footer
 -----------------------------------------------------------------------------*/

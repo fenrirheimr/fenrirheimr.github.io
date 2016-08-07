@@ -87,7 +87,12 @@ html[xmlns] .flexslider .slides {
   height: 447px;
 }
 .fl-content .flex-direction-nav {display: none !important;}
-.fl-content {}
+
+@media (max-width: 1024px) {
+  .fl-content {padding: 0 30px;}
+}
+
+.fl-content .flex-viewport {}
 .fl-content li .fl-c-block {background: #ffedd4; padding: 20px 16px; border: 2px solid #ffedd4; min-height: 178px;}
 .fl-content li .fl-c-block .caption {font-weight: bold; margin-bottom: 10px; line-height: normal;}
 .fl-content li .fl-c-block .text {margin-bottom: 10px;}

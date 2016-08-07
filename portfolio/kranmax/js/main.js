@@ -46,15 +46,17 @@
                 var contentSlideWidth = []
 
                 var windowWidth = $(window).width();
-                if (windowWidth>992) {
-                    contentSlideWidth = 227.5;
-                    console.log('> 1000')
-                } else if (windowWidth>1010) {
-                    contentSlideWidth = 277;
-                    console.log('> 1000')
+                if (windowWidth<992) {
+                    contentSlideWidth = 210;
+                    console.log('< 992')
                 } else {
+                    contentSlideWidth = 220;
+                    console.log('> 1000')
+                }
+
+                if (windowWidth>1000) {
                     contentSlideWidth = 227.5;
-                    console.log('< 1000')
+                    console.log('> 1000')
                 }
 
                 $('#carousel').flexslider({
