@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 	rimraf = require('rimraf'),
 	rigger = require('gulp-rigger'),
 	browserSync = require("browser-sync"),
-	zip = require('gulp-zip'),
+	// zip = require('gulp-zip'),
 	reload = browserSync.reload,
 	include = require('gulp-file-include'),
 	cleanCSS = require('gulp-clean-css');
@@ -20,10 +20,10 @@ var gulp = require('gulp'),
 var path = {
 	bowerDir: './bower_components',
 	bump: ['./bower.json', './package.json'],
-	zip: {
-		source: 'dist/*',
-		dest: ''
-	},
+	// zip: {
+	// 	source: 'dist/*',
+	// 	dest: ''
+	// },
 	dist: {
 		html: 'dist/',
 		js: 'dist/js/',
@@ -39,14 +39,14 @@ var path = {
 		fonts: 'build/fonts/'
 	},
 	src: {
-		haml: 'src/*.haml',
+		haml: 'src/*.html',
 		js: 'src/js/**/*.js',
 		style: 'src/css/*.scss',
 		img: 'src/img/**/*.*',
-		fonts: 'bower_components/font-awesome/fonts/fontawesome-webfont.*'
+		fonts: 'build/fonts/'
 	},
 	watch: {
-		html: 'src/**/*.haml',
+		html: 'src/**/*.html',
 		js: 'src/js/**/*.js',
 		style: 'src/css/**/*.scss',
 		img: 'src/img/**/*.*',
@@ -64,21 +64,19 @@ var config = {
 	},
 	host: 'localhost',
 	port: 9000,
-	logPrefix: "fenrirheimr"
+	logPrefix: "Symphony"
 };
 
 gulp.task('html:build', function () {
 	gulp.src(path.src.haml)
-		.pipe(include({cache: false, indent: true}))
-		.pipe(haml())
+		.pipe(rigger())
 		.pipe(gulp.dest(path.build.html))
 		.pipe(reload({stream: true, indent: true}));
 });
 
 gulp.task('html:dist', function () {
 	gulp.src(path.src.haml)
-		.pipe(include({cache: false, indent: true}))
-		.pipe(haml())
+		.pipe(rigger())
 		.pipe(gulp.dest(path.dist.html));
 });
 
@@ -180,11 +178,11 @@ gulp.task('project:build', ['html:build', 'style:build', 'image:build', 'fonts:b
 gulp.task('project:dist', ['html:dist', 'style:dist', 'image:dist',  'fonts:dist', 'js:dist']);
 
 /* Настроить автоматическую подготовку архива */
-gulp.task('zip', ['dist'], function() {
-	gulp.src(path.zip.source)
-		.pipe(zip('dist.zip'))
-		.pipe(gulp.dest(path.zip.dest));
-});
+// gulp.task('zip', ['dist'], function() {
+// 	gulp.src(path.zip.source)
+// 		.pipe(zip('dist.zip'))
+// 		.pipe(gulp.dest(path.zip.dest));
+// });
 
 gulp.task('watch', ['build'], function(){
 	watch([path.watch.html], function(event, cb) {

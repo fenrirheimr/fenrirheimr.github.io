@@ -1,6 +1,6 @@
 {
-  "name": "fenrirheimr",
-  "version": "1.0.1-4",
+  "name": "Symphony",
+  "version": "0.0.1",
   "authors": [
     "Vladimir Glushkov <xhtmlblog@gmail.com>"
   ],
@@ -11,10 +11,7 @@
   ],
   "dependencies": {
     "jquery": "2.*",
-    "bootstrap-sass": "^3.3.*",
     "Hover": "^2.1.*",
-    "font-awesome": "fontawesome#^4.7.0",
-    "particles.js": "^2.0.0",
-    "fullpage.js": "^2.8.8"
+    "bulma": "^0.4.0"
   }
 }
