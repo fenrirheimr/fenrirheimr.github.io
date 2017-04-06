@@ -21,7 +21,6 @@
     var nergativeMT = -(svgHeight/2); // отрицатильным отсуп сверху
 
     svgLoader.css({
-        // 'display': 'block',
         'marginLeft': nergativeML,
         'marginTop': nergativeMT
     });
