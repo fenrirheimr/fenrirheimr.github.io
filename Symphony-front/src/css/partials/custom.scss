@@ -5,72 +5,28 @@ html, body {
   min-height: 100%;
   height: 100%;
 }
+body {opacity: 0;}
+body.loaded {opacity: 1;}
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  svg {
+    width: 25%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
 .letter {
-  fill: red;
-  //display: none;
+  fill: transparent;
   position: relative;
-  //transform: translate(74px,0px);
-  //-ms-transform: translate(74px,0px); /* IE 9 */
-  //-webkit-transform: translate(74px,0px); /* Safari and Chrome */
-  //-o-transform: translate(74px,0px); /* Opera */
-  //-moz-transform: translate(74px,0px); /* Firefox */
-  //stroke-dasharray: 2000;
-  //stroke-dashoffset: 2000;
-  //animation: dash 5s linear;
-  //animation-fill-mode: forwards;
-}
-
-//@-webkit-keyframes color-fill {
-//  0%   { fill: #fff; }
-//  100% { fill: #69b6e3; }
-//}
-//@-moz-keyframes color-fill {
-//  0%   { fill: #fff; }
-//  100% { fill: #69b6e3; }
-//}
-//@-o-keyframes color-fill {
-//  0%   { fill: #fff; }
-//  100% { fill: #69b6e3; }
-//}
-//@keyframes color-fill {
-//  0%   { fill: #fff; }
-//  100% { fill: #69b6e3; }
-//}
-
-//#mask * {
-//  fill-opacity: 0;
-//  transition: fill-opacity 1s;
-//}
-//
-//#mask.finished * {
-//  fill-opacity: 1;
-//}
-
-.l1 {
-  animation-delay: 1s;
-}
-
-#path3 {
-  animation-delay: 3s;
-}
-
-#path4 {
-  animation-delay: 4s;
-}
-
-#path5 {
-  animation-delay: 5.8s;
-}
-
-#path6 {
-  animation-delay: 2s;
-}
-
-@keyframes dash {
-  from {
-    stroke-dashoffset: 2000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
 }

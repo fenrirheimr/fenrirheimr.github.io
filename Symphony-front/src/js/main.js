@@ -1,5 +1,4 @@
 //= ../../bower_components/jquery/dist/jquery.min.js
-//= ../../bower_components/walkway/walkway.min.js
 //= ../../bower_components/vivus/dist/vivus.min.js
 //= partials/modernizr.custom.js
 
@@ -15,26 +14,31 @@
         navMenu.toggleClass('is-active');
     });
 
-    new Vivus('mask', {duration: 50});
+    var svgLoader = $('#mask');
+    var svgWidth = svgLoader.width();
+    var svgHeight = svgLoader.height();
+    var nergativeML = -(svgWidth/2);  // отрицатильным отсуп слева
+    var nergativeMT = -(svgHeight/2); // отрицатильным отсуп сверху
 
-    // new Vivus('mask', {}, function (obj) {
-    //     obj.el.classList.add('finished');
-    // });
+    svgLoader.css({
+        // 'display': 'block',
+        'marginLeft': nergativeML,
+        'marginTop': nergativeMT
+    });
 
-    // var svg = new Walkway('#loader');
-    //
-    // svg.draw(function() {
-    //     console.log('Animation finished');
-    // });
+    $(window).load(function() {
 
-    // var loaderWrapp = $('#mask');
-    // var letter = loaderWrapp.find('.letter');
-    //
-    // loaderWrapp.each(function () {
-    //     letter.fadeIn();
-    // })
+        setTimeout(function() {
+            $('body').addClass('loaded');
 
-
+            new Vivus('mask', {
+                type: 'oneByOne',
+                duration: 300
+            }, function () {
+                $('.loader').fadeOut(300);
+            });
+        }, 1000)
+    })
 
 })(jQuery);
 
