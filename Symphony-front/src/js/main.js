@@ -1,5 +1,6 @@
 //= ../../bower_components/jquery/dist/jquery.min.js
 //= ../../bower_components/vivus/dist/vivus.min.js
+//= ../../bower_components/bootstrap/dist/js/bootstrap.min.js
 //= partials/modernizr.custom.js
 
 
@@ -36,6 +37,7 @@
             }, function () {
                 $('.loader').fadeOut(300);
             });
+
         }, 1000)
     })
 

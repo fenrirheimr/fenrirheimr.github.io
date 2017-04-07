@@ -12,8 +12,8 @@
   "dependencies": {
     "jquery": "2.*",
     "Hover": "^2.1.*",
-    "bulma": "^0.4.0",
-    "vivus": "^0.4.0"
+    "vivus": "^0.4.0",
+    "bootstrap": "v4.0.0-alpha.6"
   },
   "devDependencies": {
     "vivus": "^0.4.0"

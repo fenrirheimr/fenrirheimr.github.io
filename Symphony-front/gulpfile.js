@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 	browserSync = require("browser-sync"),
 	// zip = require('gulp-zip'),
 	reload = browserSync.reload,
-	include = require('gulp-file-include'),
+	// include = require('gulp-file-include'),
 	cleanCSS = require('gulp-clean-css');
 
 var path = {
@@ -43,7 +43,7 @@ var path = {
 		js: 'src/js/**/*.js',
 		style: 'src/css/*.scss',
 		img: 'src/img/**/*.*',
-		fonts: 'build/fonts/'
+		fonts: 'build/fonts/**/*.*'
 	},
 	watch: {
 		html: 'src/**/*.html',
@@ -121,9 +121,14 @@ gulp.task('image:dist', function () {
 		.pipe(gulp.dest(path.dist.img));
 });
 
-gulp.task('fonts:build', function () {
-	gulp.src(path.src.fonts)
-		.pipe(gulp.dest(path.build.fonts));
+// gulp.task('fonts:build', function () {
+// 	gulp.src(path.src.fonts)
+// 		.pipe(gulp.dest(path.build.fonts));
+// });
+
+gulp.task('fonts:build', function() {
+	return gulp.src('src/fonts/**/*.*')
+		.pipe(gulp.dest('build/fonts'))
 });
 
 gulp.task('fonts:dist', function () {
