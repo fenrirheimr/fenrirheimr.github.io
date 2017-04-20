@@ -41,15 +41,9 @@
         }, 1000)
     })
 
-    // var navbarNav = $('.top-nav-mobile');
-    // var navbarBtn = $('.navbar .navbar-toggler');
-    // var curHeight = navbarNav.height();
-    //
-    //
-    // navbarBtn.click(function() {
-    //     var autoHeight = navbarNav.css('height', 'auto').height();
-    //     navbarNav.height(curHeight).animate({height: autoHeight}, 600);
-    // });
+    $('.toggle-btn').click(function(){
+        $(this).toggleClass('open');
+    });
 
 
 })(jQuery);

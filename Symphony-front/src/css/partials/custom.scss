@@ -5,21 +5,95 @@ html, body {
   position: relative;
   min-height: 100%;
   height: 100%;
+  font-family: 'martaitalic';
+}
+
+*:not(#mask .letter) {
+  transition: all 0.5s ease-in-out;
 }
 
 body {opacity: 0;}
 body.loaded {opacity: 1;}
 
+
+/**/
+
+.toggle-btn {
+  width: 38px;
+  height: 28px;
+  margin-top: 15px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  cursor: pointer;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #b2bcc5;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 12px;
+    }
+    &:nth-child(4) {
+      top: 24px;
+    }
+  }
+  &.open {
+    span {
+      &:nth-child(1),
+      &:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+      &:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+/**/
+
 .bg-faded {
   background-color: #f5f7fa;
 }
-.navbar {
-  margin-bottom: 90px;
+
+.navbar {margin-bottom: 130px;}
+
+@include media-breakpoint-up(sm) {
+  .navbar {
+    margin-bottom: 200px;
+  }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-up(lg) {
   .navbar {
-    margin-bottom: 235px;
+    margin-bottom: 95px;
   }
 }
 
@@ -54,22 +128,15 @@ body.loaded {opacity: 1;}
   height: 58px;
   font-family: 'martaitalic';
   font-size: $font-size-lg;
-
   .logo {
     padding: 0 1em;
   }
+  &-mobile {
+    height: 58px;
+    .logo {z-index: 9;}
+  }
 }
-.top-nav-mobile {
-  height: 58px;
 
-  //-webkit-transition: height 0.3s ease-in-out;
-  //-moz-transition: height 0.3s ease-in-out;
-  //-o-transition: height 0.3s ease-in-out;
-  //-ms-transition: height 0.3s ease-in-out;
-  //transition: height 0.3s ease-in-out;
-
-  .logo {z-index: 9;}
-}
 @include media-breakpoint-down(md) {
   .top-nav {
     height: auto;
@@ -92,14 +159,33 @@ body.loaded {opacity: 1;}
       &:after {margin-left: 0.438em;}
     }
   }
+  .navbar-toggler {
+    border: 0;
+    outline: none;
+  }
+}
+
+.link {
+  color: #010101;
+  position: relative;
+  text-align: center;
+  &.block-link {color: #0a4692;}
+  &:before, &:after {
+    display: inline-block;
+    content: '~';
+  }
+  &:before {margin-right: 0.438em;}
+  &:after {margin-left: 0.438em;}
 }
 
 .frame {
-  border: 25px solid #f5f7fa;
+  box-shadow: inset 0 25px 0 0 #f5f7fa, inset 25px 0 0 0 #f5f7fa, inset -25px 0 0 0 #f5f7fa;
   border-bottom: none;
   position: relative;
   margin-bottom: 76px;
-  overflow-x: hidden;
+  padding: 25px 28px 0;
+  left: -5.5em;
+  width: 90%;
   &:before, &:after {
     position: absolute;
     content: ' ';
@@ -107,16 +193,163 @@ body.loaded {opacity: 1;}
   }
   &:after {
     height: 26px;
-    right: -25px;
+    right: 0;
     left: 455px;
     bottom: -26px;
     background: #f5f7fa;
   }
   &:before {
-    left: -25px;
+    left: 0;
     bottom: -76px;
     width: 480px;
     height: 76px;
     background: url("../../img/frame-bottom-border.png");
+    max-width: 100%;
+  }
+  .frame-content {}
+  &.main-frame {
+    &:after{
+      width: 26px;
+      right: 0;
+      left: auto;
+    }
+    .frame-content {
+      width: 430px;
+      height: 290px;
+      img {
+        position: absolute;
+        top: -180px;
+        left: 62px;
+      }
+    }
+    .frame-title {
+      font-size: 5.188em;
+      font-family: 'martaitalic';
+      line-height: 0.783em;
+      left: 195px;
+      top: 20px;
+      position: relative;
+    }
+    .link {
+      left: 245px;
+      top: 50px;
+    }
   }
 }
+
+.catalog-row {
+  bottom: -137px;
+  position: relative;
+  z-index: 1;
+  .description {
+    position: relative;
+    font-size: 1em;
+    color: #949494;
+    top: 0;
+    padding-left: 110px;
+    line-height: 1.250em;
+    margin-bottom: 2em;
+
+  }
+}
+
+@include media-breakpoint-down(md) { /* меньше чем 768 */
+  .container {
+    width: 100%;
+  }
+  .catalog-row {
+    bottom: 40px;
+    position: relative;
+    z-index: 1;
+    .description {
+      position: relative;
+      font-size: 1em;
+      color: #949494;
+      line-height: 1.250em;
+      margin-bottom: 2em;
+    }
+  }
+  .frame {
+    left: -2.5em;
+    &.main-frame {
+      &:after{
+        width: 26px;
+        right: 0;
+        left: auto;
+      }
+      .frame-content {
+        width: 285px;
+        height: 195px;
+        img {
+          position: absolute;
+          top: -130px;
+          left: 42px;
+          width: 22%;
+        }
+      }
+      .frame-title {
+        font-size: 3.500em;
+        font-family: 'martaitalic';
+        line-height: 0.839em;
+        left: 120px;
+        top: 15px;
+        position: relative;
+      }
+      .link {
+        left: 140px;
+        top: 35px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) { /* больше чем 576 */
+  .catalog-row {
+    .description {
+      top: 57px;
+      padding-left: 0;
+      font-size: 1.063em;
+      line-height: 1.176em;
+    }
+  }
+  .frame {
+    width: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .catalog-row {
+    .description {
+      padding-left: 0;
+    }
+  }
+
+  .frame {
+    width: 100%;
+    left: 0;
+    &.main-frame {
+      .frame-content {
+        width: 200px;
+        img {
+          top: 40px;
+          width: 15%;
+        }
+      }
+
+      .frame-title {
+        left: 70px;
+        font-size: 2.500em;
+      }
+      .link {
+        left: 70px;
+      }
+    }
+  }
+}
+
+.stream-wrapper {
+  background: #69b6e3;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
