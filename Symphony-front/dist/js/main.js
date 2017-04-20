@@ -57,7 +57,7 @@ if(n||(n=new h(this,o),t(this).data(a,n)),"string"==typeof e){if(void 0===n[e])t
             });
 
         }, 1000)
-    })
+    });
 
     $('.toggle-btn').click(function(){
         $(this).toggleClass('open');

@@ -39,7 +39,7 @@
             });
 
         }, 1000)
-    })
+    });
 
     $('.toggle-btn').click(function(){
         $(this).toggleClass('open');
