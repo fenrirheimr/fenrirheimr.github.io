@@ -92,8 +92,92 @@ if(n||(n=new h(this,o),t(this).data(a,n)),"string"==typeof e){if(void 0===n[e])t
 
         //set the position and add class .animate
         ink.css({top: y+'px', left: x+'px'}).addClass("animate");
-    })
+    });
 
+    // media block shadow
+
+    var oH, oW, wMr, wMl, wW, mR, // object height, object width, wrapper marin right, wrapper marin left, wrapper width, margin right
+        sH, sW, // shadow height, shadow width
+        streamWrapper, // .stream-wrapper
+        mObjectWrapper, mObject, mShadow, windowWidth;
+
+    windowWidth = $(window).width();
+
+    streamWrapper = $('.stream-wrapper');
+
+    function shadowSize() {
+        streamWrapper.each(function () {
+
+            var row = $(this).find('.row');
+
+            row.each(function(i, el) {
+                mObjectWrapper = $(this).find('.m-object-wrapper');
+
+                mObject = mObjectWrapper.find('.m-object');
+                mShadow = mObjectWrapper.find('.m-shadow');
+
+                oH = mObject.height();
+                oW = mObject.width();
+                wW = mObjectWrapper.width();
+
+                mR = wW-oW;
+
+                console.log(mR);
+                if(windowWidth < 992) {
+                    console.log('1');
+                    if (i % 2 === 0) {
+                        /* we are odd */
+
+                        wMr = parseFloat(mObjectWrapper.css('margin-right'));
+                        mShadow.css({
+                            'margin-right': -(wMr)+5+'px',
+                            'height': oH+'px'
+                        })
+
+                    } else {
+                        /* we are even */
+
+                        wMl = parseFloat(mObjectWrapper.css('margin-left'));
+                        mShadow.css({
+                            'margin-left': -(wMl)+5+'px',
+                            'margin-right': mR+3+'px',
+                            'height': oH+'px'
+                        })
+
+                    }
+                } else {
+                    console.log('2');
+                    if (i % 2 === 0) {
+                        /* we are odd */
+
+                        wMr = parseFloat(mObjectWrapper.css('margin-right'));
+                        mShadow.css({
+                            'margin-right': -(wMr)+45+'px',
+                            'height': oH+'px'
+                        })
+
+                    } else {
+                        /* we are even */
+
+                        wMl = parseFloat(mObjectWrapper.css('margin-left'));
+                        mShadow.css({
+                            'margin-left': -(wMl)+'px',
+                            'margin-right': mR+3+'px',
+                            'height': oH+'px'
+                        })
+                    }
+                }
+
+            });
+
+        });
+    }
+
+    shadowSize();
+
+    $(window).resize(function () {
+        shadowSize()
+    });
 
 })(jQuery);
 
