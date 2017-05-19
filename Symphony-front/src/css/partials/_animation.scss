@@ -1,0 +1,76 @@
+/* animations */
+
+.bounceIn {
+  @include bounceIn();
+}
+
+.fadeIn {
+  @include fadeIn(
+    $duration: 1.5s
+  );
+}
+.fadeInDown {}
+.fadeInDownBig {}
+.fadeInLeft {
+  @include fadeInLeft(
+    $duration: 1.5s
+  );
+}
+.fadeInLeftBig {
+  @include fadeInLeftBig();
+}
+.fadeInRight {
+  @include fadeInRight(
+    $duration: 1.5s
+  );
+}
+.fadeInRightBig {
+  @include fadeInRightBig();
+}
+.fadeInUp {
+  @include fadeInUp(
+    $duration: 1.5s
+  );
+}
+.fadeInUpBig {}
+
+.fadeOut {}
+.fadeOutDown {}
+.fadeOutDownBig {}
+.fadeOutLeft {}
+.fadeOutLeftBig {}
+.fadeOutRight {}
+.fadeOutRightBig {}
+.fadeOutUp {}
+.fadeOutUpBig {}
+
+.slideInDown {
+  @include slideInDown(
+    $duration: 1s
+  );
+}
+.slideInLeft {}
+.slideInRight {}
+.slideInUp {}
+.slideOutDown {}
+.slideOutLeft {}
+.slideOutRight {}
+.slideOutUp {}
+
+.rotateInUpLeft {
+  @include rotateInUpLeft(
+    $duration: 1s
+  );
+}
+
+.vertical-text-left {
+  @include fadeInLeft(
+    $duration: .5s
+  );
+}
+.vertical-text-right {
+  transform: rotate(-90deg);
+  @include fadeInRight(
+    $duration: .5s
+  );
+}

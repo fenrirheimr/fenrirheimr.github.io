@@ -1,0 +1,28 @@
+<svg class="img-fluid m-object" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 390" width="620" height="390" xml:space="preserve" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+    <path stroke="#f5f7fa" stroke-width="25" fill-opacity="0" d="M 0 0 L 620 0 L 620 390 L 0 390 Z"/>
+
+    <g id="01">
+        <path class="path path-10" fill-opacity="1" d="M 63 0 L 63 390"/>
+        <path class="string1box" fill-opacity="0" d="M 53 0 L 73 0 L 73 390 L 53 390 Z" />
+    </g>
+
+    <g id="02">
+        <path class="path path-15" fill-opacity="1" d="M 137 0 L 137 390"/>
+        <path class="string2box" fill-opacity="0" d="M 127 0 L 147 0 L 147 390 L 127 390 Z" />
+    </g>
+
+    <g id="03">
+        <path class="path path-20" fill-opacity="1" d="M 211 0 L 211 390"/>
+        <path class="string3box" fill-opacity="0" d="M 201 0 L 221 0 L 221 390 L 201 390 Z" />
+    </g>
+
+    <g id="04">
+        <path class="path path-25" fill-opacity="1" d="M 281 0 L 281 390"/>
+        <path class="string4box" fill-opacity="0" d="M 271 0 L 291 0 L 291 390 L 271 390 Z" />
+    </g>
+
+    <g id="05">
+        <path class="path path-30" fill-opacity="1" d="M 355 0 L 355 390"/>
+        <path class="string5box" fill-opacity="0" d="M 345 0 L 365 0 L 365 390 L 345 390 Z" />
+    </g>
+</svg>

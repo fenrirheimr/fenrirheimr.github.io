@@ -1,5 +1,5 @@
 //= partials/head.html
-//= partials/loader.html
+<!--//= partials/loader.html-->
 //= partials/nav.html
 
 
@@ -19,9 +19,9 @@
 			
 			<div class="frame main-frame pull-xl-3 pull-lg-2 pull-md-2">
 				<div class="frame-content">
-					<img src="img/product-01.png" alt="" title="">
+					<img src="img/product-01.png" alt="" title="" class="catalog-img">
 					
-					<div class="frame-title">Каталог продук-ции</div>
+					<div class="frame-title catalog-text">Каталог продук-<br>ции</div>
 					
 					<a href="#" class="link block-link">Смотреть</a>
 				</div>
@@ -52,7 +52,7 @@
 									<a href="#" class="link">Смотреть</a>
 								</span>
 								<span class="link-description">
-									Подбери аромат индивидуально под себя
+									Подбери аромат индивидуально для себя
 								</span>
 							</div>
 							
@@ -101,23 +101,20 @@
 					</div>
 				</div>
 				
-				<div class="row row-content"><!-- svg -->
+				<div class="row row-content">
 					<div class="col-md-6 first-col">
 						
 						<div class="m-object-wrapper">
 							
-							<div class="rotate-text">о продукте</div>
-							<span class="img-wrapper">
-								<img src="img/video-prev-01.jpg" alt="" title="" class="img-fluid m-object">
+							<div class="rotate-text">игры</div>
+							<span class="img-wrapper animation">
+								<div class="m-object sg-1"></div> <!-- .sg = simphony game TODO: придумать адаптив -->
 							</span>
-							<h2 class="block-caption">Найди свой аромат</h2>
+							<h2 class="block-caption lg dark hyphens right">Сыграй симфо&ndash;<br>нию</h2>
 							
 							<div class="block-footer">
 								<span class="frame-link">
-									<a href="#" class="link">Смотреть</a>
-								</span>
-								<span class="link-description">
-									Подбери аромат<br>индивидуально<br>под себя
+									<a href="#" class="link block-link">Начать</a>
 								</span>
 							</div>
 							
@@ -204,6 +201,22 @@
 	</div>
 </div>
 
+<div id="slide-panel" class="slide-panel right">
+	
+	<div class="slide-panel-items">
+		
+		
+		
+	</div>
+	
+	<div class="slide-btn align-items-center">
+		<span class="slide-caption">Найди свой<br>аромат</span>
+		<a href="#" class="link block-link">Подобрать аромат</a>
+		<img src="img/panel-balloon.png" alt="" title="">
+		<span class="btn-vert-text">menu</span>
+	</div>
+	
+</div>
 
 //= partials/scripts.html
 //= partials/footer.html
