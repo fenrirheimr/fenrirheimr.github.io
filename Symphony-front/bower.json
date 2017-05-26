@@ -16,7 +16,8 @@
     "bootstrap": "v4.0.0-alpha.6",
     "Snap.svg": "snap.svg#^0.5.1",
     "animatewithsass": "^3.2.2",
-    "isInViewport": "^3.0.0"
+    "isInViewport": "^3.0.0",
+    "malihu-custom-scrollbar-plugin": "^3.1.5"
   },
   "devDependencies": {
     "vivus": "^0.4.0"

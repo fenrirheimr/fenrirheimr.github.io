@@ -3,6 +3,7 @@
 //= ../../bower_components/bootstrap/dist/js/bootstrap.min.js
 //= ../../bower_components/Snap.svg/dist/snap.svg-min.js
 //= ../../bower_components/isInViewport/lib/isInViewport.min.js
+//= ../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js
 
 //= partials/modernizr.custom.js
 //= partials/jquery.smoothWheel.js
@@ -374,7 +375,11 @@
         $(this).parent().toggleClass('open');
 
         // $(this).animateAuto("width", 500);
-    })
+
+        $('.slide-panel-items').mCustomScrollbar({
+            theme:"right-arrows"
+        });
+    });
 
 })(jQuery);
 
