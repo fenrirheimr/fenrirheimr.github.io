@@ -2770,25 +2770,25 @@ and dependencies (minified).
 
     // smooth page scroll ----------------------------------------------------------------------------------------------
 
-    $.event.props.push("wheelDelta");
-    $.easing.easeOutQuint = function (x, t, b, c, d) {
-        return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
-    };
-
-    var docH = $(document).height() - $(window).height(),
-        scrollTop = $(window).scrollTop();
-
-    $(document).on("DOMMouseScroll mousewheel", function (e, delta) {
-
-        // clamp the scroll offset
-        scrollTop = Math.min(docH, Math.max(0, scrollTop - (delta || e.wheelDelta)));
-
-        $("body, html").stop().animate({
-            scrollTop: scrollTop
-        }, 1000, "easeOutQuint");
-
-        e.preventDefault();
-    });
+    // $.event.props.push("wheelDelta");
+    // $.easing.easeOutQuint = function (x, t, b, c, d) {
+    //     return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
+    // };
+    //
+    // var docH = $(document).height() - $(window).height(),
+    //     scrollTop = $(window).scrollTop();
+    //
+    // $(document).on("DOMMouseScroll mousewheel", function (e, delta) {
+    //
+    //     // clamp the scroll offset
+    //     scrollTop = Math.min(docH, Math.max(0, scrollTop - (delta || e.wheelDelta)));
+    //
+    //     $("body, html").stop().animate({
+    //         scrollTop: scrollTop
+    //     }, 1000, "easeOutQuint");
+    //
+    //     e.preventDefault();
+    // });
 
     // polymer click effect --------------------------------------------------------------------------------------------
 
@@ -3014,7 +3014,7 @@ and dependencies (minified).
     // $('.slide-btn').mouseenter(function() {
     $('.slide-btn').hover(function() {
         // $(this).parent().addClass('open');
-        $(this).parent().toggleClass('open');
+        $(this).parent().addClass('open');
 
         // $(this).animateAuto("width", 500);
 
@@ -3022,6 +3022,32 @@ and dependencies (minified).
             theme:"right-arrows"
         });
     });
+    $('.slide-panel').mouseleave(function() {
+        $(this).removeClass('open');
+    });
+
+    //-------
+
+    $('.catalog-tabs a').click(function (e) {
+        e.preventDefault();
+        var tab = $(this);
+
+        if(tab.hasClass('active')){
+            window.setTimeout(function(){
+                $(".tab-pane").removeClass('active');
+                tab.removeClass('active');
+            },1);
+        }
+
+    });
+
+    // var bg = $('.stream-wrapper.article');
+    // var aw = $('.article-wrapper');
+    // var awh = aw.outerHeight();
+    //
+    //
+    // console.log(awh)
+    // bg.height(awh);
 
 })(jQuery);
 
@@ -3030,6 +3056,7 @@ $(function() {
     // -----------
     // Debugger that shows view port size. Helps when making responsive designs.
     // -----------
+
     function showViewPortSize(display) {
         if(display) {
             var height = window.innerHeight;
