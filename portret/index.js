@@ -27,7 +27,7 @@ function Circle(x,y,r) {
     }
 
     this.split = function() {
-        if(this.r>=5) {
+        if(this.r>=3) {
             circles.push(new Circle(this.x-0.5*r,this.y-0.5*r,0.5*r).fill());
             circles.push(new Circle(this.x-0.5*r,this.y+0.5*r,0.5*r).fill());
             circles.push(new Circle(this.x+0.5*r,this.y-0.5*r,0.5*r).fill());
