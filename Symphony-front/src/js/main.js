@@ -244,12 +244,44 @@
 
                         wMl = parseFloat(mObjectWrapper.css('margin-left'));
                         mShadow.css({
-                            'margin-left': -(wMl)+'px',
+                            'margin-left': -(wMl+45)+'px',
                             'margin-right': mR+3+'px',
                             'height': oH+'px'
                         })
                     }
                 }
+
+                var outFrameWrapper = $(this).eq(i).find('.out-frame-wrapper');
+
+                // console.log(outFrameWrapper.length);
+
+                outFrameWrapper.each(function(i) {
+                    var outFrame = $(this).eq(i).find('.out-frame');
+                    var outFrameShadow = $(this).eq(i).find('.out-frame-shadow');
+
+                    var outFrameX = outFrame.eq(i).position().left;
+                    var outFrameY = outFrame.eq(i).position().top;
+                    var outFrameOffset = parseInt(outFrame.eq(i).css('transform').split(',')[4]);
+
+                    var outFrameShadowWidth = outFrameShadow.outerWidth() - outFrameOffset;
+                    var outFrameHeight = outFrame.outerHeight();
+                    // var outFrameOffset = outFrame.css('transform');
+
+
+                    outFrameShadow.eq(i).css({
+                        top: outFrameY,
+                        // left: outFrameX,
+                        // right: -(outFrameOffset-23),
+                        height: outFrameHeight
+                    });
+
+                    console.log(outFrameOffset);
+                });
+
+
+                // console.log(outFrameX, outFrameY);
+
+
 
             });
 
@@ -261,6 +293,9 @@
     $(window).resize(function () {
         shadowSize()
     });
+
+
+
 
     // svg string ------------------------------------------------------------------------------------------------------
 
@@ -406,6 +441,102 @@
     //
     // console.log(awh)
     // bg.height(awh);
+
+    //------------------------------------------------------------------------------------------------------------------
+
+    if($('.map').is('div')) {
+        $('body').addClass('map-exist')
+    }
+
+    ymaps.ready(init);
+
+    function init () {
+        var myMap = new ymaps.Map('map', {
+                center: [55.76, 37.64],
+                zoom: 11
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            objectManager = new ymaps.ObjectManager({
+                // Мы хотим загружать данные для балуна перед открытием, поэтому
+                // запретим автоматически открывать балун по клику.
+                geoObjectOpenBalloonOnClick: false
+            });
+
+        myMap.geoObjects.add(objectManager);
+
+
+        $.ajax({
+            url: "data.json"
+        }).done(function(data) {
+            objectManager.add(data);
+        });
+
+        // Функция, эмулирующая запрос за данными на сервер.
+        function loadBalloonData (objectId) {
+            var dataDeferred = ymaps.vow.defer();
+            function resolveData () {
+                dataDeferred.resolve('Данные балуна');
+            }
+            window.setTimeout(resolveData, 1000);
+            return dataDeferred.promise();
+        }
+
+        function hasBalloonData (objectId) {
+            return objectManager.objects.getById(objectId).properties.balloonContent;
+        }
+
+        objectManager.objects.events.add('click', function (e) {
+            var objectId = e.get('objectId');
+            if (hasBalloonData(objectId)) {
+                objectManager.objects.balloon.open(objectId);
+            } else {
+                loadBalloonData(objectId).then(function (data) {
+                    var obj = objectManager.objects.getById(objectId);
+                    obj.properties.balloonContent = data;
+                    objectManager.objects.balloon.open(objectId);
+                });
+            }
+        });
+    }
+
+    // ymaps.ready(function() {
+    //     var  map = new ymaps.Map('map', {
+    //         center: [55.183554, 61.292456],
+    //         zoom: 14,
+    //         controls: ['zoomControl'],
+    //     }, {
+    //         searchControlProvider: 'yandex#search'
+    //     }),
+    //
+    //         office_2 = new ymaps.Placemark(
+    //             // [55.175376, 61.352131], {
+    //             [55.19362756952232, 61.28526949999999], {
+    //                 // hintContent: 'Отдел продаж',
+    //                 balloonContent: 'Отдел продаж на Аношкина, 12',
+    //             }, {
+    //                 iconLayout: 'default#image',
+    //                 iconImageHref: 'img/pin.png',
+    //                 iconImageSize: [59, 60],
+    //                 iconImageOffset: [-30, -30],
+    //             }
+    //         ),
+    //         newtonLC = new ymaps.Placemark(
+    //             [55.172922, 61.283375], {
+    //                 // hintContent: 'Ньютон',
+    //                 balloonContent: 'Офис'
+    //             }, {
+    //                 iconLayout: 'default#image',
+    //                 iconImageHref: 'img/pin.png',
+    //                 iconImageSize: [59, 60],
+    //                 iconImageOffset: [-30, -30],
+    //             }
+    //         );
+    //     map.behaviors.disable('scrollZoom');
+    //     map.behaviors.disable('drag');
+    //     map.geoObjects.add(office_2);
+    //     map.geoObjects.add(newtonLC);
+    // });
 
 })(jQuery);
 
