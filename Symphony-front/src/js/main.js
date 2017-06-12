@@ -460,8 +460,32 @@
             objectManager = new ymaps.ObjectManager({
                 // Мы хотим загружать данные для балуна перед открытием, поэтому
                 // запретим автоматически открывать балун по клику.
-                geoObjectOpenBalloonOnClick: false
+                geoObjectOpenBalloonOnClick: false,
+                // iconLayout: 'default#image',
+                // iconImageHref: 'img/pin.png',
+                // iconImageSize: [59, 60],
+                // iconImageOffset: [-30, -30],
+                Icons: [
+                    {
+                        href: 'img/pin.png',
+                        size: [59, 60],
+                        offset: [-30, -30]
+                    }
+                ],
             });
+
+        objectManager.objects.options.set({
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/pin.png',
+            // Размеры метки.
+            iconImageSize: [59, 60],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-30, -30]
+        });
 
         myMap.geoObjects.add(objectManager);
 
@@ -499,7 +523,6 @@
             }
         });
     }
-
     // ymaps.ready(function() {
     //     var  map = new ymaps.Map('map', {
     //         center: [55.183554, 61.292456],
@@ -537,6 +560,46 @@
     //     map.geoObjects.add(office_2);
     //     map.geoObjects.add(newtonLC);
     // });
+
+    var storeList = $('.row-store');
+    var storeSearch = $('.row-search');
+
+    $('.open-list').click(function() {
+        storeSearch.fadeOut('100');
+        storeList.css("display", "flex").fadeIn('4000');
+    });
+
+    $('.close-btn').click(function() {
+        storeList.fadeOut('100');
+        storeSearch.css("display", "flex").fadeIn('4000');
+    });
+
+    //------------------------------------------------------------------------------------------------------------------
+
+    function frontFlip() {
+        $(".front")
+            .css('transform', 'perspective(1000px) rotateY(0deg)');
+        $(".back")
+            .css('transform', 'perspective(1000px) rotateY(180deg)');
+    }
+
+    function backFlip() {
+        $(".back")
+            .css('transform', 'perspective(1000px) rotateY(0)');
+        $(".front")
+            .css('transform', 'perspective(1000px) rotateY(-180deg)');
+    }
+
+    $(".flipper").on('click', function() {
+
+        if ($(this).attr('data-click-state') == 1) {
+            $(this).attr('data-click-state', 0)
+            frontFlip();
+        } else {
+            $(this).attr('data-click-state', 1)
+            backFlip();
+        }
+    });
 
 })(jQuery);
 
