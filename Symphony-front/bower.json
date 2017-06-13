@@ -20,6 +20,7 @@
     "malihu-custom-scrollbar-plugin": "^3.1.5"
   },
   "devDependencies": {
-    "vivus": "^0.4.0"
+    "vivus": "^0.4.0",
+    "bxslider-4": "^4.2.12"
   }
 }

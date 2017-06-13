@@ -4,6 +4,7 @@
 //= ../../bower_components/Snap.svg/dist/snap.svg-min.js
 //= ../../bower_components/isInViewport/lib/isInViewport.min.js
 //= ../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js
+//= ../../bower_components/bxslider-4/dist/jquery.bxslider.js
 
 //= partials/modernizr.custom.js
 //= partials/jquery.smoothWheel.js
@@ -86,7 +87,7 @@
         // $('[class*="sg-"]').isInViewport({ tolerance: -250 }).addClass('play');
 
         var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        $('[class*="sg-"]').isInViewport({ tolerance: -250 }).addClass('play ').one(animationEnd, function() {
+        $('[class*="sg-"]').isInViewport({ tolerance: -50 }).addClass('play ').one(animationEnd, function() {
             $(this).addClass('fa ');
         });
     });
@@ -444,11 +445,6 @@
 
     //------------------------------------------------------------------------------------------------------------------
 
-    if($('.map').is('div')) {
-        $('body').addClass('map-exist')
-    }
-
-    ymaps.ready(init);
 
     function init () {
         var myMap = new ymaps.Map('map', {
@@ -523,6 +519,15 @@
             }
         });
     }
+
+    if($('.map').is('div')) {
+        $('body').addClass('map-exist')
+        ymaps.ready(init);
+    }
+
+
+
+
     // ymaps.ready(function() {
     //     var  map = new ymaps.Map('map', {
     //         center: [55.183554, 61.292456],
@@ -568,16 +573,16 @@
         storeSearch.fadeOut('100');
         storeList.css("display", "flex").fadeIn('4000');
 
-        // $('.store-item-wrapper').mCustomScrollbar({
-        //     theme:"right-arrows"
-        // });
+        $('.game-list').mCustomScrollbar({
+            theme:"right-arrows"
+        });
     });
 
     $('.close-btn').click(function() {
         storeList.fadeOut('100');
         storeSearch.css("display", "flex").fadeIn('4000');
 
-        $('.store-item-wrapper').mCustomScrollbar('destroy');
+        $('.game-list').mCustomScrollbar('destroy');
     });
 
     //------------------------------------------------------------------------------------------------------------------
@@ -605,6 +610,13 @@
             $(this).attr('data-click-state', 1)
             backFlip();
         }
+    });
+
+    //------------------------------------------------------------------------------------------------------------------
+
+    $('.bxslider').bxSlider({
+        // pager: true
+        pagerCustom: '.nav-slider'
     });
 
 })(jQuery);
