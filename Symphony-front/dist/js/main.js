@@ -3209,11 +3209,17 @@ and dependencies (minified).
     $('.open-list').click(function() {
         storeSearch.fadeOut('100');
         storeList.css("display", "flex").fadeIn('4000');
+
+        // $('.store-item-wrapper').mCustomScrollbar({
+        //     theme:"right-arrows"
+        // });
     });
 
     $('.close-btn').click(function() {
         storeList.fadeOut('100');
         storeSearch.css("display", "flex").fadeIn('4000');
+
+        $('.store-item-wrapper').mCustomScrollbar('destroy');
     });
 
     //------------------------------------------------------------------------------------------------------------------

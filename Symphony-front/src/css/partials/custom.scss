@@ -1193,7 +1193,11 @@ a:hover {
 
 .out-frame-wrapper {
   margin: 85px 0 0 30px;
-
+  .out-frame-text {
+    font-family: 'antiquasibold_italic';
+    color: #00090c;
+    font-size: 0.875em;
+  }
   .out-frame {
     padding: 30px 50px;
 
@@ -1442,26 +1446,6 @@ a:hover {
         @include transform(rotate(-45deg));
       }
     }
-    .store-caption {
-      font-size: 3.750em;
-      font-family: 'martaitalic';
-      line-height: 0.800em;
-      position: relative;
-      width: 100%;
-      padding-right: 50%;
-      margin-bottom: 1.5em;
-    }
-
-    .store-item {
-      margin-bottom: 4em;
-      padding: 0 80px 0 0;
-      .store-title {
-        margin-bottom: 1em;
-      }
-      .store-description {
-        margin-bottom: 1em;
-      }
-    }
     .out-frame-wrapper {
       margin: 0;
       .out-frame {
@@ -1483,6 +1467,57 @@ a:hover {
   }
 }
 
+.store-item-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  .mCSB_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .store-caption {
+    font-size: 3.750em;
+    font-family: 'martaitalic';
+    line-height: 0.800em;
+    position: relative;
+    width: 100%;
+    padding-right: 50%;
+    margin-bottom: 1.5em;
+  }
+
+  .store-item {
+    margin-bottom: 4em;
+    padding: 0 80px 0 0;
+    .store-title {
+      margin-bottom: 1em;
+    }
+    .store-description {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.next-article {
+  p {
+    font-family: 'antiquasibold_italic';
+    color: #00090c;
+  }
+  .frame-link {
+    &.large {
+      width: 286px;
+      height: 55px;
+      padding: 6px 0;
+      overflow: hidden;
+      font-size: 1.250em;
+      background: url('../img/frame-link-l.png') no-repeat;
+      .link.block-link {
+        color: #0b84c2;
+      }
+    }
+  }
+}
 /* ------------------------------------------------------------------------------------------------------------------ */
 
 /* entire container, keeps perspective */
