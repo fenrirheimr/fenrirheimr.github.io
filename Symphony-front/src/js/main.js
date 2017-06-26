@@ -79,6 +79,78 @@
         }, 1000);
     });
 
+    // var myTween = new TweenMax.staggerTo(".obj", 1, {rotation:360,x: -500, y: 500,opacity:1}, 0.5);
+
+    // var myTween = new TimelineLite({ paused: true });
+    // TweenMax.staggerTo(".obj", 1, {rotation: 270, x: -500, y: 500, opacity: 1}, 0.5);
+    // myTween.play();
+
+
+
+    //------------------------------------------------------------------------------------------------------------------
+
+    // /*global TweenMax, TimelineMax,Power2*/
+    // var myDIVs = document.querySelectorAll('.obj'),
+    //     numDIVs = myDIVs.length;
+    // var timeline = new TimelineMax({
+    //         paused: true
+    //     }),
+    //     duration = .4,
+    //     ease = Power2.easeOut,
+    //     staggerFactor = .1,
+    //     scrollTweenDuration = .4;
+    // var scrollTimeout = null,
+    //     scrollTimeoutDelay = 20,
+    //     currentScrollProgress = 0;
+    // var maxScroll = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) - window.innerHeight; //see [http://stackoverflow.com/a/17698713/3344111]
+    //
+    // function initTimeline() {
+    //     for (var i = 0; i < numDIVs; i += 1) {
+    //         timeline.fromTo(myDIVs[i], duration, {
+    //             opacity: 0
+    //         }, {
+    //             opacity: 1,
+    //             ease: ease,
+    //             rotation: 270,
+    //             x: -500,
+    //             y: 500
+    //         }, i * staggerFactor);
+    //     }
+    // }
+    //
+    // function listenToScrollEvent() {
+    //     (window.addEventListener) ? window.addEventListener('scroll', debounceScroll, false) : window.attachEvent('onscroll', debounceScroll);
+    // }
+    //
+    // function debounceScroll() {
+    //     clearTimeout(scrollTimeout);
+    //     scrollTimeout = setTimeout(onScroll, scrollTimeoutDelay);
+    // }
+    //
+    // function onScroll() {
+    //     currentScrollProgress = roundDecimal(window.scrollY / maxScroll, 4);
+    //     //timeline.progress(currentScrollProgress); // either directly set the [progress] of the timeline which may produce a rather jumpy result
+    //     TweenMax.to(timeline, scrollTweenDuration, {
+    //         progress: currentScrollProgress,
+    //         ease: ease
+    //     }); // or tween the [timeline] itself to produce a transition from one state to another i.e. it looks smooth
+    // }
+    //
+    // function roundDecimal(value, place) {
+    //     return Math.round(value * Math.pow(10, place)) / Math.pow(10, place);
+    // }
+    //
+    // function initObj() {
+    //     initTimeline();
+    //     listenToScrollEvent();
+    // }
+    //
+    // initObj();
+    //
+    // console.log(maxScroll, numDIVs)
+
+    //------------------------------------------------------------------------------------------------------------------
+
     $('body').scroll(function() {
         $('.m-object-wrapper').isInViewport().addClass('animated fadeInUp');
         $('.stream-wrapper .row-content:nth-child(odd) .text-wrapper').isInViewport().addClass('animated fadeInLeft');
@@ -90,7 +162,21 @@
         $('[class*="sg-"]').isInViewport({ tolerance: -50 }).addClass('play ').one(animationEnd, function() {
             $(this).addClass('fa ');
         });
+
+        // var objLeft = $('.obj').offset().left;
+        // var objTop = $('.obj').offset().top;
+
+        // myTween.staggerTo(".obj", 1, {rotation: 270, x: -500, y: 500}, 0.5);
+
+        // myTween.set(".obj", {clearProps:"left"});
+        // myTween.set(".obj", {clearProps:"top"});
+
+        // TweenMax.staggerTo(".obj", 1, {rotation: 270, x: -500, y: 500, opacity: 1}, 0.5);
+
+        console.log('scroll');
     });
+
+
 
 
 
@@ -279,10 +365,7 @@
                     console.log(outFrameOffset);
                 });
 
-
                 // console.log(outFrameX, outFrameY);
-
-
 
             });
 
@@ -294,8 +377,6 @@
     $(window).resize(function () {
         shadowSize()
     });
-
-
 
 
     // svg string ------------------------------------------------------------------------------------------------------
@@ -645,3 +726,70 @@ $(function() {
     // });
 
 });
+
+$(function() {
+
+    // var wave = $('.obj');
+    // var winHp = $(window).height() / 100;
+    // var maxHp = 100 / ($(document).height() - $(window).height() + wave.height() * 2);
+    //
+    // console.log(winHp, maxHp);
+    //
+    // $(window).on('scroll', function(){
+    //     var cScroll = $(this).scrollTop();
+    //     var p = cScroll * maxHp;
+    //     var y =  winHp * p + cScroll;
+    //     var x = (Math.sin( p * 0.1) / 2) * 100;
+    //     wave.offset({top: y, left: x});
+    //
+    //     console.log(p, y, x);
+    // });
+    //
+    // $(window).scroll(function(){
+    //
+    // });
+
+
+
+
+
+
+    // $(window).bind('mousewheel', function(event) {
+    //     if (event.originalEvent.wheelDelta >= 0) {
+    //         $(".obj").animate({top:'-=170', left:'+=170', opacity: '1'},100);
+    //     }
+    //     else {
+    //         $(".obj").animate({top:'+=170', left:'-=170', opacity: '1'},100);
+    //     }
+    // });
+    //
+    // $('body').scroll(function() {
+    //
+    // });
+    //
+    // $(window).on('load', 'click', function() {
+    //
+    // })
+
+        // .animate({marginTop:'+=210', marginLeft: '-=290'},200)
+        // .animate({marginLeft:'+=290'},1000)
+        // .animate({marginTop:'-=210', marginLeft: '-=290'},1000)
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,7 +16,13 @@ html, body {
 
 body {opacity: 0;}
 body.loaded {opacity: 1;}
-
+.container {
+  margin-bottom: 150px;
+}
+.search-wrapper .container,
+.navbar-collapse .container {
+  margin-bottom: 0;
+}
 a:active,
 a:focus,
 a:hover {
@@ -607,7 +613,7 @@ a:hover {
     padding-bottom: 60px;
 
     &:last-child {
-      margin-bottom: 200px;
+      //margin-bottom: 200px;
     }
     .row-content {
       margin-bottom: 4em;
@@ -656,7 +662,7 @@ a:hover {
     padding-bottom: 0;
 
     &:last-child {
-      margin-bottom: 300px;
+      //margin-bottom: 300px;
     }
     .row-content {
       margin-bottom: 4em;
@@ -668,7 +674,7 @@ a:hover {
   .stream-wrapper {
 
     &:last-child {
-      margin-bottom: 430px;
+      //margin-bottom: 430px;
     }
     &.inside {
       .row-content {
@@ -761,7 +767,7 @@ a:hover {
 @include media-breakpoint-up(xl) { /* больше чем 1200 */
   .stream-wrapper {
     &:last-child {
-      margin-bottom: 25.125em;
+      //margin-bottom: 25.125em;
     }
     .row-content {
       margin-bottom: 10em;
@@ -995,6 +1001,7 @@ a:hover {
     transition: right .5s linear;
     overflow: hidden;
     width: 400px;
+    max-width: 90vw;
     &:before {
       display: block;
       width: 100%;
@@ -1019,6 +1026,7 @@ a:hover {
   &.open {
     animation: openPanel .5s linear;
     width: 400px;
+    max-width: 90vw;
     .slide-btn {
       width: 400px;
       right: 0;
@@ -1050,7 +1058,7 @@ a:hover {
 
 @include media-breakpoint-up(lg) {
   body {
-    background: red;
+    //background: red;
   }
   .slide-panel {
     .slide-btn {
@@ -1196,6 +1204,20 @@ a:hover {
   &.icon-perfume {
     background-position: -225px 0;
   }
+  &.icon-empty {
+    background-position: -9999px -9999px;
+    &:before {
+      display: block;
+      content: '';
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #e0e0e0;
+      border-radius: 50%;
+    }
+  }
   &:hover,
   &.current {
     background-position-y: -81px;
@@ -1330,6 +1352,26 @@ a:hover {
   }
 }
 
+
+@include media-breakpoint-down(lg) {
+  .out-frame-wrapper {
+    margin: 85px 20px 0 0;
+    .out-frame {
+      width: 100% !important;
+      padding: 30px 30px;
+      &.right,
+      &.left {
+        transform: translateX(0) !important;
+      }
+      .block-footer {
+        position: relative;
+        .link-description {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 
 .text-muted {
   color: #8c8c8c !important;
@@ -1913,3 +1955,74 @@ a:hover {
   box-shadow: none !important;
   padding: 1px;
 }
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.obj {
+  position: absolute;
+  opacity: 0;
+  &.obj-04 {
+    top: 0;
+    left: 100%;
+  }
+
+  &.obj-05 {
+    top: 0;
+    left: 100%;
+  }
+}
+
+
+.obj {
+  //position: absolute;
+  //top: 100px;
+  //left: 50%;
+  //-webkit-animation: xAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+  //animation: xAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+}
+
+//.obj img {
+//  display: block;
+//  //width: 20px;
+//  //height: 20px;
+//  //border-radius: 20px;
+//  //background-color: #fff;
+//  -webkit-animation: yAxis 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+//  animation: yAxis 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+//}
+//
+//@-webkit-keyframes yAxis {
+//  50% {
+//    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+//    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+//    -webkit-transform: translateY(-100px);
+//    transform: translateY(-100px);
+//  }
+//}
+//
+//@keyframes yAxis {
+//  50% {
+//    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+//    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+//    -webkit-transform: translateY(-100px);
+//    transform: translateY(-100px);
+//  }
+//}
+//
+//@-webkit-keyframes xAxis {
+//  50% {
+//    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+//    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+//    -webkit-transform: translateX(100px);
+//    transform: translateX(100px);
+//  }
+//}
+//
+//@keyframes xAxis {
+//  50% {
+//    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+//    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+//    -webkit-transform: translateX(100px);
+//    transform: translateX(100px);
+//  }
+//}
