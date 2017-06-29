@@ -10,7 +10,7 @@ html, body {
   overflow-x: hidden;
 }
 
-*:not(#mask, .letter, .m-shadow, .path, .loaded, .rotate-text, .animation, .animation *) {
+*:not(#mask, .letter, .m-shadow, .path, .loaded, .rotate-text, .row-search, .row-store, .animation, .animation *) {
   transition: all 0.5s ease-in-out;
 }
 
@@ -43,7 +43,6 @@ a:hover {
 @keyframes ripple {
   100% {opacity: 0; transform: scale(2.5);}
 }
-
 
 /**/
 
@@ -1431,6 +1430,7 @@ a:hover {
 
 .search-wrapper {
   position: absolute;
+  //display: none;
   width: 100%;
   max-width: 980px;
   bottom: 0;
@@ -1477,6 +1477,7 @@ a:hover {
   }
   .row-store {
     display: none;
+    padding: 0 70px;
     .close-btn {
       position: absolute;
       right: 0;
@@ -1874,10 +1875,42 @@ a:hover {
 }
 
 .game-list {
-  max-height: 580px;
+  //max-height: 580px;
   .game-item {
-    h2 {margin-bottom: 1em;}
-    margin-bottom: 2em;
+    //h2 {margin-bottom: 1em;}
+    margin-bottom: 5em;
+
+    .game-icon {
+      position: relative;
+      display: inline-block;
+      width: 162px;
+      height: 158px;
+      border: 25px solid #fff;
+      box-shadow:
+              16px 16px 22px 0 rgba(0,0,0,0.20),
+              inset 15px 15px 22px 0 rgba(0,0,0,0.20);
+      &:before {
+        display: block;
+        content: ' ';
+        width: 65px;
+        height: 60px;
+        background: url("../img/game-icons.png") no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &.icon-advice {
+        &:before {
+          background-position: 0 -60px;
+        }
+      }
+      &.icon-symphony {
+        &:before {
+          background-position: 0 0;
+        }
+      }
+    }
   }
 }
 
@@ -1960,15 +1993,15 @@ a:hover {
 
 .obj {
   position: absolute;
-  opacity: 0;
+  //opacity: 0;
   &.obj-04 {
-    top: 0;
-    left: 100%;
+    top: 20%;
+    left: 50%;
   }
 
   &.obj-05 {
-    top: 0;
-    left: 100%;
+    top: 30%;
+    left: 50%;
   }
 }
 

@@ -1,278 +1,169 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html lang="">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>Symphony</title>
-  <meta name="description" content="Symphony front-end">
-  <meta name="author" content="Владимир Глушков">
-  
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+	<meta charset="utf-8">
+	<title></title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+	<script>
+		
+		$(function() {
+			
+			$.fn.spiral = function( Options, Callback ){
+				/*-- Input filtering --*/
+				Opt= {
+					Radius:			150,		// numeric (pixels), horizontal distance between starting and final points
+					Duration:		1000,		// number of milliseconds (as for animate)
+					Easing:			2,			// the number of cicles - if it is higher than 2 it will make more turns and will assume a 'bouncing' deceleration effect
+					Queue:			false,	// boolean (as for animate)
+					Xdirection:	false,	// boolean. If true, the rotation starts going up instead of down.
+					Ydirection:	false,	// boolean. If true the movement will be from left to the right, instead of right to left.
+					InsideOut:	false,	// boolean. If true, the object will whirl out from the inside of the spiral. Note that setting it to true changes the sense of Xdirection
+					Vertical:		false		// boolean. If true, the object spiral will be primarily vertical. Note this changes Xdirection, Ydirection and InsideOut
+				}
+				$.extend(Opt,Options)
+				if(!Callback)
+					Callback= function(){return};
+				/*-- Animation starts --*/
+				return this.each(function(){
+					var elem=$(this),
+						start_z=elem.css('z-index');
+					if (Opt.Vertical) {
+						var start_l=parseInt(elem.css('margin-top')),
+							start_t=parseInt(elem.css('margin-left'));
+					} else {
+						var start_l=parseInt(elem.css('margin-left')),
+							start_t=parseInt(elem.css('margin-top'));
+					}
+					elem
+						.animate({'z-index':start_z},{
+							duration: Opt.Duration,
+							complete: Callback,
+							step:function(now,fx){
+								fgamma = Opt.InsideOut ? Opt.Radius*(1+fx.pos) : Opt.Radius*(1-fx.pos);
+								gamma=fx.pos*Opt.Easing*Math.PI;
+								gamma=(Opt.Ydirection) ? -gamma : gamma;
+								x=(Opt.Xdirection) ? (start_l+Opt.Radius-fgamma*Math.cos(gamma))+'px' : (start_l-Opt.Radius+fgamma*Math.cos(gamma))+'px';
+								y=(start_t+fgamma*Math.sin(gamma))+'px';
+								if (Opt.Vertical) {
+									$(fx.elem).css({'margin-top':x,'margin-left':y})
+								} else {
+									$(fx.elem).css({'margin-left':x,'margin-top':y})
+								}
+							},
+							queue: Opt.Queue
+						})
+				})
+			};
+			$('.obj').spiral();
+			
+//			/*global TweenMax, TimelineMax,Power2*/
+//			var myDIVs = document.querySelectorAll('div'),
+//				numDIVs = myDIVs.length;
+//			var timeline = new TimelineMax({
+//					paused: true
+//				}),
+//				duration = .4,
+//				ease = Power2.easeOut,
+//				staggerFactor = .1,
+//				scrollTweenDuration = .4;
+//			var scrollTimeout = null,
+//				scrollTimeoutDelay = 20,
+//				currentScrollProgress = 0;
+//			var maxScroll = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) - window.innerHeight; //see [http://stackoverflow.com/a/17698713/3344111]
+//			function init() {
+//				initTimeline();
+//				listenToScrollEvent();
+//				onScroll();
+//			}
+//
+//			function initTimeline() {
+//				for (var i = 0; i < numDIVs; i += 1) {
+//					timeline.fromTo(myDIVs[i], duration, {
+//						opacity: 0
+//					}, {
+//						opacity: 1,
+//						rotation:360,
+//						x: -500,
+//						y: 500,
+//						ease: ease
+//					}, i * staggerFactor);
+//				}
+//			}
+//
+//			function listenToScrollEvent() {
+//				(window.addEventListener) ? window.addEventListener('scroll', debounceScroll, false) : window.attachEvent('onscroll', debounceScroll);
+//			}
+//
+//			function debounceScroll() {
+//				clearTimeout(scrollTimeout);
+//				scrollTimeout = setTimeout(onScroll, scrollTimeoutDelay);
+//			}
+//
+//			function onScroll() {
+//				currentScrollProgress = roundDecimal(window.scrollY / maxScroll, 4);
+//				timeline.progress(currentScrollProgress); // either directly set the [progress] of the timeline which may produce a rather jumpy result
+//				TweenMax.to(timeline, scrollTweenDuration, {
+//					progress: currentScrollProgress,
+//					ease: ease
+//				}); // or tween the [timeline] itself to produce a transition from one state to another i.e. it looks smooth
+//			}
+//
+//			function roundDecimal(value, place) {
+//				return Math.round(value * Math.pow(10, place)) / Math.pow(10, place);
+//			}
+//			//
+//			init();
+		});
+		
+	
+	</script>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 2000px;
+		}
+		.obj {
+			/*width: 100%;*/
+			/*height: 60px;*/
+			/*margin: 2px 0;*/
+			position: absolute;
+			/*top: -200px;*/
+			/*left: 100%;*/
+		}
+		div:nth-child(odd) {
+			background: #cc0;
+		}
+		div:nth-child(even) {
+			background: #0cc;
+		}
+	</style>
 </head>
 
 <body>
-<!--//= partials/loader.html-->
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded py-0">
-  <button class="navbar-toggler navbar-toggler-left py-0 px-0" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
-    <div class="toggle-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </button>
-  
-  <div class="navbar-nav top-nav-mobile hidden-lg-up">
-    <a class="nav-link logo align-self-center py-0" href="#"><img src="img/logo.png"></a>
-  </div>
-  
-  <div class="collapse navbar-collapse" id="topNav">
-    <ul class="navbar-nav container justify-content-between top-nav px-0">
-      <li class="nav-item">
-        <a class="nav-link" href="catalog.html">Каталог</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="games.html">Атмосфера в доме</a>
-      </li>
-      <li class="nav-item align-self-start hidden-md-down">
-        <a class="nav-link logo" href="/"><img src="img/logo.png"></a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-link" href="map.html">Где купить</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="article.html">Ароматы</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="container" style="height: 3000px">
-	
-
-	
-</div>
-
-<div class="obj obj-04">
-	<img src="/img/s4-04.png" />
-</div>
-<div class="obj obj-05">
-	<img src="/img/s4-04.png" />
-</div>
-<div id="slide-panel" class="slide-panel right">
-	
-	<div class="row filter-icons">
-		<div class="col col-3">
-			<a href="#" class="freshener" title="Освежители воздуха">
-				<i class="icon-flat icon-freshener"></i>
-			</a>
-		</div>
-		<div class="col col-3">
-			<a href="#" class="purifier" title="Очистители воздуха">
-				<i class="icon-flat icon-purifier"></i>
-			</a>
-		</div>
-		<div class="col col-3">
-			<a href="#" class="auto-freshener" title="Автоматические освежители">
-				<i class="icon-flat icon-auto-freshener"></i>
-			</a>
-		</div>
-		<div class="col col-3">
-			<a href="#" class="perfume" title="Парфюм для дома">
-				<i class="icon-flat icon-perfume"></i>
-			</a>
-		</div>
-	</div>
-	
-	<div class="slide-panel-items"> <!-- wrapper -->
-				
-		<div class="slide-panel-item">
-			
-			<div class="row product-item">
-				<div class="col col-3">
-					<img src="img/product-item.png" alt="" title="">
-					<a href="#" class="product-icon"><i class="icon icon-spray"></i></a>
-				</div>
-				<div class="col col-9">
-					<h2 class="product-title">Symphony антитабак</h2>
-					<div class="product-v">V &ndash; 300</div>
-					<div class="product-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-					</div>
-					
-					<a href="#" class="link block-link">Подробнее</a>
-				</div>
-			</div>
-		
-		</div>
-		
-		<div class="slide-panel-item">
-			
-			<div class="row product-item">
-				<div class="col col-3">
-					<img src="img/product-item.png" alt="" title="">
-					<a href="#" class="product-icon"><i class="icon icon-spray"></i></a>
-				</div>
-				<div class="col col-9">
-					<h2 class="product-title">Symphony антитабак</h2>
-					<div class="product-v">V &ndash; 300</div>
-					<div class="product-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-					</div>
-					
-					<a href="#" class="link block-link">Подробнее</a>
-				</div>
-			</div>
-		
-		</div>
-		
-		<div class="slide-panel-item">
-			
-			<div class="row product-item">
-				<div class="col col-3">
-					<img src="img/product-item.png" alt="" title="">
-					<a href="#" class="product-icon"><i class="icon icon-spray"></i></a>
-				</div>
-				<div class="col col-9">
-					<h2 class="product-title">Symphony антитабак</h2>
-					<div class="product-v">V &ndash; 300</div>
-					<div class="product-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-					</div>
-					
-					<a href="#" class="link block-link">Подробнее</a>
-				</div>
-			</div>
-		
-		</div>
-		
-		<div class="slide-panel-item">
-			
-			<div class="row product-item">
-				<div class="col col-3">
-					<img src="img/product-item.png" alt="" title="">
-					<a href="#" class="product-icon"><i class="icon icon-spray"></i></a>
-				</div>
-				<div class="col col-9">
-					<h2 class="product-title">Symphony антитабак</h2>
-					<div class="product-v">V &ndash; 300</div>
-					<div class="product-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-					</div>
-					
-					<a href="#" class="link block-link">Подробнее</a>
-				</div>
-			</div>
-		
-		</div>
-		
-		<div class="slide-panel-item">
-			
-			<div class="row product-item">
-				<div class="col col-3">
-					<img src="img/product-item.png" alt="" title="">
-					<a href="#" class="product-icon"><i class="icon icon-spray"></i></a>
-				</div>
-				<div class="col col-9">
-					<h2 class="product-title">Symphony антитабак</h2>
-					<div class="product-v">V &ndash; 300</div>
-					<div class="product-description">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-					</div>
-					
-					<a href="#" class="link block-link">Подробнее</a>
-				</div>
-			</div>
-		
-		</div>
-	
-	
-	</div>
-	
-	<div class="slide-btn align-items-center">
-		<span class="slide-caption">Найди свой<br>аромат</span>
-		<a href="#" class="link block-link">Подобрать аромат</a>
-		<img src="img/panel-balloon.png" alt="" title="" class="balloon">
-		<span class="btn-vert-text">menu</span>
-	</div>
-
-</div>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js" type="text/javascript"></script>
-<script src="js/main.js"></script>
-<script>
-	/*global TweenMax, TimelineMax,Power2*/
-	var myDIVs = document.querySelectorAll('.obj'),
-		numDIVs = myDIVs.length;
-	var timeline = new TimelineMax({
-			paused: true
-		}),
-		duration = .4,
-		ease = Power2.easeOut,
-		staggerFactor = .1,
-		scrollTweenDuration = .4;
-	var scrollTimeout = null,
-		scrollTimeoutDelay = 20,
-		currentScrollProgress = 0;
-	var maxScroll = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) - window.innerHeight; //see [http://stackoverflow.com/a/17698713/3344111]
-	
-	function initTimeline() {
-		for (var i = 0; i < numDIVs; i += 1) {
-			timeline.fromTo(myDIVs[i], duration, {
-				opacity: 0
-			}, {
-				opacity: 1,
-				ease: ease,
-				rotation: 270,
-				x: -500,
-				y: 500
-			}, i * staggerFactor);
-		}
-	}
-	
-	function listenToScrollEvent() {
-		(window.addEventListener) ? window.addEventListener('scroll', debounceScroll, false) : window.attachEvent('onscroll', debounceScroll);
-	}
-	
-	function debounceScroll() {
-		clearTimeout(scrollTimeout);
-		scrollTimeout = setTimeout(onScroll, scrollTimeoutDelay);
-	}
-	
-	function onScroll() {
-		currentScrollProgress = roundDecimal(window.scrollY / maxScroll, 4);
-		//timeline.progress(currentScrollProgress); // either directly set the [progress] of the timeline which may produce a rather jumpy result
-		TweenMax.to(timeline, scrollTweenDuration, {
-			progress: currentScrollProgress,
-			ease: ease
-		}); // or tween the [timeline] itself to produce a transition from one state to another i.e. it looks smooth
-	}
-	
-	function roundDecimal(value, place) {
-		return Math.round(value * Math.pow(10, place)) / Math.pow(10, place);
-	}
-	
-	function initObj() {
-		initTimeline();
-		listenToScrollEvent();
-	}
-	
-	initObj();
-	
-	console.log(maxScroll, numDIVs)
-</script>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-04"><img src="/img/s4-04.png" /></div>
+<div class="obj obj-05"><img src="/img/s4-04.png" /></div>
 
 </body>
 

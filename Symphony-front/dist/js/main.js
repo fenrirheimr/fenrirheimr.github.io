@@ -4257,22 +4257,22 @@ and dependencies (minified).
 
 })(jQuery);
 
-(function ($) {
-    $.fn.rotationDegrees = function () {
-        var matrix = this.css("-webkit-transform") ||
-            this.css("-moz-transform")    ||
-            this.css("-ms-transform")     ||
-            this.css("-o-transform")      ||
-            this.css("transform");
-        if(typeof matrix === 'string' && matrix !== 'none') {
-            var values = matrix.split('(')[1].split(')')[0].split(',');
-            var a = values[0];
-            var b = values[1];
-            var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
-        } else { var angle = 0; }
-        return angle;
-    };
-}(jQuery));
+// (function ($) {
+//     $.fn.rotationDegrees = function () {
+//         var matrix = this.css("-webkit-transform") ||
+//             this.css("-moz-transform")    ||
+//             this.css("-ms-transform")     ||
+//             this.css("-o-transform")      ||
+//             this.css("transform");
+//         if(typeof matrix === 'string' && matrix !== 'none') {
+//             var values = matrix.split('(')[1].split(')')[0].split(',');
+//             var a = values[0];
+//             var b = values[1];
+//             var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+//         } else { var angle = 0; }
+//         return angle;
+//     };
+// }(jQuery));
 
 (function($) {
     "use strict";
@@ -4305,97 +4305,53 @@ and dependencies (minified).
 
     $(window).load(function() {
 
-        setTimeout(function() {
+        if($('#mask').length > 0) {
+            setTimeout(function() {
 
-            new Vivus('mask', {
-                type: 'oneByOne',
-                duration: 300
-            }, function () {
-                $('.loader').fadeOut(500);
+                new Vivus('mask', {
+                    type: 'oneByOne',
+                    duration: 300
+                }, function () {
+                    $('.loader').fadeOut(500);
 
-                // first show visible elements
-                $( '.navbar' ).isInViewport().animateCss('slideInDown');
+                    // first show visible elements
+                    $( '.navbar' ).isInViewport().animateCss('slideInDown');
 
-                $('.main-frame').isInViewport().animateCss('fadeInUp');
-                $('.catalog-row .description').isInViewport().animateCss('fadeInRight');
-                $('.catalog-img').isInViewport().animateCss('fadeInUp');
-                $('.catalog-text').isInViewport().animateCss('fadeInRight');
-                $('.m-object-wrapper').isInViewport().addClass('animated fadeInUp');
-                $('.text-wrapper').isInViewport().addClass('animated fadeInLeft');
-            });
+                    $('.main-frame').isInViewport().animateCss('fadeInUp');
+                    $('.catalog-row .description').isInViewport().animateCss('fadeInRight');
+                    $('.catalog-img').isInViewport().animateCss('fadeInUp');
+                    $('.catalog-text').isInViewport().animateCss('fadeInRight');
+                    $('.m-object-wrapper').isInViewport().addClass('animated fadeInUp');
+                    $('.text-wrapper').isInViewport().addClass('animated fadeInLeft');
+                });
 
-        }, 1000);
+            }, 1000);
+        }
+
     });
 
     // var myTween = new TweenMax.staggerTo(".obj", 1, {rotation:360,x: -500, y: 500,opacity:1}, 0.5);
 
-    // var myTween = new TimelineLite({ paused: true });
-    // TweenMax.staggerTo(".obj", 1, {rotation: 270, x: -500, y: 500, opacity: 1}, 0.5);
-    // myTween.play();
+    var obj = new TimelineLite({ paused: true });
+    obj.staggerTo(".obj", 1, {rotation: 270, x: -500, y: 500, opacity: 1}, 0.5);
+
+
+    $('body').scroll(function () {
+        obj.play();
+    });
+
+    // TODO: реализовать через FromTo
+
+    // $('body').click(function () {
+    //     obj.play();
+    // });
 
 
 
     //------------------------------------------------------------------------------------------------------------------
 
-    // /*global TweenMax, TimelineMax,Power2*/
-    // var myDIVs = document.querySelectorAll('.obj'),
-    //     numDIVs = myDIVs.length;
-    // var timeline = new TimelineMax({
-    //         paused: true
-    //     }),
-    //     duration = .4,
-    //     ease = Power2.easeOut,
-    //     staggerFactor = .1,
-    //     scrollTweenDuration = .4;
-    // var scrollTimeout = null,
-    //     scrollTimeoutDelay = 20,
-    //     currentScrollProgress = 0;
-    // var maxScroll = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) - window.innerHeight; //see [http://stackoverflow.com/a/17698713/3344111]
-    //
-    // function initTimeline() {
-    //     for (var i = 0; i < numDIVs; i += 1) {
-    //         timeline.fromTo(myDIVs[i], duration, {
-    //             opacity: 0
-    //         }, {
-    //             opacity: 1,
-    //             ease: ease,
-    //             rotation: 270,
-    //             x: -500,
-    //             y: 500
-    //         }, i * staggerFactor);
-    //     }
-    // }
-    //
-    // function listenToScrollEvent() {
-    //     (window.addEventListener) ? window.addEventListener('scroll', debounceScroll, false) : window.attachEvent('onscroll', debounceScroll);
-    // }
-    //
-    // function debounceScroll() {
-    //     clearTimeout(scrollTimeout);
-    //     scrollTimeout = setTimeout(onScroll, scrollTimeoutDelay);
-    // }
-    //
-    // function onScroll() {
-    //     currentScrollProgress = roundDecimal(window.scrollY / maxScroll, 4);
-    //     //timeline.progress(currentScrollProgress); // either directly set the [progress] of the timeline which may produce a rather jumpy result
-    //     TweenMax.to(timeline, scrollTweenDuration, {
-    //         progress: currentScrollProgress,
-    //         ease: ease
-    //     }); // or tween the [timeline] itself to produce a transition from one state to another i.e. it looks smooth
-    // }
-    //
-    // function roundDecimal(value, place) {
-    //     return Math.round(value * Math.pow(10, place)) / Math.pow(10, place);
-    // }
-    //
-    // function initObj() {
-    //     initTimeline();
-    //     listenToScrollEvent();
-    // }
-    //
-    // initObj();
-    //
-    // console.log(maxScroll, numDIVs)
+
+
 
     //------------------------------------------------------------------------------------------------------------------
 
@@ -4421,7 +4377,7 @@ and dependencies (minified).
 
         // TweenMax.staggerTo(".obj", 1, {rotation: 270, x: -500, y: 500, opacity: 1}, 0.5);
 
-        console.log('scroll');
+
     });
 
 
@@ -4522,102 +4478,109 @@ and dependencies (minified).
 
     windowWidth = $(window).width();
 
-    streamWrapper = $('.stream-wrapper');
+
+
+    streamWrapper = $('.stream-wrapper:not(.inside)');
 
     function shadowSize() {
-        streamWrapper.each(function () {
 
-            var row = $(this).find('.row');
+        if(streamWrapper.length > 0) {
 
-            row.each(function(i, el) {
-                mObjectWrapper = $(this).find('.m-object-wrapper');
+            streamWrapper.each(function () {
 
-                mObject = mObjectWrapper.find('.m-object');
-                mShadow = mObjectWrapper.find('.m-shadow');
+                var row = $(this).find('.row');
 
-                oH = mObject.height();
-                oW = mObject.width();
-                wW = mObjectWrapper.width();
+                row.each(function(i, el) {
+                    mObjectWrapper = $(this).find('.m-object-wrapper');
 
-                mR = wW-oW;
+                    mObject = mObjectWrapper.find('.m-object');
+                    mShadow = mObjectWrapper.find('.m-shadow');
 
-                if(windowWidth < 992) {
+                    oH = mObject.height();
+                    oW = mObject.width();
+                    wW = mObjectWrapper.width();
 
-                    if (i % 2 === 0) {
-                        /* we are odd */
+                    mR = wW-oW;
 
-                        wMr = parseFloat(mObjectWrapper.css('margin-right'));
-                        mShadow.css({
-                            'margin-right': -(wMr)+5+'px',
-                            'height': oH+'px'
-                        })
+                    if(windowWidth < 992) {
 
+                        if (i % 2 === 0) {
+                            /* we are odd */
+
+                            wMr = parseFloat(mObjectWrapper.css('margin-right'));
+                            mShadow.css({
+                                'margin-right': -(wMr)+5+'px',
+                                'height': oH+'px'
+                            })
+
+                        } else {
+                            /* we are even */
+
+                            wMl = parseFloat(mObjectWrapper.css('margin-left'));
+                            mShadow.css({
+                                'margin-left': -(wMl)+5+'px',
+                                'margin-right': mR+3+'px',
+                                'height': oH+'px'
+                            })
+
+                        }
                     } else {
-                        /* we are even */
 
-                        wMl = parseFloat(mObjectWrapper.css('margin-left'));
-                        mShadow.css({
-                            'margin-left': -(wMl)+5+'px',
-                            'margin-right': mR+3+'px',
-                            'height': oH+'px'
-                        })
+                        if (i % 2 === 0) {
+                            /* we are odd */
 
+                            wMr = parseFloat(mObjectWrapper.css('margin-right'));
+                            mShadow.css({
+                                'margin-right': -(wMr)+45+'px',
+                                'height': oH+'px'
+                            })
+
+                        } else {
+                            /* we are even */
+
+                            wMl = parseFloat(mObjectWrapper.css('margin-left'));
+                            mShadow.css({
+                                'margin-left': -(wMl+45)+'px',
+                                'margin-right': mR+3+'px',
+                                'height': oH+'px'
+                            })
+                        }
                     }
-                } else {
 
-                    if (i % 2 === 0) {
-                        /* we are odd */
+                    var outFrameWrapper = $(this).eq(i).find('.out-frame-wrapper');
 
-                        wMr = parseFloat(mObjectWrapper.css('margin-right'));
-                        mShadow.css({
-                            'margin-right': -(wMr)+45+'px',
-                            'height': oH+'px'
-                        })
+                    // console.log(outFrameWrapper.length);
 
-                    } else {
-                        /* we are even */
+                    outFrameWrapper.each(function(i) {
+                        var outFrame = $(this).eq(i).find('.out-frame');
+                        var outFrameShadow = $(this).eq(i).find('.out-frame-shadow');
 
-                        wMl = parseFloat(mObjectWrapper.css('margin-left'));
-                        mShadow.css({
-                            'margin-left': -(wMl+45)+'px',
-                            'margin-right': mR+3+'px',
-                            'height': oH+'px'
-                        })
-                    }
-                }
+                        var outFrameX = outFrame.eq(i).position().left;
+                        var outFrameY = outFrame.eq(i).position().top;
+                        var outFrameOffset = parseInt(outFrame.eq(i).css('transform').split(',')[4]);
 
-                var outFrameWrapper = $(this).eq(i).find('.out-frame-wrapper');
-
-                // console.log(outFrameWrapper.length);
-
-                outFrameWrapper.each(function(i) {
-                    var outFrame = $(this).eq(i).find('.out-frame');
-                    var outFrameShadow = $(this).eq(i).find('.out-frame-shadow');
-
-                    var outFrameX = outFrame.eq(i).position().left;
-                    var outFrameY = outFrame.eq(i).position().top;
-                    var outFrameOffset = parseInt(outFrame.eq(i).css('transform').split(',')[4]);
-
-                    var outFrameShadowWidth = outFrameShadow.outerWidth() - outFrameOffset;
-                    var outFrameHeight = outFrame.outerHeight();
-                    // var outFrameOffset = outFrame.css('transform');
+                        var outFrameShadowWidth = outFrameShadow.outerWidth() - outFrameOffset;
+                        var outFrameHeight = outFrame.outerHeight();
+                        // var outFrameOffset = outFrame.css('transform');
 
 
-                    outFrameShadow.eq(i).css({
-                        top: outFrameY,
-                        // left: outFrameX,
-                        // right: -(outFrameOffset-23),
-                        height: outFrameHeight
+                        outFrameShadow.eq(i).css({
+                            top: outFrameY,
+                            // left: outFrameX,
+                            // right: -(outFrameOffset-23),
+                            height: outFrameHeight
+                        });
+
+                        console.log(outFrameOffset);
                     });
 
-                    console.log(outFrameOffset);
-                });
+                    // console.log(outFrameX, outFrameY);
 
-                // console.log(outFrameX, outFrameY);
+                });
 
             });
 
-        });
+        }
     }
 
     shadowSize();
@@ -4899,20 +4862,28 @@ and dependencies (minified).
     var storeSearch = $('.row-search');
 
     $('.open-list').click(function() {
-        storeSearch.fadeOut('100');
-        storeList.css("display", "flex").fadeIn('4000');
-
-        $('.game-list').mCustomScrollbar({
-            theme:"right-arrows"
+        storeSearch.slideUp('slow', function() {
+            storeList.slideDown()
+            // $('.game-list').mCustomScrollbar({
+            //     theme:"right-arrows"
+            // });
         });
+
+
     });
 
     $('.close-btn').click(function() {
-        storeList.fadeOut('100');
-        storeSearch.css("display", "flex").fadeIn('4000');
+        // storeList.fadeOut();
+        // storeSearch.fadeIn('4000');
 
-        $('.game-list').mCustomScrollbar('destroy');
+        storeList.slideUp('slow', function() {
+            storeSearch.slideDown();
+            $('.game-list').mCustomScrollbar('destroy');
+        });
+
+
     });
+
 
     //------------------------------------------------------------------------------------------------------------------
 
@@ -4976,6 +4947,62 @@ $(function() {
 });
 
 $(function() {
+
+//
+//     /*global TweenMax, TimelineMax,Power2*/
+//     var myDIVs = document.querySelectorAll('.obj'),
+//         numDIVs = myDIVs.length;
+//     var timeline = new TimelineMax({
+//             paused: true
+//         }),
+//         duration = .4,
+//         ease = Power2.easeOut,
+//         staggerFactor = .1,
+//         scrollTweenDuration = .4;
+//     var scrollTimeout = null,
+//         scrollTimeoutDelay = 20,
+//         currentScrollProgress = 0;
+//     var maxScroll = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) - window.innerHeight; //see [http://stackoverflow.com/a/17698713/3344111]
+//     function initObj() {
+//         initTimeline();
+//         listenToScrollEvent();
+//         onScroll();
+//     }
+//
+//     function initTimeline() {
+//         for (var i = 0; i < numDIVs; i += 1) {
+//             timeline.fromTo(myDIVs[i], duration, {
+//                 opacity: 0
+//             }, {
+//                 opacity: 1,
+//                 ease: ease
+//             }, i * staggerFactor);
+//         }
+//     }
+//
+//     function listenToScrollEvent() {
+//         (window.addEventListener) ? window.addEventListener('scroll', debounceScroll, false) : window.attachEvent('onscroll', debounceScroll);
+//     }
+//
+//     function debounceScroll() {
+//         clearTimeout(scrollTimeout);
+//         scrollTimeout = setTimeout(onScroll, scrollTimeoutDelay);
+//     }
+//
+//     function onScroll() {
+//         currentScrollProgress = roundDecimal(window.scrollY / maxScroll, 4);
+//         //timeline.progress(currentScrollProgress); // either directly set the [progress] of the timeline which may produce a rather jumpy result
+//         TweenMax.to(timeline, scrollTweenDuration, {
+//             progress: currentScrollProgress,
+//             ease: ease
+//         }); // or tween the [timeline] itself to produce a transition from one state to another i.e. it looks smooth
+//     }
+//
+//     function roundDecimal(value, place) {
+//         return Math.round(value * Math.pow(10, place)) / Math.pow(10, place);
+//     }
+// //
+//     initObj();
 
     // var wave = $('.obj');
     // var winHp = $(window).height() / 100;
