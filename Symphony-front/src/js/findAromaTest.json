@@ -1,0 +1,47 @@
+[
+  {
+    "type": "choose",
+    "question": "<h3>Какое утверждение истинно?</h3>",
+    "answers": [
+      "jQuery - это JSON библиотека",
+      "jQuery - это JavaScript библиотека"
+    ],
+    "correct": [2]
+  },
+  {
+    "type": "choose",
+    "question": "<h3>Какое утверждение истинно?</h3>",
+    "answers": [
+      "jQuery - это JSON библиотека",
+      "jQuery - это JavaScript библиотека"
+    ],
+    "correct": [2]
+  },
+  {
+    "type": "choose",
+    "question": "<h3>Какое утверждение истинно?</h3>",
+    "answers": [
+      "jQuery - это JSON библиотека",
+      "jQuery - это JavaScript библиотека"
+    ],
+    "correct": [2]
+  },
+  {
+    "type": "choose",
+    "question": "<h3>Какое утверждение истинно?</h3>",
+    "answers": [
+      "jQuery - это JSON библиотека",
+      "jQuery - это JavaScript библиотека"
+    ],
+    "correct": [2]
+  },
+  {
+    "type": "choose",
+    "question": "<h3>Какое утверждение истинно?</h3>",
+    "answers": [
+      "jQuery - это JSON библиотека",
+      "jQuery - это JavaScript библиотека"
+    ],
+    "correct": [2]
+  }
+]

@@ -572,7 +572,7 @@ a:hover {
       }
       .out-frame-wrapper {
         .out-frame {
-          padding: 30px 70px;
+          padding: 30px 50px;
           width: 420px;
         }
       }
@@ -1513,7 +1513,7 @@ a:hover {
       margin: 0;
       .out-frame {
         transform: translateX(0%);
-        border-width: 15px;
+        border-width: 25px;
         box-shadow:
                 0 7px 7px 0 rgba(0,0,0,0.26),
                 0 16px 13px 0 rgba(0,0,0,0.26),
@@ -1525,6 +1525,9 @@ a:hover {
                 inset 45px 45px 18px 0 rgba(0,0,0,0.13),
                 inset 71px 71px 24px 0 rgba(0,0,0,0.09),
                 inset 66px 66px 59px 0 rgba(68,177,242,0.06);
+        .product-item {
+          margin: 0 ;
+        }
       }
     }
   }
@@ -1588,17 +1591,17 @@ a:hover {
   perspective: 1000px;
   transform-style: preserve-3d;
   position: relative;
-  background: url("../img/arrow-flip.png") no-repeat center bottom;
-  //.flipper-arrow {
-  //  width: 200px;
-  //  height: 68px;
-  //  position: absolute;
-  //  bottom: 20px;
-  //  left: 50%;
-  //  transform: translateX(-50%);
-  //  background: url("../img/arrow-flip.png") no-repeat;
-  //  z-index: 0;
-  //}
+  //background: url("../img/arrow-flip.png") no-repeat center bottom;
+  .flipper-arrow {
+    width: 200px;
+    height: 68px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../img/arrow-flip.png") no-repeat;
+    z-index: 0;
+  }
 }
 /*  UPDATED! flip the pane when hovered */
 //.flip-container:hover .back {
@@ -1619,7 +1622,7 @@ a:hover {
   transform-style: preserve-3d;
   height: 100%;
   position: relative;
-
+  z-index: 1;
 }
 
 /* hide back of pane during swap */
@@ -1726,7 +1729,11 @@ a:hover {
   }
 }
 
-.frame-slider {position: relative;}
+.frame-slider-item {position: relative;}
+
+.bx-wrapper {
+  background: none;
+}
 
 .arrow {
   display: inline-block;
@@ -1902,16 +1909,22 @@ a:hover {
       }
       &.icon-advice {
         &:before {
-          background-position: 0 -60px;
+          background-position: 0 0;
         }
       }
       &.icon-symphony {
         &:before {
-          background-position: 0 0;
+          background-position: 0 -60px;
         }
       }
     }
+    .game-description {
+      position: relative;
+      margin-left: 30%;
+      margin-top: -20%;
+    }
   }
+
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */

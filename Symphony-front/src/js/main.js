@@ -5,6 +5,7 @@
 //= ../../bower_components/isInViewport/lib/isInViewport.min.js
 //= ../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js
 //= ../../bower_components/bxslider-4/dist/jquery.bxslider.js
+//= partials/spritespin.min.js
 
 //= partials/modernizr.custom.js
 //= partials/jquery.smoothWheel.js
@@ -639,36 +640,61 @@
 
     //------------------------------------------------------------------------------------------------------------------
 
-    function frontFlip() {
-        $(".front")
-            .css('transform', 'perspective(1000px) rotateY(0deg)');
-        $(".back")
-            .css('transform', 'perspective(1000px) rotateY(180deg)');
-    }
+    // function frontFlip() {
+    //     $(".front")
+    //         .css('transform', 'perspective(1000px) rotateY(0deg)');
+    //     $(".back")
+    //         .css('transform', 'perspective(1000px) rotateY(180deg)');
+    // }
+    //
+    // function backFlip() {
+    //     $(".back")
+    //         .css('transform', 'perspective(1000px) rotateY(0)');
+    //     $(".front")
+    //         .css('transform', 'perspective(1000px) rotateY(-180deg)');
+    // }
+    //
+    // $(".flipper").on('click', function() {
+    //
+    //     if ($(this).attr('data-click-state') == 1) {
+    //         $(this).attr('data-click-state', 0)
+    //         frontFlip();
+    //     } else {
+    //         $(this).attr('data-click-state', 1)
+    //         backFlip();
+    //     }
+    // });
 
-    function backFlip() {
-        $(".back")
-            .css('transform', 'perspective(1000px) rotateY(0)');
-        $(".front")
-            .css('transform', 'perspective(1000px) rotateY(-180deg)');
-    }
 
-    $(".flipper").on('click', function() {
-
-        if ($(this).attr('data-click-state') == 1) {
-            $(this).attr('data-click-state', 0)
-            frontFlip();
-        } else {
-            $(this).attr('data-click-state', 1)
-            backFlip();
-        }
+    $('.flipper').spritespin({
+        width     : 320,
+        height    : 510,
+        frames    : 34,
+        framesX   : 6,
+        behavior  : "drag",
+        module    : "360",
+        sense     : -1,
+        source    : "/img/bike6x6.jpg",
+        // source    : "/img/RotatingCar.jpg",
+        animate   : true, // анимация при загрузке
+        loop      : true,
+        frameWrap : true,
+        frameTime : 90, // скорость анимации
+        enableCanvas : false
     });
+
+
 
     //------------------------------------------------------------------------------------------------------------------
 
     $('.bxslider').bxSlider({
         // pager: true
         pagerCustom: '.nav-slider'
+    });
+
+    $('.frame-slider-wrapper').bxSlider({
+        randomStart: true,
+        pager: false
     });
 
 })(jQuery);
@@ -804,6 +830,7 @@ $(function() {
 
 
 });
+
 
 
 
