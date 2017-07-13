@@ -4344,9 +4344,10 @@ var x=data.zoomX,y=data.zoomY;null!=x&&null!=y||(x=data.zoomX=.5,y=data.zoomY=.5
 
     // TODO: реализовать через FromTo
 
-    // $('body').click(function () {
-    //     obj.play();
-    // });
+    $('body').click(function () {
+        obj.play();
+        console.log('click!')
+    });
 
 
 
@@ -4866,9 +4867,9 @@ var x=data.zoomX,y=data.zoomY;null!=x&&null!=y||(x=data.zoomX=.5,y=data.zoomY=.5
     $('.open-list').click(function() {
         storeSearch.slideUp('slow', function() {
             storeList.slideDown()
-            // $('.game-list').mCustomScrollbar({
-            //     theme:"right-arrows"
-            // });
+            $('.game-list').mCustomScrollbar({
+                theme:"right-arrows"
+            });
         });
 
 

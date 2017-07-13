@@ -95,9 +95,10 @@
 
     // TODO: реализовать через FromTo
 
-    // $('body').click(function () {
-    //     obj.play();
-    // });
+    $('body').click(function () {
+        obj.play();
+        console.log('click!')
+    });
 
 
 
@@ -617,9 +618,9 @@
     $('.open-list').click(function() {
         storeSearch.slideUp('slow', function() {
             storeList.slideDown()
-            // $('.game-list').mCustomScrollbar({
-            //     theme:"right-arrows"
-            // });
+            $('.game-list').mCustomScrollbar({
+                theme:"right-arrows"
+            });
         });
 
 

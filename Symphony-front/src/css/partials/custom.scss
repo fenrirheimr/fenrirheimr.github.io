@@ -1883,6 +1883,7 @@ a:hover {
 
 .game-list {
   //max-height: 580px;
+  max-height: 60vh;
   .game-item {
     //h2 {margin-bottom: 1em;}
     margin-bottom: 5em;
@@ -1925,6 +1926,38 @@ a:hover {
     }
   }
 
+  .out-frame-wrapper {
+    .out-frame {
+      &.right {
+        transform: translateX(40%);
+      }
+    }
+  }
+
+  .frame-link {
+    background-size: contain;
+    display: inline-block;
+    width: 170px;
+    height: 54px;
+    text-align: center;
+    padding: 6px 0;
+    overflow: hidden;
+    background: url('../img/frame-link-bm.png') no-repeat;
+    .link {
+      color: #0b84c2;
+      font-size: 1.250em;
+    }
+  }
+  .mCustomScrollBox {
+    overflow: visible;
+    overflow-y: hidden;
+  }
+  .mCSB_container {
+    overflow: visible;
+    overflow-y: hidden;
+    width: auto;
+    height: auto;
+  }
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
@@ -2006,15 +2039,47 @@ a:hover {
 
 .obj {
   position: absolute;
-  //opacity: 0;
+  opacity: 1;
+  display: block;
+  background: url('../img/flowers-sprite.png') 0 0 no-repeat;
+  z-index: 99;
+  &.obj-01 {
+    width: 334px;
+    height: 375px;
+    background-position: 0 0;
+    top: 0;
+    left: 0;
+  }
+
+  &.obj-02 {
+    width: 273px;
+    height: 219px;
+    background-position: -334px 0;
+    top: 0;
+    left: 335px;
+  }
+  &.obj-03 {
+    width: 213px;
+    height: 296px;
+    background-position: -610px 0;
+    top: 0;
+    left: 610px;
+  }
+
   &.obj-04 {
-    top: 20%;
-    left: 50%;
+    width: 248px;
+    height: 277px;
+    background-position: -334px -220px;
+    top: 0;
+    left: 830px;
   }
 
   &.obj-05 {
-    top: 30%;
-    left: 50%;
+    width: 260px;
+    height: 202px;
+    background-position: 0 -376px;
+    top: 390px;
+    left: 0;
   }
 }
 
