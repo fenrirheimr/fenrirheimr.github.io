@@ -1,7 +1,7 @@
-# Created by .ignore support plugin (hsz.mobi)
 
-.DS_Store/
+.idea/*/*.*
 bower_components/
 build/
 build/*/*.*
 node_modules/
+Будет удалено .idea/
