@@ -22,7 +22,7 @@ window.requestAnimationFrame = (function(){
 // Configs
 
 var Configs = {
-    backgroundColor: '#eee9e9',
+    backgroundColor: '#fff',
     particleNum: 1000,
     step: 5,
     base: 1000,
