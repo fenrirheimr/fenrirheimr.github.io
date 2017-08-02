@@ -16,7 +16,8 @@
     "animatewithsass": "^3.2.2",
     "bootstrap": "v4.0.0-alpha.6",
     "slick-carousel": "^1.6.0",
-    "fancybox": "^3.1.20"
+    "fancybox": "^3.1.20",
+    "css-hamburgers": "^0.9.1"
   },
   "devDependencies": {},
   "description": "Portfolio of Vladimir Glushkov",
