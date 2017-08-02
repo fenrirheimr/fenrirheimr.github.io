@@ -11,5 +11,4 @@
 //= ../../bower_components/slick-carousel/slick/slick.min.js
 
 //= partials/simplex-noise.js
-//= partials/dat.gui.min.js
 //= partials/background.js
