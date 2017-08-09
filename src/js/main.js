@@ -38,6 +38,16 @@
     //     e.preventDefault();
     // });
 
+    $(".hamburger").on("click", function () {
+        $(this).toggleClass("is-active");
+        $('#navigation').toggleClass("is-active");
+
+        $('#navigation').slideToggle('medium', function() {
+            if ($(this).is(':visible'))
+                $(this).css('display','flex');
+        });
+    });
+
 })(jQuery);
 
 
