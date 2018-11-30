@@ -1,0 +1,41 @@
+{
+  "name": "fenrirheimr.ru",
+  "version": "0.0.1",
+  "description": "Portfolio of Vladimir Glushkov",
+  "author": "Vladimir Glushkov <xhtmlblog@gmail.com>",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "bulma": "^0.7.2",
+    "bulma-extensions": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-bump": "^3.1.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "imagemin-pngquant": "^6.0.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.10.0",
+    "rimraf": "^2.6.2"
+  },
+  "main": "gulpfile.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fenrirheimr/fenrirheimr.github.io.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fenrirheimr/fenrirheimr.github.io/issues"
+  },
+  "homepage": "http://fenrirheimr.ru"
+}

@@ -1,0 +1,221 @@
+html, body {
+	position: relative;
+	min-height: 100%;
+	height: auto;
+	font-family: "nerislight", sans-serif;
+	color: #fff;
+}
+
+@keyframes AnimationName {
+	0% {background-position: 32% 0%}
+	50% {background-position: 69% 100%}
+	100% {background-position: 32% 0%}
+}
+html {
+	background: linear-gradient(134deg, #2e95d0, #c958ca, #58baca);
+	background-size: 600% 600%;
+	animation: AnimationName 15s ease infinite;
+}
+body {
+	background: url("../../img/bg/bright-squares.png");
+	padding-top: 64px;
+}
+
+.navbar {
+	background: rgba(255,255,255, 0.5);
+	.navbar-brand {
+		a {
+			.part-of-name {
+				display: inline-block;
+				width: 0;
+				overflow: hidden;
+				text-align: left;
+				transition-property: width;
+				transition-duration: .5s;
+				transition-delay: .2s;
+			}
+			&:hover {
+				.part-of-name {
+					width: 115px;
+				}
+			}
+		}
+	}
+}
+
+
+//*:not(.class-name) {
+//  width: px
+//}
+
+//@mixin linearGradient($top, $bottom) {
+//	background: $top;
+//    background: -moz-linear-gradient(top, $top, $bottom);
+//    background: -webkit-gradient(linear, left top, left bottom, color-stop($top), color-stop($bottom));
+//    background: -webkit-linear-gradient(top, $top, $bottom);
+//    background: -o-linear-gradient(top, $top, $bottom);
+//    background: -ms-linear-gradient(top, $top, $bottom);
+//    background: linear-gradient(to bottom, $top, $bottom);
+//}
+
+//usage: @include linearGradient(rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%)
+
+@media screen and (max-width: 768px) {
+	.resume,
+	.timeline,
+	.portfolio {
+		h1.title {font-size: 5em;}
+		
+	}
+}
+
+@media screen and (max-width: 1087px) {
+	.navbar-menu.is-active {
+		background: transparent;
+	}
+}
+
+
+.resume,
+.timeline,
+.portfolio {
+	margin: 0 auto;
+	padding: 4em 0;
+	h1.title {
+		text-shadow: 0 5px 30px rgba(50, 50, 50, 0.75);
+        margin-bottom: 4rem;
+		white-space: nowrap;
+		transition: all 0.3s linear;
+	}
+	
+	h1.title,
+	.subtitle {
+		color: #fff;
+	}
+}
+
+.pageloader {
+	display: none;
+	background-color: #2e95d0;
+	background-color: rgba(#2e95d0, $pageloader-opacity );
+	background-image: url("../../img/bg/bright-squares.png");
+}
+
+.resume {
+	.photo {
+		box-shadow: 0 5px 30px 0 rgba(50, 50, 50, 0.75);
+	}
+	.columns {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	a {
+		border-bottom: 1px solid;
+		&:hover {
+			border-bottom: none;
+		}
+	}
+	.resume-link {
+		border-bottom-style: dashed;
+	}
+	pre {
+		display: none;
+		background: #2B2B2B;
+		text-align: left;
+		color: #f8f8f8;
+		.rtag {color: #CC7832;}
+		.tq {color: #6A8759;}
+		.class {color: #E8BF6A;}
+		.atr {color: #BABABA;}
+		.url {color: #287BDE}
+		.val {
+			&.text {color: #A5C261;}
+			&.num {color: #6897BB;}
+		}
+		.is-muted {
+			opacity: 0.4;
+		}
+	}
+}
+
+.portfolio {
+	a.has-text-warning {
+		border-bottom: 1px dashed;
+		&:hover {
+			border-bottom: none;
+		}
+	}
+	
+	.timeline {
+		&.is-centered {
+			.timeline-item {
+				padding: 1em 0 1em 2em;
+				.image {
+					img {
+						border-radius: 6px;
+					}
+				}
+				.timeline-content {
+					padding: 0 0 0 1em;
+				}
+				&:nth-of-type(2n) {
+					padding: 1em 2em 1em 0;
+					.image {
+						order: 1;
+						&.is-96x96 {
+							min-width: 96px;
+						}
+					}
+					.timeline-content {
+						padding: 0 1em 0 0;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.redone-wrapper {
+	display: none;
+	font-size: 0.85rem;
+	.redone-list {
+		.is-divider {
+			border-top-width: 1px;
+			border-top-color: #ddd;
+			margin: 1rem 0;
+		}
+		.is-divider:not(.header) {
+			margin: 0.4rem 0;
+			border-top-color: #eee;
+		}
+		.is-divider[data-content]:after {
+			color: #666;
+		}
+		.icon {
+			display: inline-table;
+			font-size: 1rem;
+		}
+	}
+}
+
+.box {
+	padding: 0.7rem 1rem;
+	&.is-3 {
+		width: 33.33%;
+	}
+	&.is-4 {
+		width: 25%;
+	}
+	&.is-6 {
+		width: 50%;
+	}
+}
+
+.footer {
+	background: rgba(255,255,255, 0.2);
+	padding: 2rem 1.5rem 2rem;
+	strong {
+		color: inherit;
+	}
+}

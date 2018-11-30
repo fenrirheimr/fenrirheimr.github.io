@@ -1,0 +1,22 @@
+{
+  "name": "fenrirheimr.ru",
+  "version": "0.0.1",
+  "authors": [
+    "Vladimir Glushkov <xhtmlblog@gmail.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animatewithsass": "^3.2.1"
+  },
+  "devDependencies": {},
+  "description": "Portfolio of Vladimir Glushkov",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://fenrirheimr.ru"
+}
