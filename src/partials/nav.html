@@ -12,8 +12,7 @@
         </div>
         <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
-                <a class="navbar-item" href="#resume">Резюме</a>
-                <a class="navbar-item" href="#portfolio">Порфолио</a>
+                <a v-for="item in nav" class="navbar-item" :href="item.url">{{ item.text }}</a>
             </div>
         </div>
     </div>

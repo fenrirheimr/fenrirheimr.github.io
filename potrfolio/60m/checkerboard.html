@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>60 минут - Система управления отелем</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="css/steps.css" rel="stylesheet">
+    <link href="css/jquery.selectbox-0.2.css" rel="stylesheet">
+    <link href="css/s.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script src="js/inheritance.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.steps.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.selectbox-0.2.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container top-row">
+                <div class="row">
+                    <div class="col-md-6 pull-left">
+                        <a href="index.html" class="logo">
+                            <img src="img/logo.png" alt="" title="">
+                            <span>Система управления отелем</span>
+                        </a>
+                    </div>
+                    <div class="service pull-right">
+                        <div class="user-wrapper">
+                            <a href="#" class="user">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span>Александр Христорождественский</span>
+                                <i class="material-icons md-20">&#xE313;</i>
+                            </a>
+                            <ul class="user-menu">
+                                <li><a href="hotel-options.html">Настройки гостиницы</a></li>
+                                <li><a href="administrator-profiles.html">Профили администраторов</a></li>
+                                <li><a href="#">Выйти</a></li>
+                            </ul>
+
+                        </div>
+
+                        <a href="#" class="help-link">
+                            <i class="material-icons md-18">&#xE887;</i>
+                            <span>Помощь</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navigation">
+
+            <div class="container">
+                <div class="row">
+                    <ul class="col-md-12 clearfix">
+                        <li class="current"><a href="checkerboard.html"><strong>Шахматка</strong></a></li>
+                        <li><a href="bid.html"><strong>Заявки и брони</strong></a> <sup>4</sup></li>
+                        <li><a href="instructions.html"><strong>Поручения</strong></a></li>
+                        <li><a href="reports.html">Отчеты</a></li>
+                        <li><a href="promotions.html">Акции и скидки</a></li>
+                        <li><a href="categories.html">Категории и цены</a></li>
+                        <li><a href="rooms.html">Номера</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <main class="container">
+
+            <div class="row">
+
+                <h1 class="col-md-12">Шахматка</h1>
+
+                <div class="col-md-12 content">
+
+                    <div class="clearfix">
+
+                        <div class="select-day pull-left">
+                            <div class="form-group select-date clearfix">
+                                <label for="date1">Сегодня</label>
+                                <input type="text" class="form-control" id="date1" placeholder="">
+                            </div>
+                        </div>
+
+                        <ul class="nav nav-tabs pull-right" role="tablist" id="reports-tab">
+                            <li role="presentation" class="active"><a href="#daily" aria-controls="Daily" role="tab" data-toggle="tab">Посуточная</a></li>
+                            <li role="presentation"><a href="#hourly" aria-controls="Hourly" role="tab" data-toggle="tab">Почасовая</a></li>
+                        </ul>
+
+                    </div>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="daily">
+                            <div class="scheduler" id="scheduler">
+
+                                <div class="scheduler-header">
+                                    <div class="btn btn-default scheduler-arrow left"><i class="material-icons">&#xE314;</i></div>
+                                    <div class="btn btn-default scheduler-arrow right"><i class="material-icons">&#xE315;</i></div>
+
+                                    <div class="rooms pull-left"></div>
+                                    <div class="days-name-wrapper">
+                                        <div class="weeks-holder">
+                                            <div class="weeks">
+                                                <table class="days" data-day-for="01">
+                                                    <caption>
+                                                        <div class="month-title" data-num="01"><div>Январь</div></div>
+                                                    </caption>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пт</div>
+                                                                    <div>1</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Сб</div>
+                                                                    <div>2</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Вс</div>
+                                                                    <div>3</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пн</div>
+                                                                    <div>4</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Вт</div>
+                                                                    <div>5</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Ср</div>
+                                                                    <div>6</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="current-day">
+                                                                    <div>Чт</div>
+                                                                    <div>7</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пт</div>
+                                                                    <div>8</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Сб</div>
+                                                                    <div>9</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Вс</div>
+                                                                    <div>10</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пн</div>
+                                                                    <div>11</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Вт</div>
+                                                                    <div>12</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Ср</div>
+                                                                    <div>13</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Чт</div>
+                                                                    <div>14</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пт</div>
+                                                                    <div>15</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Сб</div>
+                                                                    <div>16</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Вс</div>
+                                                                    <div>17</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пн</div>
+                                                                    <div>18</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Вт</div>
+                                                                    <div>19</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Ср</div>
+                                                                    <div>20</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Чт</div>
+                                                                    <div>21</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пт</div>
+                                                                    <div>22</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Сб</div>
+                                                                    <div>23</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Вс</div>
+                                                                    <div>24</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пн</div>
+                                                                    <div>25</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Вт</div>
+                                                                    <div>26</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Ср</div>
+                                                                    <div>27</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Чт</div>
+                                                                    <div>28</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пт</div>
+                                                                    <div>29</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Сб</div>
+                                                                    <div>30</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Вс</div>
+                                                                    <div>31</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="weeks">
+                                                <table class="days" data-day-for="02">
+                                                    <caption>
+                                                        <div class="month-title" data-num="02"><div>Февраль</div></div>
+                                                    </caption>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пн</div>
+                                                                    <div>1</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Вт</div>
+                                                                    <div>2</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Ср</div>
+                                                                    <div>3</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Чт</div>
+                                                                    <div>4</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пт</div>
+                                                                    <div>5</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Сб</div>
+                                                                    <div>6</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Вс</div>
+                                                                    <div>7</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пн</div>
+                                                                    <div>8</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Вт</div>
+                                                                    <div>9</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Ср</div>
+                                                                    <div>10</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Чт</div>
+                                                                    <div>11</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пт</div>
+                                                                    <div>12</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Сб</div>
+                                                                    <div>13</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Вс</div>
+                                                                    <div>14</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пн</div>
+                                                                    <div>15</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Вт</div>
+                                                                    <div>16</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Ср</div>
+                                                                    <div>17</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Чт</div>
+                                                                    <div>18</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пт</div>
+                                                                    <div>19</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Сб</div>
+                                                                    <div>20</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Вс</div>
+                                                                    <div>21</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пн</div>
+                                                                    <div>22</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Вт</div>
+                                                                    <div>23</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Ср</div>
+                                                                    <div>24</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Чт</div>
+                                                                    <div>25</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пт</div>
+                                                                    <div>26</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Сб</div>
+                                                                    <div>27</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div data-wnd="wnd">
+                                                                    <div>Вс</div>
+                                                                    <div>28</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <div>Пн</div>
+                                                                    <div>29</div>
+                                                                </div>
+                                                            </td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rooms-wrapper">
+                                    <div class="collapsed">
+                                        <div class="caption">
+                                            <a href="#">Стандарт <i class="material-icons">&#xE313;</i></a>
+                                        </div>
+                                        <div class="schedule-wrapper clearfix">
+                                            <ul class="rooms pull-left">
+                                                <li>211</li>
+                                                <li>212</li>
+                                            </ul>
+
+                                            <div class="table-wrapper">
+                                                <div class="month-holder">
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td data-record-num="4"><div data-wnd="wnd"></div></td>
+                                                                    <td data-record-num="4"><div></div></td>
+                                                                    <td data-record-num="4"><div></div></td>
+                                                                    <td data-record-num="4"><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td data-record-num="3"><div data-wnd="wnd"></div></td>
+                                                                    <td data-record-num="3"><div></div></td>
+                                                                    <td data-record-num="3"><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td data-record-num="2"><div></div></td>
+                                                                    <td data-record-num="2"><div data-wnd="wnd"></div></td>
+                                                                    <td data-record-num="2"><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td data-record-num="1"><div></div></td>
+                                                                    <td data-record-num="1"><div data-wnd="wnd"></div></td>
+                                                                    <td data-record-num="1"><div data-wnd="wnd"></div></td>
+                                                                    <td data-record-num="1"><div></div></td>
+                                                                    <td data-record-num="1"><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="records-wrapper">
+                                                <div class="records-holder">
+                                                    <div class="record" data-record="1" style="top: 50px; left: 350px; width: 250px;">
+                                                        <div class="record-inner c1" title="tooltip" data-toggle="modal" data-target="#bid">46</div>
+                                                        <div class="record-tooltip">
+                                                            <div><span>Заезд:</span> 22.12.2015&nbsp;20:00</div>
+                                                            <div><span>Выезд:</span> 26.12.2015&nbsp;12:00</div>
+                                                            <div><span>Заселил:</span> Кирилл Романюк</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="record" data-record="2" style="top: 50px; left: 0; width: 150px;">
+                                                        <div class="record-inner c2" title="tooltip" data-toggle="modal" data-target="#bid37">37</div>
+                                                        <div class="record-tooltip">
+                                                            <div><span>Заезд:</span> 22.12.2015&nbsp;20:00</div>
+                                                            <div><span>Выезд:</span> 26.12.2015&nbsp;12:00</div>
+                                                            <div><span>Заселил:</span> Кирилл Романюк</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="record" data-record="3" style="top: 0; left: 800px; width: 150px;">
+                                                        <div class="record-inner c2" title="tooltip">53</div>
+                                                        <div class="record-tooltip">
+                                                            <div><span>Заезд:</span> 22.12.2015&nbsp;20:00</div>
+                                                            <div><span>Выезд:</span> 26.12.2015&nbsp;12:00</div>
+                                                            <div><span>Заселил:</span> Кирилл Романюк</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="record" data-record="4" style="top: 0; left: 100px; width: 200px;">
+                                                        <div class="record-inner c3" title="tooltip" data-toggle="modal" data-target="#bid22">22</div>
+                                                        <div class="record-tooltip">
+                                                            <div><span>Заезд:</span> 22.12.2015&nbsp;20:00</div>
+                                                            <div><span>Выезд:</span> 26.12.2015&nbsp;12:00</div>
+                                                            <div><span>Заселил:</span> Кирилл Романюк</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="collapsed">
+                                        <div class="caption">
+                                            <a href="#">Полулюкс <i class="material-icons">&#xE313;</i></a>
+                                        </div>
+                                        <div class="schedule-wrapper clearfix">
+                                            <ul class="rooms pull-left">
+                                                <li>213</li>
+                                                <li>214</li>
+                                            </ul>
+
+                                            <div class="table-wrapper">
+                                                <div class="month-holder">
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td data-record-num="5"><div></div></td>
+                                                                    <td data-record-num="5"><div></div></td>
+                                                                    <td data-record-num="5"><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td data-record-num="6"><div data-wnd="wnd"></div></td>
+                                                                    <td data-record-num="6"><div data-wnd="wnd"></div></td>
+                                                                    <td data-record-num="6"><div></div></td>
+                                                                    <td data-record-num="6"><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div data-wnd="wnd"></div></td>
+                                                                    <td><div></div></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="records-wrapper">
+                                                <div class="records-holder">
+                                                    <div class="record" data-record="5" style="top: 0; left: 200px; width: 150px;">
+                                                        <div class="record-inner c2">11</div>
+                                                    </div>
+                                                    <div class="record" data-record="6" style="top: 50px; left: 400px; width: 200px;">
+                                                        <div class="record-inner c3">62</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="collapsed">
+                                        <div class="caption">
+                                            <a href="#">Люкс <i class="material-icons">&#xE313;</i></a>
+                                        </div>
+                                        <div class="schedule-wrapper clearfix">
+                                            <ul class="rooms pull-left">
+                                                <li>215</li>
+                                                <li>216</li>
+                                            </ul>
+
+                                            <div class="table-wrapper">
+                                                <div class="month-holder">
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td data-record-num="7"><div data-wnd="wnd"></div></td>
+                                                                <td data-record-num="7"><div></div></td>
+                                                                <td data-record-num="7"><div></div></td>
+                                                                <td data-record-num="7"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td data-repair="true"><div></div></td>
+                                                                <td data-repair="true"><div></div></td>
+                                                                <td data-repair="true"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td data-record-num="8"><div data-wnd="wnd"></div></td>
+                                                                <td data-record-num="8"><div></div></td>
+                                                                <td data-record-num="8"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td data-record-num="9"><div></div></td>
+                                                                <td data-record-num="9"><div data-wnd="wnd"></div></td>
+                                                                <td data-record-num="9"><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td data-record-num="10"><div></div></td>
+                                                                <td data-record-num="10"><div data-wnd="wnd"></div></td>
+                                                                <td data-record-num="10"><div data-wnd="wnd"></div></td>
+                                                                <td data-record-num="10"><div></div></td>
+                                                                <td data-record-num="10"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div data-wnd="wnd"></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="records-wrapper">
+                                                <div class="records-holder">
+                                                    <div class="record" data-record="10" style="top: 50px; left: 350px; width: 250px;">
+                                                        <div class="record-inner c1">44</div>
+                                                    </div>
+                                                    <div class="record" data-record="9" style="top: 50px; left: 0; width: 150px;">
+                                                        <div class="record-inner c2">52</div>
+                                                    </div>
+                                                    <div class="record" data-record="8" style="top: 0; left: 800px; width: 150px;">
+                                                        <div class="record-inner c1">31</div>
+                                                    </div>
+                                                    <div class="record" data-record="7" style="top: 0; left: 100px; width: 200px;">
+                                                        <div class="record-inner c3">27</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="hourly">
+
+                            <div class="scheduler" id="scheduler2">
+
+                                <div class="scheduler-header">
+                                    <div class="btn btn-default scheduler-arrow left"><i class="material-icons">&#xE314;</i></div>
+                                    <div class="btn btn-default scheduler-arrow right"><i class="material-icons">&#xE315;</i></div>
+
+                                    <div class="rooms pull-left"></div>
+                                    <div class="days-name-wrapper">
+                                        <div class="day-holder">
+                                            <div class="weeks">
+                                                <table class="days" data-day-for="01">
+                                                    <caption>
+                                                        <div class="month-title" data-num="01"><div>Среда, 3 февраля, 2016</div></div>
+                                                    </caption>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="4"><div data-time="night">01</div></td>
+                                                            <td colspan="4"><div data-time="night">02</div></td>
+                                                            <td colspan="4"><div data-time="night">03</div></td>
+                                                            <td colspan="4"><div data-time="night">04</div></td>
+                                                            <td colspan="4"><div data-time="night">05</div></td>
+                                                            <td colspan="4"><div data-time="night">06</div></td>
+                                                            <td colspan="4"><div>07</div></td>
+                                                            <td colspan="4"><div>08</div></td>
+                                                            <td colspan="4"><div>09</div></td>
+                                                            <td colspan="4"><div>10</div></td>
+                                                            <td colspan="4"><div>11</div></td>
+                                                            <td colspan="4"><div>12</div></td>
+                                                            <td colspan="4"><div>13</div></td>
+                                                            <td colspan="4"><div>14</div></td>
+                                                            <td colspan="4"><div>15</div></td>
+                                                            <td colspan="4"><div>16</div></td>
+                                                            <td colspan="4"><div>17</div></td>
+                                                            <td colspan="4"><div>18</div></td>
+                                                            <td colspan="4"><div>19</div></td>
+                                                            <td colspan="4"><div>20</div></td>
+                                                            <td colspan="4"><div>21</div></td>
+                                                            <td colspan="4"><div>22</div></td>
+                                                            <td colspan="4"><div data-time="night">23</div></td>
+                                                            <td colspan="4"><div data-time="night">24</div></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><div data-time="night">00</div></td>
+                                                            <td><div data-time="night">15</div></td>
+                                                            <td><div data-time="night">30</div></td>
+                                                            <td><div data-time="night">45</div></td>
+                                                            <td><div data-time="night">00</div></td>
+                                                            <td><div data-time="night">15</div></td>
+                                                            <td><div data-time="night">30</div></td>
+                                                            <td><div data-time="night">45</div></td>
+                                                            <td><div data-time="night">00</div></td>
+                                                            <td><div data-time="night">15</div></td>
+                                                            <td><div data-time="night">30</div></td>
+                                                            <td><div data-time="night">45</div></td>
+                                                            <td><div data-time="night">00</div></td>
+                                                            <td><div data-time="night">15</div></td>
+                                                            <td><div data-time="night">30</div></td>
+                                                            <td><div data-time="night">45</div></td>
+                                                            <td><div data-time="night">00</div></td>
+                                                            <td><div data-time="night">15</div></td>
+                                                            <td><div data-time="night">30</div></td>
+                                                            <td><div data-time="night">45</div></td>
+                                                            <td><div data-time="night">00</div></td>
+                                                            <td><div data-time="night">15</div></td>
+                                                            <td><div data-time="night">30</div></td>
+                                                            <td><div data-time="night">45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div>00</div></td>
+                                                            <td><div>15</div></td>
+                                                            <td><div>30</div></td>
+                                                            <td><div>45</div></td>
+                                                            <td><div data-time="night">00</div></td>
+                                                            <td><div data-time="night">15</div></td>
+                                                            <td><div data-time="night">30</div></td>
+                                                            <td><div data-time="night">45</div></td>
+                                                            <td><div data-time="night">00</div></td>
+                                                            <td><div data-time="night">15</div></td>
+                                                            <td><div data-time="night">30</div></td>
+                                                            <td><div data-time="night">45</div></td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rooms-wrapper">
+                                    <div class="collapsed">
+                                        <div class="caption">
+                                            <a href="#">Стандарт <i class="material-icons">&#xE313;</i></a>
+                                        </div>
+                                        <div class="schedule-wrapper clearfix">
+                                            <ul class="rooms pull-left">
+                                                <li>211</li>
+                                                <li>212</li>
+                                            </ul>
+
+                                            <div class="table-wrapper">
+                                                <div class="month-holder">
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td data-record-num="4"><div></div></td>
+                                                                <td data-record-num="4"><div></div></td>
+                                                                <td data-record-num="4"><div></div></td>
+                                                                <td data-record-num="4"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td data-record-num="3"><div></div></td>
+                                                                <td data-record-num="3"><div></div></td>
+                                                                <td data-record-num="3"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td data-record-num="2"><div></div></td>
+                                                                <td data-record-num="2"><div></div></td>
+                                                                <td data-record-num="2"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td data-record-num="1"><div></div></td>
+                                                                <td data-record-num="1"><div></div></td>
+                                                                <td data-record-num="1"><div></div></td>
+                                                                <td data-record-num="1"><div></div></td>
+                                                                <td data-record-num="1"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="records-wrapper">
+                                                <div class="records-holder">
+                                                    <div class="record" data-record="1" style="top: 50px; left: 350px; width: 250px;">
+                                                        <div class="record-inner c1" title="tooltip" data-toggle="modal" data-target="#bid">46</div>
+                                                        <div class="record-tooltip">
+                                                            <div><span>Заезд:</span> 22.12.2015&nbsp;20:00</div>
+                                                            <div><span>Выезд:</span> 26.12.2015&nbsp;12:00</div>
+                                                            <div><span>Заселил:</span> Кирилл Романюк</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="record" data-record="2" style="top: 50px; left: 0; width: 150px;">
+                                                        <div class="record-inner c2" title="tooltip" data-toggle="modal" data-target="#bid37">37</div>
+                                                        <div class="record-tooltip">
+                                                            <div><span>Заезд:</span> 22.12.2015&nbsp;20:00</div>
+                                                            <div><span>Выезд:</span> 26.12.2015&nbsp;12:00</div>
+                                                            <div><span>Заселил:</span> Кирилл Романюк</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="record" data-record="3" style="top: 0; left: 800px; width: 150px;">
+                                                        <div class="record-inner c2" title="tooltip">53</div>
+                                                        <div class="record-tooltip">
+                                                            <div><span>Заезд:</span> 22.12.2015&nbsp;20:00</div>
+                                                            <div><span>Выезд:</span> 26.12.2015&nbsp;12:00</div>
+                                                            <div><span>Заселил:</span> Кирилл Романюк</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="record" data-record="4" style="top: 0; left: 100px; width: 200px;">
+                                                        <div class="record-inner c3" title="tooltip" data-toggle="modal" data-target="#bid22">22</div>
+                                                        <div class="record-tooltip">
+                                                            <div><span>Заезд:</span> 22.12.2015&nbsp;20:00</div>
+                                                            <div><span>Выезд:</span> 26.12.2015&nbsp;12:00</div>
+                                                            <div><span>Заселил:</span> Кирилл Романюк</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="collapsed">
+                                        <div class="caption">
+                                            <a href="#">Полулюкс <i class="material-icons">&#xE313;</i></a>
+                                        </div>
+                                        <div class="schedule-wrapper clearfix">
+                                            <ul class="rooms pull-left">
+                                                <li>213</li>
+                                                <li>214</li>
+                                            </ul>
+
+                                            <div class="table-wrapper">
+                                                <div class="month-holder">
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td data-record-num="5"><div></div></td>
+                                                                <td data-record-num="5"><div></div></td>
+                                                                <td data-record-num="5"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td data-record-num="6"><div></div></td>
+                                                                <td data-record-num="6"><div></div></td>
+                                                                <td data-record-num="6"><div></div></td>
+                                                                <td data-record-num="6"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="records-wrapper">
+                                                <div class="records-holder">
+                                                    <div class="record" data-record="5" style="top: 0; left: 200px; width: 150px;">
+                                                        <div class="record-inner c2">11</div>
+                                                    </div>
+                                                    <div class="record" data-record="6" style="top: 50px; left: 400px; width: 200px;">
+                                                        <div class="record-inner c3">62</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="collapsed">
+                                        <div class="caption">
+                                            <a href="#">Люкс <i class="material-icons">&#xE313;</i></a>
+                                        </div>
+                                        <div class="schedule-wrapper clearfix">
+                                            <ul class="rooms pull-left">
+                                                <li>215</li>
+                                                <li>216</li>
+                                            </ul>
+
+                                            <div class="table-wrapper">
+                                                <div class="month-holder">
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td data-record-num="7"><div></div></td>
+                                                                <td data-record-num="7"><div></div></td>
+                                                                <td data-record-num="7"><div></div></td>
+                                                                <td data-record-num="7"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td data-record-num="8"><div></div></td>
+                                                                <td data-record-num="8"><div></div></td>
+                                                                <td data-record-num="8"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td data-record-num="9"><div></div></td>
+                                                                <td data-record-num="9"><div></div></td>
+                                                                <td data-record-num="9"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td data-record-num="10"><div></div></td>
+                                                                <td data-record-num="10"><div></div></td>
+                                                                <td data-record-num="10"><div></div></td>
+                                                                <td data-record-num="10"><div></div></td>
+                                                                <td data-record-num="10"><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="month-wrapper">
+                                                        <table class="days">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                                <td><div></div></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="records-wrapper">
+                                                <div class="records-holder">
+                                                    <div class="record" data-record="10" style="top: 50px; left: 350px; width: 250px;">
+                                                        <div class="record-inner c1">44</div>
+                                                    </div>
+                                                    <div class="record" data-record="9" style="top: 50px; left: 0; width: 150px;">
+                                                        <div class="record-inner c2">52</div>
+                                                    </div>
+                                                    <div class="record" data-record="8" style="top: 0; left: 800px; width: 150px;">
+                                                        <div class="record-inner c1">31</div>
+                                                    </div>
+                                                    <div class="record" data-record="7" style="top: 0; left: 100px; width: 200px;">
+                                                        <div class="record-inner c3">27</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 legend">
+
+                    <div class="legend-item">
+                        <span class="color c1"></span> Заявка
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="color c2"></span> Ожидается заселение
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="color c3"></span> Гость проживает
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="color c4"></span> Гость выехал
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="color c5"></span> Номер на ремонте
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <div class="cd-panel from-right">
+            <header class="cd-panel-header">
+                <a href="#0" class="cd-panel-close">Close</a>
+                <div class="support clearfix">
+
+                    <img src="img/support.png" alt="" title="" class="pull-left">
+
+                    <div class="contacts">
+                        <span>+7 (495) 133-65-44</span>
+                        &mdash; с 09.00 до 20.00 мск
+                        <a href="mailto:support@4inn.ru">support@4inn.ru</a>
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="cd-panel-container">
+                <div class="cd-panel-content">
+                    <div class="manual">
+                        <h3 class="star">Руководство</h3>
+                        <ul>
+                            <li><a href="#">Для администратора</a></li>
+                            <li><a href="#">Для управляющего</a></li>
+                        </ul>
+
+                        <h3 class="question">Частые вопросы</h3>
+
+                        <ul>
+                            <li><a href="#">Как создать номер?</a></li>
+                            <li><a href="#">Как создать бронь?</a></li>
+                            <li><a href="#">Как редактировать данные гостя?</a></li>
+                            <li><a href="#">Как сформировать отчет в Excel?</a></li>
+                            <li><a href="#">Как добавить администратора?</a></li>
+                            <li><a href="#">Как создать акцию?</a></li>
+                            <li><a href="#">Как выселить гостя?</a></li>
+                            <li><a href="#">Как создать номер?</a></li>
+                            <li><a href="#">Как создать бронь?</a></li>
+                            <li><a href="#">Как редактировать данные гостя?</a></li>
+                            <li><a href="#">Как сформировать отчет в Excel?</a></li>
+                            <li><a href="#">Как добавить администратора?</a></li>
+                            <li><a href="#">Как создать акцию?</a></li>
+                            <li><a href="#">Как выселить гостя?</a></li>
+                            <li><a href="#">Как создать номер?</a></li>
+                            <li><a href="#">Как создать бронь?</a></li>
+                            <li><a href="#">Как редактировать данные гостя?</a></li>
+                            <li><a href="#">Как сформировать отчет в Excel?</a></li>
+                            <li><a href="#">Как добавить администратора?</a></li>
+                            <li><a href="#">Как создать акцию?</a></li>
+                            <li><a href="#">Как выселить гостя?</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- cd-panel-content -->
+            </div> <!-- cd-panel-container -->
+        </div> <!-- cd-panel -->
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 60 минут, 2014-2016</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+
+    <div class="modal fade bid" id="bid" tabindex="-1" role="dialog" aria-labelledby="bidlLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h4 class="modal-title" id="myModalLabel">Заявка 2367 <small>Источник ostrovok.ru</small></h4>
+                        </div>
+                        <div class="col-md-7">
+
+                            <div class="total-price">
+                                К оплате <span class="price" title="tooltip">182&thinsp;870</span>
+
+                                <div class="record-tooltip">
+                                    <div><span>Проживание:</span> <span class="price">900&thinsp;300</span></div>
+                                    <div><span>Чай(2):</span> <span class="price">600</span></div>
+                                    <div><span>Халат(1):</span> </span> <span class="price">35&thinsp;000</span></div>
+                                    <div class="total"><span>Итого:</span> </span> <span class="price">935&thinsp;900</span></div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-success">Подтвердить</button>
+                            <button type="submit" class="btn btn-danger">Отменить заявку</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Дата и время заезда</th>
+                                    <th>Дата и время выезда</th>
+                                    <th>Категория</th>
+                                    <th>Номер и количество гостей</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td><span class="date">18.10.2015</span> 12:45</td>
+                                    <td><span class="date">22.10.2015</span> 22:45</td>
+                                    <td>Полулюкс</td>
+                                    <td>211, 2 гостя</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Имя, фамилия гостя</th>
+                                    <th>Телефон</th>
+                                    <th>E-mail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>Александр Христорождественский</td>
+                                    <td>+ 7 (927) 248 56 04</td>
+                                    <td>alexander.christo@yandex.ru</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bid" id="bid22" tabindex="-1" role="dialog" aria-labelledby="bidlLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h4 class="modal-title" id="myModalLabel">Бронь 22 <span class="label label-info">Гость проживает</span></h4>
+                        </div>
+                        <div class="col-md-7 text-right">
+
+                            <div class="total-price">
+                                К оплате <span class="price" title="tooltip">182&thinsp;870</span>
+
+                                <div class="record-tooltip">
+                                    <div><span>Проживание:</span> <span class="price">900&thinsp;300</span></div>
+                                    <div><span>Чай(2):</span> <span class="price">600</span></div>
+                                    <div><span>Халат(1):</span> </span> <span class="price">35&thinsp;000</span></div>
+                                    <div class="total"><span>Итого:</span> </span> <span class="price">935&thinsp;900</span></div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-danger">Выселить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form method="" action="#">
+
+                        <div class="row">
+                            <table class="table table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Дата и время заезда</th>
+                                        <th>Дата и время выезда</th>
+                                        <th>Категория</th>
+                                        <th>Номер и количество гостей</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td><span class="date">18.10.2015</span> 12:45</td>
+                                    <td>
+                                        <span class="date">22.10.2015</span>
+                                        <select class="form-control">
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                        </select>
+
+                                        <select class="form-control">
+                                            <option>00</option>
+                                            <option>10</option>
+                                            <option>20</option>
+                                            <option>30</option>
+                                            <option>40</option>
+                                            <option>50</option>
+                                        </select>
+                                    </td>
+                                    <td>Полулюкс</td>
+                                    <td>
+                                        <span class="date">211</span>
+                                        <select class="form-control">
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                        гостя
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <div class="row">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Имя, фамилия гостя</th>
+                                    <th>Телефон</th>
+                                    <th>E-mail</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td><input  type="text" class="form-control" value="Александр Христорождественский"></td>
+                                    <td><input  type="text" class="form-control" value="+ 7 (927) 248 56 04"></td>
+                                    <td><input  type="text" class="form-control" value="alexander.christo@yandex.ru"></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-info">Сохранить</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="collapsed">
+                        <div class="caption">
+                            <a href="">Дополнительные услуги и поручения  <i class="material-icons">&#xE313;</i></a>
+                        </div>
+
+                        <form method="" action="#" class="add-services">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Дополнительные услуги</h3>
+
+                                    <table class="table table-striped">
+                                        <tbody>
+                                        <tr>
+                                            <td>Тапочки</td>
+                                            <td>2</td>
+                                            <td>
+                                                <span class="price">250</span>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="text-danger">Удалить</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Кофе (кофейник)</td>
+                                            <td>3</td>
+                                            <td>
+                                                <span class="price">250</span>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="text-danger">Удалить</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                        <tfoot>
+                                        <tr>
+                                            <td>Итого</td>
+                                            <td></td>
+                                            <td>
+                                                <span class="price">1500</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        </tfoot>
+                                    </table>
+
+                                    <div class="add-serv-row">
+
+                                        <div class="choose-serv">
+                                            <select class="form-control">
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="amount">
+                                            <select class="form-control">
+                                                <option>00</option>
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>30</option>
+                                                <option>40</option>
+                                                <option>50</option>
+                                            </select>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-info">Сохранить</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="clearfix">
+                                        <h3 class="pull-left">Новое поручение</h3>
+                                        <a href="#" class="pull-left">2 поручения</a>
+                                    </div>
+
+                                    <table class="table table-striped">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="row">
+                                        <div class="col-md-12 text-right">
+                                            <button type="submit" class="btn btn-info">Добавить поручение</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bid" id="bid37" tabindex="-1" role="dialog" aria-labelledby="bidlLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="material-icons">&#xE14C;</i></span></button>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h4 class="modal-title" id="myModalLabel">Бронь 37 <span class="label label-success">Ожидает заселения</span></h4>
+                        </div>
+                        <div class="col-md-7">
+
+                            <div class="total-price">
+                                К оплате <span class="price" title="tooltip">182&thinsp;870</span>
+
+                                <div class="record-tooltip">
+                                    <div><span>Проживание:</span> <span class="price">900&thinsp;300</span></div>
+                                    <div><span>Чай(2):</span> <span class="price">600</span></div>
+                                    <div><span>Халат(1):</span> </span> <span class="price">35&thinsp;000</span></div>
+                                    <div class="total"><span>Итого:</span> </span> <span class="price">935&thinsp;900</span></div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-success">Заселить</button>
+                            <button type="submit" class="btn btn-danger">Отменить бронь</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form method="" action="#">
+
+                        <div class="row discount">
+                            <div class="col-md-12">
+                                <a href="#" class="add-discount">Применить скидку</a>
+
+                                <div class="discount-list">
+                                    <select class="form-control">
+                                        <option>Постоянный клиент</option>
+                                        <option>VIP</option>
+                                    </select>
+
+                                    <button type="submit" class="btn btn-info">Применить</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <table class="table table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Дата и время заезда</th>
+                                        <th>Дата и время выезда</th>
+                                        <th>Категория</th>
+                                        <th>Номер и количество гостей</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td><span class="date">18.10.2015</span> 12:45</td>
+                                    <td>
+                                        <span class="date">22.10.2015</span>
+                                        <select class="form-control">
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                        </select>
+
+                                        <select class="form-control">
+                                            <option>00</option>
+                                            <option>10</option>
+                                            <option>20</option>
+                                            <option>30</option>
+                                            <option>40</option>
+                                            <option>50</option>
+                                        </select>
+                                    </td>
+                                    <td>Полулюкс</td>
+                                    <td>
+                                        <span class="date">211</span>
+                                        <select class="form-control">
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                        гостя
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+                            <table class="table table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th>Имя, фамилия гостя</th>
+                                        <th>Телефон</th>
+                                        <th>E-mail</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>Александр Христорождественский</td>
+                                    <td>+ 7 (927) 248 56 04</td>
+                                    <td>alexander.christo@yandex.ru</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Имя, фамилия гостя</th>
+                                    <th>Телефон</th>
+                                    <th>E-mail</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td><input  type="text" class="form-control" value="Александр Христорождественский"></td>
+                                    <td><input  type="text" class="form-control" value="+ 7 (927) 248 56 04"></td>
+                                    <td><input  type="text" class="form-control" value="alexander.christo@yandex.ru"></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-info">Сохранить</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="collapsed">
+                        <div class="caption">
+                            <a href="">Дополнительные услуги и поручения  <i class="material-icons">&#xE313;</i></a>
+                        </div>
+
+                        <form method="" action="#" class="add-services">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Дополнительные услуги</h3>
+
+                                    <table class="table table-striped">
+                                        <tbody>
+                                        <tr>
+                                            <td>Тапочки</td>
+                                            <td>2</td>
+                                            <td>
+                                                <span class="price">250</span>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="text-danger">Удалить</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Кофе (кофейник)</td>
+                                            <td>3</td>
+                                            <td>
+                                                <span class="price">250</span>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="text-danger">Удалить</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                        <tfoot>
+                                        <tr>
+                                            <td>Итого</td>
+                                            <td></td>
+                                            <td>
+                                                <span class="price">1500</span>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        </tfoot>
+                                    </table>
+
+                                    <div class="add-serv-row">
+
+                                        <div class="choose-serv">
+                                            <select class="form-control">
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="amount">
+                                            <select class="form-control">
+                                                <option>00</option>
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>30</option>
+                                                <option>40</option>
+                                                <option>50</option>
+                                            </select>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-info">Сохранить</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="clearfix">
+                                        <h3 class="pull-left">Новое поручение</h3>
+                                        <a href="#" class="pull-left">2 поручения</a>
+                                    </div>
+
+                                    <table class="table table-striped">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="row">
+                                        <div class="col-md-12 text-right">
+                                            <button type="submit" class="btn btn-info">Добавить поручение</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

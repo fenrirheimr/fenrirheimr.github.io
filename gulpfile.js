@@ -23,28 +23,28 @@ var path = {
         js: 'js/',
         css: 'css/',
         img: 'img/',
-        fonts: 'fonts/'
+        fonts: 'fonts/',
     },
     build: {
         html: 'build/',
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
-        fonts: 'build/fonts/'
+        fonts: 'build/fonts/',
     },
     src: {
         html: 'src/*.html',
         js: 'src/js/**/*.js',
         style: 'src/css/*.scss',
         img: 'src/img/**/*.*',
-        fonts: 'build/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/css/**/*.scss',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
     },
     clean: {
         build: './build',
@@ -120,11 +120,6 @@ gulp.task('fonts:build', function () {
 		.pipe(gulp.dest(path.build.fonts));
 });
 
-gulp.task('fonts:build', function() {
-    return gulp.src('src/fonts/**/*.*')
-        .pipe(gulp.dest('build/fonts'))
-});
-
 gulp.task('fonts:dist', function () {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.dist.fonts));
@@ -151,20 +146,6 @@ gulp.task('dist:major', ['clean:dist'], function() {
     gulp.start('project:dist');
     gulp.src(path.bump)
         .pipe(bump({type: 'major'}))
-        .pipe(gulp.dest('./'));
-});
-
-gulp.task('dist:patch', ['clean:dist'], function() {
-    gulp.start('project:dist');
-    gulp.src(path.bump)
-        .pipe(bump())
-        .pipe(gulp.dest('./'));
-});
-
-gulp.task('dist:prerelease', ['clean:dist'], function() {
-    gulp.start('project:dist');
-    gulp.src(path.bump)
-        .pipe(bump({type: 'prerelease'}))
         .pipe(gulp.dest('./'));
 });
 
