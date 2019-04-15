@@ -142,21 +142,6 @@ gulp.task('js:dist', function () {
         .pipe(gulp.dest(path.dist.js));
 });
 
-//////
-
-// gulp.task('portfolio:build', function () {
-//     gulp.src(path.src.portfolio)
-//         .pipe(rigger())
-//         .pipe(gulp.dest(path.build.portfolio))
-//         .pipe(reload({stream: true}));
-// });
-//
-// gulp.task('portfolio:dist', function () {
-//     gulp.src(path.src.portfolio)
-//         .pipe(rigger())
-//         .pipe(gulp.dest(path.dist.portfolio));
-// });
-
 gulp.task('portfolio:build', function () {
     gulp.src(path.src.portfolio)
         .pipe(gulp.dest(path.build.portfolio));
@@ -166,7 +151,7 @@ gulp.task('portfolio:dist', function () {
     gulp.src(path.src.portfolio)
         .pipe(gulp.dest(path.dist.portfolio));
 });
-//////
+
 
 gulp.task('build', ['clean:build'], function() {
     gulp.start('project:build');

@@ -214,7 +214,7 @@ const app = new Vue({
                     currentClass: '',
                     isExist: true,
                     isYear: false,
-                    exLink: 'portfolio/60mIS/',
+                    exLink: 'portfolio/60mIS/index.html',
                     status: '',
                     isVisible: true
                 },{
@@ -229,7 +229,7 @@ const app = new Vue({
                     currentClass: '',
                     isExist: true,
                     isYear: false,
-                    exLink: 'portfolio/BluesHotel/',
+                    exLink: 'portfolio/BluesHotel/index.html',
                     status: '',
                     isVisible: true
                 },{
@@ -244,7 +244,7 @@ const app = new Vue({
                     currentClass: '',
                     isExist: true,
                     isYear: false,
-                    exLink: 'portfolio/60m/',
+                    exLink: 'portfolio/60m/index.html',
                     status: '',
                     isVisible: true
                 },{
