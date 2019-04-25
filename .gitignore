@@ -1,7 +1,5 @@
-
-.idea/*/*.*
+.idea/
 bower_components/
 build/
-build/*/*.*
 node_modules/
-Будет удалено .idea/
+

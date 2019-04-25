@@ -116,7 +116,7 @@ gulp.task('image:dist', function () {
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.dist.css));
+        .pipe(gulp.dest(path.dist.img));
 });
 
 gulp.task('fonts:build', function () {
