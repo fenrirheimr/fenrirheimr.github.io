@@ -29,7 +29,7 @@
     <body>
         <section class="header">
     <div class="container">
-        <div class="column">
+        <div class="column first">
             <div class="f-wrapper">
                 <div class="lang-tabs">
                     <a href="" class="current">Ru</a>
@@ -44,23 +44,25 @@
             </div>
             <img class="rosel" src="img/svg/rosel-logo.svg" alt="" title="">
         </div>
-        <div class="column">
-            <a class="logo" href="/">
+        <div class="column second">
+            <a class="logo" href="index.html">
                 <img src="img/logo.png" alt="" title="">
             </a>
         </div>
-        <div class="column">
+        <div class="column last">
             <div class="header-contacts">
                 <a href="" class="fb"></a>
                 <a href="" class="vk"></a>
-                <a href="" class="mail">сhrz@polyot.ru</a>
+                <div class="mail open-modal">сhrz@polyot.ru</div>
+                <div class="burger">
+                    <span></span>
+                </div>
             </div>
             <img class="vega" src="img/vega-logo.png" alt="" title="">
         </div>
     </div>
 </section>
-
-        <section class="navigation-bar">
+<section class="navigation-bar">
     <nav class="container">
         <a href="products.html">Продукция</a>
         <a href="">Разработки</a>
@@ -72,6 +74,7 @@
         <a href="">Контакты</a>
     </nav>
 </section>
+
 
         <section class="promo">
     <div class="container">
@@ -264,7 +267,7 @@
             </a>
         </div>
         <div class="column">
-            <a href="" class="mail">сhrz@polyot.ru</a>
+            <div class="mail open-modal-footer">сhrz@polyot.ru</div>
             <div class="map">г. Челябинск, ул. Тернопольская, д. 6 <a href="">На карте</a></div>
             <a class="logo" href="/">
                 <img src="img/logo-footer.png" alt="" title="">
@@ -275,6 +278,21 @@
         </div>
     </div>
 </section>
+<section class="modal-wrapper">
+    <form method="" action="">
+        <div class="close-modal"></div>
+        <h3>Заказать обратный звонок</h3>
+        <div class="text-field">
+            <input type="text" placeholder="Имя">
+        </div>
+        <div class="text-field">
+            <input type="text" placeholder="Телефон">
+        </div>
+        <button type="submit" class="button">Заказать звонок</button>
+        <div class="privacy">Нажимая на кнопку вы соглашаетесь<br>с нашими <a href="">условиями опередаче данных</a></div>
+    </form>
+</section>
+
 
         <script src="js/main.min.js"></script>
         <script src="js/vendor.min.js"></script>
