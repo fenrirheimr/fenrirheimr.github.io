@@ -96,6 +96,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */
 }
@@ -424,7 +425,6 @@ ul {
 }
 
 * {
-  -moz-box-sizing: border-box;
   /* Для Firefox */
   box-sizing: border-box;
   /* Ширина блока с полями */
@@ -551,6 +551,14 @@ body.inside {
   padding: 8px 32px 8px 8px;
   outline: none;
   box-shadow: 0px 4px 12px rgba(56, 48, 133, 0.1);
+}
+
+.header .container .column .f-wrapper .search form input:-moz-placeholder-shown {
+  box-shadow: none;
+}
+
+.header .container .column .f-wrapper .search form input:-ms-input-placeholder {
+  box-shadow: none;
 }
 
 .header .container .column .f-wrapper .search form input:placeholder-shown {
@@ -977,6 +985,7 @@ body.inside {
   align-items: center;
   margin: 0 70px;
   text-decoration: underline;
+  -webkit-text-decoration-color: #d2d2d7;
   text-decoration-color: #d2d2d7;
 }
 
@@ -1342,6 +1351,14 @@ body.inside {
   padding: 8px 32px 8px 8px;
   outline: none;
   box-shadow: 0px 4px 12px rgba(56, 48, 133, 0.1);
+}
+
+.modal-wrapper form .text-field input:-moz-placeholder-shown {
+  box-shadow: none;
+}
+
+.modal-wrapper form .text-field input:-ms-input-placeholder {
+  box-shadow: none;
 }
 
 .modal-wrapper form .text-field input:placeholder-shown {
@@ -1780,6 +1797,10 @@ body.inside {
     display: none;
   }
 
+  .product-list .container .products {
+    padding: 0 30px;
+  }
+
   .footer .container .column:nth-child(2) {
     display: none;
   }
@@ -1830,9 +1851,46 @@ body.inside {
     max-width: 100%;
   }
 
+  .product-list .container .products .product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .product-list .container .products .product-item img {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .product-list .container .products .product-item .text {
+    font-family: "Golos";
+    font-weight: normal;
+    font-size: 14px;
+    color: #1F1C39;
+    line-height: 20px;
+  }
+
+  .product-list .container .products .product-item .text h2 {
+    font-family: "Golos";
+    font-weight: 600;
+    font-size: 16px;
+    color: #1F1C39;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  .product-list .container .products .product-item .button {
+    margin-top: 10px;
+  }
+
   .modal-wrapper form {
     padding: 56px 22px;
     margin: auto 20px;
+  }
+
+  .footer .container {
+    padding: 20px 30px;
   }
 
   .footer .container .column .mail {
@@ -1870,4 +1928,3 @@ body.inside {
     margin: auto 7px;
   }
 }
-/*# sourceMappingURL=maps/main.css.map */
