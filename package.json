@@ -4,7 +4,7 @@
   "description": "Portfolio of Vladimir Glushkov",
   "author": "Vladimir Glushkov <xhtmlblog@gmail.com>",
   "dependencies": {
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.27.10",
     "bulma": "0.7.4",
     "bulma-extensions": "4.1.1",
     "gulp": "4.0.1",
